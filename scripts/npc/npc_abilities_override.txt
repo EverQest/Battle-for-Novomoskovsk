@@ -226,7 +226,7 @@
 	}
 
 	//=================================================================================================================
-	// Remove Dagon
+	// Remove Dagon (only dagon5)
 	//=================================================================================================================
 	"item_dagon"
 	{
@@ -250,7 +250,7 @@
 	}
 	"item_dagon_5"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 	"item_recipe_dagon"
 	{
@@ -270,7 +270,7 @@
 	//=================================================================================================================
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"300.0"
+		"ItemInitialStockTime"			"100.0"
 	}
 
 	//=================================================================================================================
@@ -278,11 +278,11 @@
 	//=================================================================================================================
 	//"item_ward_sentry"
 	//{
-	//	"ItemCost"						"100"
+	//	"ItemCost"						"50"
 	//	"AbilityValues"
 	//	{
-	//		"lifetime"				"360"
-	//		"true_sight_range"		"850"
+	//		"lifetime"				"500"
+	//		"true_sight_range"		"1000"
 	//		"duration_minutes_tooltip"				"6"
 	//	}
 	//}
@@ -292,102 +292,8 @@
 	//=================================================================================================================
 	"item_dust"
 	{
-		"AbilityCooldown"				"15.0"	// currently 30.0 on public
+		"AbilityCooldown"				"10.0"	// currently 30.0 on public
 	}
-
-	//=================================================================================================================
-	// Silencer: Glaives of Wisdom
-	//=================================================================================================================
-	//"silencer_glaives_of_wisdom"
-	//{
-	//	"AbilitySpecial"
-	//	{
-	//		//"01"
-	//		//{
-	//		//	"var_type"				"FIELD_FLOAT"
-	//		//	"intellect_damage_pct"	"15 25 35 45"
-	//		//}
-	//		"02"
-	//		{
-	//			"var_type"			"FIELD_INTEGER"
-	//			"permanent_int_steal_range"		"450"	// 925 on public
-	//		}
-	//	}
-	//}
-
-	//=================================================================================================================
-	// Zuus: Thundergod's Wrath
-	//=================================================================================================================
-	//"zuus_thundergods_wrath"
-	//{
-	//	"AbilitySpecial"
-	//	{
-	//		"06"
-	//		{
-	//			"var_type"				"FIELD_INTEGER"
-	//			"damage"				"200 300 400"
-	//		}
-	//	}
-	//}
-
-	//=================================================================================================================
-	// Riki: Blink Strike
-	//=================================================================================================================
-	//"riki_blink_strike"
-	//{
-	//	"AbilityCastRange"				"400"
-	//	"AbilityValues"
-	//	{
-	//		"bonus_damage"					"10 20 30 40"
-	//	}
-	//}
-	
-	//=================================================================================================================
-	// Riki: Cloak and Dagger
-	//=================================================================================================================
-	//"riki_backstab"
-	//{
-	//	"AbilityValues"
-	//	{
-	//		"damage_multiplier"				"0.4 0.6 0.8 1.0"
-	//		"fade_delay"					"16.0 12.0 8.0 4.0"
-	//	}
-	//}
-
-	//=================================================================================================================
-	// Bounty Hunter: Wind Walk
-	//=================================================================================================================
-	//"bounty_hunter_wind_walk"
-	//{
-	//	"AbilityValues"
-	//	{
-	//		"duration"					"10.0 12.0 15.0 18.0"
-	//		"fade_time"					"2.0 1.5 1.0 0.5"
-	//	}
-	//}
-
-	//=================================================================================================================
-	// Ability: Pudge Flesh Heap
-	//=================================================================================================================
-	//"pudge_flesh_heap"
-	//{
-	//	"AbilityValues"
-	//	{
-	//		"flesh_heap_strength_buff_amount"	"0.5 0.75 1.0 1.25"
-	//		"flesh_heap_range"		"225"
-	//	}
-	//}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -395,7 +301,7 @@
 
 
     //=================================================================================================================
-	// Ability: Pudge Rot Lua (Vyasich)
+	// Ability: Pudge Rot (Vyasich)
 	//=================================================================================================================
 	"pudge_rot_lua"
 	{
@@ -406,8 +312,9 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"BaseClass"						"ability_lua"
-		"AbilityTextureName"					"vyasich_rot"
-		"ScriptFile"						"pudge_rot_lua"
+		"AbilityTextureName"			"vyasich_rot"
+		"ScriptFile"					"pudge_rot_lua"
+		"AbilitySound"                  "Hero_Pudge.Rot"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -542,7 +449,7 @@
     }
 
     //=================================================================================================================
-    // Ability: Heartstopper Aura Vyasich
+    // Ability: Heartstopper Aura (Vyasich)
     //=================================================================================================================
     "ascension_heal_suppression"
     {
@@ -583,7 +490,7 @@
 		"ID"							"5470"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"HasScepterUpgrade"			    "1"
@@ -598,7 +505,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"70"
+		"AbilityCooldown"				"50"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -636,12 +543,374 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"regen_rate_tooltip_scepter"				"10"
+				"regen_rate_tooltip_scepter"				"100"
 				"RequiresScepter"	"1"
 			}
 		}
 	}
 
+
+	//=================================================================================================================
+    // Magnataur: Horn Toss (DIMA)
+    //=================================================================================================================
+    "magnus_push_horn_toss"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "magnus_push_horn_toss"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"   
+		"AbilityTextureName"            "dima_horn_toss"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "MaxLevel"                      "4"
+        "FightRecapLevel"               "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "1 0.8 0.5 0.2"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        "AbilityCastRange"              "300"
+        
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20 15 10 8"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "40 30 20 15"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "damage"        "200 400 600 800"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "radius"        "300"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "air_duration"      "0.2"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "air_height"        "800"
+            }
+            "05"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "slow_duration"     "1.25"
+            }
+            "06"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "pull_offset"       "275"
+            }
+            "07"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "destination_offset"        "175"
+            }
+            "08"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "pull_angle"                "230"
+            }
+
+        }
+    }    
+
+	//=================================================================================================================
+	// Magnataur: Skewer (DIMA)
+	//=================================================================================================================
+	"aghsfort_magnataur_skewer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Magnataur.Skewer.Cast"
+		"AbilityTextureName"            "dima_skewer"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22 20 18 16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_speed"					"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"					"900 1100 1500 2000"
+				"LinkedSpecialBonus"	"special_bonus_unique_magnus_3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_pct"				"10 20 30 40"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_radius"				"145"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"				"3.25"
+			}			
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_damage"			"80 170 260 350"
+			}			
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tree_radius"				"200"
+			}			
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tool_attack_slow"				"10 20 30 40"
+			}	
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"skewer_cooldown"				"8 6 4 2"
+				"RequiresScepter"	"1"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_manacost"				"40"
+				"RequiresScepter"	"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Tiny: Toss (DIMA)
+	//=================================================================================================================
+	"tiny_toss_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"tiny_toss_lua"
+		"AbilityTextureName"			"dima_toss"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_RUNE_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850 1000 1150 1300"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"69"
+		"AbilityManaCost"				"220"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"1000 2000 3500 8000"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 5 7 14"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"grab_radius"			"305"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"275"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage_pct"		"30"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"toss_damage"				"2500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"AbilityCharges"		""
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Creature: Kraken Shell (DIMA)
+	//=================================================================================================================
+	"creature_kraken_shell"
+	{
+		"BaseClass"						"tidehunter_kraken_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "dima_kraken_shell"
+        "IsOnCastBar"                   "1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_reduction"		"30 50 100 150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_cleanse"		"150"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_reset_interval"	"6.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Marci: Dispose (DIMA)
+	//=================================================================================================================
+	"marci_dispose_lua"
+	{
+
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"marci_dispose_lua"
+		"AbilityTextureName"			"dima_boot_kick"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"175"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 15 10 8"
+		"AbilityManaCost"				"90"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"landing_radius"	"275"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"air_duration"		"14 7 5 2"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"air_height"		"600 400 300 170"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"pull_offset"		"75"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"throw_distance_behind"	"-350 -450 -550 -650"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"pull_angle"		"230"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.2 1.5 1.8 2.1"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"impact_damage"		"200 300 400 500"
+			}
+		}
+	}
 
 
 }

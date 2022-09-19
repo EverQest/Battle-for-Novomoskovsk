@@ -3,16 +3,38 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
+
+
+
 //=================================================================================================================
-	// HERO: Io (Vyashich)
-	//=================================================================================================================
+// HERO: Io (Vyashich)
+//=================================================================================================================
 	"npc_dota_hero_wisp_lua"
 	{
-		"override_hero"				"npc_dota_hero_wisp"	
-		"Ability1"                  "aghsfort_wisp_tether"	
-		"Ability2"		    "pudge_rot_lua"
-		"Ability3"                  "ascension_heal_suppression"
-                "Ability6"                  "naga_siren_song_of_the_siren"	
+		"override_hero"		   "npc_dota_hero_wisp"	
+		"Ability1"             "aghsfort_wisp_tether"	
+		"Ability2"		       "pudge_rot_lua"
+		"Ability3"             "ascension_heal_suppression"
+        "Ability6"             "naga_siren_song_of_the_siren"	
+        "Ability4"             ""	
+        "Ability5"             ""	
 	}
+//=================================================================================================================
+// HERO: Morphling (DIMA)
+//=================================================================================================================
+	"npc_dota_hero_morphling_lua"
+	{
+		"override_hero"		   "npc_dota_hero_morphling"	
+		"Ability1"		       "aghsfort_magnataur_skewer"
+		"Ability2"		       "magnus_push_horn_toss"
+		"Ability3"		       "marci_dispose_lua"
+		"Ability4"		       "creature_kraken_shell"
+		"Ability5"		       ""
+		"Ability6"		       ""
+		"Ability7"		       "tiny_toss_lua"
+
+	}
+
+
 
 }
