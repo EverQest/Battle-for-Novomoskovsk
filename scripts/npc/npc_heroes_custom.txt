@@ -12,6 +12,7 @@
 	"npc_dota_hero_wisp_lua"
 	{
 		"override_hero"		   "npc_dota_hero_wisp"	
+		"AbilityLayout"		   "4"
 		"Ability1"             "aghsfort_wisp_tether"	
 		"Ability2"		       "pudge_rot_lua"
 		"Ability3"             "ascension_heal_suppression"
@@ -25,13 +26,13 @@
 	"npc_dota_hero_morphling_lua"
 	{
 		"override_hero"		   "npc_dota_hero_morphling"	
+		"AbilityLayout"		   "5"
 		"Ability1"		       "aghsfort_magnataur_skewer"
 		"Ability2"		       "magnus_push_horn_toss"
 		"Ability3"		       "marci_dispose_lua"
 		"Ability4"		       "creature_kraken_shell"
 		"Ability5"		       ""
-		"Ability6"		       ""
-		"Ability7"		       "tiny_toss_lua"
+		"Ability6"		       "tiny_toss_lua"
 
 	}
 

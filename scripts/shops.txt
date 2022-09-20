@@ -42,7 +42,8 @@
 		"item"		"item_river_painter4"	
 		"item"		"item_river_painter3"	
 		"item"		"item_river_painter2"	
-		"item"		"item_river_painter"	
+		"item"		"item_river_painter"
+		"item"		"item_heart_of_tarras"
 	}
 
 	"weapons_armor"
