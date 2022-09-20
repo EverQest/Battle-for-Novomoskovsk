@@ -6,7 +6,7 @@
 "CustomHeroList"
 {
 	//--------------- CUSTOM ------------------
-	"npc_dota_hero_vyashich"		"1"
+    //"npc_dota_hero_vyashich"		"0"
 
 	//--------------- ENABLED -----------------
 	"npc_dota_hero_abaddon"				"0"
