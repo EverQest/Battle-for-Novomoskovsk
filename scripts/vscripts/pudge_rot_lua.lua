@@ -15,6 +15,7 @@ function pudge_rot_lua:OnToggle()
 
 		if not self:GetCaster():IsChanneling() then
 			self:GetCaster():StartGesture( ACT_DOTA_CAST_ABILITY_ROT )
+			EmitSoundOn("bruh", self:GetCaster())
 		end
 	else
 		local hRotBuff = self:GetCaster():FindModifierByName( "modifier_pudge_rot_lua" )

@@ -60,6 +60,10 @@ function Precache( context )
 
 	-- Cache overthrow-specific sounds
 		PrecacheResource( "soundfile", "soundevents/game_sounds_overthrow.vsndevts", context )
+
+	-- Custom skils sounds
+		PrecacheResource( "soundfile", "soundevents/bruh.vsnd_c", context )
+
 end
 
 function Activate()
