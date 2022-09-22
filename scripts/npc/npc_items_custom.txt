@@ -67,26 +67,64 @@
 		"ItemCastOnPickup"				"1"
 	}
 
+
+
 	//=================================================================================================================
-	// Heart of Tarras
+	// Recipe: Item_heart_of_tarras
+	//=================================================================================================================
+	"item_recipe_heart_of_tarras"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"14201"	
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart_of_tarras"
+		"ItemRequirements"
+		{
+			"01"						"item_heart;item_heart;item_heart"
+		}
+	}
+	
+	//=================================================================================================================
+	// Heart
 	//=================================================================================================================
 	"item_heart_of_tarras"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"						"114"									// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"14200"	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"15150"
+		"ItemCost"						"15000"
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"hot;heart of tarrasque"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"AbilityTextureName"			"-"
+		"AbilityTextureName"			"item_desolator_2"
+		"AbilityName"					"item_heart_of_tarras"
 		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"1"
+		"ItemStackable"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"0"
+		"ItemKillable"					"1"
+		"ItemCastOnPickup"				"1"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -94,12 +132,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"180"
+				"bonus_strength"		"3000"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"1200"
+				"bonus_health"			"2500"
 			}
 			"03"
 			{
@@ -110,31 +148,31 @@
 	}
 
 	//=================================================================================================================
-	// Heart of Tarras
+	// Greater Mango
 	//=================================================================================================================
-	"item_recipe_heart"
+	"item_greater_mango"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"113"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ID"							"295"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"	
+		"Model"							"models/props_gameplay/mango.vmdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1200"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_heart"
-		"ItemRequirements"
-		{
-			"01"						"item_heart;item_heart;item_heart"
-		}
+		"ItemCost"						"15000"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"IsTempestDoubleClonable"		"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
 	}
-
-
 
 
 

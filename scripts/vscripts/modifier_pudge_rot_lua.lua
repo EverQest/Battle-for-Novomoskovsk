@@ -1,13 +1,13 @@
-modifier_pudge_rot_lua = class({})
+modifier_vyashich_rot = class({})
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:IsDebuff()
+function modifier_vyashich_rot:IsDebuff()
 	return true
 end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:IsAura()
+function modifier_vyashich_rot:IsAura()
 	if self:GetCaster() == self:GetParent() then
 		return true
 	end
@@ -17,31 +17,31 @@ end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:GetModifierAura()
-	return "modifier_pudge_rot_lua"
+function modifier_vyashich_rot:GetModifierAura()
+	return "modifier_vyashich_rot"
 end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:GetAuraSearchTeam()
+function modifier_vyashich_rot:GetAuraSearchTeam()
 	return DOTA_UNIT_TARGET_TEAM_ENEMY
 end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:GetAuraSearchType()
+function modifier_vyashich_rot:GetAuraSearchType()
 	return DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC
 end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:GetAuraRadius()
+function modifier_vyashich_rot:GetAuraRadius()
 	return self.rot_radius
 end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:OnCreated( kv )
+function modifier_vyashich_rot:OnCreated( kv )
 	self.rot_radius = self:GetAbility():GetSpecialValueFor( "rot_radius" )
 	self.rot_slow = self:GetAbility():GetSpecialValueFor( "rot_slow" )
 	self.rot_damage = self:GetAbility():GetSpecialValueFor( "rot_damage" )
@@ -65,7 +65,7 @@ end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:OnDestroy()
+function modifier_vyashich_rot:OnDestroy()
 	if IsServer() then
 		StopSoundOn( "Hero_Pudge.Rot", self:GetCaster() )
 	end
@@ -73,7 +73,7 @@ end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:DeclareFunctions()
+function modifier_vyashich_rot:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE,
 	}
@@ -83,7 +83,7 @@ end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:GetModifierMoveSpeedBonus_Percentage( params )
+function modifier_vyashich_rot:GetModifierMoveSpeedBonus_Percentage( params )
 	if self:GetParent() == self:GetCaster() then
 		return 0
 	end
@@ -93,7 +93,7 @@ end
 
 --------------------------------------------------------------------------------
 
-function modifier_pudge_rot_lua:OnIntervalThink()
+function modifier_vyashich_rot:OnIntervalThink()
 	if IsServer() then
 		local flDamagePerTick = self.rot_tick * self.rot_damage
 

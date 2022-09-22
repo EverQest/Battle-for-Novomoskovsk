@@ -30,17 +30,17 @@
 		//Васич
        "npc_dota_hero_wisp"        "Васич"
 
-       "Dota_Tooltip_ability_pudge_rot_lua"                  "Сила вони"
-       "Dota_Tooltip_ability_pudge_rot_lua_datadriven"       "Лютая вонь"
-       "Dota_Tooltip_ability_pudge_rot_lua_Description"      "Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
-       "Dota_Tooltip_ability_aghsfort_wisp_tether"                  "Душнила"
-       "Dota_Tooltip_ability_aghsfort_wisp_tether_Description"      "Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
-       "Dota_Tooltip_ability_ascension_heal_suppression"                  "Одно присутствие"
-       "Dota_Tooltip_ability_ascension_heal_suppression_datadriven"       "Вам страшно"
-       "Dota_Tooltip_ability_ascension_heal_suppression_Description"      "Васич настолько сильно нагоняет страх только при виде, что буквально выжигает противников"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren"                  "Дарк метал"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_datadriven"       "Минус уши"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_Description"      "Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
+       "Dota_Tooltip_ability_vyashich_rot"                  "Сила вони"
+       "Dota_Tooltip_ability_vyashich_rot_datadriven"       "Лютая вонь"
+       "Dota_Tooltip_ability_vyashich_rot_Description"      "Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
+       "Dota_Tooltip_ability_vyashich_tether"                  "Душнила"
+       "Dota_Tooltip_ability_vyashich_tether_Description"      "Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
+       "Dota_Tooltip_ability_vyashich_ascension_heal_suppression"                  "Одно присутствие"
+       "Dota_Tooltip_ability_vyashich_ascension_heal_suppression_datadriven"       "Вам страшно"
+       "Dota_Tooltip_ability_vyashich_ascension_heal_suppression_Description"      "Васич настолько сильно нагоняет страх только при виде, что буквально выжигает противников"
+       "Dota_Tooltip_ability_vyashich_naga_siren_song"                  "Дарк метал"
+       "Dota_Tooltip_ability_vyashich_naga_siren_song_datadriven"       "Минус уши"
+       "Dota_Tooltip_ability_vyashich_naga_siren_song_Description"      "Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
 
 		//ДИМА
 		"npc_dota_hero_morphling"        "Снюсовый морфлинг"
@@ -56,6 +56,15 @@
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
 
+		"Dota_Tooltip_ability_imba_batrider_flaming_lasso_senya"				 "Ласось"
+		"Dota_Tooltip_ability_imba_batrider_flaming_lasso_senya_Description"	 "Тут может быть ваша рекламма"
+		"Dota_Tooltip_ability_imba_techies_suicide_senya"				 		 "Баунс в окно"
+		"Dota_Tooltip_ability_imba_techies_suicide_senya_Description"		 	 "Тут может быть ваша рекламма"
+		"Dota_Tooltip_ability_undying_decay_senya"								 "Арсюша"
+		"Dota_Tooltip_ability_undying_decay_senya_Description"					 "После сами знаете чего..."
+
+		
+
 		//Некит
  		"npc_dota_hero_spirit_breaker"         "КАКАШКИ"
 
@@ -66,7 +75,7 @@
 		"npc_dota_hero_enigma"      		   "Занзак"
 
 		//Ботаник Дюк
-		"npc_dota_hero_tinker"     			   "Ботаник Дюк"
+		"npc_dota_hero_tinker_danya"     	   "Ботаник Дюк"
 
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"
@@ -94,6 +103,7 @@
 
 		//Алижа
 		"npc_dota_hero_undying"				   "Алижа"
+
 	}
 
 }

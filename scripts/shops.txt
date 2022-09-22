@@ -44,6 +44,7 @@
 		"item"		"item_river_painter2"	
 		"item"		"item_river_painter"
 		"item"		"item_heart_of_tarras"
+		"item"		"item_greater_mango"
 	}
 
 	"weapons_armor"
