@@ -1,0 +1,24 @@
+# Cache crap that Valve autogenerates
+*.bin
+*.cfg
+*.soc
+*.tmp
+*.vpk
+
+# Compiled formats
+*.vmat_c
+*.vagrp_c
+*.vmesh_c
+
+# Map files
+
+# Map overviews
+resource/overviews/*
+
+# eclipse
+.project
+.settings
+.DS_Store
+.idea
+
+node_modules
