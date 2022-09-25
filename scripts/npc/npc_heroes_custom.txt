@@ -58,12 +58,13 @@
 //=================================================================================================================
 	"npc_dota_hero_techies_senya"
 	{
+		"AttributePrimary"	   "DOTA_ATTRIBUTE_STRENGTH"
 		"override_hero"		   "npc_dota_hero_techies"	
 		"AbilityLayout"		   "4"
-		"Ability1"             "undying_decay_senya"	
-		"Ability2"		       "imba_techies_suicide_senya"
+		"Ability1"             "imba_undying_decay"	
+		"Ability2"		       "imba_techies_suicide"
 		"Ability3"             ""
-        "Ability4"             "imba_batrider_flaming_lasso_senya"	
+        "Ability4"             "imba_batrider_flaming_lasso"	
         "Ability5"             ""	
         "Ability6"             ""	
 	}

@@ -913,12 +913,12 @@
 	//=================================================================================================================
 	// Undying: Decay (Senya)
 	//=================================================================================================================
-	"undying_decay_senya"
+	"imba_undying_decay"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
-		"ScriptFile"					"-"
+		"ScriptFile"					"hero_undying.lua"
 		"AbilityTextureName"			"senya_decay"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -939,8 +939,8 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10 8 6 4"
-		"AbilityDuration"				"70"
+		"AbilityCooldown"				"10.0 8.0 6.0 4.0"
+		"AbilityDuration"				"45.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -953,18 +953,17 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"decay_damage"					"10 20 40 50"
+				"decay_damage"					"20 50 80 110"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"str_steal"						"10 20 30 50"
+				"str_steal"						"4 4 4 4"
 			}	
 			"03"
 			{
 				"var_type"						"FIELD_FLOAT"
 				"decay_duration"				"45"
-				//"LinkedSpecialBonus"			"special_bonus_unique_undying_4"
 				"LinkedSpecialBonus"			"special_bonus_imba_undying_decay_duration"
 			}
 			"04"
@@ -996,12 +995,12 @@
 	//=================================================================================================================
 	// Batrider: Flaming Lasso (Senya)
 	//=================================================================================================================
-	"imba_batrider_flaming_lasso_senya"
+	"imba_batrider_flaming_lasso"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
-		"ScriptFile"					"-"
+		"ScriptFile"					"hero_batrider.lua"
 		"AbilityTextureName"			"senya_laso"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -1012,7 +1011,6 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Batrider.FlamingLasso.Cast"
 
 		"HasScepterUpgrade"			"1"
@@ -1084,40 +1082,29 @@
 	//=================================================================================================================
 	// Techies' Blast Off (Senya)
 	//=================================================================================================================
-	"imba_techies_suicide_senya"
+	"imba_techies_suicide"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-		"FightRecapLevel"				"1"
-		"AbilityTextureName"			"senya_blast_off"
-	
+		"BaseClass"							"ability_lua"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"				"senya_blast_off"	
+		"ScriptFile"						"hero_techies.lua"	
+
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"		
-			"particle"		"particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+			"soundfile"						"soundevents/voscripts/game_sounds_vo_techies.vsndevts"			
+			"particle"						"particles/units/heroes/hero_techies/techies_blast_off_trail.vpcf"
+			"particle"						"particles/units/heroes/hero_techies/techies_blast_off.vpcf"
 		}
-	
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
-		"AbilityCastPoint"				"1 1 1 0.5"
-	
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20 15 10 5"
-	
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 125 150 175"
-	
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1125,135 +1112,27 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"small_radius"				"200"
+				"max_jumps"					"1 2 3 4"
 			}
 			"02"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"big_radius"				"500"
+				"var_type"					"FIELD_FLOAT"
+				"jump_max_height"			"500"
 			}
 			"03"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"500 650 850 1150"
+				"var_type"					"FIELD_FLOAT"
+				"jump_duration"				"0.75"
 			}
 			"04"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"partial_damage"			"260 300 340 380"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"respawn_time_percentage"		"0.5"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"respawn_time_percentage_tooltip"		"50"
-			}
-			// Extra
-			"07"
-			{
 				"var_type"					"FIELD_FLOAT"
-				"vision_radius"				"400"
+				"jump_continue_delay"		"0.5"
 			}
-			"08"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"vision_duration"			"2.0"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"FireSound"
-			{
-				"EffectName"	"Hero_Techies.Suicide"
-				"Target" 		"CASTER"
-			}
-	
-			"FireEffect"
-			{
-				"EffectName"        "particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
-				"EffectAttachType"  "follow_origin"
-				"Target"            "CASTER"
-			}
-	
-			"DestroyTrees"
-			{
-				"Target" 		"CASTER"
-				"Radius"		"%big_radius"
-			}
-	
-			"ActOnTargets"
-			{
-				"Target"
-				{
-					"Center"  	"CASTER"
-					"Radius" 	"%small_radius"
-					"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-					"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-				}
-			
-				"Action"    
-				{
-					"Damage"
-					{
-						"Target"
-						{
-							"Center"	"TARGET"
-							"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-						}
-						"Type"			"DAMAGE_TYPE_PHYSICAL"
-						"Damage"		"%damage - %partial_damage"
-					}
-				}
-			}
-	
-			"ActOnTargets"
-			{
-				"Target"
-				{
-					"Center"  	"CASTER"
-					"Radius" 	"%big_radius"
-					"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-					"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-				}
-			
-				"Action"    
-				{
-					"Damage"
-					{
-						"Target"
-						{
-							"Center"	"TARGET"
-							"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-						}
-						"Type"			"DAMAGE_TYPE_PHYSICAL"
-						"Damage"		"%partial_damage"
-					}
-				}
-			}
-	
-			"DelayedAction"
-			{
-				"Delay"     "0.03"
-				"Action"    
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"heroes/hero_techies/suicide.lua"
-						"Function"		"Suicide"
-					}
-				}
-			}	
-		}
+		}			
 	}
 
-
+	
 	//=================================================================================================================
 	// Tinker: Laser (Danya)
 	//=================================================================================================================
@@ -1379,8 +1258,6 @@
 			}
 		}
 	}
-
-
 
 
 }
