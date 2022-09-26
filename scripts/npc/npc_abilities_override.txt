@@ -1260,4 +1260,331 @@
 	}
 
 
+	//=================================================================================================================
+	// Ogre Magi: Multicast (Chicha)
+	//=================================================================================================================
+	"ogre_magi_multicast_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"ogre_magi_multicast_lua"
+		"AbilityTextureName"			"chicha_multicast"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+			"particle"	"particles/units/heroes/hero_ogre_magi/ogre_magi_multicast.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_2_times"		"0.8 0.5 0.4 0.2"
+			}
+
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_3_times"		"0 0.8 0.5 0.4"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_4_times"		"0 0 0.4 0.5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bloodlust_aoe"			"575"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_2_times_tooltip"		"75"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_3_times_tooltip"		"0 30 30 30"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_4_times_tooltip"		"0 0 15 15"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Lina: Laguna Blade (Chicha)
+	//=================================================================================================================
+	"lina_laguna_blade_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"lina_laguna_blade_lua"
+		"AbilityTextureName"			"chicha_laguna"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"3"
+		"HasScepterUpgrade"			"1"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+			"particle"	"particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.45 0.45 0.45"
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70 60 50"
+		"AbilityManaCost"				"280 420 680"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"450 650 850"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_range_scepter"		"600"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_delay"				"0.25"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Lion: Finger of Death (Chicha)
+	//=================================================================================================================
+	"lion_finger_of_death_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"lion_finger_of_death_lua"
+		"AbilityTextureName"			"chicha_finger"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		"HasScepterUpgrade"				"1"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+			"particle"	"particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"160.0 100.0 40.0"
+		"AbilityManaCost"				"200 420 650"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"600 725 850"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_scepter"			"725 875 1025"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_cost_scepter"			"200 420 625"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_delay"				"0.25"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown_scepter"			"100.0 60.0 20.0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"splash_radius_scepter"		"325"
+			}
+		}
+	}
+
+	
+	//=================================================================================================================
+	// Snapfire: Firesnap Cookie (Chicha)
+	//=================================================================================================================
+	"snapfire_firesnap_cookie_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"snapfire_firesnap_cookie_lua"
+		"AbilityTextureName"			"chicha_bounce"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_snapfire.vsndevts"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_projectile.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_selfcast.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_buff.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_receive.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_landing.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.2"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 14 10"
+		"AbilityManaCost"				"100"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"pre_hop_duration"		"0.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"jump_duration"			"0.484" //"0.431 0.484 0.538 0.592"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"jump_height"			"200 300 450 500"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"jump_horizontal_distance"	"300 450 600 650"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"pre_land_anim_time"	"0.14"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"landing_gesture_duration"	"0.6"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"impact_radius"			"300"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"impact_damage"			"100 160 230 300"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"impact_stun_duration"	"1.5 1.6 1.7 1.8"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"self_cast_delay"		"0.4"
+			}
+		}
+	}
+
+
+
 }
