@@ -26,25 +26,25 @@
 		"npc_dota_creature_basic_zombie"				"Клоун"
 		"npc_dota_creature_berserk_zombie"				"Клоуник"
 
-
-		//Васич
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	   //Васич
        "npc_dota_hero_wisp"        "Васич"
 
-       "Dota_Tooltip_ability_vyashich_rot"                  "Сила вони"
-       "Dota_Tooltip_ability_vyashich_rot_datadriven"       "Лютая вонь"
-       "Dota_Tooltip_ability_vyashich_rot_Description"      "Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
-       "Dota_Tooltip_ability_vyashich_tether"                  "Душнила"
-       "Dota_Tooltip_ability_vyashich_tether_Description"      "Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
-       "Dota_Tooltip_ability_vyashich_ascension_heal_suppression"                  "Одно присутствие"
-       "Dota_Tooltip_ability_vyashich_ascension_heal_suppression_datadriven"       "Вам страшно"
-       "Dota_Tooltip_ability_vyashich_ascension_heal_suppression_Description"      "Васич настолько сильно нагоняет страх только при виде, что буквально выжигает противников"
-       "Dota_Tooltip_ability_vyashich_naga_siren_song"                  "Дарк метал"
-       "Dota_Tooltip_ability_vyashich_naga_siren_song_datadriven"       "Минус уши"
-       "Dota_Tooltip_ability_vyashich_naga_siren_song_Description"      "Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
+       "Dota_Tooltip_ability_pudge_rot_lua"                  						"Сила вони"
+       "Dota_Tooltip_ability_pudge_rot_lua_datadriven"       						"Лютая вонь"
+       "Dota_Tooltip_ability_pudge_rot_lua_Description"      						"Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
+       "Dota_Tooltip_ability_aghsfort_wisp_tether"                  				"Душнила"
+       "Dota_Tooltip_ability_aghsfort_wisp_tether_Description"      				"Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
+       "Dota_Tooltip_ability_bristleback_warpath_lua"                 				"Одно присутствие"
+       "Dota_Tooltip_ability_bristleback_warpath_lua_datadriven"      				"Вам страшно"
+       "Dota_Tooltip_ability_bristleback_warpath_lua_Description"     				"Васич настолько сильно воняет что постепенно наращивает складки"
+       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua"                		"Дарк метал"
+       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_datadriven"     		"Минус уши"
+       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_Description"    		"Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Дима
+		"npc_dota_hero_morphling"        "Снюсовый морфлинг"	
 
-		//ДИМА
-		"npc_dota_hero_morphling"        "Снюсовый морфлинг"
-		
 		"Dota_Tooltip_ability_aghsfort_magnataur_skewer"                 		 "Барьба"
 		"Dota_Tooltip_ability_aghsfort_magnataur_skewer_Description"     		 "Не зря он учил этот приём, теперь он его будт отрабатывать"
 		"Dota_Tooltip_ability_magnus_push_horn_toss"     						 "Прогиб"
@@ -55,6 +55,9 @@
 		"Dota_Tooltip_ability_creature_kraken_shell_Description" 				 "150 милиграмм никотина помогут справиться с любой болью"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Сеня
+		"npc_dota_hero_techies"       		   "Сеня"
 
 		"Dota_Tooltip_ability_imba_batrider_flaming_lasso_senya"				 "Ласось"
 		"Dota_Tooltip_ability_imba_batrider_flaming_lasso_senya_Description"	 "Тут может быть ваша рекламма"
@@ -62,23 +65,55 @@
 		"Dota_Tooltip_ability_imba_techies_suicide_senya_Description"		 	 "Тут может быть ваша рекламма"
 		"Dota_Tooltip_ability_undying_decay_senya"								 "Арсюша"
 		"Dota_Tooltip_ability_undying_decay_senya_Description"					 "После сами знаете чего..."
-
-		
-
-		//Некит
- 		"npc_dota_hero_spirit_breaker"         "КАКАШКИ"
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Чича
 		"npc_dota_hero_ogre_magi"      		   "Чича"
+		
+		"Dota_Tooltip_ability_snapfire_firesnap_cookie_lua"							 "Нырнуть по закладку"
+		"Dota_Tooltip_ability_snapfire_firesnap_cookie_lua_Description"	 			 "Чича делает нырок за закладкой и просит своих союзников тоже исполнить этот финт"
+		"Dota_Tooltip_ability_lion_finger_of_death_lua"				 				 "Игал"
+		"Dota_Tooltip_ability_lion_finger_of_death_lua_Description"		 			 "Ответ на любую отрыжку в сторону Чичи, лучше вам не знать что это..."
+		"Dota_Tooltip_ability_lina_laguna_blade_lua"								 "Ачич"
+		"Dota_Tooltip_ability_lina_laguna_blade_lua_Description"					 "Только на одних ардуинах он смог сделать такую сильную лазерную указку, от которой точно будет больно"
+		"Dota_Tooltip_ability_ogre_magi_multicast_lua"								 "Ульта бумбокс"
+		"Dota_Tooltip_ability_ogre_magi_multicast_lua_Description"					 "Бит бокс бум бум бокс бит бит бит бокс бум бикс бим бом бокс"
+		
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//ReeZox
+		"npc_dota_hero_nevermore"              "ReeZox"
+		
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_a_lua"							 "ReeVox"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_a_lua_Description"	 			 "ReeShadowrazeVeryShort"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_b_lua"							 "ReeZxc"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_b_lua_Description"	 			 "ReeShadowrazeShort"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_c_lua"							 "ReePax"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_c_lua_Description"	 			 "ReeShadowrazeMiddle"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_d_lua"							 "ReeBux"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_d_lua_Description"	 			 "ReeShadowrazeLong"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_e_lua"							 "ReeDux"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_e_lua_Description"	 			 "ReeShadowrazeYarikPenis"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua"							 "ReeZox"
+		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua_Description"	 			 "ReeShadowrazeOneShot"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Ботаник Дюк
+		"npc_dota_hero_tinker"     	   "Ботаник Дюк"
+
+		"Dota_Tooltip_ability_tinker_laser_lua"									 "Лазер oK?"
+		"Dota_Tooltip_ability_tinker_laser_lua_Description"						 "Этот придурок начитался так много книг что теперь сделал эту хрень и хуячит во всех!!!"
+		"Dota_Tooltip_ability_lion_hex_lua"							  			 "Свввииииинннньььяяя!"
+		"Dota_Tooltip_ability_lion_hex_lua_Description"							 "Что будет если нажать на этериал? ответ очевиден: HEX"
+		"Dota_Tooltip_ability_tinker_rearm_lua"									 "Переосмысление..."
+		"Dota_Tooltip_ability_tinker_rearm_lua_Description"				 		 "Взяв сигу, Даня начинает слишком много думать, заставляя свой мозг перезагрузить всё что он знал"
+		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
+		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		//Некитос
+ 		"npc_dota_hero_spirit_breaker"         "КАКАШКИ"
 
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
-
-		//Ботаник Дюк
-		"npc_dota_hero_tinker_danya"     	   "Ботаник Дюк"
-
-		//Сеня
-		"npc_dota_hero_techies"       		   "Сеня"
 
 		//ТimurTheTitan
 		"npc_dota_hero_elder_titan"        	   "ТimurTheTitan"
@@ -92,9 +127,6 @@
 		//Тёмыч
 		"npc_dota_hero_storm_spirit"           "Тёмыч"
 
-		//ReeZox
-		"npc_dota_hero_nevermore"              "ReeZox"
-
 		//Felix
 		"npc_dota_hero_clinkz" 				   "Felix"
 
@@ -104,6 +136,8 @@
 		//Алижа
 		"npc_dota_hero_undying"				   "Алижа"
 
+		//Перик
+		"npc_dota_hero_lone_druid"			"Переверик"
 	}
 
 }

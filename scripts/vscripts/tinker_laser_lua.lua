@@ -109,7 +109,7 @@ end
 function tinker_laser_lua:PlayEffects( targets )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_tinker/tinker_laser.vpcf"
-	local sound_cast = "Hero_Tinker.Laser"
+	local sound_cast = "CustomLaser"
 	local sound_target = "Hero_Tinker.LaserImpact"
 
 	-- Create Particle

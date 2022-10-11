@@ -4,7 +4,7 @@ tinker_rearm_lua = class({})
 -- Ability Start
 function tinker_rearm_lua:OnSpellStart()
 	-- effects
-	local sound_cast = "Hero_Tinker.Rearm"
+	local sound_cast = "CustomRearm"
 	EmitSoundOn( sound_cast, self:GetCaster() )
 end
 
@@ -72,12 +72,12 @@ tinker_rearm_lua.ItemException = {
 -- Effects
 function tinker_rearm_lua:PlayEffects()
 	-- Get Resources
-	local particle_cast = "particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+	local particle_cast = "particles/econ/items/tinker/boots_of_travel/teleport_start_bots_top.vpcf"
 	local sound_cast = "Hero_Tinker.RearmStart"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
-	assert(loadfile("lua_abilities/rubick_spell_steal_lua/rubick_spell_steal_lua_color"))(self,effect_cast)
+	assert(loadfile("rubick_spell_steal_lua_color"))(self,effect_cast)
 	ParticleManager:ReleaseParticleIndex( effect_cast )
 
 	EmitSoundOn( sound_cast, self:GetCaster() )
