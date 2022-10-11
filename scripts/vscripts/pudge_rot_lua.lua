@@ -1,24 +1,23 @@
-vyashich_rot = class({})
-LinkLuaModifier( "modifier_vyashich_rot", LUA_MODIFIER_MOTION_NONE )
+pudge_rot_lua = class({})
+LinkLuaModifier( "modifier_pudge_rot_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 
-function vyashich_rot:ProcsMagicStick()
+function pudge_rot_lua:ProcsMagicStick()
 	return false
 end
 
 --------------------------------------------------------------------------------
 
-function vyashich_rot:OnToggle()
+function pudge_rot_lua:OnToggle()
 	if self:GetToggleState() then
-		self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_vyashich_rot", nil )
+		self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_pudge_rot_lua", nil )
 
 		if not self:GetCaster():IsChanneling() then
 			self:GetCaster():StartGesture( ACT_DOTA_CAST_ABILITY_ROT )
-			EmitSoundOn("bruh", self:GetCaster())
 		end
 	else
-		local hRotBuff = self:GetCaster():FindModifierByName( "modifier_vyashich_rot" )
+		local hRotBuff = self:GetCaster():FindModifierByName( "modifier_pudge_rot_lua" )
 		if hRotBuff ~= nil then
 			hRotBuff:Destroy()
 		end
