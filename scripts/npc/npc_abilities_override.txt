@@ -226,27 +226,27 @@
 	}
 
 	//=================================================================================================================
-	// Remove Dagon (only dagon5)
+	// Remove Dagon
 	//=================================================================================================================
 	"item_dagon"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 	"item_dagon_1"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 	"item_dagon_2"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 	"item_dagon_3"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 	"item_dagon_4"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 	"item_dagon_5"
 	{
@@ -254,7 +254,7 @@
 	}
 	"item_recipe_dagon"
 	{
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 	}
 
 	//=================================================================================================================
@@ -300,25 +300,40 @@
 
 
 
-    //=================================================================================================================
-	// Ability: Pudge Rot (Vyasich)
-	//=================================================================================================================
-	"vyashich_rot"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------														
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"vyasich_rot"
-		"ScriptFile"					"pudge_rot_lua"
-		
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
 
+
+	//=================================================================================================================
+	// Bristleback: Warpath (Vyashich)
+	//=================================================================================================================
+	"bristleback_warpath_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bristleback_warpath_lua"
+		"AbilityTextureName"			"vyasich_aura"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_bristleback.vsndevts"
+			"particle"	"particles/units/heroes/hero_bristleback/bristleback_warpath.vpcf"
+			"particle"	"particles/units/heroes/hero_bristleback/bristleback_warpath_dust.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -326,23 +341,23 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"rot_radius"			"500"
+				"var_type"						"FIELD_INTEGER"
+				"damage_per_stack"					"40 80 120 160"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"rot_tick"				"0.1"
+				"var_type"						"FIELD_INTEGER"
+				"move_speed_per_stack"				"30 50 80 120"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"rot_slow"				"-20 -30 -40 -50"
+				"var_type"						"FIELD_FLOAT"
+				"stack_duration"				"20"
 			}
 			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"rot_damage"			"200 400 500 600"
+				"var_type"						"FIELD_INTEGER"
+				"max_stacks"					"5 7 9 12"
 			}
 		}
 	}
@@ -350,7 +365,7 @@
     //=================================================================================================================
     // Wisp: Tether (Vyasich)
     //=================================================================================================================
-    "vyashich_tether"
+    "aghsfort_wisp_tether"
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
@@ -447,69 +462,101 @@
         }
     }
 
-    //=================================================================================================================
-    // Ability: Heartstopper Aura (Vyasich)
-    //=================================================================================================================
-    "vyashich_ascension_heal_suppression"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "BaseClass"                     "ability_lua"
-        "ScriptFile"                    "ascension_heal_suppression"        
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "MaxLevel"                      "5"
-        "IsOnCastBar"                   "1"
-        "AbilityTextureName"            "vyasich_aura"        
-
-        // Special
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                 "FIELD_INTEGER"
-                "heal_suppression_pct"     "50"
-            }   
-            "02"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "radius"                    "400"
-            }   
-        }
-    }    
-
-
-    //=================================================================================================================
-	// Naga Siren: Song of the Siren (Vyasich)
+  	//=================================================================================================================
+	// Ability: Pudge Rot (Vyasich)
 	//=================================================================================================================
-	"vyashich_naga_siren_song"
+	"pudge_rot_lua"
 	{
 		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5470"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		//-------------------------------------------------------------------------------------------------------------														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"HasScepterUpgrade"			    "1"
-		"AbilitySound"					""
-		"AbilityTextureName"            "vyasich_song"
+		"FightRecapLevel"				"1"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"vyasich_rot"
+		"ScriptFile"					"pudge_rot_lua"
+		
+		"precache"
+		{
+			"soundfile"	""
+		}
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"2.0"
-		"AbilityCastRange"				"1000 1200 1400"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastPoint"				"0 0 0 0"
 
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50"
 
-		// Cost
+		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"200"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rot_radius"			"450"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rot_tick"				"0.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rot_slow"				"-20 -25 -30 -35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rot_damage"				"80 120 140 180"
+			}
+		}
+	}
+	
+
+
+	//=================================================================================================================
+	// Naga Siren: Song of the Siren (Vyashich)
+	//=================================================================================================================
+	"naga_siren_song_of_the_siren_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"naga_siren_song_of_the_siren_lua"
+		"AbilityTextureName"			"vyasich_song"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"3"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+			"particle"	"particles/status_fx/status_effect_siren_song.vpcf"
+			"particle"	"particles/units/heroes/hero_siren/naga_siren_siren_song_cast.vpcf"
+			"particle"	"particles/units/heroes/hero_siren/naga_siren_song_aura.vpcf"
+			"particle"	"particles/units/heroes/hero_siren/naga_siren_song_debuff.vpcf"
+		}
 		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"1.0"
+		"AbilityCastRange"				"1000 1200 1400"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"160.0 120.0 80.0"
+		"AbilityManaCost"				"150 175 200"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -517,12 +564,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"1000"
+				"radius"					"1000 1200 1400"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"7.0"
+				"duration"					"7.0 7.0 7.0"
 			}
 			"03"
 			{
@@ -537,15 +584,46 @@
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"regen_rate_self"				"100.0"
+				"regen_rate_self"				"10.0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"regen_rate_tooltip_scepter"				"100"
+				"regen_rate_tooltip_scepter"				"10"
 				"RequiresScepter"	"1"
 			}
 		}
+	}
+
+	//=================================================================================================================
+	// Naga Siren: Song of the Siren End (Vyashich)
+	//=================================================================================================================
+	"naga_siren_song_of_the_siren_end_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"naga_siren_song_of_the_siren_lua"
+		"AbilityTextureName"			"vyasich_song_end"
+		"MaxLevel"						"1"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.0 1.0 1.0"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
 	}
 
 
@@ -1148,7 +1226,7 @@
 		
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+			"soundfile"	"soundevents/Danya.vsndevts"
 			"particle"	"particles/units/heroes/hero_tinker/tinker_laser.vpcf"
 		}
 		
@@ -1225,7 +1303,7 @@
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+			"soundfile"	"soundevents/Danya.vsndevts"
 			"particle"	"particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
 		}
 		
@@ -1255,6 +1333,150 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"channel_tooltip"			"3.0 1.5 0.75"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Lion: Hex (Danya)
+	//=================================================================================================================
+	"lion_hex_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"lion_hex_lua"
+		"AbilityTextureName"			"hex_danya"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Danya.vsndevts"
+			"particle"	"particles/units/heroes/hero_lion/lion_spell_voodoo.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0 24.0 18.0 12.0"
+		"AbilityManaCost"				"125 150 175 200"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"2 3 3.4 3.8"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed"					"140"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Tinker: March of the Machines (Danya)
+	//=================================================================================================================
+	"tinker_march_of_the_machines_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"tinker_march_of_the_machines_lua"
+		"AbilityTextureName"			"kobold_danya"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"HasScepterUpgrade"				"1"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/Danya.vsndevts"
+			"particle"	"particles/units/heroes/hero_tinker/tinker_machine.vpcf"
+			"particle"	"particles/units/heroes/hero_tinker/tinker_motm.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"2"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35.0"
+		"AbilityManaCost"				"145 150 165 190"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"30 50 80 100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"collision_radius"		"50 50 50 50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"splash_radius"			"150 150 150 150"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"6.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed"					"400 400 400 400"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"machines_per_sec"		"24"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"distance"				"1800"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"distance_scepter"		"1800"
 			}
 		}
 	}
@@ -1581,6 +1803,449 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"self_cast_delay"		"0.4"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Shadow Fiend: Shadowrazes (Yarik)
+	//=================================================================================================================
+	"shadow_fiend_shadowraze_a_lua"
+	{
+		// base script folder	: scripts/vscripts
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"AbilityTextureName"			"yarik_coil1"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"shadow_fiend_shadowraze_b_lua"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"90"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 300"	
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_radius"	"250"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_range"	"200"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_cooldown"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "80"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"8"
+			}
+		}
+	}
+
+	
+	"shadow_fiend_shadowraze_b_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"AbilityTextureName"			"yarik_coil2"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"shadow_fiend_shadowraze_c_lua"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"90"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 300"	
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_radius"	"250"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_range"	"350"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_cooldown"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "80"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"8"
+			}
+		}
+	}
+
+	"shadow_fiend_shadowraze_c_lua"
+	{
+
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"AbilityTextureName"			"yarik_coil3"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"shadow_fiend_shadowraze_a_lua"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"90"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 300"	
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_radius"	"250"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_range"	"500"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_cooldown"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "80"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"8"
+			}
+		}
+	}
+
+	"shadow_fiend_shadowraze_d_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"AbilityTextureName"			"yarik_coil4"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"shadow_fiend_shadowraze_c_lua"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"650"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"90"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 300"	
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_radius"	"250"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_range"	"650"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_cooldown"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "80"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"8"
+			}
+		}
+	}
+
+	"shadow_fiend_shadowraze_e_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"AbilityTextureName"			"yarik_coil5"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"LinkedAbility"					"shadow_fiend_shadowraze_d_lua"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"90"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 300"	
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_radius"	"250"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_range"	"800"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_cooldown"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "80"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"8"
+			}
+		}
+	}
+
+	"shadow_fiend_shadowraze_f_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"AbilityTextureName"			"yarik_coil6"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"LinkedAbility"					"shadow_fiend_shadowraze_e_lua"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"950"
+		"AbilityCastPoint"				"2"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityManaCost"				"900"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"999999"	
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_radius"	"100"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_range"	"950"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_cooldown"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "80"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"8"
 			}
 		}
 	}
