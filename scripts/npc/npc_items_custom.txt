@@ -70,60 +70,42 @@
 
 
 	//=================================================================================================================
-	// Recipe: Item_heart_of_tarras
+	// Recipe: Item_helm_of_tarras
 	//=================================================================================================================
-	"item_recipe_heart_of_tarras"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"14201"	
-		"Model"							"models/props_gameplay/recipe.vmdl"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_heart_of_tarras"
-		"ItemRequirements"
-		{
-			"01"						"item_heart;item_heart;item_heart"
-		}
-	}
+	"item_recipe_helm_of_tarras"
+{
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "300" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_helm_of_tarras" //the result of combining the ItemRequirements
+    "ItemRequirements"
+    {
+        "01" "item_heart;item_heart;item_heart"
+    }
+}
 	
 	//=================================================================================================================
-	// Heart
+	// Helm of tarras
 	//=================================================================================================================
-	"item_heart_of_tarras"
+	"item_helm_of_tarras"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"14200"	
+		"ID"							"13000"					// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"15000"
+		"ItemCost"						"14850"
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"hot;heart of tarrasque"
+		"ItemAliases"					"hot;helm of tarrasque"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"AbilityTextureName"			"item_desolator_2"
-		"AbilityName"					"item_heart_of_tarras"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemPurchasable"				"1"
-		"ItemStackable"					"0"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"0"
-		"ItemKillable"					"1"
-		"ItemCastOnPickup"				"1"
+		"AbilityTextureName" 			"helm_of_tarras"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -132,17 +114,27 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"3000"
+				"bonus_strength"		"150"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"2500"
+				"bonus_health"			"1000"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen_pct"		"10"
+				"health_regen_rate"		"15"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"		"3"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"3"
 			}
 		}
 	}
