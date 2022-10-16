@@ -16,7 +16,7 @@ LinkLuaModifier( "modifier_generic_stunned_lua", "modifier_generic_stunned_lua",
 --------------------------------------------------------------------------------
 -- Init Abilities
 function marci_dispose_lua:Precache( context )
-	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_marci.vsndevts", context )
+	PrecacheResource( "soundfile", "soundevents/Dima.vsndevts", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_marci/marci_dispose_aoe_damage.vpcf", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_marci/marci_dispose_debuff.vpcf", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_marci/marci_dispose_land_aoe.vpcf", context )
@@ -189,7 +189,7 @@ end
 function marci_dispose_lua:PlayEffects3( caster, target, duration )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_marci/marci_dispose_debuff.vpcf"
-	local sound_cast = "Hero_Marci.Grapple.Target"
+	local sound_cast = "CustomRock"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_POINT_FOLLOW, caster )

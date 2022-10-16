@@ -19,7 +19,7 @@ end
 function modifier_lion_hex_lua:OnCreated( kv )
 	-- references
 	self.base_speed = self:GetAbility():GetSpecialValueFor( "movespeed" )
-	self.model = "models/props_gameplay/pig.vmdl"
+	self.model = "models/creeps/neutral_creeps/n_creep_kobold/kobold_b/n_creep_kobold_b.vmdl"
 
 	if IsServer() then
 		-- play effects

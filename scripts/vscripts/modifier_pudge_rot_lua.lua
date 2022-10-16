@@ -49,7 +49,7 @@ function modifier_pudge_rot_lua:OnCreated( kv )
 
 	if IsServer() then
 		if self:GetParent() == self:GetCaster() then
-			EmitSoundOn( "Hero_Pudge.Rot", self:GetCaster() )
+			EmitSoundOn( "CustomRot", self:GetCaster() )
 			local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_pudge/pudge_rot.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
 			ParticleManager:SetParticleControl( nFXIndex, 1, Vector( self.rot_radius, 1, self.rot_radius ) )
 			self:AddParticle( nFXIndex, false, false, -1, false, false )
@@ -67,7 +67,7 @@ end
 
 function modifier_pudge_rot_lua:OnDestroy()
 	if IsServer() then
-		StopSoundOn( "Hero_Pudge.Rot", self:GetCaster() )
+		StopSoundOn( "CustomRot", self:GetCaster() )
 	end
 end
 

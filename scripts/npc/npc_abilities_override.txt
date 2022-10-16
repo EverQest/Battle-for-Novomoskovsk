@@ -300,8 +300,6 @@
 
 
 
-
-
 	//=================================================================================================================
 	// Bristleback: Warpath (Vyashich)
 	//=================================================================================================================
@@ -365,102 +363,438 @@
     //=================================================================================================================
     // Wisp: Tether (Vyasich)
     //=================================================================================================================
-    "aghsfort_wisp_tether"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityTextureName"            "vyasich_tether"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
-        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+	"wisp_tether_datadriven"
+	{	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"vyasich_tether"
+		"CastFilterRejectCaster" 		"1"
 
-        "IsOnCastBar"                   "1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.001 0.001 0.001 0.001"
 
-        // Casting
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastPoint"              "0"
-        "AbilityCastAnimation"          "ACT_INVALID"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 14 12"
+		"AbilityDuration"				"50 50 50 50"
 
-        // Time     
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "5"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40 40 40 40"
+	
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1800 1800 1800 1800"
 
-        // Cost
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "80"
-        
-        // Cast Range
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "1000"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"900 900 900 900"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed"					"20 40 50 100"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"latch_distance"			"700 700 700 700"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"latch_speed"				"1000 1000 1000 1000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tether_duration"			"50.0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tether_heal_amp"			"100.0 120.0 130.0 140.0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow"						"-100"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attackslow_tooltip"			"-100"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"0.75 1.25 1.75 2.25"
+			}
+			// Extra variables
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"latch_distance_to_target"	"300"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"latch_destroy_tree_radius"	"350"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"latch_tick_interval"		"0.03"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tether_line_radius"		"32"
+			}
+			"14"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tether_line_tick_interval"	"0.03"
+			}
+		}
+	
+		// Data driven
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/Vyashich.vsndevts"
+			"particle"					"particles/units/heroes/hero_wisp/wisp_tether.vpcf"
+			"particle"					"particles/units/heroes/hero_wisp/wisp_tether_hit.vpcf"
+			"particle"					"particles/units/heroes/hero_wisp/wisp_tether_slow.vpcf"
+		}
+		
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"		"CASTER"
+				"ModifierName"	"modifier_tether_caster_datadriven"
+			}
+			
+			"ApplyModifier"
+			{
+				"Target"		"TARGET"
+				"ModifierName"	"modifier_tether_ally_datadriven"
+			}
+			
+			"RunScript"
+			{
+				"ScriptFile"		"tether.lua"
+				"Function"			"CastTether"
+				"Target"			"TARGET"
+				
+				"latch_distance"	"%latch_distance"
+				"latch_modifier"	"modifier_tether_caster_latching_datadriven"
+				
+				"sub_ability_name"	"wisp_tether_break_datadriven"
+			}
+		}
+	
+		"OnUpgrade"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"tether.lua"
+				"Function"		"LevelUpAbility"
+				"ability_name"	"wisp_tether_break_datadriven"
+			}
+		}
 
-        // Special
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "radius"                    "900 900 900 900"
-            }
-            "02"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "movespeed"                 "20 25 30 40"
-            }
-            "03"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "latch_distance"            "300"
-            }
-            "04"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "latch_speed"               "1000 1000 1000 1000"
-            }
-            "05"
-            {
-                "var_type"                  "FIELD_FLOAT"
-                "tether_heal_amp"           "5"
-            }
-            "06"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "self_bonus"                "20"
-            }
-            "07"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "slow"                      "25"
-            }
-            "08"
-            {
-                "var_type"                  "FIELD_FLOAT"
-                "slow_duration"             "5.5"
-            }
-            "09"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "movement_speed"             "15"
-            }
-            "10"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "attack_speed"             "15 20 25 30"
-            }
-            "11"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "health_regen"             "20 30 40 50"
-            }
-            "12"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "status_resist"             "20 25 30 35"
-            }
-        }
-    }
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+
+			"RunScript"
+			{
+				"ScriptFile"		"tether.lua"
+				"Function"			"OnProjectileHit"
+				"Target"			"TARGET"
+
+				"slow_modifier"		"modifier_tether_slow_datadriven"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_tether_caster_datadriven"
+			{
+				"IsBuff"	"1"
+				"Duration"	"%tether_duration"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movespeed"
+				}
+
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"		"CustomTeather"	// a loop sound
+						"Target"			"CASTER"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RemoveModifier"
+					{
+						"Target"			"CASTER"
+						"ModifierName"		"modifier_tether_caster_latching_datadriven"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"		"tether.lua"
+						"Function"			"EndTether"
+
+						"ally_modifier"		"modifier_tether_ally_datadriven"
+						"sub_ability_name"	"wisp_tether_break_datadriven"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"		"tether.lua"
+						"Function"			"StopSound"
+						"sound_name"		"CustomTeather"
+					}
+
+					"FireSound"
+					{
+						"EffectName"		"Hero_Wisp.Tether.Stop"
+						"Target"			"CASTER"
+					}
+				}
+
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"TrackCurrentHealth"
+					}
+				}
+
+				"OnHealReceived"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"HealAlly"
+						"tether_heal_amp"	"%tether_heal_amp"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"TrackCurrentHealth"
+					}
+				}
+
+				"OnHealthGained"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"HealAlly"
+						"tether_heal_amp"	"%tether_heal_amp"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"TrackCurrentHealth"
+					}
+				}
+
+				"OnSpentMana"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"GiveManaToAlly"
+						"tether_heal_amp"	"%tether_heal_amp"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"TrackCurrentMana"
+					}
+				}
+
+				"OnManaGained"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"GiveManaToAlly"
+						"tether_heal_amp"	"%tether_heal_amp"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"TrackCurrentMana"
+					}
+				}
+
+				"ThinkInterval"		"0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"TrackCurrentHealth"
+					}
+				//	"RunScript"
+				//	{
+				//		"ScriptFile"	"tether.lua"
+				//		"Function"		"TrackCurrentMana"
+				//	}
+					"RunScript"
+					{
+						"ScriptFile"	"tether.lua"
+						"Function"		"CheckDistance"
+
+						"radius"			"%radius"
+						"caster_modifier"	"modifier_tether_caster_datadriven"
+						"latch_modifier"	"modifier_tether_caster_latching_datadriven"
+					}
+				}
+			}
+		
+			"modifier_tether_caster_latching_datadriven"
+			{
+				"IsHidden"	"1"
+
+				"Duration"	"%tether_duration"
+
+				"ThinkInterval"		"%latch_tick_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"tether.lua"
+						"Function"			"Latch"
+
+						"tick_interval"				"%latch_tick_interval"
+						"latch_speed"				"%latch_speed"
+						"latch_distance_to_target"	"%latch_distance_to_target"
+						"latch_modifier"			"modifier_tether_caster_latching_datadriven"
+					}
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ROOTED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+				"OnDestroy"
+				{
+					"DestroyTrees"
+					{
+						"Target"		"TARGET"
+						"Radius"		"%latch_destroy_tree_radius"
+					}
+				}
+			}
+		
+			"modifier_tether_ally_datadriven"
+			{
+				"IsBuff"	"1"
+				"Duration"	"%tether_duration"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movespeed"
+				}
+
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"		"CustomTeather"
+						"Target"			"TARGET"
+					}
+
+					"AttachEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_wisp/wisp_tether.vpcf"
+						"EffectAttachType"	"attach_hitloc"
+						"Target"			"TARGET"
+
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_hitloc"
+							"TARGET"	"attach_hitloc"
+						}
+					}
+				}
+			
+				"ThinkInterval"			"%tether_line_tick_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"tether.lua"
+						"Function"			"FireTetherProjectile"
+						"Target"			"TARGET"
+
+						"tether_line_radius"	"%tether_line_radius"
+						"tick_interval"			"%tether_line_tick_interval"
+					}
+				}
+			}
+
+			"modifier_tether_slow_datadriven"
+			{
+				"IsDebuff"	"1"
+
+				"Duration"	"%stun_duration"
+
+				"EffectName"		"particles/units/heroes/hero_wisp/wisp_tether_slow.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow"
+				}
+
+				"OnCreated"
+				{
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_wisp/wisp_tether_slow.vpcf"
+						"EffectAttachType"	"attach_hitloc"
+						"Target"			"TARGET"
+					}
+
+					"FireSound"
+					{
+						"EffectName"	"Hero_Wisp.Tether.Stun"
+						"Target"		"TARGET"
+					}
+				}
+			}
+		}
+	}
 
   	//=================================================================================================================
 	// Ability: Pudge Rot (Vyasich)
@@ -479,7 +813,7 @@
 		
 		"precache"
 		{
-			"soundfile"	""
+			"soundfile"	"soundevents/Vyashich.vsndevts"
 		}
 
 		// Casting
@@ -530,7 +864,7 @@
 
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+			"soundfile"	"soundevents/Vyashich.vsndevts"
 			"particle"	"particles/status_fx/status_effect_siren_song.vpcf"
 			"particle"	"particles/units/heroes/hero_siren/naga_siren_siren_song_cast.vpcf"
 			"particle"	"particles/units/heroes/hero_siren/naga_siren_song_aura.vpcf"
@@ -579,12 +913,12 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"regen_rate"				"10.0"
+				"regen_rate"				"100 120 130 150"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"regen_rate_self"				"10.0"
+				"regen_rate_self"			"100 120 130 150"
 			}
 			"06"
 			{
@@ -637,7 +971,7 @@
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "magnus_push_horn_toss"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"   
 		"AbilityTextureName"            "dima_horn_toss"
@@ -808,9 +1142,10 @@
 		"ScriptFile"					"tiny_toss_lua"
 		"AbilityTextureName"			"dima_toss"
 		"MaxLevel"						"4"
+
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
+			"soundfile"	"soundevents/Dima.vsndevts"
 		}
 		
 		// Ability General
@@ -843,7 +1178,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"2 5 7 14"
+				"duration"				"15"
 			}
 			"02"
 			{
@@ -917,6 +1252,11 @@
 		"AbilityTextureName"			"dima_boot_kick"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/Dima.vsndevts"
+		}
 		
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
@@ -953,7 +1293,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"air_duration"		"14 7 5 2"
+				"air_duration"		"2"
 			}
 			"03"
 			{
@@ -991,84 +1331,61 @@
 	//=================================================================================================================
 	// Undying: Decay (Senya)
 	//=================================================================================================================
-	"imba_undying_decay"
+	"undying_decay_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	
+	"AbilityCastRange"				"625"
+	"AbilityCastPoint"				"0.45 0.45 0.45 0.45"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"senya_decay"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0 8.0 6.0 4.0"
+	"AbilityDuration"				"21.0 24.0 27.0 30.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"70 90 110 130"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"hero_undying.lua"
-		"AbilityTextureName"			"senya_decay"
-		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilitySound"					"Hero_Undying.Decay.Cast"
-		"FightRecapLevel"				"1"
-		"HasScepterUpgrade"				"1"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastAnimation"			"ACT_DOTA_UNDYING_DECAY"
-		"AbilityCastGestureSlot"		"DEFAULT"
-		"AbilityCastRange"				"650"
-		"AbilityCastPoint"				"0.45 0.45 0.45 0.45"
-		
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10.0 8.0 6.0 4.0"
-		"AbilityDuration"				"45.0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"70 85 100 115"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"decay_damage"					"20 50 80 110"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"str_steal"						"4 4 4 4"
-			}	
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"decay_duration"				"45"
-				"LinkedSpecialBonus"			"special_bonus_imba_undying_decay_duration"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"radius"						"325 325 325 325"
-			}			
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"str_scale_up"					"2"
-			}		
-			"06"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"str_steal_scepter"				"10 10 10 10"
-				"RequiresScepter"	"1"
-			}
-			
-			"07"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"brains_int_pct"				"20"
-			}
+			"var_type"						"FIELD_INTEGER"
+			"decay_damage"					"20 60 100 140"
 		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"						"325"
+		}			
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"decay_duration"				"40.0"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"str_steal"						"4"
+		}	
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"str_scale_up"					"2"
+		}					
 	}
-
+}
 
 	//=================================================================================================================
 	// Batrider: Flaming Lasso (Senya)
@@ -1156,22 +1473,159 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Nyx Assassin Carapace(Senya)
+	//=================================================================================================================
+	"nyx_assassin_spiked_carapace_datadriven"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"nyx_assassin_spiked_carapace"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+	"AbilityCastPoint"				"0 0 0 0"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"reflect_duration"			"999999"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"2.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_damage"				"0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor"				"0"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_intellect"			"0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"chance_pct"				"17 25 33 37"
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"						"particles/generic_gameplay/generic_stunned.vpcf"
+		"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace.vpcf"
+		"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace_hit.vpcf"
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"				"spiked_carapace.lua"
+			"Function"					"spiked_carapace_init"
+		}
+		
+		"ApplyModifier"
+		{
+			"Target"					"CASTER"
+			"ModifierName"				"modifier_spiked_carapace_buff_datadriven"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_spiked_carapace_buff_datadriven"
+		{
+			"IsBuff"				"0"
+			"IsPurgable"			"0"
+		
+			"Duration"				"%reflect_duration"
+			
+			"EffectName"			"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace.vpcf"
+			
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"spiked_carapace.lua"
+					"Function"		"spiked_carapace_reflect"
+					"DamageTaken"	"%attack_damage"
+				}
+			}
+		}
+		
+		"modifier_spiked_carapaced_stun_datadriven"
+		{
+			"IsDebuff"				"1"
+		
+			"Duration"				"%stun_duration"
+			
+			"OverrideAnimation"		"ACT_DOTA_DISABLED"
+			
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"Target"			"TARGET"
+					"EffectName"		"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace_hit.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"ControlPoints"
+					{
+						"02"			"%stun_duration %stun_duration %stun_duration"
+					}
+				}
+			
+				"AttachEffect"
+				{
+					"Target"			"TARGET"
+					"EffectName"		"particles/generic_gameplay/generic_stunned.vpcf"
+					"EffectAttachType"	"follow_overhead"
+				}
+			}
+			
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	  }
+	}
 
 	//=================================================================================================================
 	// Techies' Blast Off (Senya)
 	//=================================================================================================================
-	"imba_techies_suicide"
+	"mina_explosion_jump"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+
 		"BaseClass"							"ability_lua"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitDamageType"				"DAMAGE_TYPE_PURE"
 		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityTextureName"				"senya_blast_off"	
-		"ScriptFile"						"hero_techies.lua"	
+		"MaxLevel"							"4"
+		"ScriptFile"						"explosive_jump"
 
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -1179,36 +1633,44 @@
 		{
 			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
 			"soundfile"						"soundevents/voscripts/game_sounds_vo_techies.vsndevts"			
-			"particle"						"particles/units/heroes/hero_techies/techies_blast_off_trail.vpcf"
-			"particle"						"particles/units/heroes/hero_techies/techies_blast_off.vpcf"
+			"particle"						"particles/heroes/hero_mina/explosivejump.vpcf"
 		}
 
-		// Special
+		// Casting
 		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"					"1"
+		
+		
+
+		"AbilityCooldown"					"30 28 26 24"
+
+
+		"AbilityManaCost"					"100 150 175 200"
+
+
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_jumps"					"1 2 3 4"
+				"damage"					"1000 1500 2000 2500"
 			}
+
 			"02"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"jump_max_height"			"500"
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"50"
 			}
+			
 			"03"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"jump_duration"				"0.75"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"jump_continue_delay"		"0.5"
+				"var_type"					"FIELD_INTEGER"
+				"silence"					"4 5 6 7"
 			}
 		}			
 	}
+
+
 
 	
 	//=================================================================================================================
@@ -1409,7 +1871,7 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Danya.vsndevts"
-			"particle"	"particles/units/heroes/hero_tinker/tinker_machine.vpcf"
+			"particle"	"particles/tinker_rollermaw.vpcf"
 			"particle"	"particles/units/heroes/hero_tinker/tinker_motm.vpcf"
 		}
 		

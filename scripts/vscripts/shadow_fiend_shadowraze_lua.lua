@@ -95,7 +95,7 @@ end
 
 function shadowraze.PlayEffects( this, position, radius )
 	-- get resources
-	local particle_cast = "particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
+	local particle_cast = "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_shadowraze.vpcf"
 	local sound_cast = "Hero_Nevermore.Shadowraze"
 
 	-- create particle

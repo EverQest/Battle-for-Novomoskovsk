@@ -60,7 +60,7 @@ end
 function tinker_march_of_the_machines_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/tinker_rollermaw.vpcf"
-	local sound_cast = "CustomBaba"
+	local sound_cast = "CustomKobald"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )

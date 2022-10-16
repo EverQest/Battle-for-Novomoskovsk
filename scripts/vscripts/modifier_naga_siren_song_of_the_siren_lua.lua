@@ -70,7 +70,7 @@ end
 -- Helper
 function modifier_naga_siren_song_of_the_siren_lua:End()
 	-- play effects
-	local sound_cast = "Hero_NagaSiren.SongOfTheSiren"
+	local sound_cast = "CustomSiren"
 	local sound_stop = "Hero_NagaSiren.SongOfTheSiren.Cancel"
 	StopSoundOn( sound_cast, self:GetCaster() )
 	EmitSoundOn( sound_stop, self:GetCaster() )
@@ -123,7 +123,7 @@ function modifier_naga_siren_song_of_the_siren_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast1 = "particles/units/heroes/hero_siren/naga_siren_siren_song_cast.vpcf"
 	local particle_cast2 = "particles/units/heroes/hero_siren/naga_siren_song_aura.vpcf"
-	local sound_cast = "Hero_NagaSiren.SongOfTheSiren"
+	local sound_cast = "CustomSiren"
 
 	-- Get Data
 	local caster = self:GetCaster()
