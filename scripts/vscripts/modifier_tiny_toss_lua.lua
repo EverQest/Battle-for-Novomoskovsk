@@ -130,7 +130,7 @@ function modifier_tiny_toss_lua:OnCreated( kv )
 	end
 
 	-- emit sound
-	local sound_cast = "CustomGigachad"
+	local sound_cast = "CustomToss"
 	local sound_target = "Hero_Tiny.Toss.Target"
 	EmitSoundOn( sound_cast, self.caster )
 	EmitSoundOn( sound_target, self.parent )

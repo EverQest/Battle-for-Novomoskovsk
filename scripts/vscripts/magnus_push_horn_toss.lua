@@ -4,7 +4,7 @@ magnus_push_horn_toss = class({})
 ----------------------------------------------------------------------------------------
 
 function magnus_push_horn_toss:Precache( context )
-
+	PrecacheResource( "soundfile", "soundevents/Dima.vsndevts", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_magnataur/magnataur_horn_toss.vpcf", context )
 	PrecacheResource( "particle", "particles/econ/events/darkmoon_2017/darkmoon_generic_aoe.vpcf", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_magnataur/magnataur_skewer.vpcf", context )
@@ -62,13 +62,12 @@ function magnus_push_horn_toss:OnSpellStart()
 	if IsServer() then
 		self:GetCaster():RemoveModifierByName( 'modifier_absolute_no_cc' )
 		ParticleManager:DestroyParticle( self.nFXIndex, true )
-		EmitSoundOn( "Hero_Magnataur.HornToss.Cast", self:GetCaster() )
+		EmitSoundOn( "CustomHornToss", self:GetCaster() )
 		self:GetCaster():StartGesture( ACT_DOTA_CAST_ABILITY_5 )
 
 		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_magnataur/magnataur_horn_toss.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
 		ParticleManager:SetParticleControlEnt( nFXIndex, 1, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_horn", self:GetCaster():GetAbsOrigin(),true)
 		ParticleManager:ReleaseParticleIndex( nFXIndex )
-
 
 		local enemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), self.vTargetPos, nil, self.grab_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_BUILDING, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false )
 		for _,enemy in pairs( enemies ) do
@@ -99,13 +98,6 @@ function magnus_push_horn_toss:OnSpellStart()
 						local urnVec = urn:GetOrigin() - self:GetCaster():GetOrigin()
 						local flDistance = urnVec:Length()
 						urnVec = urnVec:Normalized()
-
-						--This checks if the urn is behind Magnus. Disabling for now
-						--
-						--local myBackward = self:GetCaster():GetForwardVector() * (-1)
-						--local flDirectionDot = DotProduct( urnVec, myBackward )
-						--local flAngle = 180 * math.acos( flDirectionDot ) / math.pi
-						--if flAngle < 90 then
 							
 						vDestination = self:GetCaster():GetAbsOrigin() + destination_offset * urnVec
 						if flDistance >= 250 then

@@ -33,8 +33,8 @@
        "Dota_Tooltip_ability_pudge_rot_lua"                  						"Сила вони"
        "Dota_Tooltip_ability_pudge_rot_lua_datadriven"       						"Лютая вонь"
        "Dota_Tooltip_ability_pudge_rot_lua_Description"      						"Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
-       "Dota_Tooltip_ability_aghsfort_wisp_tether"                  				"Душнила"
-       "Dota_Tooltip_ability_aghsfort_wisp_tether_Description"      				"Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
+       "Dota_Tooltip_ability_wisp_tether_datadriven"                  				"Душнила"
+       "Dota_Tooltip_ability_wisp_tether_datadriven_Description"      				"Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
        "Dota_Tooltip_ability_bristleback_warpath_lua"                 				"Одно присутствие"
        "Dota_Tooltip_ability_bristleback_warpath_lua_datadriven"      				"Вам страшно"
        "Dota_Tooltip_ability_bristleback_warpath_lua_Description"     				"Васич настолько сильно воняет что постепенно наращивает складки"
@@ -45,26 +45,26 @@
 		//Дима
 		"npc_dota_hero_morphling"        "Снюсовый морфлинг"	
 
-		"Dota_Tooltip_ability_aghsfort_magnataur_skewer"                 		 "Барьба"
-		"Dota_Tooltip_ability_aghsfort_magnataur_skewer_Description"     		 "Не зря он учил этот приём, теперь он его будт отрабатывать"
+		"Dota_Tooltip_ability_magnus_skewer_lua"                 				 "Барьба"
+		"Dota_Tooltip_ability_magnus_skewer_lua_Description"     				 "Не зря он учил этот приём, теперь он его будт отрабатывать"
 		"Dota_Tooltip_ability_magnus_push_horn_toss"     						 "Прогиб"
 		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	 "Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
 		"Dota_Tooltip_ability_tiny_toss_lua"									 "ТОСС на левый третий"
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
-		"Dota_Tooltip_ability_creature_kraken_shell" 						     "Снюс KRAKEN SHELL☆☆☆☆☆"
-		"Dota_Tooltip_ability_creature_kraken_shell_Description" 				 "150 милиграмм никотина помогут справиться с любой болью"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_shell" 						     "Снюс KRAKEN SHELL☆☆☆☆☆"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 				 "150 милиграмм никотина помогут справиться с любой болью"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"
 
-		"Dota_Tooltip_ability_imba_batrider_flaming_lasso_senya"				 "Ласось"
-		"Dota_Tooltip_ability_imba_batrider_flaming_lasso_senya_Description"	 "Тут может быть ваша рекламма"
-		"Dota_Tooltip_ability_imba_techies_suicide_senya"				 		 "Баунс в окно"
-		"Dota_Tooltip_ability_imba_techies_suicide_senya_Description"		 	 "Тут может быть ваша рекламма"
-		"Dota_Tooltip_ability_undying_decay_senya"								 "Арсюша"
-		"Dota_Tooltip_ability_undying_decay_senya_Description"					 "После сами знаете чего..."
+		"Dota_Tooltip_ability_mina_explosion_jump"				 				 "Подвернуть ногу"
+		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 			 "Сеня прыгает и калечит ногу и наносит очень много урона"
+		"Dota_Tooltip_ability_undying_decay_senya"								 "Декэй"
+		"Dota_Tooltip_ability_undying_decay_senya_Description"					 "Мамаочки тут поле"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 	 "Арсюша после SЭkS4"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"		 "Пухленький, но сильный"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Чича
 		"npc_dota_hero_ogre_magi"      		   "Чича"
@@ -100,18 +100,40 @@
 
 		"Dota_Tooltip_ability_tinker_laser_lua"									 "Лазер oK?"
 		"Dota_Tooltip_ability_tinker_laser_lua_Description"						 "Этот придурок начитался так много книг что теперь сделал эту хрень и хуячит во всех!!!"
-		"Dota_Tooltip_ability_lion_hex_lua"							  			 "Свввииииинннньььяяя!"
-		"Dota_Tooltip_ability_lion_hex_lua_Description"							 "Что будет если нажать на этериал? ответ очевиден: HEX"
+		"Dota_Tooltip_ability_lion_hex_lua"							  			 "КОООООББАААЛЬЬДД!!"
+		"Dota_Tooltip_ability_lion_hex_lua_Description"							 "Как же он любит кобальдов (можно применить на кого угодно)"
 		"Dota_Tooltip_ability_tinker_rearm_lua"									 "Переосмысление..."
 		"Dota_Tooltip_ability_tinker_rearm_lua_Description"				 		 "Взяв сигу, Даня начинает слишком много думать, заставляя свой мозг перезагрузить всё что он знал"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Некит
+		"npc_dota_hero_phantom_lancer"         "Некит"
 
+		"Dota_Tooltip_ability_doppelganger_datadriven"									"Личности Некита"
+		"Dota_Tooltip_ability_doppelganger_datadriven_Description"						"Призывает две свои личности: Некит и Скинхэд"
+		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua"				"The Company"
+		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua_Description"	"Некит помещает выбранного чела на тренеровку в company, где его используют как грушу и пиздят. По окончании тренировки ему дают по ебалу и выгоняют из company."
+		"Dota_Tooltip_ability_medusa_stone_gaze_lua"									"Какашка"
+		"Dota_Tooltip_ability_medusa_stone_gaze_lua_Description"				 		"Некит говорит какашка тем самым заставляя ближайших врагов смеется некоторое время "
+		"Dota_Tooltip_ability_mars_arena_of_blood_lua"					 				"Обезьяны"
+		"Dota_Tooltip_ability_mars_arena_of_blood_lua_Description"		 				"Некит говорит что все кто с ним общается и окружает его обезьяны, тем самым призывает всех своих друзей на поле боя"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
 		//Некитос
- 		"npc_dota_hero_spirit_breaker"         "КАКАШКИ"
+		"npc_dota_hero_lycan"         		   "КАКАШКИ"
 
+		"Dota_Tooltip_ability_wind_walk_datadriven"									"Где лобби?"
+		"Dota_Tooltip_ability_wind_walk_datadriven_Description"						"Некитос просто напросто пропадает с реальности в поискал лобби"
+		"Dota_Tooltip_ability_slark_essence_shift_lua"								"Отдай"
+		"Dota_Tooltip_ability_slark_essence_shift_lua_Description"					"Некитос ворует у врагов какашки что делает его сильнее"
+		"Dota_Tooltip_ability_primal_roar_datadriven"								"Вот это рыг!"
+		"Dota_Tooltip_ability_primal_roar_datadriven_Description"				 	"Фокусируя все газы в организме от выдаёт лютую базу, с которой сложно посморить. Лучшая отрыжка ever"
+		"Dota_Tooltip_ability_lycan_shapeshift_datadriven"					 		"Форма Вяз-токса"
+		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_Description"		 		"Все знают это формулу ввяз-токса, осторожно он токсичный..."
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
 
@@ -121,9 +143,6 @@
 		//Ростислав Легенда
 		"npc_dota_hero_gyrocopter"      	   "Ростислав Легенда"
 
-		//Некит
-		"npc_dota_hero_phantom_lancer"         "Некит"
-		
 		//Тёмыч
 		"npc_dota_hero_storm_spirit"           "Тёмыч"
 
@@ -137,7 +156,7 @@
 		"npc_dota_hero_undying"				   "Алижа"
 
 		//Перик
-		"npc_dota_hero_lone_druid"			"Переверик"
+		"npc_dota_hero_lone_druid"			   "Переверик"
 	}
 
 }

@@ -83,7 +83,7 @@ end
 -- Initializer
 ---------------------------------------------------------------------------
 function COverthrowGameMode:InitGameMode()
-	print( "Overthrow is loaded." )
+	print( "Battle is loaded." )
 	
 --	CustomNetTables:SetTableValue( "test", "value 1", {} );
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
@@ -147,10 +147,10 @@ function COverthrowGameMode:InitGameMode()
 
 	self.itemSpawnLocations = nil
 	self.KILLS_TO_WIN_SINGLES = 25
-	self.KILLS_TO_WIN_DUOS = 30
-	self.KILLS_TO_WIN_TRIOS = 35
-	self.KILLS_TO_WIN_QUADS = 50
-	self.KILLS_TO_WIN_QUINTS = 50
+	self.KILLS_TO_WIN_DUOS = 40
+	self.KILLS_TO_WIN_TRIOS = 50
+	self.KILLS_TO_WIN_QUADS = 60
+	self.KILLS_TO_WIN_QUINTS = 70
 
 	self.TEAM_KILLS_TO_WIN = self.KILLS_TO_WIN_SINGLES
 	self.CLOSE_TO_VICTORY_THRESHOLD = 5

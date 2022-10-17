@@ -3,7 +3,6 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
-
 //=================================================================================================================
 // HERO: Io (Vyashich)
 //=================================================================================================================
@@ -24,14 +23,18 @@
 //=================================================================================================================
 	"npc_dota_hero_dima"
 	{
-		"override_hero"		   "npc_dota_hero_morphling"	
-		"AbilityLayout"		   "6"
-		"Ability1"		       "aghsfort_magnataur_skewer"
-		"Ability2"		       "magnus_push_horn_toss"
-		"Ability3"		       "marci_dispose_lua"
-		"Ability4"		       "creature_kraken_shell"
-		"Ability5"		       ""
-		"Ability6"		       "tiny_toss_lua"
+		"override_hero"		   		"npc_dota_hero_morphling"	
+
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
+		"AttributeAgilityGain"		"1.2"
+		"AttributeStrengthGain"		"3.4"
+		"AbilityLayout"		  		"6"
+		"Ability1"		      		"magnus_skewer_lua"
+		"Ability2"		     		"magnus_push_horn_toss"
+		"Ability3"		     		"marci_dispose_lua"
+		"Ability4"		     		"tidehunter_kraken_shell_lua"
+		"Ability5"		      		""
+		"Ability6"		     		"tiny_toss_lua"
 	}
 //=================================================================================================================
 // HERO: Tinker (Danya)
@@ -56,13 +59,12 @@
 		"override_hero"		   "npc_dota_hero_techies"	
 		"AbilityLayout"		   "5"
 		"Ability1"             "undying_decay_datadriven"	
-		"Ability2"		       "mina_explosion_jump"
+        "Ability2"             "terrorblade_metamorphosis_lua"	
 		"Ability3"             "nyx_assassin_spiked_carapace_datadriven"
-        "Ability4"             "imba_batrider_flaming_lasso"	
+		"Ability4"		       "mina_explosion_jump"
         "Ability5"             ""	
         "Ability6"             ""	
 	}
-
 //=================================================================================================================
 // HERO: Ogre (Chicha)
 //=================================================================================================================
@@ -77,7 +79,6 @@
         "Ability5"             ""	
         "Ability6"             ""	
 	}
-
 //=================================================================================================================
 // HERO: Nevermore (Yarik)
 //=================================================================================================================
@@ -92,6 +93,38 @@
         "Ability5"             "shadow_fiend_shadowraze_e_lua"	
         "Ability6"             "shadow_fiend_shadowraze_f_lua"	
 	}
+//=================================================================================================================
+// HERO: Phantom Lancer (Некит)
+//=================================================================================================================
+	"npc_dota_hero_nekit"
+	{
+		"override_hero"		   "npc_dota_hero_phantom_lancer"
+		"AbilityLayout"		   "4"
+		"Ability1"             "mars_arena_of_blood_lua"
+		"Ability2"		       "doppelganger_datadriven"
+		"Ability3"             "outworld_devourer_astral_imprisonment_lua"
+        "Ability4"             ""	
+        "Ability5"             ""	
+        "Ability6"             "medusa_stone_gaze_lua"
 
+	}
+//=================================================================================================================
+// HERO: Lycan (Kaki)
+//=================================================================================================================
+	"npc_dota_hero_kaki"
+	{
+		"override_hero"		   		"npc_dota_hero_lycan"
+		
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
+		"AttributeAgilityGain"		"3.4"
+		"AttributeStrengthGain"		"1.2"
+		"AbilityLayout"				"6"
+		"Ability1"					"wind_walk_datadriven"	
+		"Ability2"					""
+		"Ability3"					"slark_essence_shift_lua"
+        "Ability4"					"primal_roar_datadriven"
+        "Ability5"					""
+        "Ability6"					"lycan_shapeshift_datadriven"
+	}
 
 }
