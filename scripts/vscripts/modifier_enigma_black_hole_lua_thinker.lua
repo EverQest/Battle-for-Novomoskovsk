@@ -43,6 +43,11 @@ function modifier_enigma_black_hole_lua_thinker:OnRefresh( kv )
 end
 
 function modifier_enigma_black_hole_lua_thinker:OnRemoved()
+	local sound_cast = "Hero_Enigma.Black_Hole"
+	local sound_stop = "Hero_Enigma.Black_Hole.Stop"
+	EmitSoundOn( sound_stop, self:GetParent() )
+	StopSoundOn( sound_cast, self:GetParent() )
+	
 	if IsServer() then
 		-- ensure last tick damage happens
 		if self:GetRemainingTime()<0.01 and self.tick<self.ticks then
@@ -52,10 +57,6 @@ function modifier_enigma_black_hole_lua_thinker:OnRemoved()
 		UTIL_Remove( self:GetParent() )
 	end
 
-	local sound_cast = "Hero_Enigma.Black_Hole"
-	local sound_stop = "Hero_Enigma.Black_Hole.Stop"
-	EmitSoundOn( sound_stop, self:GetParent() )
-	StopSoundOn( sound_cast, self:GetParent() )
 end
 
 function modifier_enigma_black_hole_lua_thinker:OnDestroy()
