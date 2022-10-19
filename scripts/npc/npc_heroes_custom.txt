@@ -10,13 +10,14 @@
 	{
 		"override_hero"		   "npc_dota_hero_wisp"	
 
-		"AbilityLayout"		   "4"
-		"Ability1"             "wisp_tether_datadriven"	
-		"Ability2"		       "pudge_rot_lua"
-		"Ability3"             "bristleback_warpath_lua"
-        "Ability6"             "naga_siren_song_of_the_siren_lua"	
-        "Ability4"             ""	
-        "Ability5"             ""	
+		"AttributeStrengthGain"		 "6.2"
+		"AbilityLayout"		   		 "4"
+		"Ability1"            		 "wisp_tether_datadriven"	
+		"Ability2"		     		 "pudge_rot_lua"
+		"Ability3"            		 "bristleback_warpath_lua"
+        "Ability6"            		 "naga_siren_song_of_the_siren_lua"	
+        "Ability4"           		 ""	
+        "Ability5"           		 ""	
 	}
 //=================================================================================================================
 // HERO: Morphling (DIMA)
@@ -120,11 +121,25 @@
 		"AttributeStrengthGain"		"1.2"
 		"AbilityLayout"				"6"
 		"Ability1"					"wind_walk_datadriven"	
-		"Ability2"					""
+		"Ability2"					"alchemist_unstable_concoction_lua"
 		"Ability3"					"slark_essence_shift_lua"
         "Ability4"					"primal_roar_datadriven"
         "Ability5"					""
         "Ability6"					"lycan_shapeshift_datadriven"
 	}
-
+//=================================================================================================================
+// HERO: Enigma (Zanzak)
+//=================================================================================================================
+	"npc_dota_hero_zanzak"
+	{
+		"override_hero"		   		"npc_dota_hero_enigma"
+		
+		"AbilityLayout"				"4"
+		"Ability1"					""	
+		"Ability2"					""
+		"Ability3"					""
+        "Ability4"					"enigma_black_hole_lua"
+        "Ability5"					""
+        "Ability6"					""
+	}
 }

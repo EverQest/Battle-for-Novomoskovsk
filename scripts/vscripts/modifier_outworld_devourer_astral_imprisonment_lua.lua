@@ -115,8 +115,8 @@ end
 -- Graphics & Animations
 function modifier_outworld_devourer_astral_imprisonment_lua:PlayEffects()
 	-- Get Resources
-	local particle_cast1 = "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison.vpcf"
-	local particle_cast2 = "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_ring.vpcf"
+	local particle_cast1 = "particles/obsidian_destroyer_prison.vpcf"
+	local particle_cast2 = "particles/obsidian_destroyer_prison_ring.vpcf"
 	local sound_loop = "Hero_ObsidianDestroyer.AstralImprisonment"
 
 	-- Create Particle

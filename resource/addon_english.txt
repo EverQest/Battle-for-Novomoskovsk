@@ -4,7 +4,7 @@
 	"Tokens"
 	{		
 		"addon_game_name"								"Battle For Novomoskovsk"
-		"DOTA_GameMode_15"													"Overthrow"
+		"DOTA_GameMode_15"								"Overthrow"
 		"BanPhase"										"Ban"
 		"HeroPickPhase"									"HeroPick"
 		"StrategyPhase"									"Strategy"
@@ -51,8 +51,8 @@
 		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	 "Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
 		"Dota_Tooltip_ability_tiny_toss_lua"									 "ТОСС на левый третий"
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_shell" 						     "Снюс KRAKEN SHELL☆☆☆☆☆"
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 				 "150 милиграмм никотина помогут справиться с любой болью"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_shell" 				 "Снюс KRAKEN SHELL☆☆☆☆☆"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -112,7 +112,7 @@
 		"npc_dota_hero_phantom_lancer"         "Некит"
 
 		"Dota_Tooltip_ability_doppelganger_datadriven"									"Личности Некита"
-		"Dota_Tooltip_ability_doppelganger_datadriven_Description"						"Призывает две свои личности: Некит и Скинхэд"
+		"Dota_Tooltip_ability_doppelganger_datadriven_Description"						"Призывает две свои личности: Скинхэд и Девятихвостый"
 		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua"				"The Company"
 		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua_Description"	"Некит помещает выбранного чела на тренеровку в company, где его используют как грушу и пиздят. По окончании тренировки ему дают по ебалу и выгоняют из company."
 		"Dota_Tooltip_ability_medusa_stone_gaze_lua"									"Какашка"
@@ -120,13 +120,12 @@
 		"Dota_Tooltip_ability_mars_arena_of_blood_lua"					 				"Обезьяны"
 		"Dota_Tooltip_ability_mars_arena_of_blood_lua_Description"		 				"Некит говорит что все кто с ним общается и окружает его обезьяны, тем самым призывает всех своих друзей на поле боя"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		
 		//Некитос
 		"npc_dota_hero_lycan"         		   "КАКАШКИ"
 
 		"Dota_Tooltip_ability_wind_walk_datadriven"									"Где лобби?"
 		"Dota_Tooltip_ability_wind_walk_datadriven_Description"						"Некитос просто напросто пропадает с реальности в поискал лобби"
-		"Dota_Tooltip_ability_slark_essence_shift_lua"								"Отдай"
+		"Dota_Tooltip_ability_slark_essence_shift_lua"								"Потрогать за какашки"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_Description"					"Некитос ворует у врагов какашки что делает его сильнее"
 		"Dota_Tooltip_ability_primal_roar_datadriven"								"Вот это рыг!"
 		"Dota_Tooltip_ability_primal_roar_datadriven_Description"				 	"Фокусируя все газы в организме от выдаёт лютую базу, с которой сложно посморить. Лучшая отрыжка ever"

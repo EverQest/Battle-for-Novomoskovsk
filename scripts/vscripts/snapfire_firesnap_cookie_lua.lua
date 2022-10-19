@@ -78,7 +78,7 @@ function snapfire_firesnap_cookie_lua:OnSpellStart()
 	ProjectileManager:CreateTrackingProjectile(info)
 
 	-- Play sound
-	local sound_cast = "Hero_Snapfire.FeedCookie.Cast"
+	local sound_cast = "CustomTit"
 	EmitSoundOn( sound_cast, self:GetCaster() )
 end
 --------------------------------------------------------------------------------
@@ -177,7 +177,7 @@ function snapfire_firesnap_cookie_lua:PlayEffects2( target )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_snapfire/hero_snapfire_cookie_buff.vpcf"
 	local particle_cast2 = "particles/units/heroes/hero_snapfire/hero_snapfire_cookie_receive.vpcf"
-	local sound_target = "Hero_Snapfire.FeedCookie.Consume"
+	local sound_target = "CustomTit"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, target )
@@ -194,7 +194,7 @@ end
 function snapfire_firesnap_cookie_lua:PlayEffects3( target, radius )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_snapfire/hero_snapfire_cookie_landing.vpcf"
-	local sound_location = "Hero_Snapfire.FeedCookie.Impact"
+	local sound_location = "CustomSuda"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, target )

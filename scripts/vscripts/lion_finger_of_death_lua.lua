@@ -36,7 +36,7 @@ function lion_finger_of_death_lua:OnSpellStart()
 	local target = self:GetCursorTarget()
 
 	-- pre-effects
-	local sound_cast = "Hero_Lion.FingerOfDeath"
+	local sound_cast = "CustomChicha"
 	EmitSoundOn( sound_cast, caster )
 
 	-- cancel if linken

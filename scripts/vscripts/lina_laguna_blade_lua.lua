@@ -52,7 +52,7 @@ function lina_laguna_blade_lua:PlayEffects( target )
 
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
-	local sound_cast = "Ability.LagunaBladeImpact"
+	local sound_cast = "CustomLags"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_CUSTOMORIGIN, nil )

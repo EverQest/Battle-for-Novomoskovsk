@@ -298,8 +298,13 @@
 
 
 
-
-
+	//=================================================================================================================
+	//HEROES//=========================================================================================================
+	//=================================================================================================================
+	
+	
+	
+	
 	//=================================================================================================================
 	// Bristleback: Warpath (Vyashich)
 	//=================================================================================================================
@@ -1999,7 +2004,7 @@
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+			"soundfile"	"soundevents/Chicha.vsndevts"
 			"particle"	"particles/units/heroes/hero_ogre_magi/ogre_magi_multicast.vpcf"
 		}
 		
@@ -2076,7 +2081,7 @@
 
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+			"soundfile"	"soundevents/Chicha.vsndevts"
 			"particle"	"particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
 		}
 		
@@ -2140,7 +2145,7 @@
 
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+			"soundfile"	"soundevents/Chicha.vsndevts"
 			"particle"	"particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
 		}
 		
@@ -2217,7 +2222,7 @@
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_snapfire.vsndevts"
+			"soundfile"	"soundevents/Chicha.vsndevts"
 			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_projectile.vpcf"
 			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_selfcast.vpcf"
 			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_cookie_buff.vpcf"
@@ -2889,7 +2894,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"100 120 140 150"
+				"damage"				"200 300 400 500"
 			}
 			"03"
 			{
@@ -3176,12 +3181,12 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-	"AbilityTextureName"			"bounty_hunter_wind_walk"
+	"AbilityTextureName"			"kaki_invis"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	 {
-	  "soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+	  "soundfile"   "soundevents/Kaki.vsndevts"
 	  "particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
 	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
 	 
@@ -3229,7 +3234,7 @@
 		"FireSound"
 		{
 			"Target"			"CASTER"
-			"EffectName"		"Hero_BountyHunter.WindWalk"
+			"EffectName"		"CustomLobby"
 		}
 
 		"ApplyModifier"
@@ -3348,7 +3353,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"slark_essence_shift_lua"
-		"AbilityTextureName"			"slark_essence_shift"
+		"AbilityTextureName"			"kaki_potrogat"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 
@@ -3394,6 +3399,7 @@
 			}
 		}
 	}
+
 	//=================================================================================================================
 	// Beast Master: Primal Roar (Kaki)
 	//=================================================================================================================
@@ -3410,7 +3416,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"FightRecapLevel"				"2"
-	"AbilityTextureName"			"beastmaster_primal_roar"
+	"AbilityTextureName"			"kaki_otrijka"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -3613,7 +3619,7 @@
   	}
 
 	//=================================================================================================================
-	// Beast Master: Primal Roar (Kaki)
+	// Lycan: Shapeshift (Kaki)
 	//=================================================================================================================
 	"lycan_shapeshift_datadriven"
 	{
@@ -3623,17 +3629,16 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"FightRecapLevel"				"2"
-	"AbilityTextureName"			"lycan_shapeshift"
+	"AbilityTextureName"			"kaki_zmei"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"		
+		"soundfile"		"soundevents/Kaki.vsndevts"		
 		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_buff.vpcf"
 		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_cast.vpcf"
-		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_revert.vpcf"
-		"model"			"models/heroes/lycan/lycan_wolf.vmdl"	
+		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_revert.vpcf"	
 	}
 
 	// Time		
@@ -3690,13 +3695,13 @@
 	{
 		"FireSound"
 		{
-			"EffectName"	"Hero_Lycan.Shapeshift.Cast"
+			"EffectName"	"CustomGadyka"
 			"Target" 		"CASTER"
 		}
 
 		"FireEffect"
 		{
-			"EffectName"        "particles/units/heroes/hero_lycan/lycan_shapeshift_cast.vpcf"
+			"EffectName"        "particles/lycan_shapeshift_cast.vpcf"
 			"EffectAttachType"  "follow_origin"
 			"Target"            "CASTER"
 		}
@@ -3764,7 +3769,7 @@
 
 				"AttachEffect"
 				{
-					"EffectName"        "particles/units/heroes/hero_lycan/lycan_shapeshift_buff.vpcf"
+					"EffectName"        "particles/lycan_shapeshift_buff.vpcf"
 					"EffectAttachType"  "follow_origin"
 					"Target"            "TARGET"
 
@@ -3873,5 +3878,274 @@
 	}
 	}
 
+	//=================================================================================================================
+	// Alchemist: Unstable Concoction (Kaki)
+	//=================================================================================================================
+	"alchemist_unstable_concoction_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"alchemist_unstable_concoction_lua"
+		"AbilityTextureName"			"kaki_zavtik"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Kaki.vsndevts"
+			"particle"	"particles/units/heroes/hero_alchemist/alchemist_unstable_concoction_explosion.vpcf"
+			"particle"	"particles/units/heroes/hero_alchemist/alchemist_unstable_concoction_projectile.vpcf"
+			"particle"	"particles/units/heroes/hero_alchemist/alchemist_unstable_concoction_timer.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"775" // for visualization on hover
+		"AbilityCastPoint"				"0.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22 20 18 16"
+		"AbilityManaCost"				"120"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"brew_time"					"5.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"brew_explosion"			"5.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"min_stun"					"0.25"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"max_stun"					"1.75 2.5 3.25 4.0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"min_damage"				"200"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_damage"				"300 400 500 600"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"400"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Alchemist: Unstable Concoction Throw (Kaki)
+	//=================================================================================================================
+	"alchemist_unstable_concoction_throw_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"alchemist_unstable_concoction_lua"
+		"AbilityTextureName"			"kaki_zavtik"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"775"
+		"AbilityCastPoint"				"0.2"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"brew_time"					"5.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"min_stun"					"0.25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"max_stun"					"1.75 2.5 3.25 4.0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"min_damage"				"200"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_damage"				"300 400 500 600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"			"900"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"vision_range"				"400"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"midair_explosion_radius"	"200"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"brew_explosion"			"7.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Enigma: Black Hole
+	//=================================================================================================================
+	"enigma_black_hole_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"enigma_black_hole_lua"
+		"AbilityTextureName"			"enigma_black_hole"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"3"
+		"HasScepterUpgrade"			"1"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"275"
+		"AbilityCastPoint"				"0.3"
+		"AbilityChannelTime"			"4.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"200.0 180.0 160.0"
+		"AbilityManaCost"				"275 325 375"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"far_damage"			"50 100 150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"far_radius"			"420"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pull_radius"			"420"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pull_speed"			"30"
+			}			
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"near_radius"			"200"
+			}			
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"near_damage"			"50 100 150"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_rate"				"0.1 0.1 0.1"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"6.0 7.0 8.0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"800 800 800"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"pull_rotate_speed"		"0.25"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"animation_rate"		"0.2"
+			}
+		}
+	}
 }

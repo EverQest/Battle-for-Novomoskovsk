@@ -35,7 +35,7 @@ function modifier_magnus_skewer_lua_debuff:OnCreated( kv )
 	end
 
 	-- play effects
-	local sound_cast = "CustomSkewer"
+	local sound_cast = "Hero_Magnataur.Skewer.Target"
 	EmitSoundOn( sound_cast, self:GetParent() )
 end
 
