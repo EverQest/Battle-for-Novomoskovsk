@@ -185,8 +185,8 @@ function modifier_medusa_stone_gaze_lua_debuff:ChangeEffects( IsNowFacing )
 		target = self.center_unit
 
 		-- play sound
-		local sound_cast = "Hero_Medusa.StoneGaze.Target"
-		EmitSoundOnClient( sound_cast, self:GetParent():GetPlayerOwner() )
+		local sound_cast = "CustomHaha"
+		EmitSoundOn( sound_cast, self:GetParent():GetPlayerOwner() )
 	end
 
 	ParticleManager:SetParticleControlEnt(

@@ -86,7 +86,7 @@ end
 function modifier_medusa_stone_gaze_lua_petrified:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_medusa/medusa_stone_gaze_debuff_stoned.vpcf"
-	local sound_cast = "Hero_Medusa.StoneGaze.Stun"
+	local sound_cast = "CustomHaha"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )

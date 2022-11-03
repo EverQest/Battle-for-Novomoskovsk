@@ -70,9 +70,9 @@
 
 
 	//=================================================================================================================
-	// Recipe: Item_helm_of_tarras
+	// Item_helm_of_tarras
 	//=================================================================================================================
-	"item_recipe_helm_of_tarras"
+	"item_helm_of_tarras"
 {
     "BaseClass"           "item_datadriven"
     "ItemRecipe"          "1" //destroyed after combine
@@ -167,7 +167,79 @@
 	}
 
 
+	//=================================================================================================================
+	// Recipe: Phase Boots
+	//=================================================================================================================
+	"item_recipe_phase_boots_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"49"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.mdl"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots;item_phase_boots;item_phase_boots"
+		}
+	}
+	
+	//=================================================================================================================
+	// Phase Boots
+	//=================================================================================================================
+	"item_phase_boots_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"50"					// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1290"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"phase boots"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"24"
+			}			
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"phase_movement_speed"  "160"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"phase_duration"		"5"
+			}
+		}
+	}
 
 
 

@@ -45,6 +45,7 @@
 		"item"		"item_river_painter"
 		"item"		"item_helm_of_tarras"
 		"item"		"item_greater_mango"
+		"item"		"item_phase_boots_custom"
 	}
 
 	"weapons_armor"

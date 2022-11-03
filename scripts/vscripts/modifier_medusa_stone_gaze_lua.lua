@@ -51,7 +51,7 @@ function modifier_medusa_stone_gaze_lua:OnDestroy()
 	end
 
 	-- stop sound
-	local sound_cast = "Hero_Medusa.StoneGaze.Cast"
+	local sound_cast = "CustomKakaski"
 	StopSoundOn( sound_cast, self:GetParent() )
 end
 
@@ -99,7 +99,7 @@ end
 function modifier_medusa_stone_gaze_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_medusa/medusa_stone_gaze_active.vpcf"
-	local sound_cast = "Hero_Medusa.StoneGaze.Cast"
+	local sound_cast = "CustomKakaski"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )

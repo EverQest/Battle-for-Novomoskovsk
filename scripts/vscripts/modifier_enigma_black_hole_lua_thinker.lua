@@ -123,7 +123,7 @@ end
 -- Graphics & Animations
 function modifier_enigma_black_hole_lua_thinker:PlayEffects()
 	-- Get Resources
-	local particle_cast = "particles/enigma_blackhole_ti5.vpcf"
+	local particle_cast = "particles/gyro_call_down_explosion_impact_a.vpcf"
 	local sound_cast = "Hero_Enigma.Black_Hole"
 
 	-- Create Particle

@@ -91,7 +91,7 @@ function modifier_outworld_devourer_astral_imprisonment_lua:OnDestroy()
 
 	-- play effects
 	self:GetParent():RemoveNoDraw()
-	local sound_loop = "Hero_ObsidianDestroyer.AstralImprisonment"
+	local sound_loop = "CustomCompany"
 	StopSoundOn( sound_loop, self:GetCaster() )
 
 	local sound_cast = "Hero_ObsidianDestroyer.AstralImprisonment.End"
@@ -117,7 +117,7 @@ function modifier_outworld_devourer_astral_imprisonment_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast1 = "particles/obsidian_destroyer_prison.vpcf"
 	local particle_cast2 = "particles/obsidian_destroyer_prison_ring.vpcf"
-	local sound_loop = "Hero_ObsidianDestroyer.AstralImprisonment"
+	local sound_loop = "CustomCompany"
 
 	-- Create Particle
 	local effect_cast1 = ParticleManager:CreateParticle( particle_cast1, PATTACH_WORLDORIGIN, nil )

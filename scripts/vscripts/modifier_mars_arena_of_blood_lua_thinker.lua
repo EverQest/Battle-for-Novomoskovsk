@@ -171,6 +171,7 @@ function modifier_mars_arena_of_blood_lua_thinker:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/mars_arena_of_blood.vpcf"
 	local sound_cast = "Hero_Mars.ArenaOfBlood.Start"
+	local sound_custom = "CustomMonkey"
 	-- Hero_Mars.Block_Projectile
 
 	-- Get data
@@ -196,4 +197,5 @@ function modifier_mars_arena_of_blood_lua_thinker:PlayEffects()
 
 	-- Play sound
 	EmitSoundOn( sound_cast, self:GetParent() )
+	EmitSoundOn( sound_custom, self:GetParent() )
 end
