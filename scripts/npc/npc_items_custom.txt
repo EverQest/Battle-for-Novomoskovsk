@@ -70,9 +70,9 @@
 
 
 	//=================================================================================================================
-	// Item_helm_of_tarras
+	// Recipe: Helm Of Tarras
 	//=================================================================================================================
-	"item_helm_of_tarras"
+	"item_recipe_helm_of_tarras"
 {
     "BaseClass"           "item_datadriven"
     "ItemRecipe"          "1" //destroyed after combine
@@ -140,6 +140,79 @@
 	}
 
 	//=================================================================================================================
+	// Recipe: Travel Boots
+	//=================================================================================================================
+	"item_recipe_travel_boots"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"47"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.mdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_travel_boots"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots;item_phase_boots;item_phase_boots"
+		}
+	}
+	
+
+	//=================================================================================================================
+	// Travel Boots
+	//=================================================================================================================
+	"item_travel_boots" 
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"48"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityTextureName" 			"boots_of_speed"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+		"AbilitySharedCooldown"			"teleport"
+		"AbilityChannelTime"			"3.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"4500"
+		"ItemShopTags"					"move_speed"
+		"ItemQuality"					"common"
+		"ItemAliases"					"bot;boots of travel"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"MaxUpgradeLevel"				"1"
+		"ItemBaseLevel"					"1"
+
+
+		"UpgradesItems"					"item_travel_boots"
+		"UpgradeRecipe"					"item_recipe_travel_boots"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"150"
+			}
+		}
+	}
+
+	//=================================================================================================================
 	// Greater Mango
 	//=================================================================================================================
 	"item_greater_mango"
@@ -167,79 +240,7 @@
 	}
 
 
-	//=================================================================================================================
-	// Recipe: Phase Boots
-	//=================================================================================================================
-	"item_recipe_phase_boots_custom"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"49"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.mdl"
-	
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_phase_boots"
-		"ItemRequirements"
-		{
-			"01"						"item_phase_boots;item_phase_boots;item_phase_boots"
-		}
-	}
-	
-	//=================================================================================================================
-	// Phase Boots
-	//=================================================================================================================
-	"item_phase_boots_custom"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"50"					// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
-		// Stats		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8.0"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1290"
-		"ItemShopTags"					"damage;move_speed;hard_to_tag"
-		"ItemQuality"					"common"
-		"ItemAliases"					"phase boots"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"500"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"24"
-			}			
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"phase_movement_speed"  "160"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"phase_duration"		"5"
-			}
-		}
-	}
 
 
 
