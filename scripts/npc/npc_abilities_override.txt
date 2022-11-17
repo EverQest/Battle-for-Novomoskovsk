@@ -4058,7 +4058,7 @@
 	}
 
 	//=================================================================================================================
-	// Enigma: Black Hole
+	// Enigma: Black Hole (Zanzak)
 	//=================================================================================================================
 	"enigma_black_hole_lua"
 	{
@@ -4161,7 +4161,7 @@
 	}
 
 	//=================================================================================================================
-	// Gyrocopter: Homing Missile
+	// Gyrocopter: Homing Missile (Rostik)
 	//=================================================================================================================
 	"homing_missile_datadriven"
 	{
@@ -4332,6 +4332,442 @@
 			
 			"EffectName"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_target.vpcf"
 			"EffectAttachType"	"follow_overhead"
+		}
+	}
+	}
+
+	//=================================================================================================================
+	// Grimstroke: Phantom's Embrace (Felix)
+	//=================================================================================================================
+	"grimstroke_phantoms_embrace_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"grimstroke_phantoms_embrace_lua"
+		"AbilityTextureName"			"felix_babka"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Felix.vsndevts"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_cast_phantom.vpcf"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_marker.vpcf"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_ambient.vpcf"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_attacked.vpcf"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_death.vpcf"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_return.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"32 28 24 20"
+		"AbilityManaCost"				"110 120 130 140"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"spawn_time"				"0.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"speed"						"750"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"latch_duration"			"4.0 4.5 5.0 5.5"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"destroy_attacks"			"6 6 9 9"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_per_tick"			"6 9 12 15"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"dps_tooltip"				"12 18 24 30"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"enemy_vision_time"			"4"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tick_interval"				"0.5"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"infection_search_radius"	"1000"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"destroy_attacks_tooltip"	"2 2 3 3"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"pop_damage"				"120 200 280 360"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"return_projectile_speed"	"750"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"return_mana_gain"			"50 75 100 125"
+			}
+			"14"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"latched_unit_offset"		"130"
+			}
+			"15"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"latched_unit_offset_short"	"95"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Doom: Scorched Earth (Felix)
+	//=================================================================================================================
+	"doom_scorched_earth_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"doom_scorched_earth_lua"
+		"AbilityTextureName"			"felix_fx"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Felix.vsndevts"
+			"particle"	"particles/units/heroes/hero_doom_bringer/doom_scorched_earth.vpcf"
+			"particle"	"particles/units/heroes/hero_doom_bringer/doom_bringer_scorched_earth_buff.vpcf"
+			"particle"	"particles/units/heroes/hero_doom_bringer/doom_bringer_scorched_earth_debuff.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 600 600 600"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50 45 40 35"
+		"AbilityManaCost"				"60 65 70 75"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_second"		"100 140 180 250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"600 600 600 600"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed_pct"	"11 12 13 14"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10.0 12.0 14.0 16.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: God's Strength (Felix)
+	//=================================================================================================================
+	"sven_gods_strength_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"felix_club"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"ScriptFile"					"sven_gods_strength_lua"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40.0 40.0 40.0"
+		"AbilityDuration"				"25.0 25.0 25.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gods_strength_damage"		"100 150 200"		
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_aoe"		"900"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gods_strength_damage_scepter"	"50 75 100"		
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"gods_strength_duration"	"25.0 25.0 25.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Berserkers Rage (Felix)
+	//=================================================================================================================
+	"troll_warlord_berserkers_rage_datadriven"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"felix_knife"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/Felix.vsndevts"
+		"particle"			"particles/units/heroes/hero_troll_warlord/troll_warlord_berserk_buff.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"15"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_move_speed"		"200 250 300 350"
+		}
+		"03"
+		{	
+			"var_type"				"FIELD_INTEGER"
+			"bonus_range"			"-472"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"base_attack_time"		"1.8 1.5 1.0 0.5"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp"				"300"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"7"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bash_chance"			"0"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bash_duration"			"0.8 1.2 1.6 2.0"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bash_damage"			"20 30 40 50"
+		}
+	}
+
+	"OnToggleOn"
+	{
+		"FireSound"
+		{
+			"EffectName"	"KnifeCustom"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"berserkers_rage.lua"
+			"Function"		"BerserkersRageAttackCapability"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_berserkers_rage_datadriven"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"berserkers_rage.lua"
+			"Function"		"SwapAbilities"
+			"main_ability_name"	"troll_warlord_whirling_axes_ranged_datadriven"
+			"sub_ability_name"	"troll_warlord_whirling_axes_melee_datadriven"
+		}
+	}
+
+	"OnToggleOff"
+	{
+		"FireSound"
+		{
+			"EffectName"	"KnifeCustom"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"berserkers_rage.lua"
+			"Function"		"BerserkersRageAttackCapability"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_berserkers_rage_datadriven"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"berserkers_rage.lua"
+			"Function"		"SwapAbilities"
+			"main_ability_name"	"troll_warlord_whirling_axes_melee_datadriven"
+			"sub_ability_name"	"troll_warlord_whirling_axes_ranged_datadriven"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_berserkers_rage_datadriven"
+		{
+			"IsHidden"			"1"
+			"IsPurgable"		"0"
+
+			"EffectName"	"particles/units/heroes/hero_troll_warlord/troll_warlord_berserk_buff.vpcf"
+			"EffectAttachType"	"follow_origin"
+	
+			"OnAttackLanded"
+			// "%attack_damage" is set to the damage value before mitigation
+			{
+				"Random"
+				{
+					"Chance"			"%bash_chance"
+					"OnSuccess"
+					{
+						"RunScript"
+						{
+							"ScriptFile"	"berserkers_rage.lua"
+							"Function"		"BerserkersRageBash"
+							"sound"			"Hero_TrollWarlord.BerserkersRage.Stun"
+						}
+					}
+				}
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%bonus_move_speed"
+			    "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS" 			"%bonus_range"
+			    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+			    "MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%base_attack_time"
+			    "MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_hp"
+			    "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+			}
+		}
+
+		"modifier_berserkers_rage_track_datadriven"
+		{
+			"IsHidden"		"1"
+			"Passive"		"1"
+
+			"OnAttack"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"berserkers_rage.lua"
+					"Function"		"BerserkersRageTrack"
+				}
+			}
 		}
 	}
 	}

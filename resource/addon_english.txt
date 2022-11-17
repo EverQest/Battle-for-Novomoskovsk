@@ -134,6 +134,18 @@
 		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua"					"Завтык"
 		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_Description"		"Малой завтыкал, не мешайте"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Felix
+		"npc_dota_hero_clinkz" 				   "Felix"
+
+		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven"						"Стойка Керамбита"
+		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_Description"			"Тот самый легендарный деревяный нож КЕРАМБИТ, когда он у него в руках он очень быстрый и страшный"
+		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua"								"Выключай компьютер!"
+		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_Description"					"АНУ БЫСТРО ВЫКЛЮЧАЙ КОМПЬЮТЕР Я ТЕБЕ СКАЗАЛА!"
+		"Dota_Tooltip_ability_doom_scorched_earth_lua"										"Согревай меня FX..."
+		"Dota_Tooltip_ability_doom_scorched_earth_lua_Description"				 			"Старый добрый процесор Андрюхи который согревает его зимой... Как мило, жаль что он всё вокруг выжигает"
+		"Dota_Tooltip_ability_sven_gods_strength_lua"					 					"Клубняковая музыка"
+		"Dota_Tooltip_ability_sven_gods_strength_lua_Description"		 					"Тебе одиноко? грустно? хочешь потанцевать? Самое время подрубить нормальный музон для нормального движа!!!"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
@@ -146,9 +158,6 @@
 
 		//Тёмыч
 		"npc_dota_hero_storm_spirit"           "Тёмыч"
-
-		//Felix
-		"npc_dota_hero_clinkz" 				   "Felix"
 
 		//Валик
 		"npc_dota_hero_obsidian_destroyer" 	   "Валик"

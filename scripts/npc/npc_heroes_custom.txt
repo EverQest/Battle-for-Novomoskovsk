@@ -145,16 +145,22 @@
 //=================================================================================================================
 // HERO: Storm Spirit  (Temich)
 //=================================================================================================================
-	"npc_dota_hero_temich"
+//=================================================================================================================
+// HERO: Clinkz  (Felix)
+//=================================================================================================================
+	"npc_dota_hero_felix"
 	{
-		"override_hero"		   		"npc_dota_hero_storm_spirit"
+		"override_hero"		   		"npc_dota_hero_clinkz"
 		
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
+		"AttributeAgilityGain"		"1.2"
+		"AttributeStrengthGain"		"3.4"
 		"AbilityLayout"				"4"
-		"Ability1"					""	
-		"Ability2"       			""
-        "Ability3"       			""
-        "Ability4"					""
-        "Ability5"					""
+        "Ability1"					"troll_warlord_berserkers_rage_datadriven"
+		"Ability2"       			"grimstroke_phantoms_embrace_lua"
+        "Ability3"       			"doom_scorched_earth_lua"
+        "Ability4"					"sven_gods_strength_lua"
+		"Ability5"					""	
         "Ability6"					""
 	}
 
