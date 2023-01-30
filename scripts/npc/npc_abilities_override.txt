@@ -274,6 +274,13 @@
 	{
 		"ItemPurchasable"				"0"
 	}
+	//=================================================================================================================
+	// Aegis
+	//=================================================================================================================
+	"item_aegis"
+	{
+		"ItemPurchasable"				"1"
+	}
 
 	//=================================================================================================================
 	// Aghanim's Shard
@@ -310,11 +317,6 @@
 
 	//=================================================================================================================
 	//HEROES//=========================================================================================================
-	//=================================================================================================================
-	
-	
-	
-	
 	//=================================================================================================================
 	// Bristleback: Warpath (Vyashich)
 	//=================================================================================================================
@@ -2337,7 +2339,7 @@
 		"LinkedAbility"					"shadow_fiend_shadowraze_b_lua"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"soundfile"	"soundevents/Yarik.vsndevts"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
 		}
@@ -2410,7 +2412,7 @@
 		"LinkedAbility"					"shadow_fiend_shadowraze_c_lua"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"soundfile"	"soundevents/Yarik.vsndevts"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
 		}
 
@@ -2483,7 +2485,7 @@
 		"LinkedAbility"					"shadow_fiend_shadowraze_a_lua"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"soundfile"	"soundevents/Yarik.vsndevts"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
 		}
 
@@ -2555,7 +2557,7 @@
 		"LinkedAbility"					"shadow_fiend_shadowraze_c_lua"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"soundfile"	"soundevents/Yarik.vsndevts"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
 		}
@@ -2628,7 +2630,7 @@
 		"LinkedAbility"					"shadow_fiend_shadowraze_d_lua"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"soundfile"	"soundevents/Yarik.vsndevts"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
 		}
@@ -2694,14 +2696,14 @@
 	{
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
-		"ScriptFile"					"shadow_fiend_shadowraze_lua"
+		"ScriptFile"					"shadow_fiend_shadowraze6_lua"
 		"AbilityTextureName"			"yarik_coil6"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"1"
 		"LinkedAbility"					"shadow_fiend_shadowraze_e_lua"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+			"soundfile"	"soundevents/Yarik.vsndevts"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze.vpcf"
 			"particle"	"particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
 		}
@@ -4464,6 +4466,25 @@
 	}
 
 	//=================================================================================================================
+	// Sad song: After death (None)
+	//=================================================================================================================
+	"rip_opz"
+	{
+	//	General
+	//-----------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	"MaxLevel"						"1"
+	"ScriptFile"					"rip_opz.lua"
+	//	Casting
+	//-----------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+
+	//	Cost
+	"AbilityManaCost"				"0"
+	}
+
+	//=================================================================================================================
 	// Doom: Scorched Earth (Felix)
 	//=================================================================================================================
 	"doom_scorched_earth_lua"
@@ -4770,6 +4791,290 @@
 			}
 		}
 	}
+	}
+
+	//=================================================================================================================
+	// Phantom Assasin: Coup de Grace (Temich)
+	//=================================================================================================================
+	"phantom_assassin_coup_de_grace_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"phantom_assassin_coup_de_grace_lua"
+		"AbilityTextureName"			"temich_crit"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		"precache"
+		{
+			"soundfile"	"soundevents/Temich.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_chance"				"1 5 10"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_bonus"				"1000 2000 3000"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Attack: Att Speed (Temich)
+	//=================================================================================================================
+	"lightspeed"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityTextureName"        "temich_attspeed"
+		"MaxLevel"                  "4"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"           "10"
+		"AbilityManaCost"           "0"
+
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+			    "EffectName"   "CustomAttspeed"
+			    "Target"       "CASTER"
+			}
+			
+			"RunScript"
+			{
+				"ScriptFile"	"drinksomepepper.lua"
+				"Function"		"DrinkSomePepper"
+			}
+			
+			"Heal"
+		    {
+		        "Target"        "CASTER"
+		        "HealAmount"    "%regen"
+		    }
+		}
+		
+		"Modifiers"
+		{
+		    "modifier_illidan_pepper"
+		    {
+		        "Isbuff"          "1"
+				
+				"EffectName"		"particles/units/heroes/hero_ogre_magi/ogre_magi_bloodlust_buff.vpcf"
+			    "EffectAttachType"	"follow_origin"
+
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+		            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movement_speed" 
+		        }
+		    }
+		}
+		
+		"AbilitySpecial"
+		{
+		    "01"
+		    {
+		        "var_type"          			"FIELD_INTEGER"
+		        "bonus_movement_speed"          "20 30 40 50"
+		    }
+		    "02"
+		    {
+		        "var_type"         			    "FIELD_FLOAT"
+		        "duration"          			"5"
+		    }
+		    "03"
+		    {
+		        "var_type"          			"FIELD_INTEGER"
+		        "bonus_attack_speed"             "40 50 60 70"
+		    }
+			"04"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "regen"             "150 250 350 450"
+		    }
+		}
+	}
+
+	//=================================================================================================================
+	// Storm Spirit: Ball Lightning (Temich)
+	//=================================================================================================================
+	"storm_spirit_ball_lightning_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"storm_spirit_ball_lightning_lua"
+		"AbilityTextureName"			"temich_lightning"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.2 0.1"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"10"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"										"FIELD_INTEGER"
+				"ball_lightning_initial_mana_percentage"		"0"		
+			}
+			"02"
+			{
+				"var_type"										"FIELD_INTEGER"
+				"ball_lightning_initial_mana_base"				"300"		
+			}
+			"03"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"ball_lightning_move_speed"				"1500 2500 3500"		
+			}
+			"04"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"ball_lightning_aoe"					"0"		
+			}
+			"05"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"ball_lightning_travel_cost_base"		"0"		
+			}
+			"06"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"ball_lightning_travel_cost_percent"	"0"		
+			}
+			"07"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"ball_lightning_vision_radius"			"800"		
+			}
+			"08"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"blocker_duration"						"5"		
+			}
+			"09"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"scepter_remnant_interval"				"300"		
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Sand King: Epicenter (Temich)
+	//=================================================================================================================
+	"sand_king_epicenter_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"sand_king_epicenter_lua"
+		"AbilityTextureName"			"temich_bass"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"3"
+		"precache"
+		{
+			"soundfile"	"soundevents/Temich.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityChannelTime"			"6.0"
+		"AbilityDuration"				"20.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 30 20"
+		"AbilityManaCost"				"150 225 300"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"200 350 400 500"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_radius"	"275 325 375 425 475 525 575 650 675 700 725 750 775 800"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_pulses"	"10 15 20"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_damage"	"200 350 400 500"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_slow"	"-50 -80 -120"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"epicenter_slow_as"		"-30"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_slow_duration_tooltip"	"3"
+			}
+		}
 	}
 
 }

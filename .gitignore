@@ -22,7 +22,7 @@ resource/overviews/*
 .idea
 
 node_modules
-tools_thumbnail_cache.bin
+.tools_thumbnail_cache.bin
 
 materials/models/props_structures/midas_throne/kobold_underboss_crown.vmat_c
 materials/overviews/temple_quartet.vmat_c
@@ -50,3 +50,5 @@ materials/models/props_structures/midas_throne/midas_throne_backplate_mines.vmat
 materials/models/props_structures/midas_throne/midas_throne_gems.vmat_c
 tools_asset_info.bin
 tools_thumbnail_cache.bin
+tools_thumbnail_cache.bin
+tools_asset_info.bin

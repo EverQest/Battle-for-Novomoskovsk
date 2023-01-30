@@ -17,7 +17,7 @@
 
 	"Scoreboard_Goal"								"Goal"
 
-	"Chest"											"NEUTRAL ITEM"
+	"Chest"										"NEUTRAL ITEM"
 	"ItemWillSpawn"									"IS ABOUT TO BE DELIVERED!"
 	"ItemHasSpawned"								"IS ON ITS WAY!"
 

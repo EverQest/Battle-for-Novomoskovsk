@@ -4,7 +4,7 @@
 	{
 		"item"		"item_tpscroll"
 		"item"		"item_clarity"	
-		"item"		"item_faerie_fire"				
+		"item"		"item_faerie_fire"			
 		"item"		"item_smoke_of_deceit"
 		"item"		"item_ward_observer"
 		"item"		"item_ward_sentry"
@@ -15,24 +15,20 @@
 		"item"		"item_dust"	
 		"item"		"item_bottle"
 		"item"		"item_aghanims_shard"
+		"item"		"item_aegis"
 	}
 
 	"attributes"
 	{
 		"item"		"item_branches"
-
 		"item"		"item_gauntlets"
 		"item"		"item_slippers"
 		"item"		"item_mantle"	
-
 		"item"		"item_circlet"
-
 		"item"		"item_belt_of_strength"
 		"item"		"item_boots_of_elves"
 		"item"		"item_robe"
-
 		"item"		"item_crown"
-
 		"item"		"item_ogre_axe"
 		"item"		"item_blade_of_alacrity"
 		"item"		"item_staff_of_wizardry"
@@ -43,9 +39,11 @@
 		"item"		"item_river_painter3"	
 		"item"		"item_river_painter2"	
 		"item"		"item_river_painter"
-		"item"		"item_helm_of_tarras"
+		"item"		"item_headdress"
 		"item"		"item_greater_mango"
 		"item"		"item_travel_boots"
+		"item"		"item_helm_of_tarras"
+
 	}
 
 	"weapons_armor"
@@ -63,8 +61,9 @@
 		"item"		"item_broadsword"
 		"item"		"item_blitz_knuckles"
 		"item"		"item_javelin"
-		"item"		"item_claymore"				
+		"item"		"item_claymore"	
 		"item"		"item_mithril_hammer"	
+		"item"		"item_necronomicon"	
 	}
 			
 	"misc"
@@ -76,7 +75,7 @@
 		"item"		"item_wind_lace"
 		"item"		"item_cloak"
 		"item"		"item_boots"
-		//"item"		"item_ring_of_tarrasque"
+		"item"		"item_ring_of_tarrasque"
 		"item"		"item_gem"
 		"item"		"item_lifesteal"
 		"item"		"item_voodoo_mask"

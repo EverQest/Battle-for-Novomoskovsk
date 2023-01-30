@@ -96,7 +96,9 @@ end
 function shadowraze.PlayEffects( this, position, radius )
 	-- get resources
 	local particle_cast = "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_shadowraze.vpcf"
-	local sound_cast = "Hero_Nevermore.Shadowraze"
+	-- Create Sound
+	local sound_mt = math.random( 1, 5 )
+	local sound_cast = "Coil" .. sound_mt
 
 	-- create particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, nil )

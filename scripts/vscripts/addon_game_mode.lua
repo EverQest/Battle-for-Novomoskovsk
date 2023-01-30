@@ -225,11 +225,11 @@ function COverthrowGameMode:InitGameMode()
 	local nTeamSize = GameRules:GetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS )
 	--print( '^^^Setting BANS PER TEAM to Team Size = ' .. nTeamSize )
 	GameRules:SetCustomGameBansPerTeam( nTeamSize )
-	GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 8.0 )
+	GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 15.0 )
 	if self.m_bFastPlay then
 		GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 1.0 )
 	end
-	GameRules:GetGameModeEntity():SetDraftingHeroPickSelectTimeOverride( 30.0 )
+	GameRules:GetGameModeEntity():SetDraftingHeroPickSelectTimeOverride( 60.0 )
 
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( COverthrowGameMode, 'OnGameRulesStateChange' ), self )
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( COverthrowGameMode, "OnNPCSpawned" ), self )

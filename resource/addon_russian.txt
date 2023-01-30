@@ -4,7 +4,7 @@
 	"Tokens"
 	{		
 		"addon_game_name"								"Battle For Novomoskovsk"
-		"DOTA_GameMode_15"													"Overthrow"
+		"DOTA_GameMode_15"								"Overthrow"
 		"BanPhase"										"Стадия серьёзки"
 		"HeroPickPhase"									"Выбери чмоню"
 		"StrategyPhase"									"Планирование"
@@ -18,22 +18,33 @@
 		"DOTA_Tooltip_modifier_fountain_aura_effect_lua"					"Фонтанище"
 		"DOTA_Tooltip_modifier_fountain_aura_effect_lua_Description"		"Прикинь тебя фонтан хилит"
 		//
-		"DOTA_Tooltip_modifier_invis_revealed"				"Нашли лоха"
+		"DOTA_Tooltip_modifier_invis_revealed"							"Нашли лоха"
 		//
-		"DOTA_Tooltip_ability_item_bag_of_gold"				"300грн"
-		"DOTA_Tooltip_ability_item_treasure_chest"			"Рундук"
+		"DOTA_Tooltip_ability_item_bag_of_gold"							"300грн"
+		"DOTA_Tooltip_ability_item_treasure_chest"						"Рундук"
 		//
-		"npc_dota_creature_basic_zombie"					"Клоун"
-		"npc_dota_creature_berserk_zombie"					"Клоуник"
+		"npc_dota_creature_basic_zombie"								"Клоун"
+		"npc_dota_creature_berserk_zombie"								"Клоуник"
 		//
-		"DOTA_Tooltip_Ability_item_ward_sentry"				"Жабий глаз"
-		"DOTA_Tooltip_Ability_item_dust"					"Пыльца фей"
+		"DOTA_Tooltip_Ability_item_ward_sentry"							"Жабий глаз"
+		"DOTA_Tooltip_Ability_item_dust"								"Пыльца фей"
 		//
-		"DOTA_Tooltip_Ability_item_helm_of_tarras"					"Шлем Тараса"
-		"DOTA_Tooltip_Ability_item_helm_of_tarras_Description"		"Шлем Тараса Григоривича Шевченко"
+		"DOTA_Tooltip_Ability_item_travel_boots"						"Пингвины"
 		//
-		"DOTA_Tooltip_Ability_item_travel_boots"					"Пингвины"
-		"DOTA_Tooltip_Ability_item_travel_boots_Description"		"Надевая эти прекрасные ботинки, вы словно летите..."
+		"DOTA_Tooltip_Ability_item_headdress"							"Шлем Тараса"
+		//
+		"DOTA_Tooltip_Ability_item_arcane_boots"						"Бумбокс"
+		//
+		"DOTA_Tooltip_Ability_item_refresher"							"Макс Корж"
+		//
+		"DOTA_Tooltip_Ability_item_rapier"								"Палка Косаря"
+		//
+		"DOTA_Tooltip_Ability_item_sphere"								"Линк Очка"
+		//
+		"DOTA_Tooltip_Ability_item_vladmir"								"Зяблз"
+		//
+		"DOTA_Tooltip_Ability_item_wraith_pact"							"Мега Зяблз"
+		//
 
 	}
 }

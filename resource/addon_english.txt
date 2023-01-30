@@ -146,7 +146,20 @@
 		"Dota_Tooltip_ability_sven_gods_strength_lua"					 					"Клубняковая музыка"
 		"Dota_Tooltip_ability_sven_gods_strength_lua_Description"		 					"Тебе одиноко? грустно? хочешь потанцевать? Самое время подрубить нормальный музон для нормального движа!!!"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		
+		//Тёмыч
+		"npc_dota_hero_storm_spirit"           "Тёмыч"
+
+		"Dota_Tooltip_ability_lightspeed"														"Чикс"
+		"Dota_Tooltip_ability_lightspeed_Description"											"Чикс который даёт скорость атаки, скорость передвижения, и востанавливает силы"
+		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua"								"Хуякс"
+		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_Description"					"Хуякс говорит сам за себя, если хуякс то конкретный"
+		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua"									"Вжухич"
+		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_Description"				 		"Полетаем?"
+		"Dota_Tooltip_ability_sand_king_epicenter_lua"					 						"Навалить басса в 7 утра"
+		"Dota_Tooltip_ability_sand_king_epicenter_lua_Description"		 						"Как же он любит послушать музыку, тут ничего не сказать о_0"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
 
@@ -155,9 +168,6 @@
 
 		//Ростислав Легенда
 		"npc_dota_hero_gyrocopter"      	   "Ростислав Легенда"
-
-		//Тёмыч
-		"npc_dota_hero_storm_spirit"           "Тёмыч"
 
 		//Валик
 		"npc_dota_hero_obsidian_destroyer" 	   "Валик"

@@ -1,0 +1,10 @@
+{
+    "Lua.diagnostics.globals": [
+        "Timers",
+        "DOTA_SPEECH_USER_ALL",
+        "DOTA_ABILITY_SPEAK_CAST",
+        "PauseGame",
+        "rip_opz",
+        "class"
+    ]
+}
