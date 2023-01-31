@@ -318,64 +318,55 @@
 	//=================================================================================================================
 	//HEROES//=========================================================================================================
 	//=================================================================================================================
-	// Bristleback: Warpath (Vyashich)
+	// Spectre: Dispersion (Vyashich)
 	//=================================================================================================================
-	"bristleback_warpath_lua"
+	"spectre_dispersion_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityTextureName"		"spectre_dispersion"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"		"vyasich_aura"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"bristleback_warpath_lua"
-		"AbilityTextureName"			"vyasich_aura"
-		"FightRecapLevel"				"1"
-		"MaxLevel"						"4"
-		"precache"
+		"01"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_bristleback.vsndevts"
-			"particle"	"particles/units/heroes/hero_bristleback/bristleback_warpath.vpcf"
-			"particle"	"particles/units/heroes/hero_bristleback/bristleback_warpath_dust.vpcf"
+			"var_type"			"FIELD_INTEGER"
+			"min_radius"			"500 550 600 650"
 		}
-		
-		// Ability General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-
-		// Ability Casting
-		//-------------------------------------------------------------------------------------------------------------
-
-		// Ability Resource
-		//-------------------------------------------------------------------------------------------------------------
-
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"02"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"					"40 80 120 160"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"move_speed_per_stack"				"30 50 80 120"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"stack_duration"				"20"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"max_stacks"					"5 7 9 12"
-			}
+			"var_type"			"FIELD_INTEGER"
+			"max_radius"			"1000 1100 1200 1300"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_reflection_pct"		"30 40 50 70"
 		}
 	}
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_spectre/spectre_dispersion.vpcf"
+		"particle"	"particles/units/heroes/hero_spectre/spectre_dispersion_fallback_mid.vpcf"
+		"particle"	"particles/units/heroes/hero_spectre/spectre_dispersion_b_fallback_low.vpcf"
+	}
+
+	"OnCreated"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"dispersion.lua"
+			"Function"		"ApplyModifier"
+		}
+	}
+}
 
     //=================================================================================================================
     // Wisp: Tether (Vyasich)
@@ -1108,7 +1099,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"skewer_speed"				"250"
+				"skewer_speed"				"650"
 			}
 			"02"
 			{
@@ -1763,7 +1754,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
+		"AbilityCastRange"				"900"
 		"AbilityCastPoint"				"0.2"
 
 		// Ability Resource
@@ -1891,7 +1882,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30.0 24.0 18.0 12.0"
+		"AbilityCooldown"				"20.0 18.0 16.0 12.0"
 		"AbilityManaCost"				"125 150 175 200"
 
 		// Damage
@@ -2113,7 +2104,7 @@
 		"AbilityCastPoint"				"0.45 0.45 0.45"
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"70 60 50"
+		"AbilityCooldown"				"30 20 15"
 		"AbilityManaCost"				"280 420 680"
 
 		// Damage
@@ -2136,7 +2127,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"damage_delay"				"0.25"
+				"damage_delay"				"0.10"
 			}
 		}
 	}
@@ -2177,7 +2168,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"160.0 100.0 40.0"
+		"AbilityCooldown"				"50.0 40.0 30.0"
 		"AbilityManaCost"				"200 420 650"
 
 		// Damage
@@ -2210,7 +2201,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"100.0 60.0 20.0"
+				"cooldown_scepter"			"20.0 15.0 10.0"
 			}
 			"06"
 			{
@@ -2371,7 +2362,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"90 160 230 300"	
+				"shadowraze_damage"	"50 100 150 200"	
 			}
 			"02"
 			{
@@ -2386,17 +2377,17 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"3"
+				"shadowraze_cooldown"	"10"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "80"
+				"stack_bonus_damage" "50"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"8"
+				"duration"	"10"
 			}
 		}
 	}
@@ -2443,7 +2434,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"90 160 230 300"	
+				"shadowraze_damage"	"50 100 150 200"	
 			}
 			"02"
 			{
@@ -2458,17 +2449,17 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"3"
+				"shadowraze_cooldown"	"10"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "80"
+				"stack_bonus_damage" "50"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"8"
+				"duration"	"10"
 			}
 		}
 	}
@@ -2516,7 +2507,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"90 160 230 300"	
+				"shadowraze_damage"	"50 100 150 200"	
 			}
 			"02"
 			{
@@ -2526,22 +2517,22 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"500"
+				"shadowraze_range"	"350"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"3"
+				"shadowraze_cooldown"	"10"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "80"
+				"stack_bonus_damage" "50"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"8"
+				"duration"	"10"
 			}
 		}
 	}
@@ -2589,7 +2580,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"90 160 230 300"	
+				"shadowraze_damage"	"50 100 150 200"	
 			}
 			"02"
 			{
@@ -2599,22 +2590,22 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"650"
+				"shadowraze_range"	"350"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"3"
+				"shadowraze_cooldown"	"10"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "80"
+				"stack_bonus_damage" "50"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"8"
+				"duration"	"10"
 			}
 		}
 	}
@@ -2662,7 +2653,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"90 160 230 300"	
+				"shadowraze_damage"	"50 100 150 200"	
 			}
 			"02"
 			{
@@ -2672,22 +2663,22 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"800"
+				"shadowraze_range"	"350"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"3"
+				"shadowraze_cooldown"	"10"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "80"
+				"stack_bonus_damage" "50"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"8"
+				"duration"	"10"
 			}
 		}
 	}
@@ -2722,8 +2713,8 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60"
-		"AbilityManaCost"				"900"
+		"AbilityCooldown"				"60 40 20"
+		"AbilityManaCost"				"600"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2750,17 +2741,17 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"3"
+				"shadowraze_cooldown"	"30 40 20"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "80"
+				"stack_bonus_damage" "50"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"8"
+				"duration"	"10"
 			}
 		}
 	}
@@ -3206,7 +3197,7 @@
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"15.0 15.0 15.0 15.0"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+	"AbilityCastPoint"				"1 0.8 0.5 0.2"
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -3435,7 +3426,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"80.0 75.0 70.0"
+	"AbilityCooldown"				"40.0 30.0 20.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -3457,7 +3448,7 @@
 		"01"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"duration"					"3.0 3.5 4.0"
+			"duration"					"5.0 6.0 7.0"
 		}
 		"02"
 		{
@@ -3654,7 +3645,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"120.0 90.0 60.0"
+	"AbilityCooldown"				"40.0 35.0 25.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -3672,7 +3663,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"speed"						"800"
+			"speed"						"600"
 		}
 		"03"
 		{
@@ -3923,7 +3914,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"22 20 18 16"
+		"AbilityCooldown"				"20 18 15 10"
 		"AbilityManaCost"				"120"
 
 		// Damage
@@ -3946,12 +3937,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"min_stun"					"0.25"
+				"min_stun"					"2.0"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"max_stun"					"1.75 2.5 3.25 4.0"
+				"max_stun"					"3.0 3.5 4.0 5.5"
 			}
 			"05"
 			{
@@ -4019,12 +4010,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"min_stun"					"0.25"
+				"min_stun"					"3.0"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"max_stun"					"1.75 2.5 3.25 4.0"
+				"max_stun"					"3.0 3.5 4.0 5.5"
 			}
 			"04"
 			{
@@ -4831,8 +4822,8 @@
 		{
 			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"crit_chance"				"1 5 10"
+				"var_type"					"FIELD_FLOAT"
+				"crit_chance"				"1 2.5 5"
 			}
 			"02"
 			{
@@ -4851,7 +4842,7 @@
 		"AbilityTextureName"        "temich_attspeed"
 		"MaxLevel"                  "4"
 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"           "10"
+		"AbilityCooldown"           "20 15 10"
 		"AbilityManaCost"           "0"
 
 

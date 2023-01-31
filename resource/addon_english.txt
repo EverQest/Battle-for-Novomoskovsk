@@ -5,15 +5,15 @@
 	{		
 		"addon_game_name"								"Battle For Novomoskovsk"
 		"DOTA_GameMode_15"								"Overthrow"
-		"BanPhase"										"Ban"
-		"HeroPickPhase"									"HeroPick"
-		"StrategyPhase"									"Strategy"
+		"BanPhase"										"Стадия серьёзки"
+		"HeroPickPhase"									"Выбери чмоню"
+		"StrategyPhase"									"Планирование"
 
+		"DOTA_Tooltip_modifier_get_xp_global"					"Кто то наблюдает"
+		"DOTA_Tooltip_modifier_get_xp_global_Description"		"Кто то пристолько следит за тобой и ты почему то получаешь опыт и деньги"
+		
 		"DOTA_Tooltip_modifier_get_xp"					"Святость Калыбаба"
 		"DOTA_Tooltip_modifier_get_xp_Description"		"Калыбаб наделяет вас золотом и опытом"
-
-		"DOTA_Tooltip_modifier_get_xp_global"					"Святость Калыбаба"
-		"DOTA_Tooltip_modifier_get_xp_global_Description"		"Калыбаб наделяет вас золотом и опытом"
 
 		"DOTA_Tooltip_modifier_fountain_aura_effect_lua"					"Фонтанище"
 		"DOTA_Tooltip_modifier_fountain_aura_effect_lua_Description"		"Прикинь тебя фонтан хилит"
@@ -35,9 +35,9 @@
        "Dota_Tooltip_ability_pudge_rot_lua_Description"      						"Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
        "Dota_Tooltip_ability_wisp_tether_datadriven"                  				"Душнила"
        "Dota_Tooltip_ability_wisp_tether_datadriven_Description"      				"Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
-       "Dota_Tooltip_ability_bristleback_warpath_lua"                 				"Одно присутствие"
-       "Dota_Tooltip_ability_bristleback_warpath_lua_datadriven"      				"Вам страшно"
-       "Dota_Tooltip_ability_bristleback_warpath_lua_Description"     				"Васич настолько сильно воняет что постепенно наращивает складки"
+       "Dota_Tooltip_ability_spectre_dispersion_datadriven"                 		"Одно присутствие"
+       "Dota_Tooltip_ability_spectre_dispersion_datadriven_datadriven"      		"Больно однако"
+       "Dota_Tooltip_ability_spectre_dispersion_datadriven_Description"     		"Васичу настолько похуй на оскорбления что он их тупо отражает во врагов от чего те получают урон"
        "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua"                		"Дарк метал"
        "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_datadriven"     		"Минус уши"
        "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_Description"    		"Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
@@ -177,6 +177,37 @@
 
 		//Перик
 		"npc_dota_hero_lone_druid"			   "Переверик"
+
+		//
+		"DOTA_Tooltip_modifier_invis_revealed"							"Нашли лоха"
+		//
+		"DOTA_Tooltip_ability_item_bag_of_gold"							"300грн"
+		"DOTA_Tooltip_ability_item_treasure_chest"						"Рундук"
+		//
+		"npc_dota_creature_basic_zombie"								"Клоун"
+		"npc_dota_creature_berserk_zombie"								"Клоуник"
+		//
+		"DOTA_Tooltip_Ability_item_ward_sentry"							"Жабий глаз"
+		"DOTA_Tooltip_Ability_item_dust"								"Пыльца фей"
+		//
+		"DOTA_Tooltip_Ability_item_travel_boots"						"Пингвины"
+		//
+		"DOTA_Tooltip_Ability_item_headdress"							"Шлем Тараса"
+		//
+		"DOTA_Tooltip_Ability_item_arcane_boots"						"Бумбокс"
+		//
+		"DOTA_Tooltip_Ability_item_refresher"							"Макс Корж"
+		//
+		"DOTA_Tooltip_Ability_item_rapier"								"Палка Косаря"
+		//
+		"DOTA_Tooltip_Ability_item_sphere"								"Линк Очка"
+		//
+		"DOTA_Tooltip_Ability_item_vladmir"								"Зяблз"
+		//
+		"DOTA_Tooltip_Ability_item_wraith_pact"							"Мега Зяблз"
+		//
+		"DOTA_Tooltip_Ability_item_aegis"								"Сердце Гатиловича"
+		//
 	}
 
 }

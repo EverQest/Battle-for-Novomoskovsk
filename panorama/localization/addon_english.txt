@@ -1,75 +1,68 @@
 "addon"
 {
-	"PointsToWin"									"+{d:points_to_win} more"
-	"PointsToWin_CloseToVictory"					"+{d:points_to_win} more"
-	"PointsToWin_VeryCloseToVictory"				"+{d:points_to_win} more!"
-	"PointsToWin_Victory"							"Victory!"
+	"PointsToWin"									"Ещё {d:points_to_win}"
+	"PointsToWin_CloseToVictory"					"Ещё {d:points_to_win}"
+	"PointsToWin_VeryCloseToVictory"				"Ещё {d:points_to_win}!"
+	"PointsToWin_Victory"							"Тут нет победы!"
 
-	"InstructionsTitle"								"OVERTHROW"
-	"InstructionsObjective"							"OBJECTIVE"
-	"InstructionsObjectiveText"						"Slay your enemies! Be the first to earn the goal number of kills, or the team with the most kills when the round ends, and you will be victorious."
-	"InstructionsHowToPlay"							"HOW TO PLAY"
-	"InstructionsLines"								"-Approach the Midas Throne to earn bonus gold and experience.<br>
-													-Snatch up any giant coins the Over Boss tosses to earn even more gold.<br>
-													-Keep an eye out for neutral item deliveries. An icon will appear on your map where a neutral item will appear.<br>
-													-The fewer kills your team has, the better the neutral item you will receive from a delivery.<br>
-													-Slay anyone who isn't on your team."
+	"InstructionsTitle"								"Battle For Novomoskovsk"
+	"InstructionsObjective"							"ЦЕЛЬ"
+	"InstructionsObjectiveText"						"Уничтожайте врагов! Наберите необходимое число убийств первыми или совершите наибольшее число убийств к концу раунда, и победа будет за вами."
+	"InstructionsHowToPlay"							"ПРАВИЛА"
+	"InstructionsLines"								"— Трон Мидаса даёт дополнительные золото и опыт.<br>
+													— Хватайте гигантские монеты в центре карты, чтобы получить ещё больше золота.<br>
+													— Следите за картой: на ней показано, где появятся сундуки с предметами.<br>
+													— Чем меньше убийств у вашей команды, тем лучше предметы, которые вы получите из сундуков.<br>
+													— Убивайте всех, кто не в вашей команде."
 
-	"Scoreboard_Goal"								"Goal"
+	"Scoreboard_Goal"								"Цель"
 
-	"Chest"										"NEUTRAL ITEM"
-	"ItemWillSpawn"									"IS ABOUT TO BE DELIVERED!"
-	"ItemHasSpawned"								"IS ON ITS WAY!"
+	"Chest"											"Нова пошта"
+	"ItemWillSpawn"									"Замовлення прийняте"
+	"ItemHasSpawned"								"Замовлення в дорозi"
 
 	"RecentScore"									"+{d:score}"
 
-	"Unassigned"      								"Unassigned Team"
-	"Spectator"       								"Spectator Team"
-	"Neutrals"        								"Neutral Team"
-	"NoTeam"          								"No Team"
+	"Unassigned"      								"Неопределившиеся"
+	"Spectator"       								"Зыретели"
+	"Neutrals"        								"Нейтральная команда"
+	"NoTeam"          								"Нет команды"
 
-	"DOTA_GoodGuys"   								"Teal Tiger"
-	"DOTA_BadGuys"    								"Yellow Monkey"
-	"DOTA_Custom1"    								"Pink Dragon"
-	"DOTA_Custom2"    								"Orange Dog"
-	"DOTA_Custom3"    								"Blue Rooster"
-	"DOTA_Custom4"    								"Green Ram"
-	"DOTA_Custom5"    								"Brown Rat"
-	"DOTA_Custom6"    								"Cyan Boar"
-	"DOTA_Custom7"    								"Olive Snake"
-	"DOTA_Custom8"    								"Purple Horse"
+	"DOTA_GoodGuys"   								"Кривые Бассы"
+	"DOTA_BadGuys"    								"Типы с Левого"
+	"DOTA_Custom1"    								"Серъёзка"
+	"DOTA_Custom2"    								"Любители покушать"
+	"DOTA_Custom3"    								"Трогатели какашек"
+	"DOTA_Custom4"    								"Терпилы"
+	"DOTA_Custom5"    								"Чичанутые"
+	"DOTA_Custom6"    								"Бумбокс"
+	"DOTA_Custom7"    								"Адская дрочильня"
+	"DOTA_Custom8"    								"Пацаны с Верхника"
 	
 	"OverthrowHeroPickup"							"{s:hero_id}"
-	"OverthrowTextPickup"							"HAS PICKED UP"
+	"OverthrowTextPickup"							"Отримав у замовленнi"
 	"OverthrowItemPickup"							"{s:item_id}!"
 
-	"Remaining"										"REMAINING"
+	"Remaining"										"ОСТАЛОСЬ"
 
-	"Overtime"										"OVERTIME!"
-	"OvertimeInstructions"							"SCORE TO WIN"
+	"Overtime"										"ДОБАВОЧНОЕ ВРЕМЯ!"
+	"OvertimeInstructions"							"УБИВАЙТЕ, ЧТОБЫ ПОБЕДИТЬ"
 
 	"KillMessageHero"								"{s:hero_id}"
-	"KillMessageText"								"HAS KILLED THE LEADER"
-	"KillMessageBounty"								"FOR 500 BONUS GOLD!"
+	"KillMessageText"								"Потрогал"
+	"KillMessageBounty"								"Какашки"
 	
-	"addonname"										"Overthrow"
-	"overthrow_game_info_header_objective"			"Objective:"
-	"overthrow_brief_description"					"Slay your enemies! First team to hit the kill limit wins!"
-	"overthrow_game_info_header_how_to_play"		"How To Play:"
-	"overthrow_game_info_throne"					"Approach the <span class='midas_throne'>Midas Throne</span> to earn bonus <span class='gold'>gold</span> and <span class='xp'>experience</span>."
-	"overthrow_game_info_coins"						"Snatch up coins the <span class='overboss'>Overboss</span> tosses to earn more <span class='gold'>gold</span>."
-	"overthrow_game_info_items"						"Keep an eye out for <span class='treasure'>neutral item</span> deliveries. An icon will appear on your map where a <span class='items'>neutral item</span> will appear."
-	"overthrow_game_info_tips_header"				"Tips:"
-	"overthrow_game_info_tip01"						"The current leader has a gold crown, and you will get extra gold for killing them."
-	"overthrow_game_info_tip03"						"You may need to coordinate with an opposing team to take out a strong opponent."
-	"overthrow_game_info_tip04"						"The fewer kills your team has, the stronger the neutral items you will recieve from a delivery."
+	"addonname"										"Battle For Novomoskovsk"
+	"overthrow_game_info_header_objective"			"Цель:"
+	"overthrow_brief_description"					"Уничтожайте врагов! Первый, кто наберёт достаточно убийств, победит!"
+	"overthrow_game_info_header_how_to_play"		"Правила:"
+	"overthrow_game_info_throne"					"<span class='midas_throne'>Трон Мидаса</span> даёт дополнительные <span class='gold'>золото</span> и <span class='xp'>опыт</span>"
+	"overthrow_game_info_coins"						"Хватайте меня за какашки, чтобы получить ещё больше <span class='gold'>золота</span>."
+	"overthrow_game_info_items"						"Следите за <span class='treasure'>картой</span>: на ней показано, где появятся сундуки с <span class='items'>нейтральными предметами</span>."
+	"overthrow_game_info_tips_header"				"Советы:"
+	"overthrow_game_info_tip01"						"Текущий лидер не лидер, и вы ничего не получите."
+	"overthrow_game_info_tip03"						"Возможно, чтобы убить сильного врага, вам придётся действовать сообща с другими противниками."
+	"overthrow_game_info_tip04"						"Чем меньше убийств совершила ваша команда, тем сильнее нейтральные предметы, которые вы получаете из сундуков."
 
-	//"npc_dota_hero_silencer_notification"			"Silencer"
-	//"npc_dota_hero_necrolyte_notification"			"Necrophos"
-	//"npc_dota_hero_zuus_notification"				"Zeus"
-	//"npc_dota_hero_riki_notification"				"Riki"
-	//"npc_dota_hero_bounty_hunter_notification"		"Bounty Hunter"
-	//"npc_dota_hero_broodmother_notification"		"Broodmother"
-	//"npc_dota_hero_pudge_notification"				"Pudge"
 }
 

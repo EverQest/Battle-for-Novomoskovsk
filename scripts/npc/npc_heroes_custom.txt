@@ -92,7 +92,7 @@
 		"override_hero"		   		"npc_dota_hero_lycan"
 		
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
-		"AttributeAgilityGain"		"3.4"
+		"AttributeAgilityGain"		"3.8"
 		"AttributeStrengthGain"		"1.2"
 		"AbilityLayout"				"6"
 		"Ability1"					"wind_walk_datadriven"	
@@ -103,7 +103,7 @@
 	        "Ability6"					"lycan_shapeshift_datadriven"
 	}
 	//=================================================================================================================
-	// HERO: Phantom Lancer (Некит)
+	// HERO: Phantom Lancer (Nekit)
 	//=================================================================================================================
 	"npc_dota_hero_nekit"
 	{
@@ -139,14 +139,17 @@
 	{
 		"override_hero"		   "npc_dota_hero_wisp"	
 	
+		"MagicalResistance"			 "10"
+		"MovementTurnRate"			 "50"
+		"StatusHealthRegen"			 "20.0"
 		"AttributeStrengthGain"		 "6.2"
 		"AbilityLayout"		   		 "4"
 		"Ability1"            		 "wisp_tether_datadriven"	
 		"Ability2"		     		 "pudge_rot_lua"
-		"Ability3"            		 "bristleback_warpath_lua"
-	        "Ability6"            		 "naga_siren_song_of_the_siren_lua"	
-	        "Ability4"           		 ""	
-	        "Ability5"           		 ""	
+		"Ability3"            		 "spectre_dispersion_datadriven"
+	    "Ability6"            		 "naga_siren_song_of_the_siren_lua"	
+	    "Ability4"           		 ""	
+	    "Ability5"           		 ""	
 	}
 	//=================================================================================================================
 	// HERO: Nevermore (Yarik)
