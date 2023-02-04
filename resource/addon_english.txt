@@ -158,10 +158,18 @@
 		"Dota_Tooltip_ability_sand_king_epicenter_lua"					 						"Навалить басса в 7 утра"
 		"Dota_Tooltip_ability_sand_king_epicenter_lua_Description"		 						"Как же он любит послушать музыку, тут ничего не сказать о_0"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
+		
+		"Dota_Tooltip_ability_chaos_bolt_datadriven"								"Дать пять!"
+		"Dota_Tooltip_ability_chaos_bolt_datadriven_Description"					"Здарова братва! оглушает выбранного братана"
+		"Dota_Tooltip_ability_usa_rage"												"На всех парах в Канаду"
+		"Dota_Tooltip_ability_usa_rage_Description"									"Занзак так стремиться уехать в Канаду что его не остановить, большая скорость но может потерять рассудок и оглушиться и оглушить других"
+		"Dota_Tooltip_ability_vacuum_datadriven"									"Кучнее пацанва!"
+		"Dota_Tooltip_ability_vacuum_datadriven_Description"				 		"Занзак собирает всех в одну группу людей, притягивая всех в центр"
+		"Dota_Tooltip_ability_enigma_black_hole_lua"					 			"Самая сильная кнопка в ДНР"
+		"Dota_Tooltip_ability_enigma_black_hole_lua_Description"		 			"Зарядив красную кнопку прилётов он яросно кастует конец вселенной"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		//ТimurTheTitan
 		"npc_dota_hero_elder_titan"        	   "ТimurTheTitan"

@@ -4058,7 +4058,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"enigma_black_hole_lua"
-		"AbilityTextureName"			"enigma_black_hole"
+		"AbilityTextureName"			"dnr"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
 		"HasScepterUpgrade"			"1"
@@ -4085,7 +4085,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"200.0 180.0 160.0"
+		"AbilityCooldown"				"100.0 80.0 60.0"
 		"AbilityManaCost"				"275 325 375"
 
 		// Damage
@@ -4154,9 +4154,9 @@
 	}
 
 	//=================================================================================================================
-	// Gyrocopter: Homing Missile (Rostik)
+	// Chaos Knight: Chaos Bolt (Zanzak)
 	//=================================================================================================================
-	"homing_missile_datadriven"
+	"chaos_bolt_datadriven"
 	{
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -4167,166 +4167,460 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			"gyrocopter_homing_missile"
-	
+	"AbilityTextureName"			"darova"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_target.vpcf"
-		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_death.vpcf"
-		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
-		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_homing_missile_fuse.vpcf"
-		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile.vsnd"
-		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile_enemy.vsnd"
-		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile_destroy.vsnd"
-		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile_target.vsnd"
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+		"particle"		"particles/chaos_knight_chaos_bolt.vpcf"
+		"particle"		"particles/econ/events/plus/high_five/high_five_impact_steam.vpcf"
 	}
-	
+
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1050"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
-
+	"AbilityCastRange"				"500"
+	"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20 17 14 11"
-	
+	"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 130 140 150"
+	"AbilityManaCost"				"140 140 140 140"
 
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"125 250 375 500"
-	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
 		"01"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"hits_to_kill_tooltip"				"3 3 4 5"
+			"var_type"				"FIELD_INTEGER"
+			"chaos_bolt_speed"		"500"
 		}
 		"02"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"tower_hits_to_kill_tooltip"		"6 6 8 10"
+			"var_type"				"FIELD_INTEGER"
+			"stun_min"				"2 2.2 2.5 3"
 		}
 		"03"
 		{
-			"var_type"							"FIELD_FLOAT"
-			"stun_duration"						"2.2 2.4 2.6 2.8"
+			"var_type"				"FIELD_INTEGER"
+			"stun_max"				"2 3.2 2.6 3.2"
 		}
 		"04"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"min_damage"						"50"
+			"var_type"				"FIELD_INTEGER"
+			"damage_min"			"75 100 125 150"
 		}
-		"06"
+		"05"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"max_distance"						"1500"
-		}
-		"07"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"min_distance"						"601 301 201 151"
-		}
-		"08"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"pre_flight_time"					"2"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"starting_distance"			"100"
-		}
-		"10"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"speed"						"100"
-		}
-		"11"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"acceleration"				"10"
-		}
-		"12"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"vision_time"				"3.5"
-		}
-		"13"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"vision_radius"				"400"
+			"var_type"				"FIELD_INTEGER"
+			"damage_max"			"200 225 250 275"
 		}
 	}
-	
+
 	"OnSpellStart"
 	{
-		"RunScript"
+		"FireSound"
 		{
-			"ScriptFile"	"homing_missile.lua"
-			"Function"		"CreateMissile"
-			"particle"		"particles/units/heroes/hero_gyrocopter/gyro_homing_missile_fuse.vpcf"
+			"EffectName"	"Hero_ChaosKnight.ChaosBolt.Cast"
+			"Target" 		"CASTER"
 		}
-		
-		"ApplyModifier"
+
+		"TrackingProjectile"
 		{
-			"ModifierName"	"modifier_homing_missile_target"
-			"Target"		"TARGET"
+			"Target"           	"TARGET"
+			"EffectName"		"particles/chaos_knight_chaos_bolt.vpcf"
+			"Dodgeable"			"1"
+			"ProvidesVision"	"0"
+			"MoveSpeed"        	"%chaos_bolt_speed"
+			"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
 		}
 	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"1"
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_ChaosKnight.ChaosBolt.Impact"
+			"Target" 		"TARGET"
+		}
+		
+		"RunScript"
+		{
+			"ScriptFile"	"chaos_bolt.lua"
+			"Function"		"ChaosBolt"
+			"chaos_bolt_particle"	"particles/econ/events/plus/high_five/high_five_impact_steam.vpcf"
+		}
+	  }
+	}
+
+	//=================================================================================================================
+	// Dark Seer: Vacuum (Zanzak)
+	//=================================================================================================================
+	"vacuum_datadriven"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"kychnee"
+	"AOERadius"						"%radius"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts"
+		"particle"			"particles/units/heroes/hero_dark_seer/dark_seer_vacuum.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"180 250 330 350"
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"33 25 23 20"
 	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 130 160 190"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"180 250 330 350"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"0.1 0.1 0.1 0.1"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"100 120 140 160"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius_tree"			"180 250 300 350"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireEffect"
+		{
+			"EffectName"        "particles/econ/events/ti10/blink_dagger_end_ti10_vacuum.vpcf"
+			"EffectAttachType"  "start_at_customorigin"
+			"TargetPoint"       "POINT"
+
+			"ControlPoints"
+			{
+				"01"	"%radius 0 0"
+			}
+		}
+
+		"CreateThinker"
+		{
+			"ModifierName"	"modifier_vacuum_thinker_datadriven"
+			"Target" 		"POINT"
+		}
+	}
+
 	"Modifiers"
 	{
-		"modifier_homing_missile_datadriven"
+		"modifier_vacuum_thinker_datadriven"
 		{
+			"Duration"		"%duration"
+
 			"OnCreated"
 			{
 				"FireSound"
 				{
-					"EffectName"	"Hero_Gyrocopter.HomingMissile"
-					"Target"		"TARGET"
+					"EffectName"	"Hero_Dark_Seer.Vacuum"
+					"Target" 		"TARGET"
+				}
+
+				"DestroyTrees"
+				{
+					"Target" 		"TARGET"
+					"Radius"		"%radius_tree"
+				}
+
+				"RunScript"
+				{
+					"ScriptFile"	"vacuum.lua"
+					"Function"		"VacuumStart"
 				}
 			}
-		
-			"ThinkInterval"		"0.02"
+
+			"OnDestroy"
+			{
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"  	"TARGET"
+						"Radius" 	"%radius"
+						"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						"Flags"     "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+					}
+				
+					"Action"    
+					{
+						"Damage"
+						{
+							"Target"		"TARGET"
+							"Type"			"DAMAGE_TYPE_MAGICAL"
+							"Damage"		"%damage"
+						}
+					}
+				}
+			}
+
+			"ThinkInterval"  "0.03"
 			"OnIntervalThink"
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"homing_missile.lua"
-					"Function"		"MoveMissile"
+					"ScriptFile"	"vacuum.lua"
+					"Function"		"Vacuum"
+					"vacuum_modifier"	"modifier_vacuum_datadriven"
 				}
 			}
-			
-			"OnTakeDamage"
+		}
+
+		"modifier_vacuum_datadriven"
+		{
+			"IsPurgable"	"0"
+
+			"OverrideAnimation"     "ACT_DOTA_FLAIL"
+
+			"States"
 			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/hero_gyrocopter/homing_missile.lua"
-					"Function"		"MissileAttacked"
-					"sound"			"Hero_Gyrocopter.HomingMissile"
-					"sound2"		"Hero_Gyrocopter.HomingMissile.Enemy"
-					"sound3"		"Hero_Gyrocopter.HomingMissile.Target"
-					"sound4"		"Hero_Gyrocopter.HomingMissile.Destroy"
-					"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_death.vpcf"
-					"particle2"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
-				}
+				"MODIFIER_STATE_STUNNED"			"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+	}
+
+	//=================================================================================================================
+	// MLG Злость
+	//=================================================================================================================
+	"usa_rage"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"usa"
+		"MaxLevel" 						"3"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCooldown"				"30 25 20 "
+		"AbilityManaCost"				"200"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AoERadius"						"%radius"
+		
+		"precache"
+		{
+			"soundfile"   "soundevents/thomas/hero/game_sounds_thomas.vsnd"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"0"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun"				"2"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"700"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius_boom"		"700"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"		"-300"
 			}
 		}
 		
-		"modifier_homing_missile_target"
+		"OnSpellStart"
 		{
-			"IsDebuff" "1"
-			
-			"EffectName"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_target.vpcf"
-			"EffectAttachType"	"follow_overhead"
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_Train_Thomas"
+				"Target" 		"CASTER"
+				"Duration"		"%duration"
+			}
+			"FireSound"
+			{
+				"EffectName"		"thomas"
+				"Target"			"CASTER"
+			}
 		}
-	}
+		
+		"Modifiers"
+		{
+			"modifier_Train_Thomas"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+		
+				"EffectName"		"particles/econ/items/windrunner/windrunner_cape_cascade/windrunner_windrun_cascade.vpcf"
+				"EffectAttachType"	"follow_origin"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"%speed"
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS" 	"%range"
+				}
+		
+				"OnDestroy"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"  	"CASTER"
+							"Radius" 	"%radius_boom"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						}
+					
+						"Action"    
+						{
+							"Stun"
+							{
+								"Duration"   "%stun"
+								"Target" 	 "TARGET"
+							}
+							"RunScript"
+							{
+								"ScriptFile"	"mlgrage.lua"
+								"Function"		"MLGRage"
+							}
+						}
+					}
+					"Stun"
+					{
+						"Duration"   "2"
+						"Target" 	 "CASTER"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"stop_sound.lua"
+						"Function"		"ThomasDied"
+					}
+					"CreateThinker"
+					{
+						"ModifierName" "modifier_thomas_train_effect"
+						"Target" "CASTER"
+					}
+				}
+			}
+			"modifier_thomas_train_effect"
+			{
+				"Passive"		"0"
+				"IsHidden"		"1"			
+				"Duration"	"1.2"
+				
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName" "particles/units/heroes/hero_lina/lina_spell_light_strike_array_explosion.vpcf"
+						"EffectAttachType" "follow_origin"
+						"Target" "TARGET"
+						"ControlPoints"
+						{
+							"00" "0 0 0"
+							"01" "650 1 1"
+						}
+					}
+					"AttachEffect"
+					{
+						"EffectName" "particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_unstable_concoction_explosion.vpcf"
+						"EffectAttachType" "follow_origin"
+						"Target" "TARGET"
+						"ControlPoints"
+						{
+							"00" "0 0 0"
+							"01" "650 1 1"
+						}
+					}
+					"AttachEffect"
+					{
+						"EffectName" "particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
+						"EffectAttachType" "follow_origin"
+						"Target" "TARGET"
+						"ControlPoints"
+						{
+							"00" "0 0 0"
+							"01" "650 1 1"
+						}
+					}
+				}
+			}
+			"modifier_Train_Thomas_bash"
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+
+				"OnCreated"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_Train_Thomas"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"	"particles/econ/items/sniper/sniper_charlie/sniper_assassinate_impact_blood_charlie.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
 	}
 
 	//=================================================================================================================
