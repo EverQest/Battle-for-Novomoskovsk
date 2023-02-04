@@ -10,7 +10,8 @@ end
 
 
 function rip_opz:OnOwnerDied ()
-    self:GetCaster():EmitSound("CustomHornToss")
+    local sound_cast = "FelixCustomSong1"
+	EmitSoundOn( sound_cast, self:GetCaster() )
     PauseGame(true)
 end
 

@@ -55,6 +55,7 @@
 		"override_hero"		   		"npc_dota_hero_storm_spirit"	
 		"AttackRate"				"0.3"
 		"ProjectileSpeed"			"200"
+		"AttributeAgilityGain"		"1.9"
 		"AbilityLayout"		  		"4"
 
 		"Ability1"		      		"storm_spirit_ball_lightning_lua"
@@ -141,8 +142,8 @@
 	
 		"MagicalResistance"			 "10"
 		"MovementTurnRate"			 "50"
-		"StatusHealthRegen"			 "20.0"
-		"AttributeStrengthGain"		 "6.2"
+		"StatusHealthRegen"			 "12.0"
+		"AttributeStrengthGain"		 "6.0"
 		"AbilityLayout"		   		 "4"
 		"Ability1"            		 "wisp_tether_datadriven"	
 		"Ability2"		     		 "pudge_rot_lua"

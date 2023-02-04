@@ -316,7 +316,7 @@
 
 
 	//=================================================================================================================
-	//HEROES//=========================================================================================================
+	//===============================================//HEROES//========================================================
 	//=================================================================================================================
 	// Spectre: Dispersion (Vyashich)
 	//=================================================================================================================
@@ -325,7 +325,6 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"					"ability_datadriven"
-	"AbilityTextureName"		"spectre_dispersion"
 	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"		"vyasich_aura"
@@ -336,18 +335,18 @@
 	{
 		"01"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"min_radius"			"500 550 600 650"
+			"var_type"				"FIELD_INTEGER"
+			"min_radius"			"200 250 300 350"
 		}
 		"02"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"max_radius"			"1000 1100 1200 1300"
+			"var_type"				"FIELD_INTEGER"
+			"max_radius"			"200 250 300 350"
 		}
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"damage_reflection_pct"		"30 40 50 70"
+			"damage_reflection_pct"		"10 20 30 40"
 		}
 	}
 
@@ -394,11 +393,11 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"40 40 40 40"
+		"AbilityManaCost"				"80 60 50 40"
 	
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1800 1800 1800 1800"
+		"AbilityCastRange"				"1000 1200 1400 1800"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -412,7 +411,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movespeed"					"20 40 50 100"
+				"movespeed"					"20 40 50 80"
 			}
 			"03"
 			{
@@ -432,7 +431,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"tether_heal_amp"			"100.0 120.0 130.0 140.0"
+				"tether_heal_amp"			"20.0 30.0 40.0 50.0"
 			}
 			"07"
 			{
@@ -813,7 +812,7 @@
 		//-------------------------------------------------------------------------------------------------------------														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"vyasich_rot"
@@ -1734,7 +1733,7 @@
 		"AbilityTextureName"			"laser_danya"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
-		"HasScepterUpgrade"				"1"
+		"HasScepterUpgrade"				"0"
 		
 		"precache"
 		{
@@ -1755,7 +1754,7 @@
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"900"
-		"AbilityCastPoint"				"0.2"
+		"AbilityCastPoint"				"0.0"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -1787,7 +1786,7 @@
 			"04"	
 			{
 				"var_type"				"FIELD_INTEGER"
-				"laser_damage"			"80 160 240 320"
+				"laser_damage"			"100 160 240 320"
 			}	
 			"05"
 			{
@@ -1811,7 +1810,7 @@
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"tinker_rearm_lua"
 		"AbilityTextureName"			"rearm_danya"
-		"FightRecapLevel"				"2"
+		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"precache"
 		{
@@ -1826,8 +1825,8 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.53"
-		"AbilityChannelTime"			"3.0 1.5 0.75 0.40"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"2.8 1.5 1.0 0.4"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -1883,7 +1882,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"20.0 18.0 16.0 12.0"
-		"AbilityManaCost"				"125 150 175 200"
+		"AbilityManaCost"				"200 175 150 125"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -1895,12 +1894,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"2 3 3.4 3.8"
+				"duration"					"2.0 3.0 3.4 3.8"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movespeed"					"140"
+				"movespeed"					"100"
 			}
 		}
 	}
@@ -1935,7 +1934,7 @@
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"300"
-		"AbilityCastPoint"				"2"
+		"AbilityCastPoint"				"1.2"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -1968,7 +1967,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"6.0"
+				"duration"				"7.0"
 			}
 			"05"
 			{
@@ -2096,7 +2095,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -2105,7 +2104,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30 20 15"
-		"AbilityManaCost"				"280 420 680"
+		"AbilityManaCost"				"280 420 480"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2117,7 +2116,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"450 650 850"
+				"damage"					"600 800 1000"
 			}
 			"02"
 			{
@@ -2127,7 +2126,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"damage_delay"				"0.10"
+				"damage_delay"				"0.20"
 			}
 		}
 	}
@@ -2159,7 +2158,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -2168,7 +2167,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50.0 40.0 30.0"
+		"AbilityCooldown"				"30 20 15"
 		"AbilityManaCost"				"200 420 650"
 
 		// Damage
@@ -2181,7 +2180,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"600 725 850"
+				"damage"					"600 800 1000"
 			}
 			"02"
 			{
@@ -2306,7 +2305,7 @@
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"impact_stun_duration"	"1.5 1.6 1.7 1.8"
+				"impact_stun_duration"	"2.5 2.6 2.7 2.8"
 			}
 			"11"
 			{
@@ -2517,7 +2516,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"350"
+				"shadowraze_range"	"500"
 			}
 			"04"
 			{
@@ -2590,7 +2589,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"350"
+				"shadowraze_range"	"650"
 			}
 			"04"
 			{
@@ -2663,7 +2662,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"350"
+				"shadowraze_range"	"800"
 			}
 			"04"
 			{
@@ -2871,14 +2870,14 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"225 300 375 450"
+		"AbilityCastRange"				"300 350 400 450"
 		"AbilityCastPoint"				"0.25 0.25 0.25 0.25"
 		"AbilityDuration"				"4.0"
-		"AbilityDamage"					"100 120 140 150"
+		"AbilityDamage"					"140 180 200 250"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"22 18 14 10"
+		"AbilityCooldown"				"22 18 14 12"
 		"AbilityManaCost"				"140 160 180 200"
 
 		// Damage
@@ -2896,7 +2895,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"200 300 400 500"
+				"damage"				"140 180 200 250"
 			}
 			"03"
 			{
@@ -2950,8 +2949,8 @@
 	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0.1"
 	"AoERadius"						"325"
-	"AbilityCooldown"				"25 20 15 10"
-	"AbilityManaCost"				"50"
+	"AbilityCooldown"				"25 20 15 12"
+	"AbilityManaCost"				"100 80 60 50"
 		
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -2980,7 +2979,7 @@
 		"05"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"first_illusion_outgoing_damage"	"20.0"
+			"first_illusion_outgoing_damage"	"30.0"
 		}
 		"06"
 		{
@@ -2990,7 +2989,7 @@
 		"07"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"second_illusion_outgoing_damage"	"20.0"
+			"second_illusion_outgoing_damage"	"30.0"
 		}
 		"08"
 		{
@@ -3196,7 +3195,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15.0 15.0 15.0 15.0"
+	"AbilityCooldown"				"30.0 28.0 26.0 24.0"
 	"AbilityCastPoint"				"1 0.8 0.5 0.2"
 	
 	// Cost
@@ -3397,7 +3396,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15 30 60 120"
+				"duration"				"10 20 30 40"
 			}
 		}
 	}
@@ -3658,12 +3657,12 @@
 		"01"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"duration"					"18.0 18.0 18.0"
+			"duration"					"10.0 15.0 18.0"
 		}
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"speed"						"600"
+			"speed"						"300 400 600"
 		}
 		"03"
 		{
@@ -3909,7 +3908,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0" // for visualization on hover
+		"AbilityCastRange"				"1" // for visualization on hover
 		"AbilityCastPoint"				"0.0"
 
 		// Ability Resource
@@ -3989,7 +3988,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0"
+		"AbilityCastRange"				"1"
 		"AbilityCastPoint"				"0.2"
 
 		// Ability Resource
@@ -5136,8 +5135,8 @@
 		"AbilityTextureName"        "temich_attspeed"
 		"MaxLevel"                  "4"
 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"           "20 15 10"
-		"AbilityManaCost"           "0"
+		"AbilityCooldown"           "24 22 20"
+		"AbilityManaCost"           "300 200 100"
 
 
 		"OnSpellStart"
@@ -5183,7 +5182,7 @@
 		    "01"
 		    {
 		        "var_type"          			"FIELD_INTEGER"
-		        "bonus_movement_speed"          "20 30 40 50"
+		        "bonus_movement_speed"          "20 25 30 35"
 		    }
 		    "02"
 		    {
@@ -5193,12 +5192,12 @@
 		    "03"
 		    {
 		        "var_type"          			"FIELD_INTEGER"
-		        "bonus_attack_speed"             "40 50 60 70"
+		        "bonus_attack_speed"             "30 40 50 60"
 		    }
 			"04"
 		    {
 		        "var_type"          "FIELD_INTEGER"
-		        "regen"             "150 250 350 450"
+		        "regen"             "50 60 70 80"
 		    }
 		}
 	}
