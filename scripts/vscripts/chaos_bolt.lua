@@ -48,5 +48,12 @@ function ChaosBolt( keys )
 	damage_table.damage_type = ability:GetAbilityDamageType()
 	damage_table.damage = damage
 
+-- Create Sound
+local sound = math.random( 1, 3 )
+local sound_cast = "CustomDarova" .. sound
+if sound>0 then
+	EmitSoundOn( sound_cast, caster )
+end
+
 	ApplyDamage(damage_table)
 end

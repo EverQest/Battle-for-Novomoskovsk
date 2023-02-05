@@ -1,6 +1,9 @@
 --[[Author: Pizzalol
 	Date: 03.04.2015.
 	Pulls the targets to the center]]
+
+
+
 function Vacuum( keys )
 	local caster = keys.caster
 	local target = keys.target
@@ -20,6 +23,10 @@ function Vacuum( keys )
 	local target_flags = ability:GetAbilityTargetFlags() 
 
 	local units = FindUnitsInRadius(caster:GetTeamNumber(), target_location, nil, radius, target_teams, target_types, target_flags, FIND_CLOSEST, false)
+
+
+
+
 
 	-- Calculate the position of each found unit
 	for _,unit in ipairs(units) do
@@ -42,6 +49,11 @@ function Vacuum( keys )
 		unit:SetAbsOrigin(unit_location + direction * unit.vacuum_caster.pull_speed)
 
 	end
+
+	-- Create Sound
+	local sound_cast = "CustomVacum1"
+	EmitSoundOn( sound_cast, caster )
+
 end
 
 --[[Author: Pizzalol
@@ -49,6 +61,6 @@ end
 	Track the starting vacuum time]]
 function VacuumStart( keys )
 	local target = keys.target
-
 	target.vacuum_start_time = GameRules:GetGameTime()
 end
+

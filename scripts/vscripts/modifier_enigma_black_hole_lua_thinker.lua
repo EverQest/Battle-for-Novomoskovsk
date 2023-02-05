@@ -124,7 +124,8 @@ end
 function modifier_enigma_black_hole_lua_thinker:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/gyro_call_down_explosion_impact_a.vpcf"
-	local sound_cast = "Hero_Enigma.Black_Hole"
+	local sound = math.random( 1, 2 )
+	local sound_cast = "CustomDnr" .. sound
 
 	-- Create Particle
 	-- local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN, self:GetCaster() )

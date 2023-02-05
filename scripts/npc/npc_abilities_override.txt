@@ -4063,7 +4063,7 @@
 		"HasScepterUpgrade"			"1"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+			"soundfile"	"soundevents/Zanzak.vsndevts"
 			"particle"	"particles/gyro_call_down_explosion_impact_a.vpcf"
 		}
 		
@@ -4172,7 +4172,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+		"soundfile"		"soundevents/Zanzak.vsndevts"
 		"particle"		"particles/chaos_knight_chaos_bolt.vpcf"
 		"particle"		"particles/econ/events/plus/high_five/high_five_impact_steam.vpcf"
 	}
@@ -4223,11 +4223,6 @@
 
 	"OnSpellStart"
 	{
-		"FireSound"
-		{
-			"EffectName"	"Hero_ChaosKnight.ChaosBolt.Cast"
-			"Target" 		"CASTER"
-		}
 
 		"TrackingProjectile"
 		{
@@ -4243,13 +4238,7 @@
 	"OnProjectileHitUnit"
 	{
 		"DeleteOnHit"	"1"
-
-		"FireSound"
-		{
-			"EffectName"	"Hero_ChaosKnight.ChaosBolt.Impact"
-			"Target" 		"TARGET"
-		}
-		
+			
 		"RunScript"
 		{
 			"ScriptFile"	"chaos_bolt.lua"
@@ -4281,7 +4270,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts"
+		"soundfile"			"soundevents/Zanzak.vsndevts"
 		"particle"			"particles/units/heroes/hero_dark_seer/dark_seer_vacuum.vpcf"
 	}
 
@@ -4353,12 +4342,6 @@
 
 			"OnCreated"
 			{
-				"FireSound"
-				{
-					"EffectName"	"Hero_Dark_Seer.Vacuum"
-					"Target" 		"TARGET"
-				}
-
 				"DestroyTrees"
 				{
 					"Target" 		"TARGET"
@@ -4443,7 +4426,7 @@
 		
 		"precache"
 		{
-			"soundfile"   "soundevents/thomas/hero/game_sounds_thomas.vsnd"
+			"soundfile"   "soundevents/Zanzak.vsnd"
 		}
 
 		"AbilitySpecial"
@@ -4490,7 +4473,7 @@
 			}
 			"FireSound"
 			{
-				"EffectName"		"thomas"
+				"EffectName"		"CustomUsaSpeed"
 				"Target"			"CASTER"
 			}
 		}

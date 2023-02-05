@@ -1,4 +1,4 @@
 function ThomasDied(keys)
 	local caster = keys.caster
-	caster:StopSound("thomas")
+	caster:StopSound("CustomUsaSpeed")
 end
