@@ -160,30 +160,30 @@ function COverthrowGameMode:SpecialItemAdd( event )
 	local nLeaderKills = GetTeamHeroKills( leader )
 
 	if nLeaderKills <= 5 then
-		spawnedItem = t1
+		spawnedItem = t3
 	elseif nLeaderKills > 5 and nLeaderKills <= 13 then
 		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t1
-		elseif ownerTeam == lastPlace then
-			spawnedItem = t3
-		else
-			spawnedItem = t2
-		end
-	elseif nLeaderKills > 13 and nLeaderKills <= 21 then
-		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t2
-		elseif ownerTeam == lastPlace then
-			spawnedItem = t4
-		else
-			spawnedItem = t3
-		end
-	elseif nLeaderKills > 21 then
-		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t3
+			spawnedItem = t5
 		elseif ownerTeam == lastPlace then
 			spawnedItem = t5
 		else
 			spawnedItem = t4
+		end
+	elseif nLeaderKills > 13 and nLeaderKills <= 21 then
+		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
+			spawnedItem = t4
+		elseif ownerTeam == lastPlace then
+			spawnedItem = t5
+		else
+			spawnedItem = t4
+		end
+	elseif nLeaderKills > 21 then
+		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
+			spawnedItem = t5
+		elseif ownerTeam == lastPlace then
+			spawnedItem = t5
+		else
+			spawnedItem = t5
 		end
 	end
 

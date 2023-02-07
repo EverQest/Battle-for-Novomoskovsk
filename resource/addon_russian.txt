@@ -59,12 +59,14 @@
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"
 
-		"Dota_Tooltip_ability_mina_explosion_jump"				 				 "Подвернуть ногу"
-		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 			 "Сеня прыгает и калечит ногу и наносит очень много урона"
-		"Dota_Tooltip_ability_undying_decay_senya"								 "Декэй"
-		"Dota_Tooltip_ability_undying_decay_senya_Description"					 "Мамаочки тут поле"
+		"Dota_Tooltip_ability_mina_explosion_jump"				 						 "Подвернуть ногу"
+		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 					 "Сеня прыгает и калечит ногу и наносит очень много урона, но тут нужно иметь филлигранную точность чтобы попасть в противника"
+		"Dota_Tooltip_ability_nyx_assassin_spiked_carapace_datadriven"				 	 "Отражение"
+		"Dota_Tooltip_ability_nyx_assassin_spiked_carapace_datadriven_Description"		 "Сеня отражает любое оскорбление в его сторону, заставляя врагов задуматься о поведении"
+		"Dota_Tooltip_ability_imba_undying_decay"								 "Схавать"
+		"Dota_Tooltip_ability_imba_undying_decay_Description"					 "Сеня хавает по области атрибуты противника и набирает массу, достигая масштабов планеты"
 		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 	 "Арсюша после SЭkS4"
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"		 "Пухленький, но сильный"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"		 "Пухленький, дал разкумара и теперь готов превратиться в истинную форму которая даёт ему мотивацию жить дальше"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Чича
 		"npc_dota_hero_ogre_magi"      		   "Чича"

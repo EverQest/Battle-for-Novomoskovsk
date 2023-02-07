@@ -125,13 +125,13 @@
 	{
 		"AttributePrimary"	   "DOTA_ATTRIBUTE_STRENGTH"
 		"override_hero"		   "npc_dota_hero_techies"	
-		"AbilityLayout"		   "5"
-		"Ability1"             "undying_decay_datadriven"	
-	        "Ability2"             "terrorblade_metamorphosis_lua"	
+		"AbilityLayout"		   "4"
+		"Ability1"             "imba_undying_decay"	
+	    "Ability2"        	   "terrorblade_metamorphosis_lua"	
 		"Ability3"             "nyx_assassin_spiked_carapace_datadriven"
 		"Ability4"		       "mina_explosion_jump"
-	        "Ability5"             ""	
-	        "Ability6"             ""	
+	    "Ability5"             ""	
+	    "Ability6"             ""	
 	}
 	//=================================================================================================================
 	// HERO: Io (Vyashich)
@@ -143,7 +143,7 @@
 		"MagicalResistance"			 "10"
 		"MovementTurnRate"			 "50"
 		"StatusHealthRegen"			 "12.0"
-		"AttributeStrengthGain"		 "6.0"
+		"AttributeStrengthGain"		 "3.2"
 		"AbilityLayout"		   		 "4"
 		"Ability1"            		 "wisp_tether_datadriven"	
 		"Ability2"		     		 "pudge_rot_lua"
@@ -158,13 +158,15 @@
 	"npc_dota_hero_yarik"
 	{
 		"override_hero"		   "npc_dota_hero_nevermore"	
-		"AbilityLayout"		   "6"
+		"AbilityLayout"		  			 "6"
+		"AttributeIntelligenceGain"		 "2.8"
+		
 		"Ability1"             "shadow_fiend_shadowraze_a_lua"	
 		"Ability2"		       "shadow_fiend_shadowraze_b_lua"
 		"Ability3"             "shadow_fiend_shadowraze_c_lua"
-	        "Ability4"             "shadow_fiend_shadowraze_d_lua"	
-	        "Ability5"             "shadow_fiend_shadowraze_e_lua"	
-	        "Ability6"             "shadow_fiend_shadowraze_f_lua"	
+	    "Ability4"             "shadow_fiend_shadowraze_d_lua"	
+	    "Ability5"             "shadow_fiend_shadowraze_e_lua"	
+	    "Ability6"             "shadow_fiend_shadowraze_f_lua"	
 	}
 	//=================================================================================================================
 	// HERO: Enigma (Zanzak)
@@ -172,12 +174,27 @@
 	"npc_dota_hero_zanzak"
 	{
 		"override_hero"		   		"npc_dota_hero_enigma"
-		
 		"AbilityLayout"				"4"
+
 		"Ability1"					"usa_rage"	
 		"Ability2"					"chaos_bolt_datadriven"
 		"Ability3"					"vacuum_datadriven"
 	    "Ability4"					"enigma_black_hole_lua"
+	    "Ability5"					""
+	    "Ability6"					""
+	}
+	//=================================================================================================================
+	// HERO: Gyrocopter (Rostik)
+	//=================================================================================================================
+	"npc_dota_hero_rostik"
+	{
+		"override_hero"		   		"npc_dota_hero_gyrocopter"
+		"AbilityLayout"				"4"
+		
+		"Ability1"					"hattrickleatherball"	
+		"Ability2"					""
+		"Ability3"					""
+	    "Ability4"					""
 	    "Ability5"					""
 	    "Ability6"					""
 	}
