@@ -5375,7 +5375,7 @@
 	"ballhit"
     {
     	"BaseClass"                 "ability_datadriven"
-        "AbilityTextureName"        "Hex"
+        "AbilityTextureName"        "rostik_ball"
         "MaxLevel"                  "4"
 		"AbilityCooldown"			"12"
 		"AbilityManaCost"			"150"
@@ -5384,7 +5384,7 @@
 
         "precache"
 		{
-			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+			"soundfile"			"soundevents/Rostik.vsndevts"
 			"particle"			"particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf"
 		}
 		
@@ -5407,7 +5407,7 @@
 			}
 			"FireSound"
 			{
-				"EffectName"	"bukinball"
+				"EffectName"	"CustomBallKick"
 				"Target"		"CASTER"
 			}
 		}
@@ -5492,10 +5492,11 @@
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"2"
-		"AbilityTextureName"			"Pistoletov/DeathFight"
+		"AbilityTextureName"			"rostik_rage"
 
 		"precache"
 		{
+			"soundfile"				"soundevents/Rostik.vsndevts"
 			"particle"				"particles/duel/legion_duel_ring_arcana.vpcf"
 			"particle"				"particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
 		}
@@ -5681,20 +5682,20 @@
 	{
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			"keeper_of_the_light_illuminate"
+	"AbilityTextureName"			"rostik_paparoach"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+		"soundfile"			"soundevents/Rostik.vsndevts"
 		"particle"			"particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_sonic_wave_v2.vpcf"
 		"particle"			"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_charge.vpcf"
 		"particle"  		"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact.vpcf"
@@ -5721,7 +5722,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage_per_second"		"100.0 140.0 160.0 180.0"
+			"damage_per_second"		"100.0 140.0 180.0 260.0"
 		}
 		"02"
 		{
@@ -5779,14 +5780,14 @@
 	{
 		"FireSound"
 		{
-			"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Charge"
+			"EffectName"	"CustomPrecast"
 			"Target" 		"CASTER"
 		}
 		
 		"RunScript"
 		{
-			"ScriptFile"	"illuminate.lua"
-			"Function"		"IlluminateStart"
+			"ScriptFile"		"illuminate.lua"
+			"Function"			"IlluminateStart"
 			"sub_ability_name"	"illuminate_end_datadriven"
 		}
 
@@ -5811,14 +5812,14 @@
 	{
 		"FireSound"
 		{
-			"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Discharge"
+			"EffectName"	"CustomPaparoch"
 			"Target" 		"CASTER"
 		}
 		
 		"RunScript"
 		{
-			"ScriptFile"	"illuminate.lua"
-			"Function"		"IlluminateEnd"
+			"ScriptFile"				"illuminate.lua"
+			"Function"					"IlluminateEnd"
 			"projectile_name"			"particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_sonic_wave_v2.vpcf"
 		}
 
@@ -5892,7 +5893,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-	"AbilityTextureName"			"keeper_of_the_light_illuminate_end"
+	"AbilityTextureName"			"rostik_paparoach_cast"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -5916,12 +5917,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"silencer_global_silence_lua"
-		"AbilityTextureName"			"silencer_global_silence"
+		"AbilityTextureName"			"rostik_peace"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+			"soundfile"	"soundevents/Rostik.vsndevts"
 			"particle"	"particles/units/heroes/hero_silencer/silencer_global_silence.vpcf"
 			"particle"	"particles/units/heroes/hero_silencer/silencer_global_silence_hero.vpcf"
 		}

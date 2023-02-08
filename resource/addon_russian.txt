@@ -63,10 +63,10 @@
 		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 					 "Сеня прыгает и калечит ногу и наносит очень много урона, но тут нужно иметь филлигранную точность чтобы попасть в противника"
 		"Dota_Tooltip_ability_nyx_assassin_spiked_carapace_datadriven"				 	 "Отражение"
 		"Dota_Tooltip_ability_nyx_assassin_spiked_carapace_datadriven_Description"		 "Сеня отражает любое оскорбление в его сторону, заставляя врагов задуматься о поведении"
-		"Dota_Tooltip_ability_imba_undying_decay"								 "Схавать"
-		"Dota_Tooltip_ability_imba_undying_decay_Description"					 "Сеня хавает по области атрибуты противника и набирает массу, достигая масштабов планеты"
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 	 "Арсюша после SЭkS4"
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"		 "Пухленький, дал разкумара и теперь готов превратиться в истинную форму которая даёт ему мотивацию жить дальше"
+		"Dota_Tooltip_ability_imba_undying_decay"										 "Схавать"
+		"Dota_Tooltip_ability_imba_undying_decay_Description"							 "Сеня хавает по области атрибуты противника и набирает массу, достигая масштабов планеты"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 			 "Арсюша после SЭkS4"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"				 "Пухленький, дал разкумара и теперь готов превратиться в истинную форму которая даёт ему мотивацию жить дальше"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Чича
 		"npc_dota_hero_ogre_magi"      		   "Чича"
@@ -171,6 +171,18 @@
 		"Dota_Tooltip_ability_vacuum_datadriven_Description"				 		"Занзак собирает всех в одну группу людей, притягивая всех в центр"
 		"Dota_Tooltip_ability_enigma_black_hole_lua"					 			"Самая сильная кнопка в ДНР"
 		"Dota_Tooltip_ability_enigma_black_hole_lua_Description"		 			"Зарядив красную кнопку прилётов он яросно кастует конец вселенной"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Ростислав Легенда
+		"npc_dota_hero_gyrocopter"      	   "Ростислав Легенда"
+		
+		"Dota_Tooltip_ability_ballhit"												"Удар Ронольдо"
+		"Dota_Tooltip_ability_ballhit_Description"									"Легендарный пинок Ростислава, перед которым сложно устоять. Опрокидывает врага и накладывает бесселие"
+		"Dota_Tooltip_ability_illuminate_datadriven"								"Сыграть Paparoch"
+		"Dota_Tooltip_ability_illuminate_datadriven_Description"					"Заряжая гитарную волну Ростислав сметает всё на своём пути, стоит зарядить до конца..."
+		"Dota_Tooltip_ability_silencer_global_silence_lua"							"Ребята давайте дружить"
+		"Dota_Tooltip_ability_silencer_global_silence_lua_Description"				"Заставляет всех на карте не драться и жить мирно, даёт сайленс на всех"
+		"Dota_Tooltip_ability_duelofdeath"					 						"Серьезка"
+		"Dota_Tooltip_ability_duelofdeath_Description"		 						"Ты на кого напал другалёк? Ростислав вызывает на дуель хейтера и получает аттрибуты при дуели, если Ростислав убивает за время действия схватки он получает основной аттрибут"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

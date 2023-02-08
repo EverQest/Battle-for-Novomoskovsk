@@ -47,7 +47,7 @@ end
 function silencer_global_silence_lua:PlayEffects1()
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_silencer/silencer_global_silence.vpcf"
-	local sound_cast = "Hero_Silencer.GlobalSilence.Cast"
+	local sound_cast = "CustomPeace"
 
 	-- Create Particle
 	-- local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )

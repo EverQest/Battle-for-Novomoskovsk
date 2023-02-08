@@ -8,7 +8,7 @@ function pistoletov_ultimate_start(keys)
 	local modifier_stats = "modifier_pistoletov_deathfight_stats_active"
 	
 	if target:IsIllusion() == false then
-		caster:EmitSound("PistoletovDeathfight")
+		caster:EmitSound("CustomLegenda")
 		caster.legion_commander_duel_datadriven_particle = ParticleManager:CreateParticle("particles/econ/items/legion/legion_weapon_voth_domosh/legion_duel_start_ring_arcana.vpcf", PATTACH_ABSORIGIN, caster)
 		local center_point = target_origin + ((caster_origin - target_origin) / 1)
 		ParticleManager:SetParticleControl(caster.legion_commander_duel_datadriven_particle, 0, center_point)  --The center position.
@@ -66,7 +66,7 @@ function modifier_test_on_deathfight(keys)
 					individual_hero:RemoveModifierByName("modifier_pistoletov_deathfight_target")
 					individual_hero:RemoveModifierByName("modifier_pistoletov_deathfight_heal_target")
 					
-					individual_hero:EmitSound("Hero_LegionCommander.Duel.Victory")
+					individual_hero:EmitSound("CustomVictory")
 					local duel_victory_particle = ParticleManager:CreateParticle("particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf", PATTACH_ABSORIGIN_FOLLOW, individual_hero)
 				end
 			end

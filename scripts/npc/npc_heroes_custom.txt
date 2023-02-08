@@ -193,9 +193,9 @@
 		
 		"Ability1"					"ballhit"	
 		"Ability2"					"illuminate_datadriven"
-		"Ability3"					"illuminate_end_datadriven"
-	    "Ability4"					"silencer_global_silence_lua"
-	    "Ability5"					""
+		"Ability3"					"silencer_global_silence_lua"
+	    "Ability4"					""
+	    "Ability5"					"illuminate_end_datadriven"
 	    "Ability6"					"duelofdeath"
 	}
 }
