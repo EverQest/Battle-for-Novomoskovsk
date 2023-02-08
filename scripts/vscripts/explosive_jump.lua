@@ -21,7 +21,7 @@ function mina_explosion_jump:OnSpellStart()
             vLocZ = vLocation.z
         }
         self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_mina_explosion_jump", kv )
-        EmitSoundOn( "Hero_MonkeyKing.TreeJump.Cast", self:GetCaster() )
+        EmitSoundOn( "CustomNoga", self:GetCaster() )
 
         local nFXIndex = ParticleManager:CreateParticle( "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_launch.vpcf", PATTACH_WORLDORIGIN, nil )
         ParticleManager:SetParticleControl( nFXIndex, 0, self:GetCaster():GetOrigin() )

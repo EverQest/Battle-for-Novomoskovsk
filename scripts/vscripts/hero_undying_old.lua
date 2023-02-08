@@ -71,7 +71,7 @@ function imba_undying_decay:OnSpellStart()
 	-- Yes I know it's stupid
 	self.scepter_updated = self:GetCaster():HasScepter()
 
-	self:GetCaster():EmitSound("Hero_Undying.Decay.Cast")
+	self:GetCaster():EmitSound("CustomOpa")
 
 	if self:GetCaster():GetName() == "npc_dota_hero_undying" and RollPercentage(50) then
 		if not self.responses then

@@ -191,11 +191,11 @@
 		"override_hero"		   		"npc_dota_hero_gyrocopter"
 		"AbilityLayout"				"4"
 		
-		"Ability1"					"hattrickleatherball"	
-		"Ability2"					""
-		"Ability3"					""
-	    "Ability4"					""
+		"Ability1"					"ballhit"	
+		"Ability2"					"illuminate_datadriven"
+		"Ability3"					"illuminate_end_datadriven"
+	    "Ability4"					"silencer_global_silence_lua"
 	    "Ability5"					""
-	    "Ability6"					""
+	    "Ability6"					"duelofdeath"
 	}
 }

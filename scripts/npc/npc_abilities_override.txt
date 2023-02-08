@@ -1382,7 +1382,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilitySound"					"Hero_Undying.Decay.Cast"
+		"AbilitySound"					"CustomOpa"
 		"FightRecapLevel"				"1"
 		"HasScepterUpgrade"				"1"
 
@@ -1605,6 +1605,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
+		"soundfile"						"soundevents/Senya.vsndevts"
 		"particle"						"particles/generic_gameplay/generic_stunned.vpcf"
 		"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace_b.vpcf"
 		"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace_hit.vpcf"
@@ -1616,6 +1617,12 @@
 		{
 			"ScriptFile"				"spiked_carapace.lua"
 			"Function"					"spiked_carapace_init"
+		}
+
+		"FireSound"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"CustomPohyi"
 		}
 		
 		"ApplyModifier"
@@ -1705,7 +1712,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+			"soundfile"						"soundevents/Senya.vsndevts"
 			"soundfile"						"soundevents/voscripts/game_sounds_vo_techies.vsndevts"			
 			"particle"						"particles/heroes/hero_mina/explosivejump.vpcf"
 		}
@@ -5361,5 +5368,595 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Ball hit (Rostik)
+	//=================================================================================================================
+	"ballhit"
+    {
+    	"BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "Hex"
+        "MaxLevel"                  "4"
+		"AbilityCooldown"			"12"
+		"AbilityManaCost"			"150"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityCastRange"			"1200"
+
+        "precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+			"particle"			"particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf"
+		}
+		
+		"OnSpellStart"
+		{
+			"LinearProjectile"
+			{
+			    "Target"      	 "POINT"
+				"EffectName"	 "particles/rostik/bukin_ball.vpcf"
+				"MoveSpeed"		 "1000"
+				"StartRadius"	 "175"
+				"StartPosition"  "attach_attack1"
+				"EndRadius"      "225"
+				"HasFrontalCone" "0"
+				"FixedDistance"  "1200"
+				"TargetTeams"	 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"TargetTypes"	 "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"						
+			    "ProvidesVision" "1"
+			    "VisionRadius" 	 "400"
+			}
+			"FireSound"
+			{
+				"EffectName"	"bukinball"
+				"Target"		"CASTER"
+			}
+		}
+		
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+			
+			"Knockback"
+			{
+				"Target"            "TARGET"
+				"Center" 	        "CASTER"
+				"Distance"	        "0"
+				"Duration"	        "%bash_duration"
+				"Height"	        "100"
+				"IsFixedDistance"	"1"
+				"ShouldStun"        "0"	
+			}
+			
+			"Damage"
+			{
+				"Target"
+				{
+					"Center"	"TARGET"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				}
+				"Type"	"DAMAGE_TYPE_PHYSICAL"
+				"Damage"	"%damage"
+			}
+			
+			"ApplyModifier"
+			{
+				"ModifierName" 	"modifier_bukin_HatTrickLeatherBall_debuff"
+				"Target"		"TARGET"
+				"Duration"		"%duration"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_bukin_HatTrickLeatherBall_debuff"
+			{	
+				"IsDeBuff"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+			
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bash_duration"			"0.8 1 1.8 2.3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"80 160 240 320"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"1.5 2.5 3.5 4.5"
+			}
+		}
+    }
+
+	//=================================================================================================================
+	// LC: Duel (Rostik)
+	//=================================================================================================================
+	"duelofdeath"
+	{
+		"BaseClass"                    	"ability_datadriven" 
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilityTextureName"			"Pistoletov/DeathFight"
+
+		"precache"
+		{
+			"particle"				"particles/duel/legion_duel_ring_arcana.vpcf"
+			"particle"				"particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
+		}
+
+		"AbilityCastRange"				"500"
+		"AbilityCooldown"               "50 45 40 30"
+		"AbilityManaCost"               "100"
+		"AbilityCastPoint"				"0.3"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"5 6 7 8"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agility"				"5 10 15 20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor"					"4 7 10 13"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"atribute"				"3 6 10 15"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"deathfight.lua"
+				"Function"		"pistoletov_ultimate_start"
+				"Duration"		"%duration"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_pistoletov_deathfight"
+			{
+				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsDebuff"			"1"
+				
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"deathfight.lua"
+						"Function"		"modifier_test_on_deathfight"
+						"Target"		"UNIT"
+						"RewardDamage"	"%atribute"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"deathfight.lua"
+						"Function"		"modifier_test_on_destroy"
+					}
+				}
+				
+				"OnTakeDamage"
+		        {
+		            "RunScript"
+		            {
+		                "ScriptFile"    "deathfight.lua"
+		                "Function"      "heal"
+		                "DamageTaken"	"%attack_damage"
+		            }
+		        }
+
+				"States"
+				{
+						"MODIFIER_STATE_SILENCED"				"MODIFIER_STATE_VALUE_ENABLED"
+						"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+						"MODIFIER_STATE_MAGIC_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+						"MODIFIER_STATE_MUTED"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			
+			"modifier_pistoletov_deathfight_stats_active"
+			{
+				"IsHidden"	"1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%agility"
+				}
+			}
+			
+			"modifier_pistoletov_deathfight_stats_active_talent"
+			{
+				"IsHidden"	"1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"40"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"30"
+				}
+			}
+			
+			"modifier_pistoletov_deathfight_heal_caster"
+			{
+				"IsHidden"	"1"
+
+				"OnTakeDamage"
+		        {
+		            "RunScript"
+		            {
+		                "ScriptFile"    "deathfight.lua"
+		                "Function"      "healcaster"
+		                "DamageTaken"	"%attack_damage"
+		            }
+		        }
+			}
+			
+			"modifier_pistoletov_deathfight_heal_target"
+			{
+				"IsHidden"	"1"
+
+				"OnTakeDamage"
+		        {
+		            "RunScript"
+		            {
+		                "ScriptFile"    "deathfight.lua"
+		                "Function"      "healtarget"
+		                "DamageTaken"	"%attack_damage"
+		            }
+		        }
+			}
+			
+			"modifier_pistoletov_deathfight_target"
+			{
+				"IsHidden"			"1"
+
+				"ThinkInterval"  "0.1"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"    "deathfight.lua"
+						"Function"      "modifier_test_on_attack_passive"
+					}
+				}
+				
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"    "GladSorry.lua"
+						"Function"      "GladSorryEnd"
+					}
+				}
+			}
+
+			"modifier_deathfight_atribute"
+			{
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"1"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"1"
+				}
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// KOTL: Illuminate (Rostik)
+	//=================================================================================================================
+	"illuminate_datadriven"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"keeper_of_the_light_illuminate"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+		"particle"			"particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_sonic_wave_v2.vpcf"
+		"particle"			"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_charge.vpcf"
+		"particle"  		"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1800"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0 18.0 16.0 14.0"
+	"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 160 170 180"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_second"		"100.0 140.0 160.0 180.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"350 350 350 350"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"					"1550"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"speed"					"1050.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"max_channel_time"		"2.0 3.0 4.0 5.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"vision_radius"			"800 800 800 800"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"vision_duration"		"3.34 3.34 3.34 3.34"
+		}
+		"08"
+		{	
+			"var_type"				"FIELD_INTEGER"
+			"channel_vision_radius"	"350"
+		}
+		"09"
+		{	
+			"var_type"					"FIELD_FLOAT"
+			"channel_vision_interval"	"0.5"
+		}
+		"10"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"channel_vision_duration"	"10.34"
+		}
+		"11"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"channel_vision_step"		"150"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Charge"
+			"Target" 		"CASTER"
+		}
+		
+		"RunScript"
+		{
+			"ScriptFile"	"illuminate.lua"
+			"Function"		"IlluminateStart"
+			"sub_ability_name"	"illuminate_end_datadriven"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_illuminate_vision_field_timer_datadriven"
+			"Target" 		"CASTER"
+		}				
+	}
+
+	"OnUpgrade"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"illuminate.lua"
+			"Function"		"LevelUpAbility"
+			"ability_name"	"illuminate_end_datadriven"
+		}
+	}
+
+	"OnChannelFinish"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Discharge"
+			"Target" 		"CASTER"
+		}
+		
+		"RunScript"
+		{
+			"ScriptFile"	"illuminate.lua"
+			"Function"		"IlluminateEnd"
+			"projectile_name"			"particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_sonic_wave_v2.vpcf"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"illuminate.lua"
+			"Function"		"IlluminateSwapEnd"
+			"sub_ability_name"	"illuminate_end_datadriven"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_illuminate_vision_field_timer_datadriven"
+			"Target" 		"CASTER"
+		}		
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"0"
+		"FireSound"
+		{
+			"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Target"
+			"Target" 		"TARGET"
+		}
+		
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact.vpcf"
+			"EffectAttachType"  "follow_origin"
+			"Target"            "TARGET"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"illuminate.lua"
+			"Function"		"IlluminateProjectileHit"
+		}		
+	}
+	
+	
+	
+	"Modifiers"
+	{
+		"modifier_illuminate_vision_field_timer_datadriven"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+			"IsPurgable"		"0"
+
+			"EffectName"		"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_charge.vpcf"
+			"EffectAttachType"	"attach_attack1"
+	
+			"ThinkInterval"  "%channel_vision_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"illuminate.lua"
+					"Function"		"IlluminateVisionFields"
+				}				
+			}			
+		}		
+	}	
+	}
+
+	"illuminate_end_datadriven"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityTextureName"			"keeper_of_the_light_illuminate_end"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"illuminate.lua"
+			"Function"		"IlluminateStop"
+		}
+	}	
+	}
+
+	//=================================================================================================================
+	// Silencer: Global Silence (Lua version)
+	//=================================================================================================================
+	"silencer_global_silence_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"silencer_global_silence_lua"
+		"AbilityTextureName"			"silencer_global_silence"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+			"particle"	"particles/units/heroes/hero_silencer/silencer_global_silence.vpcf"
+			"particle"	"particles/units/heroes/hero_silencer/silencer_global_silence_hero.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityDuration"				"3.0 4.0 5.0 5.5"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45 40 35 30"
+		"AbilityManaCost"				"100 250 300 400"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tooltip_duration"		"3.0 4.0 5.0 5.5"
+			}
+		}
+	}
+
 
 }

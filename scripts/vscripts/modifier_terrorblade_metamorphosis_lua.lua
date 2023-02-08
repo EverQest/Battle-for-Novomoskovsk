@@ -154,7 +154,7 @@ end
 function modifier_terrorblade_metamorphosis_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
-	local sound_cast = "Hero_Terrorblade.Metamorphosis"
+	local sound_cast = "CustomMiay"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
