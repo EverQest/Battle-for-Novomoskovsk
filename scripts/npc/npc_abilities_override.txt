@@ -1409,12 +1409,12 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"decay_damage"					"20 30 40 50"
+				"decay_damage"					"0 0 0 0"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"str_steal"						"6 8 12 16"
+				"str_steal"						"6 8 10 12"
 			}	
 			"03"
 			{
@@ -1432,7 +1432,6 @@
 				"str_steal_scepter"				"10 10 10 10"
 				"RequiresScepter"	"1"
 			}
-			
 			"06"
 			{
 				"var_type"						"FIELD_INTEGER"
@@ -2733,12 +2732,12 @@
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"950"
-		"AbilityCastPoint"				"2"
+		"AbilityCastPoint"				"1.7"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"60 40 20"
-		"AbilityManaCost"				"600"
+		"AbilityManaCost"				"500"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2755,7 +2754,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"100"		
+				"shadowraze_radius"	"250"		
 			}
 			"03"
 			{
@@ -5235,7 +5234,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"10"
+		"AbilityManaCost"				"100"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -5253,7 +5252,7 @@
 			"02"
 			{
 				"var_type"										"FIELD_INTEGER"
-				"ball_lightning_initial_mana_base"				"300"		
+				"ball_lightning_initial_mana_base"				"50"		
 			}
 			"03"
 			{
@@ -5273,7 +5272,7 @@
 			"06"
 			{
 				"var_type"								"FIELD_INTEGER"
-				"ball_lightning_travel_cost_percent"	"0"		
+				"ball_lightning_travel_cost_percent"	"1.5"		
 			}
 			"07"
 			{
@@ -5521,7 +5520,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor"					"4 7 10 13"
+				"armor"					"5 10 15 20"
 			}
 			"04"
 			{
@@ -5722,7 +5721,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage_per_second"		"100.0 140.0 180.0 260.0"
+			"damage_per_second"		"140.0 180.0 240.0 280.0"
 		}
 		"02"
 		{

@@ -53,9 +53,9 @@
 	"npc_dota_hero_temich"
 	{
 		"override_hero"		   		"npc_dota_hero_storm_spirit"	
-		"AttackRate"				"0.3"
+		"AttackRate"				"1.3"
 		"ProjectileSpeed"			"200"
-		"AttributeAgilityGain"		"1.9"
+		"AttributeAgilityGain"		"1.5"
 		"AbilityLayout"		  		"4"
 
 		"Ability1"		      		"storm_spirit_ball_lightning_lua"
