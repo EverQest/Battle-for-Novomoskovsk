@@ -2380,7 +2380,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"90"
+		"AbilityManaCost"				"60"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2406,18 +2406,18 @@
 			}
 			"04"
 			{
-				"var_type"			"FIELD_INTEGER"
+				"var_type"				"FIELD_INTEGER"
 				"shadowraze_cooldown"	"10"
 			}
 			"05"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "70"
+				"var_type"				"FIELD_INTEGER"
+				"stack_bonus_damage" 	"70"
 			}
 			"06"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"	"10"
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"15"
 			}
 		}
 	}
@@ -2452,7 +2452,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"90"
+		"AbilityManaCost"				"60"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2489,7 +2489,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"10"
+				"duration"			"15"
 			}
 		}
 	}
@@ -2525,7 +2525,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"90"
+		"AbilityManaCost"				"60"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2562,7 +2562,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"10"
+				"duration"	"15"
 			}
 		}
 	}
@@ -2598,7 +2598,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"90"
+		"AbilityManaCost"				"60"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2635,7 +2635,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"10"
+				"duration"			"15"
 			}
 		}
 	}
@@ -2671,7 +2671,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"90"
+		"AbilityManaCost"				"60"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2708,7 +2708,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"10"
+				"duration"			"15"
 			}
 		}
 	}
@@ -2781,7 +2781,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"	"10"
+				"duration"			"15"
 			}
 		}
 	}
@@ -5918,7 +5918,7 @@
 	}
 
 	//=================================================================================================================
-	// Silencer: Global Silence (Lua version)
+	// Silencer: Global Silence (Rostik)
 	//=================================================================================================================
 	"silencer_global_silence_lua"
 	{
@@ -5962,10 +5962,361 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"tooltip_duration"		"3.0 4.0 5.0 5.5"
+				"tooltip_duration"		"3.0 4.0 4.5 5.0"
 			}
 		}
 	}
 
+	//=================================================================================================================
+	// Pudge: Meat Hook (BigBobr)
+	//=================================================================================================================
+	"pudge_meat_hook_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"pudge_meat_hook_lua"
+		"AbilityTextureName"			"bigbobr_hook"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		"precache"
+		{
+			"soundfile"	"soundevents/Bigbobr.vsndevts"
+		}
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1300 1400 1600 1800"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 16 14 12"
+		"AbilityManaCost"				"110"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"400 500 600 700"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"400 500 600 700"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hook_speed"			"500.0"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_width"		"100"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_distance"		"1300 1400 1600 1800"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"500 500 500 500"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_duration"	"4.0 4.0 4.0 4.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Mirana: Leap (BigBobr)
+	//=================================================================================================================
+	"mirana_leap_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"mirana_leap_lua"
+		"AbilityTextureName"			"bigbobr_sonic"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Bigbobr.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30 20 15 10"
+		"AbilityManaCost"				"40"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"leap_distance"			"850"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"leap_speed"			"1800.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"leap_acceleration"		"8000.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"leap_speedbonus"		"8 16 24 32"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"leap_speedbonus_as"	"25 50 75 100"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"leap_bonus_duration"	"3.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_charges"			"4"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_restore_time"	"15 12 10 5"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Azazin Spinner
+	//=================================================================================================================
+
+	"Azazin_Spinner"
+	{
+		"BaseClass"             	    "ability_datadriven"
+		"AbilityType"          		    "DOTA_ABILITY_TYPE_ULTIMATE"	
+		"MaxLevel"             		    "3"
+		"AbilityTextureName" 		    "bigbobr_bkb"
+		"RequiredLevel"        		    "6"
+		"LevelsBetweenUpgrades" 	    "6"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"40 30 20"
+		"AbilityManaCost"				"185"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/Bigbobr.vsndevts"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"spinner_damage_tick"		"0.3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"spinner_radius"			"300"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"10"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage"					"150 200 250"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"Spinner.lua"
+				"Function"		"AzazinModifier"
+			}			
+		}
+
+		"Modifiers"
+		{
+			"modifier_spinner"
+			{	
+				"OverrideAnimation"     	"ACT_DOTA_CAST_ABILITY_5"
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/black_king_bar_avatar.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"
+						{
+							"Center"  	"CASTER"
+							"Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+						}
+						"ControlPoints"
+						{
+							"05"	"%spinner_radius 0 0"
+						}					
+					}
+					"FireSound"
+					{
+						"EffectName"	"CustomBkb"
+						"Target"
+						{
+							"Center"  	"CASTER"
+							"Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+						}
+					}			
+				}
+				
+				"ThinkInterval"  "%spinner_damage_tick"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile" "Spinner.lua"
+						"Function"		"Damage"
+					}	
+
+				}
+				"OnDestroy"
+				{
+					"FireSound"
+					{
+						"EffectName"	"CustomBkb.Stop"
+						"Target" 		"CASTER"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"Spinner.lua"
+						"Function"		"BladeFuryStop"
+					}
+				}
+			}
+		}	
+	}
+	
+	//=================================================================================================================
+	// Doom: Doom (BigBobr)
+	//=================================================================================================================
+	"doom_doom_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"doom_doom_lua"
+		"AbilityTextureName"			"bigbobr_mute"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"4"
+		"HasScepterUpgrade"				"1"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/Bigbobr.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550 550 550 550"
+		"AbilityCastPoint"				"0.5"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25 20 15 10"
+		"AbilityManaCost"				"150 200 250 300"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"0 0 0 0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_scepter"		"16.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_scepter"		"0 0 0 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"deniable_pct"			"25 25 25"
+			}
+		}
+	}
 
 }

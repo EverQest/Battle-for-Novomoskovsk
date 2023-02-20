@@ -42,7 +42,6 @@
 		"item"		"item_headdress"
 		"item"		"item_greater_mango"
 		"item"		"item_travel_boots"
-		"item"		"item_helm_of_tarras"
 
 	}
 

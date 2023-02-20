@@ -200,4 +200,19 @@
 	    "Ability5"					"illuminate_end_datadriven"
 	    "Ability6"					"duelofdeath"
 	}
+	//=================================================================================================================
+	// HERO: OD (BigBobr)
+	//=================================================================================================================
+	"npc_dota_hero_bigbobr"
+	{
+		"override_hero"		   		"npc_dota_hero_obsidian_destroyer"
+		"AbilityLayout"				"4"
+		
+		"Ability1"					"pudge_meat_hook_lua"
+		"Ability2"					"mirana_leap_lua"
+		"Ability3"					"doom_doom_lua"
+	    "Ability4"					""
+	    "Ability5"					""
+	    "Ability6"					"Azazin_Spinner"
+	}
 }

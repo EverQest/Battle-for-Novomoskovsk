@@ -184,12 +184,21 @@
 		"Dota_Tooltip_ability_duelofdeath"					 						"Серьезка"
 		"Dota_Tooltip_ability_duelofdeath_Description"		 						"Ты на кого напал другалёк? Ростислав вызывает на дуель хейтера и получает аттрибуты при дуели, если Ростислав убивает за время действия схватки он получает основной аттрибут"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Валик
+		"npc_dota_hero_obsidian_destroyer" 	   "BigBobr"
+		
+		"Dota_Tooltip_ability_pudge_meat_hook_lua"											"Заролять 40%"
+		"Dota_Tooltip_ability_pudge_meat_hook_lua_Description"								"Попробуй 40-процентный хук, медленный но мощьный"
+		"Dota_Tooltip_ability_mirana_leap_lua"												"Соник дэш"
+		"Dota_Tooltip_ability_mirana_leap_lua_Description"									"Ускорение в одну точку, имеет 4 заряда"
+		"Dota_Tooltip_ability_Azazin_Spinner"												"БКБ для лохов"
+		"Dota_Tooltip_ability_Azazin_Spinner_Description"									"Только попробуй сказать что бкб предмет, персонаж получает невосприимчивость к статус эффектам и магии на 10 секунд, нанося урон всем кто находиться близко"
+		"Dota_Tooltip_ability_doom_doom_lua"					 							"Осёл, как же ты меня заебал"
+		"Dota_Tooltip_ability_doom_doom_lua_Description"		 							"Дай мут ослам и покажи кто тут батя, накладывает сильнейший мут на персонажа, что он не может даже нажать кнопки"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 		//ТimurTheTitan
 		"npc_dota_hero_elder_titan"        	   "ТimurTheTitan"
-
-		//Валик
-		"npc_dota_hero_obsidian_destroyer" 	   "Валик"
 
 		//Алижа
 		"npc_dota_hero_undying"				   "Алижа"
