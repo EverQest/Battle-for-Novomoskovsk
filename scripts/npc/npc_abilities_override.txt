@@ -2375,7 +2375,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"200"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCastAnimation"			"ACT_DOTA_NEVERMORE_SHADOWRAZE"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -6125,7 +6125,6 @@
 	//=================================================================================================================
 	// BKB (BigBobr)
 	//=================================================================================================================
-
 	"Azazin_Spinner"
 	{
 		"BaseClass"             	    "ability_datadriven"
@@ -6318,5 +6317,178 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Lone Druid: Spirit Bear (Perik)
+	//=================================================================================================================
+	"lone_druid_spirit_bear_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"					"ability_datadriven"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"DisplayAdditionalHeroes"	"1"
+		"AbilityTextureName"		"perik_bear"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30 28 25 20"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 75 75 75"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bear_hp"					"1400 1800 2300 2700"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bear_regen_tooltip"		"2 3 4 5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bear_bat"					"1.75 1.65 1.55 1.45"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bear_armor"				"3 4 5 6"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"backlash_damage"			"10.0"
+			}
+		}
+	
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+			"particle"	"particles/units/heroes/hero_lone_druid/lone_druid_bear_spawn.vpcf"
+			"particle"	"particles/status_fx/status_effect_spirit_bear.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+			"model"		"models/heroes/lone_druid/spirit_bear.vmdl"
+		}
+	
+		"OnUpgrade"
+		{
+			"RunScript"
+		    {
+		        "ScriptFile"    "spirit_bear.lua"
+		        "Function"      "SpiritBearLevel"
+		    }
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+		    {
+		        "ScriptFile"    "spirit_bear.lua"
+		        "Function"      "SpiritBearSpawn"
+		        "unit_name"		"npc_dota_lone_druid_bear"
+		    }
+	
+		    "FireSound"
+		    {
+		    	"EffectName"	"Hero_LoneDruid.SpiritBear.Cast" 
+		    	"Target"		"CASTER"
+		    }
+		}
+	
+		"Modifiers"
+		{
+			"modifier_spirit_bear"
+			{
+				"IsHidden"		"1"
+	
+				"StatusEffectName"		"particles/status_fx/status_effect_spirit_bear.vpcf"
+				"StatusEffectPriority"	"1"
+	
+				"OnCreated"
+				{
+					"FireEffect"
+					{
+						"Target"			"TARGET"
+						"EffectName"		"particles/units/heroes/hero_lone_druid/lone_druid_bear_spawn.vpcf"
+						"EffectAttachType"	"follow_origin"
+					}
+				}
+	
+				"OnDeath"
+				{
+					"FireEffect"
+					{
+						"Target"			"TARGET"
+						"EffectName"		"particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+						"EffectAttachType"	"follow_origin"
+					}
+					"RunScript"
+				    {
+				        "ScriptFile"    "spirit_bear.lua"
+				        "Function"      "SpiritBearDeath"
+				    }
+				}
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Arc Warden: Tempest Double (Perik)
+	//=================================================================================================================
+	"arc_warden_tempest_double"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"arc_warden_tempest_double_lua.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityTextureName"			"perik_double"
+		
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"40 30 20"
+
+		"AbilitySpecial"
+			{
+			"01"
+				{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"20"
+				}
+			"02"
+				{
+				"var_type"				"FIELD_INTEGER"
+				"health_cost"			"10 20 30"
+				}
+			"03"
+				{
+				"var_type"				"FIELD_INTEGER"
+				"mana_cost"				"80 75 60"
+				}
+			}
+		"precache"
+			{
+			"particle" "particles/status_fx/status_effect_ancestral_spirit.vpcf"
+			}
+	}
+
+	//=================================================================================================================
+	// Meepo: Divided We Stand (Perik)
+	//=================================================================================================================
+	"meepo_divided_we_stand"
+	{
+	"AbilityTextureName"			"perik_we_stand"
+	}
+
 
 }

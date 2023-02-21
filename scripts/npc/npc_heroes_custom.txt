@@ -6,13 +6,13 @@
 	"npc_dota_hero_chicha"
 	{
 		"override_hero"		   "npc_dota_hero_ogre_magi"	
-		"AbilityLayout"		   "4"
+
 		"Ability1"             "snapfire_firesnap_cookie_lua"
 		"Ability2"		       "lion_finger_of_death_lua"
 		"Ability3"             "lina_laguna_blade_lua"
-	    "Ability4"             "ogre_magi_multicast_lua"	
-	    "Ability5"             ""	
-	    "Ability6"             ""	
+	    	"Ability4"             "generic_hidden"	
+	    	"Ability5"             "generic_hidden"	
+	    "Ability6"             "ogre_magi_multicast_lua"	
 	}
 	//=================================================================================================================
 	// HERO: Tinker (Danya)
@@ -20,12 +20,12 @@
 	"npc_dota_hero_danya"
 	{
 		"override_hero"		   "npc_dota_hero_tinker"	
-		"AbilityLayout"		   "4"
+
 		"Ability1"		       "tinker_laser_lua"
 	    "Ability2"             "lion_hex_lua"	
 		"Ability3"             "tinker_march_of_the_machines_lua"
-	    "Ability4"             ""	
-		"Ability5"             ""	
+	   		"Ability4"             "generic_hidden"	
+			"Ability5"             "generic_hidden"	
 	    "Ability6"             "tinker_rearm_lua"	
 	}
 	//=================================================================================================================
@@ -34,19 +34,17 @@
 	"npc_dota_hero_dima"
 	{
 		"override_hero"		   		"npc_dota_hero_morphling"	
-	
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
 		"AttributeAgilityGain"		"1.4"
 		"AttributeStrengthGain"		"3.4"
 		"AttackDamageMin"			"70"
 		"AttackDamageMax"			"110"
-		"AbilityLayout"		  		"6"
 
 		"Ability1"		      		"magnus_skewer_lua"
 		"Ability2"		     		"magnus_push_horn_toss"
 		"Ability3"		     		"marci_dispose_lua"
 		"Ability4"		     		"tidehunter_kraken_shell_lua"
-		"Ability5"		      		""
+			"Ability5"		      		"generic_hidden"
 		"Ability6"		     		"tiny_toss_lua"
 	}
 	//=================================================================================================================
@@ -58,14 +56,13 @@
 		"AttackRate"				"1.3"
 		"ProjectileSpeed"			"200"
 		"AttributeAgilityGain"		"1.5"
-		"AbilityLayout"		  		"4"
 
 		"Ability1"		      		"storm_spirit_ball_lightning_lua"
 		"Ability2"		     		"lightspeed"
 		"Ability3"		     		"phantom_assassin_coup_de_grace_lua"
-		"Ability4"		     		"sand_king_epicenter_lua"
-		"Ability5"		      		""
-		"Ability6"		     		""
+			"Ability4"		     		"generic_hidden"
+			"Ability5"		      		"generic_hidden"
+		"Ability6"		     		"sand_king_epicenter_lua"
 	}
 	//=================================================================================================================
 	// HERO: Clinkz  (Felix)
@@ -73,18 +70,16 @@
 	"npc_dota_hero_felix"
 	{
 		"override_hero"		   		"npc_dota_hero_clinkz"
-		
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
 		"AttributeAgilityGain"		"1.2"
 		"AttributeStrengthGain"		"3.4"
-		"AbilityLayout"				"4"
 
 	    "Ability1"					"troll_warlord_berserkers_rage_datadriven"
 		"Ability2"       			"grimstroke_phantoms_embrace_lua"
 	    "Ability3"       			"doom_scorched_earth_lua"
-	    "Ability4"					"sven_gods_strength_lua"
-		"Ability5"					""	
-	    "Ability6"					""
+	 		"Ability4"					"generic_hidden"
+			"Ability5"					"generic_hidden"	
+	    "Ability6"					"sven_gods_strength_lua"
 	}
 	
 	//=================================================================================================================
@@ -93,17 +88,16 @@
 	"npc_dota_hero_kaki"
 	{
 		"override_hero"		   		"npc_dota_hero_lycan"
-		
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
 		"AttributeAgilityGain"		"3.8"
 		"AttributeStrengthGain"		"1.2"
-		"AbilityLayout"				"6"
+
 		"Ability1"					"wind_walk_datadriven"	
 		"Ability2"					"alchemist_unstable_concoction_lua"
 		"Ability3"					"slark_essence_shift_lua"
-	        "Ability4"					"primal_roar_datadriven"
-	        "Ability5"					""
-	        "Ability6"					"lycan_shapeshift_datadriven"
+	 	   "Ability4"					"generic_hidden"
+	    "Ability5"					"primal_roar_datadriven"
+	    "Ability6"					"lycan_shapeshift_datadriven"
 	}
 	//=================================================================================================================
 	// HERO: Phantom Lancer (Nekit)
@@ -111,13 +105,13 @@
 	"npc_dota_hero_nekit"
 	{
 		"override_hero"		   "npc_dota_hero_phantom_lancer"
-		"AbilityLayout"		   "4"
+
 		"Ability1"             "mars_arena_of_blood_lua"
 		"Ability2"		       "doppelganger_datadriven"
 		"Ability3"             "outworld_devourer_astral_imprisonment_lua"
-	        "Ability4"             ""	
-	        "Ability5"             ""	
-	        "Ability6"             "medusa_stone_gaze_lua"
+	    	"Ability4"             "generic_hidden"	
+	    	"Ability5"             "generic_hidden"	
+	    "Ability6"             "medusa_stone_gaze_lua"
 	
 	}
 	//=================================================================================================================
@@ -125,43 +119,44 @@
 	//=================================================================================================================
 	"npc_dota_hero_senya"
 	{
-		"AttributePrimary"	   "DOTA_ATTRIBUTE_STRENGTH"
 		"override_hero"		   "npc_dota_hero_techies"	
-		"AbilityLayout"		   "4"
+		"AttributePrimary"	   "DOTA_ATTRIBUTE_STRENGTH"
+
 		"Ability1"             "imba_undying_decay"	
 	    "Ability2"        	   "terrorblade_metamorphosis_lua"	
 		"Ability3"             "nyx_assassin_spiked_carapace_datadriven"
-		"Ability4"		       "mina_explosion_jump"
-	    "Ability5"             ""	
-	    "Ability6"             ""	
+	    	"Ability4"             "generic_hidden"	
+	    	"Ability5"             "generic_hidden"	
+		"Ability6"		       "mina_explosion_jump"
 	}
 	//=================================================================================================================
 	// HERO: Io (Vyashich)
 	//=================================================================================================================
 	"npc_dota_hero_vyashich"
 	{
-		"override_hero"		   "npc_dota_hero_wisp"	
-	
-		"MagicalResistance"			 "10"
-		"MovementTurnRate"			 "50"
-		"StatusHealthRegen"			 "12.0"
-		"AttributeStrengthGain"		 "3.2"
-		"AbilityLayout"		   		 "4"
+		"override_hero"		   		"npc_dota_hero_wisp"	
+		"MagicalResistance"			"10"
+		"MovementTurnRate"			"50"
+		"StatusHealthRegen"			"12.0"
+		"AttributeStrengthGain"		"3.2"
+
 		"Ability1"            		 "wisp_tether_datadriven"	
 		"Ability2"		     		 "pudge_rot_lua"
 		"Ability3"            		 "spectre_dispersion_datadriven"
+	    	"Ability4"           		 "generic_hidden"	
+	    	"Ability5"           		 "generic_hidden"	
 	    "Ability6"            		 "naga_siren_song_of_the_siren_lua"	
-	    "Ability4"           		 ""	
-	    "Ability5"           		 ""	
+
+		"Ability10"        "special_bonus_gold_income_15"
+		"Ability11"        "special_bonus_exp_boost_25"
 	}
 	//=================================================================================================================
 	// HERO: Nevermore (Yarik)
 	//=================================================================================================================
 	"npc_dota_hero_yarik"
 	{
-		"override_hero"		   "npc_dota_hero_nevermore"	
-		"AbilityLayout"		  			 "6"
-		"AttributeIntelligenceGain"		 "2.8"
+		"override_hero"		   			"npc_dota_hero_nevermore"	
+		"AttributeIntelligenceGain"		"2.8"
 		
 		"Ability1"             "shadow_fiend_shadowraze_a_lua"	
 		"Ability2"		       "shadow_fiend_shadowraze_b_lua"
@@ -176,14 +171,13 @@
 	"npc_dota_hero_zanzak"
 	{
 		"override_hero"		   		"npc_dota_hero_enigma"
-		"AbilityLayout"				"4"
 
 		"Ability1"					"usa_rage"	
 		"Ability2"					"chaos_bolt_datadriven"
 		"Ability3"					"vacuum_datadriven"
-	    "Ability4"					"enigma_black_hole_lua"
-	    "Ability5"					""
-	    "Ability6"					""
+	    	"Ability4"					"generic_hidden"
+	    	"Ability5"					"generic_hidden"
+	    "Ability6"					"enigma_black_hole_lua"
 	}
 	//=================================================================================================================
 	// HERO: Gyrocopter (Rostik)
@@ -191,14 +185,14 @@
 	"npc_dota_hero_rostik"
 	{
 		"override_hero"		   		"npc_dota_hero_gyrocopter"
-		"AbilityLayout"				"4"
 		
 		"Ability1"					"ballhit"	
 		"Ability2"					"illuminate_datadriven"
 		"Ability3"					"silencer_global_silence_lua"
-	    "Ability4"					""
-	    "Ability5"					"illuminate_end_datadriven"
+	    	"Ability4"					"generic_hidden"
+	    	"Ability5"					"generic_hidden"
 	    "Ability6"					"duelofdeath"
+	    "Ability7"					"illuminate_end_datadriven"
 	}
 	//=================================================================================================================
 	// HERO: OD (BigBobr)
@@ -206,7 +200,6 @@
 	"npc_dota_hero_bigbobr"
 	{
 		"override_hero"		   		"npc_dota_hero_obsidian_destroyer"
-		"AbilityLayout"				"4"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
 		"AttributeStrengthGain"		"2.4"	
 		"AttributeIntelligenceGain"	"1.8"
@@ -214,8 +207,22 @@
 		"Ability1"					"pudge_meat_hook_lua"
 		"Ability2"					"mirana_leap_lua"
 		"Ability3"					"doom_doom_lua"
+	    	"Ability4"					"generic_hidden"
+	    	"Ability5"					"generic_hidden"
+	    "Ability6"					"Azazin_Spinner"
+	}
+	//=================================================================================================================
+	// HERO: Lone Druid (Perik)
+	//=================================================================================================================
+	"npc_dota_hero_perik"
+	{
+		"override_hero"		   		"npc_dota_hero_lone_druid"
+
+		"Ability1"					"lone_druid_spirit_bear_datadriven"
+		"Ability2"					""
+		"Ability3"					"meepo_divided_we_stand"
 	    "Ability4"					""
 	    "Ability5"					""
-	    "Ability6"					"Azazin_Spinner"
+	    "Ability6"					""
 	}
 }

@@ -119,6 +119,45 @@
 		"TeamName"					"DOTA_TEAM_NEUTRALS"
 	}
 
+	//=================================================================================
+	// Lone Druid Spirit Bears	
+	//=================================================================================
+  	"npc_dota_lone_druid_bear1"
+  	{                   
+	"ModelScale"                                          "0.20"
+
+	"Ability1"			"beastmaster_wild_axes_datadriven"
+    "Ability2"          "arc_warden_tempest_double"    
+	"Ability5" 			"troll_warlord_fervor"
+  	}
+
+  	"npc_dota_lone_druid_bear2"
+ 	 {                   
+	"ModelScale"                                          "0.65"
+
+    "Ability1"			"beastmaster_wild_axes_datadriven"
+    "Ability2"          "arc_warden_tempest_double"    
+	"Ability5" 			"troll_warlord_fervor"
+  	}
+
+  	"npc_dota_lone_druid_bear3"
+  	{   
+	"ModelScale"                                          "1.2"
+                
+    "Ability1"			"beastmaster_wild_axes_datadriven"
+    "Ability2"          "arc_warden_tempest_double"    
+	"Ability5" 			"troll_warlord_fervor"
+ 	 }
+
+ 	 "npc_dota_lone_druid_bear4"
+  	{        
+	"ModelScale"                                          "1.6"
+           
+    "Ability1"			"beastmaster_wild_axes_datadriven"
+    "Ability2"          "arc_warden_tempest_double"    
+	"Ability5" 			"troll_warlord_fervor"
+ 	 }
+
 	//=================================================================================	
 	// Creature: Basic Zombie
 	//=================================================================================
