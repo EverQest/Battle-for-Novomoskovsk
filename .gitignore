@@ -10,6 +10,15 @@
 *.vagrp_c
 *.vmesh_c
 
+# Gen folders
+maps
+materials
+models
+panorama
+particles
+soundevents
+sounds
+
 # Map files
 
 # Map overviews
