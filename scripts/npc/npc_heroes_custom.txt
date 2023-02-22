@@ -354,9 +354,9 @@
 		"Ability15"				"special_bonus_cooldown_reduction_20"
 		"Ability16"				"special_bonus_attack_damage_100"
 		"Ability17"				"special_bonus_spell_amplify_25"
-
-		"Ability1"					"lone_druid_spirit_bear_datadriven"
-		"Ability2"					""
+		
+		"Ability1"					"beastmaster_wild_axes"
+		"Ability2"					"lone_druid_spirit_bear_datadriven"
 		"Ability3"					"meepo_divided_we_stand"
 	    "Ability4"					""
 	    "Ability5"					""

@@ -51,7 +51,7 @@
 		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	 "Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
 		"Dota_Tooltip_ability_tiny_toss_lua"									 "ТОСС на левый третий"
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_shell" 				 "Снюс KRAKEN SHELL☆☆☆☆☆"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 "Снюс KRAKEN SHELL☆☆☆☆☆"
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
@@ -196,7 +196,16 @@
 		"Dota_Tooltip_ability_doom_doom_lua"					 							"Осёл, как же ты меня заебал"
 		"Dota_Tooltip_ability_doom_doom_lua_Description"		 							"Дай мут ослам и покажи кто тут батя, накладывает сильнейший мут на персонажа, что он не может даже нажать кнопки"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+		//Перик
+		"npc_dota_hero_lone_druid"			   "Переверик"
+		
+		"Dota_Tooltip_ability_beastmaster_wild_axes"												"ПеревереПоры"
+		"Dota_Tooltip_ability_beastmaster_wild_axes_Description"									"Перевере топоры для переверика чтобы переверно наносить перевереурон переверетивникам"
+		"Dota_Tooltip_ability_lone_druid_spirit_bear_datadriven"									"ПеревереМедверза"
+		"Dota_Tooltip_ability_lone_druid_spirit_bear_datadriven_Description"						"Перевере ведмедь у которого есть своё альтер-эго и страсть к насилию"
+		"Dota_Tooltip_ability_meepo_divided_we_stand"												"ПеревериДрузья"
+		"Dota_Tooltip_ability_meepo_divided_we_stand_Description"									"Переверик призывает на помощь своих друзей перевериков, которые если умрут понесут Переверика тоже в могилу"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
 
@@ -210,9 +219,6 @@
 
 		//Алижа
 		"npc_dota_hero_undying"				   "Алижа"
-
-		//Перик
-		"npc_dota_hero_lone_druid"			   "Переверик"
 
 		//
 		"DOTA_Tooltip_modifier_invis_revealed"							"Нашли лоха"
@@ -243,6 +249,8 @@
 		"DOTA_Tooltip_Ability_item_wraith_pact"							"Мега Зяблз"
 		//
 		"DOTA_Tooltip_Ability_item_aegis"								"Сердце Гатиловича"
+		//
+		"DOTA_Tooltip_Ability_item_aghanims_shard"						"Star Shard"
 		//
 	}
 }
