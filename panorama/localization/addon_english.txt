@@ -1,0 +1,68 @@
+"addon"
+{
+	"PointsToWin"									"Ещё {d:points_to_win}"
+	"PointsToWin_CloseToVictory"					"Ещё {d:points_to_win}"
+	"PointsToWin_VeryCloseToVictory"				"Ещё {d:points_to_win}!"
+	"PointsToWin_Victory"							"Тут нет победы!"
+
+	"InstructionsTitle"								"Battle For Novomoskovsk"
+	"InstructionsObjective"							"ЦЕЛЬ"
+	"InstructionsObjectiveText"						"Уничтожайте врагов! Наберите необходимое число убийств первыми или совершите наибольшее число убийств к концу раунда, и победа будет за вами."
+	"InstructionsHowToPlay"							"ПРАВИЛА"
+	"InstructionsLines"								"— Трон Мидаса даёт дополнительные золото и опыт.<br>
+													— Хватайте гигантские монеты в центре карты, чтобы получить ещё больше золота.<br>
+													— Следите за картой: на ней показано, где появятся сундуки с предметами.<br>
+													— Чем меньше убийств у вашей команды, тем лучше предметы, которые вы получите из сундуков.<br>
+													— Убивайте всех, кто не в вашей команде."
+
+	"Scoreboard_Goal"								"Цель"
+
+	"Chest"											"Нова пошта"
+	"ItemWillSpawn"									"Замовлення прийняте"
+	"ItemHasSpawned"								"Замовлення в дорозi"
+
+	"RecentScore"									"+{d:score}"
+
+	"Unassigned"      								"Неопределившиеся"
+	"Spectator"       								"Зыретели"
+	"Neutrals"        								"Нейтральная команда"
+	"NoTeam"          								"Нет команды"
+
+	"DOTA_GoodGuys"   								"Кривые Бассы"
+	"DOTA_BadGuys"    								"Типы с Левого"
+	"DOTA_Custom1"    								"Серъёзка"
+	"DOTA_Custom2"    								"Любители покушать"
+	"DOTA_Custom3"    								"Трогатели какашек"
+	"DOTA_Custom4"    								"Терпилы"
+	"DOTA_Custom5"    								"Чичанутые"
+	"DOTA_Custom6"    								"Бумбокс"
+	"DOTA_Custom7"    								"Адская дрочильня"
+	"DOTA_Custom8"    								"Пацаны с Верхника"
+	
+	"OverthrowHeroPickup"							"{s:hero_id}"
+	"OverthrowTextPickup"							"Отримав у замовленнi"
+	"OverthrowItemPickup"							"{s:item_id}!"
+
+	"Remaining"										"ОСТАЛОСЬ"
+
+	"Overtime"										"ДОБАВОЧНОЕ ВРЕМЯ!"
+	"OvertimeInstructions"							"УБИВАЙТЕ, ЧТОБЫ ПОБЕДИТЬ"
+
+	"KillMessageHero"								"{s:hero_id}"
+	"KillMessageText"								"Потрогал"
+	"KillMessageBounty"								"Какашки"
+	
+	"addonname"										"Battle For Novomoskovsk"
+	"overthrow_game_info_header_objective"			"Цель:"
+	"overthrow_brief_description"					"Уничтожайте врагов! Первый, кто наберёт достаточно убийств, победит!"
+	"overthrow_game_info_header_how_to_play"		"Правила:"
+	"overthrow_game_info_throne"					"<span class='midas_throne'>Трон Мидаса</span> даёт дополнительные <span class='gold'>золото</span> и <span class='xp'>опыт</span>"
+	"overthrow_game_info_coins"						"Хватайте меня за какашки, чтобы получить ещё больше <span class='gold'>золота</span>."
+	"overthrow_game_info_items"						"Следите за <span class='treasure'>картой</span>: на ней показано, где появятся сундуки с <span class='items'>нейтральными предметами</span>."
+	"overthrow_game_info_tips_header"				"Советы:"
+	"overthrow_game_info_tip01"						"Текущий лидер не лидер, и вы ничего не получите."
+	"overthrow_game_info_tip03"						"Возможно, чтобы убить сильного врага, вам придётся действовать сообща с другими противниками."
+	"overthrow_game_info_tip04"						"Чем меньше убийств совершила ваша команда, тем сильнее нейтральные предметы, которые вы получаете из сундуков."
+
+}
+
