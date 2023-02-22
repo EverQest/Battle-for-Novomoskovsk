@@ -51,7 +51,7 @@
 		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	 "Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
 		"Dota_Tooltip_ability_tiny_toss_lua"									 "ТОСС на левый третий"
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_shell" 				 "Снюс KRAKEN SHELL☆☆☆☆☆"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 "Снюс KRAKEN SHELL☆☆☆☆☆"
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
@@ -249,6 +249,8 @@
 		"DOTA_Tooltip_Ability_item_wraith_pact"							"Мега Зяблз"
 		//
 		"DOTA_Tooltip_Ability_item_aegis"								"Сердце Гатиловича"
+		//
+		"DOTA_Tooltip_Ability_item_aghanims_shard"						"Star Shard"
 		//
 	}
 }
