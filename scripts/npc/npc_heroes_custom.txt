@@ -7,6 +7,16 @@
 	{
 		"override_hero"		   "npc_dota_hero_ogre_magi"	
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"             "snapfire_firesnap_cookie_lua"
 		"Ability2"		       "lion_finger_of_death_lua"
 		"Ability3"             "lina_laguna_blade_lua"
@@ -20,6 +30,16 @@
 	"npc_dota_hero_danya"
 	{
 		"override_hero"		   "npc_dota_hero_tinker"	
+
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
 
 		"Ability1"		       "tinker_laser_lua"
 	    "Ability2"             "lion_hex_lua"	
@@ -40,6 +60,16 @@
 		"AttackDamageMin"			"70"
 		"AttackDamageMax"			"110"
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"		      		"magnus_skewer_lua"
 		"Ability2"		     		"magnus_push_horn_toss"
 		"Ability3"		     		"marci_dispose_lua"
@@ -57,6 +87,16 @@
 		"ProjectileSpeed"			"200"
 		"AttributeAgilityGain"		"1.5"
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"		      		"storm_spirit_ball_lightning_lua"
 		"Ability2"		     		"lightspeed"
 		"Ability3"		     		"phantom_assassin_coup_de_grace_lua"
@@ -73,6 +113,15 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
 		"AttributeAgilityGain"		"1.2"
 		"AttributeStrengthGain"		"3.4"
+
+	    "Ability10"				"special_bonus_all_stats_20"
+	    "Ability11"				"special_bonus_exp_boost_25"
+	    "Ability12"				"special_bonus_armor_10"
+	    "Ability13"				"special_bonus_exp_boost_25"
+	    "Ability14"				"special_bonus_lifesteal_20"
+	    "Ability15"				"special_bonus_exp_boost_25"
+	    "Ability16"				"special_bonus_attack_damage_100"
+	    "Ability17"				"special_bonus_exp_boost_25"
 
 	    "Ability1"					"troll_warlord_berserkers_rage_datadriven"
 		"Ability2"       			"grimstroke_phantoms_embrace_lua"
@@ -92,6 +141,16 @@
 		"AttributeAgilityGain"		"3.8"
 		"AttributeStrengthGain"		"1.2"
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"					"wind_walk_datadriven"	
 		"Ability2"					"alchemist_unstable_concoction_lua"
 		"Ability3"					"slark_essence_shift_lua"
@@ -105,6 +164,16 @@
 	"npc_dota_hero_nekit"
 	{
 		"override_hero"		   "npc_dota_hero_phantom_lancer"
+
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
 
 		"Ability1"             "mars_arena_of_blood_lua"
 		"Ability2"		       "doppelganger_datadriven"
@@ -121,6 +190,16 @@
 	{
 		"override_hero"		   "npc_dota_hero_techies"	
 		"AttributePrimary"	   "DOTA_ATTRIBUTE_STRENGTH"
+
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
 
 		"Ability1"             "imba_undying_decay"	
 	    "Ability2"        	   "terrorblade_metamorphosis_lua"	
@@ -140,6 +219,16 @@
 		"StatusHealthRegen"			"12.0"
 		"AttributeStrengthGain"		"3.2"
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"            		 "wisp_tether_datadriven"	
 		"Ability2"		     		 "pudge_rot_lua"
 		"Ability3"            		 "spectre_dispersion_datadriven"
@@ -147,8 +236,6 @@
 	    	"Ability5"           		 "generic_hidden"	
 	    "Ability6"            		 "naga_siren_song_of_the_siren_lua"	
 
-		"Ability10"        "special_bonus_gold_income_15"
-		"Ability11"        "special_bonus_exp_boost_25"
 	}
 	//=================================================================================================================
 	// HERO: Nevermore (Yarik)
@@ -158,6 +245,16 @@
 		"override_hero"		   			"npc_dota_hero_nevermore"	
 		"AttributeIntelligenceGain"		"2.8"
 		
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"             "shadow_fiend_shadowraze_a_lua"	
 		"Ability2"		       "shadow_fiend_shadowraze_b_lua"
 		"Ability3"             "shadow_fiend_shadowraze_c_lua"
@@ -171,6 +268,16 @@
 	"npc_dota_hero_zanzak"
 	{
 		"override_hero"		   		"npc_dota_hero_enigma"
+
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
 
 		"Ability1"					"usa_rage"	
 		"Ability2"					"chaos_bolt_datadriven"
@@ -186,6 +293,16 @@
 	{
 		"override_hero"		   		"npc_dota_hero_gyrocopter"
 		
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"					"ballhit"	
 		"Ability2"					"illuminate_datadriven"
 		"Ability3"					"silencer_global_silence_lua"
@@ -204,6 +321,16 @@
 		"AttributeStrengthGain"		"2.4"	
 		"AttributeIntelligenceGain"	"1.8"
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+
 		"Ability1"					"pudge_meat_hook_lua"
 		"Ability2"					"mirana_leap_lua"
 		"Ability3"					"doom_doom_lua"
@@ -218,6 +345,16 @@
 	{
 		"override_hero"		   		"npc_dota_hero_lone_druid"
 
+		// Talents 
+		"Ability10"				"special_bonus_all_stats_20"
+		"Ability11"				"special_bonus_exp_boost_25"
+		"Ability12"				"special_bonus_armor_10"
+		"Ability13"				"special_bonus_magic_resistance_25"
+		"Ability14"				"special_bonus_lifesteal_20"
+		"Ability15"				"special_bonus_cooldown_reduction_20"
+		"Ability16"				"special_bonus_attack_damage_100"
+		"Ability17"				"special_bonus_spell_amplify_25"
+		
 		"Ability1"					"beastmaster_wild_axes"
 		"Ability2"					"lone_druid_spirit_bear_datadriven"
 		"Ability3"					"meepo_divided_we_stand"
