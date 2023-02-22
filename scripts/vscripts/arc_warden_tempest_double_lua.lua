@@ -13,6 +13,9 @@ function arc_warden_tempest_double:OnSpellStart()
 	local health_after_cast = caster:GetHealth() * mana_cost
 	local mana_after_cast = caster:GetMana() * health_cost
 
+	local sound_cast = "CustomPere"
+	EmitSoundOn( sound_cast, caster )
+
 	caster:SetHealth(health_after_cast)
 	caster:SetMana(mana_after_cast)
 	local double = CreateUnitByName( caster:GetUnitName(), spawn_location, true, caster, caster:GetOwner(), caster:GetTeamNumber())

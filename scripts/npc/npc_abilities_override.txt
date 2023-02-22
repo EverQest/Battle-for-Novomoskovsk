@@ -6378,7 +6378,7 @@
 			"particle"	"particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
 			"particle"	"particles/units/heroes/hero_lone_druid/lone_druid_bear_spawn.vpcf"
 			"particle"	"particles/status_fx/status_effect_spirit_bear.vpcf"
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+			"soundfile"	"soundevents/Perik.vsndevts"
 			"model"		"models/heroes/lone_druid/spirit_bear.vmdl"
 		}
 	
@@ -6402,7 +6402,7 @@
 	
 		    "FireSound"
 		    {
-		    	"EffectName"	"Hero_LoneDruid.SpiritBear.Cast" 
+		    	"EffectName"	"CustomYes" 
 		    	"Target"		"CASTER"
 		    }
 		}
@@ -6479,15 +6479,35 @@
 		"precache"
 			{
 			"particle" "particles/status_fx/status_effect_ancestral_spirit.vpcf"
+			"soundfile"	"soundevents/Perik.vsndevts"
 			}
 	}
 
 	//=================================================================================================================
-	// Meepo: Divided We Stand (Perik)
+	// Meepo: Divided We Stand (Perik) + Axes
 	//=================================================================================================================
 	"meepo_divided_we_stand"
 	{
 	"AbilityTextureName"			"perik_we_stand"
+	}
+	"beastmaster_wild_axes"
+	{
+	"AbilityTextureName"			"perik_axes"
+
+	"precache"
+	{
+	"soundfile"	"soundevents/Perik.vsndevts"
+	}
+
+	"OnSpellStart"
+		{
+		    "FireSound"
+		    {
+		    	"EffectName"	"CustomAra" 
+		    	"Target"		"CASTER"
+		    }
+		}
+
 	}
 
 

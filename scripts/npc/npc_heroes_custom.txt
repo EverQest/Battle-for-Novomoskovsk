@@ -218,8 +218,8 @@
 	{
 		"override_hero"		   		"npc_dota_hero_lone_druid"
 
-		"Ability1"					"lone_druid_spirit_bear_datadriven"
-		"Ability2"					""
+		"Ability1"					"beastmaster_wild_axes"
+		"Ability2"					"lone_druid_spirit_bear_datadriven"
 		"Ability3"					"meepo_divided_we_stand"
 	    "Ability4"					""
 	    "Ability5"					""
