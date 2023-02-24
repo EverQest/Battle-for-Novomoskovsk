@@ -226,10 +226,6 @@
 		"npc_dota_hero_elder_titan"        	   "ТimurTheTitan"
 
 
-
-		//Алижа
-		"npc_dota_hero_undying"				   "Алижа"
-
 		//
 		"DOTA_Tooltip_modifier_invis_revealed"							"Нашли лоха"
 		//
