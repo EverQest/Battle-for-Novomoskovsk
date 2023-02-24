@@ -190,7 +190,7 @@
 		"Dota_Tooltip_ability_pudge_meat_hook_lua"											"Заролять 40%"
 		"Dota_Tooltip_ability_pudge_meat_hook_lua_Description"								"Попробуй 40-процентный хук, медленный но мощьный"
 		"Dota_Tooltip_ability_mirana_leap_lua"												"Соник дэш"
-		"Dota_Tooltip_ability_mirana_leap_lua_Description"									"Ускорение в одну точку, имеет 4 заряда"
+		"Dota_Tooltip_ability_mirana_leap_lua_Description"									"Ускорение в одну точку, имеет 3 заряда а также на небольшой промежуток времени даёт скорость атаки"
 		"Dota_Tooltip_ability_Azazin_Spinner"												"БКБ для лохов"
 		"Dota_Tooltip_ability_Azazin_Spinner_Description"									"Только попробуй сказать что бкб предмет, персонаж получает невосприимчивость к статус эффектам и магии на 10 секунд, нанося урон всем кто находиться близко"
 		"Dota_Tooltip_ability_doom_doom_lua"					 							"Осёл, как же ты меня заебал"
@@ -206,12 +206,25 @@
 		"Dota_Tooltip_ability_meepo_divided_we_stand"												"ПеревериДрузья"
 		"Dota_Tooltip_ability_meepo_divided_we_stand_Description"									"Переверик призывает на помощь своих друзей перевериков, которые если умрут понесут Переверика тоже в могилу"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Алижа
+		"npc_dota_hero_undying"				   "Чивокуня"
 		
+		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua"					"Хомяк на спидах"
+		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_Description"		"Превращаеться в хомяка и летит в одну сторону, попадая в противника наносит урон и останавливаеться"
+		"Dota_Tooltip_ability_puck_phase_shift_lua"								"Ладно я на улицу"
+		"Dota_Tooltip_ability_puck_phase_shift_lua_Description"					"Пропадает из реальности погулять, но благо это только на время"
+		"Dota_Tooltip_ability_venomancer_poison_sting_lua"						"Краска от балончика"
+		"Dota_Tooltip_ability_venomancer_poison_sting_lua_Description"			"Накладывает эффект гниения на противников которых он коснулся"
+		"Dota_Tooltip_ability_imba_templar_assassin_trap_teleport"				"Телепортация"
+		"Dota_Tooltip_ability_imba_templar_assassin_trap_teleport_Description"	"Телепортирует на определённый ТЕГ на карте в районе видимости"
+		"Dota_Tooltip_ability_imba_templar_assassin_trap"						"Подорвать ТЕГ"
+		"Dota_Tooltip_ability_imba_templar_assassin_trap_Description"			"Подрывает ближайший ТЕГ и наносит сильный переодический урон, при переключении этого умения - все теги начинают отбрасывать от себя"
+		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap"				"Тегнуть место"
+		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap_Description"	"Наносит ТЕГ на место который может находится неопределённое количество времени, после задержки в 2 секунды пропадает в невидимость. Имеет 3 вида тега которые можно переключать, Фиолетовый тег - Сильно замедняет, Чёрный тег - Убирает видимость у врага, Красный - Оглушает каждую миллисекунду."
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//ТimurTheTitan
 		"npc_dota_hero_elder_titan"        	   "ТimurTheTitan"
 
-		//Алижа
-		"npc_dota_hero_undying"				   "Алижа"
 
 
 		//
