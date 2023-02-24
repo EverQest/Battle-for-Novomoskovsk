@@ -357,8 +357,8 @@
 		"Ability17"				"special_bonus_spell_amplify_25"
 		
 		"Ability1"					"beastmaster_wild_axes"
-			"Ability2"					"generic_hidden"
-		"Ability3"					"lone_druid_spirit_bear_datadriven"
+		"Ability2"					"lone_druid_spirit_bear_datadriven"
+			"Ability3"					"generic_hidden"
 	    	"Ability4"					"generic_hidden"
 	    	"Ability5"					"generic_hidden"
 	    "Ability6"					"meepo_divided_we_stand"

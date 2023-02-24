@@ -5402,7 +5402,7 @@
         "precache"
 		{
 			"soundfile"			"soundevents/Rostik.vsndevts"
-			"particle"			"particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf"
+			"particle"			"particles/rostik_ball.vpcf"
 		}
 		
 		"OnSpellStart"
@@ -5410,7 +5410,7 @@
 			"LinearProjectile"
 			{
 			    "Target"      	 "POINT"
-				"EffectName"	 "particles/rostik/bukin_ball.vpcf"
+				"EffectName"	 "particles/rostik_ball.vpcf"
 				"MoveSpeed"		 "1000"
 				"StartRadius"	 "175"
 				"StartPosition"  "attach_attack1"
@@ -6486,6 +6486,7 @@
 			}
 		"precache"
 			{
+			"soundfile"	"soundevents/Perik.vsndevts"
 			"particle" "particles/status_fx/status_effect_ancestral_spirit.vpcf"
 			}
 		}
