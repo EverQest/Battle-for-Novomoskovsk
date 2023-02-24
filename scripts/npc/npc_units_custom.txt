@@ -124,7 +124,7 @@
 	//=================================================================================
   	"npc_dota_lone_druid_bear1"
   	{                   
-	"ModelScale"                                          "0.20"
+	"ModelScale"                                          "0.35"
 
 	"Ability1"			"beastmaster_wild_axes"
     "Ability2"          "arc_warden_tempest_double"    

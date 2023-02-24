@@ -54,9 +54,9 @@ function arc_warden_tempest_double:OnSpellStart()
 	double:SetHealth(health_after_cast)
 	double:SetMana(mana_after_cast)
 
-	double:SetMaximumGoldBounty(0)
-	double:SetMinimumGoldBounty(0)
-	double:SetDeathXP(0)
+	double:SetMaximumGoldBounty(300)
+	double:SetMinimumGoldBounty(100)
+	double:SetDeathXP(200)
 
 	double:SetHasInventory(false)
 	double:SetCanSellItems(false)

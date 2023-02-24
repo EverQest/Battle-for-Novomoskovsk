@@ -236,7 +236,7 @@
 
 
 	//=================================================================================================================
-	// Remove Dagon
+	// Dagon
 	//=================================================================================================================
 	"item_dagon"
 	{
@@ -299,7 +299,7 @@
 	//	"AbilityValues"
 	//	{
 	//		"lifetime"				"500"
-	//		"true_sight_range"		"1000"
+	//		"true_sight_range"		"1300"
 	//		"duration_minutes_tooltip"				"6"
 	//	}
 	//}
@@ -3094,7 +3094,7 @@
 			{
 				"FireSound"
 				{
-					"EffectName"	"Hero_PhantomLancer.Doppelganger.Appear"
+					"EffectName"	"CustomCopy"
 					"Target"		"CASTER"
 				}
 
@@ -6457,40 +6457,38 @@
 	// Arc Warden: Tempest Double (Perik)
 	//=================================================================================================================
 	"arc_warden_tempest_double"
-	{
-		"BaseClass"						"ability_lua"
+		{
+		"BaseClass"					    "ability_lua"
 		"ScriptFile"					"arc_warden_tempest_double_lua.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityTextureName"			"perik_double"
 		
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"40 30 20"
+		"AbilityCooldown"				"65 60 55"
 
 		"AbilitySpecial"
 			{
 			"01"
 				{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"20"
+				"duration"	"20"
 				}
 			"02"
 				{
 				"var_type"				"FIELD_INTEGER"
-				"health_cost"			"10 20 30"
+				"health_cost"	"30 15 0"
 				}
 			"03"
 				{
 				"var_type"				"FIELD_INTEGER"
-				"mana_cost"				"80 75 60"
+				"mana_cost"	"30 15 0"
 				}
 			}
 		"precache"
 			{
 			"particle" "particles/status_fx/status_effect_ancestral_spirit.vpcf"
-			"soundfile"	"soundevents/Perik.vsndevts"
 			}
-	}
+		}
 
 	//=================================================================================================================
 	// Meepo: Divided We Stand (Perik) + Axes
@@ -6518,6 +6516,531 @@
 		}
 
 	}
+
+	//=================================================================================================================
+	// Earth Spirit: Rolling Boulder (Oleg)
+	//=================================================================================================================
+	"earth_spirit_rolling_boulder_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"earth_spirit_rolling_boulder_lua"
+		"AbilityTextureName"			"custom_hamster"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Oleg.vsndevts"
+			"particle"	"particles/units/heroes/hero_earth_spirit/espirit_rollingboulder.vpcf"
+			"particle"	"particles/econ/items/earth_spirit/earth_spirit_ti6_boulder/espirit_ti6_rollingboulder.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000 1300 1400 1500"
+		"AbilityCastPoint"				"0.01"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16.0 12.0 8.0 4.0"
+		"AbilityManaCost"				"50 60 70 80"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed"					"1700"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rock_speed"			"1700"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"distance"				"1000.0 1300.0 1400.0 1500.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rock_distance"			"1600.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"delay"					"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"100 120 140 160"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_slow"				"120 130 140 150"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"			"0.8 1.2 1.6 2.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Puck: Phase Shift (Oleg)
+	//=================================================================================================================
+	"puck_phase_shift_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"puck_phase_shift_lua"
+		"AbilityTextureName"			"custom_door"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/Oleg.vsndevts"
+			"particle"	"particles/units/heroes/hero_puck/puck_phase_shift.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityChannelTime"			"1.0 2.0 3.0 4.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14 12 10 8"
+		"AbilityManaCost"				"0"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"1.0 2.0 3.0 4.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Templar Assassin: Psionic Trap (Oleg)
+	//=================================================================================================================
+	"imba_templar_assassin_psionic_trap"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"hero_templar_assassin"
+		"AbilityTextureName"			"custom_purple_tag"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_TemplarAssassin.Trap"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2000"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11.0 8.0 6.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"15 30 40"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"max_traps"						"5 8 11"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"trap_fade_time"				"4.0 3.0 1.5"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"movement_speed_min"			"20"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"movement_speed_max"			"70"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"trap_duration_tooltip"			"5"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"trap_bonus_damage"				"450 600 850"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"trap_max_charge_duration"		"3.2"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"inhibit_limbs_attack_slow"		"80"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"inhibit_limbs_attack_slow_pct"	"10"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"inhibit_limbs_turn_rate_slow"	"-80"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"inhibit_eyes_vision_reduction"	"-200"
+			}
+			"12"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"inhibit_nerves_ministun_duration"	"0.05"
+			}
+			"13" // QOL for AOERadius
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_radius"				"400"
+			}
+		}
+
+		"AbilityDraftPreAbility"			"templar_assassin_trap"
+	}
+
+	//=================================================================================================================
+	// Templar Assassin: Trap (Oleg)
+	//=================================================================================================================
+	"imba_templar_assassin_trap"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"hero_templar_assassin"
+		"AbilityTextureName"			"custom_button"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.5"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_radius"				"400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_duration"				"5.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_bonus_damage"			"450 600 850"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_min"			"20"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_max"			"70"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_max_charge_duration"			"3.2"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"springboard_min_height"	"200"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"springboard_max_height"	"400"
+			}
+			"09" 
+			{
+				"var_type"					"FIELD_FLOAT"
+				"springboard_duration"		"0.8"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"springboard_vector_amp"	"2.25"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"springboard_movement_slow_pct"		"20"
+			}
+			
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_limbs_attack_slow"			"80"
+			}
+			"13"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"inhibit_limbs_attack_slow_pct"		"10"
+			}
+			"14"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_limbs_turn_rate_slow"		"-80"
+			}
+			"15"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_eyes_vision_reduction"		"-200"
+			}
+			"16"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"inhibit_nerves_ministun_duration"	"0.05"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Templar Assassin Scepter (Oleg)
+	//=================================================================================================================
+	"imba_templar_assassin_trap_teleport"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"hero_templar_assassin"
+		"AbilityTextureName"			"custom_teleport"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED| DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE "
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE" // Morphling Exception
+		"MaxLevel"						"3"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityChannelTime"			"1.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_radius"				"400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_duration"				"5.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_bonus_damage"			"250 450 650"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_min"			"40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_max"			"80"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_max_charge_duration"			"4"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_channel_time"			"2"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_cooldown"			"30"
+			}
+			
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_limbs_attack_slow"			"80"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_limbs_attack_slow_pct"		"10"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_limbs_turn_rate_slow"		"-80"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inhibit_eyes_vision_reduction"		"-200"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"inhibit_nerves_ministun_duration"	"0.05"
+			}
+		}
+		
+		"AbilityDraftPreAbility"		"templar_assassin_trap"
+	}
+
+	//=================================================================================================================
+	// Venomancer: Poison Sting (Oleg)
+	//=================================================================================================================
+	"venomancer_poison_sting_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"venomancer_poison_sting_lua"
+		"AbilityTextureName"			"custom_wall"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"600 700 800 900"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"30 50 70 90"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"6.0 9.0 12.0 15.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"30 50 70 90"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"			"-9 -11 -13 -15"
+			}
+		}
+	}
+
 
 
 }
