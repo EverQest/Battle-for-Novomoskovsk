@@ -345,6 +345,8 @@
 	"npc_dota_hero_perik"
 	{
 		"override_hero"		   		"npc_dota_hero_lone_druid"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
+		"AttributeAgilityGain"		"2.4"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -360,7 +362,7 @@
 		"Ability2"					"lone_druid_spirit_bear_datadriven"
 			"Ability3"					"generic_hidden"
 	    	"Ability4"					"generic_hidden"
-	    	"Ability5"					"generic_hidden"
+	    "Ability5"					"phantom_lancer_juxtapose"
 	    "Ability6"					"meepo_divided_we_stand"
 	}
 	//=================================================================================================================

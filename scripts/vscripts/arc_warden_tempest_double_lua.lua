@@ -58,7 +58,7 @@ function arc_warden_tempest_double:OnSpellStart()
 	double:SetMinimumGoldBounty(100)
 	double:SetDeathXP(200)
 
-	double:SetHasInventory(false)
+	double:SetHasInventory(true)
 	double:SetCanSellItems(false)
 
 	double:AddNewModifier(caster, self, "arc_warden_tempest_double_modifier", nil)

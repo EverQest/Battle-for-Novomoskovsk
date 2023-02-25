@@ -127,7 +127,7 @@
 	"ModelScale"                                          "0.35"
 
 	"Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "arc_warden_tempest_double"    
+    "Ability2"          "chaos_knight_chaos_strike_lua"    
 	"Ability5" 			"troll_warlord_fervor"
   	}
 
@@ -136,7 +136,7 @@
 	"ModelScale"                                          "0.65"
 
     "Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "arc_warden_tempest_double"    
+    "Ability2"          "chaos_knight_chaos_strike_lua"    
 	"Ability5" 			"troll_warlord_fervor"
   	}
 
@@ -145,7 +145,7 @@
 	"ModelScale"                                          "1.2"
                 
     "Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "arc_warden_tempest_double"    
+    "Ability2"          "chaos_knight_chaos_strike_lua"    
 	"Ability5" 			"troll_warlord_fervor"
  	 }
 
@@ -154,7 +154,7 @@
 	"ModelScale"                                          "1.6"
            
     "Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "arc_warden_tempest_double"    
+    "Ability2"          "chaos_knight_chaos_strike_lua"    
 	"Ability5" 			"troll_warlord_fervor"
  	 }
 
