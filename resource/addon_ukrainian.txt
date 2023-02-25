@@ -205,6 +205,8 @@
 		"Dota_Tooltip_ability_lone_druid_spirit_bear_datadriven_Description"						"Перевере ведмедь у которого есть своё альтер-эго и страсть к насилию"
 		"Dota_Tooltip_ability_meepo_divided_we_stand"												"ПеревериДрузья"
 		"Dota_Tooltip_ability_meepo_divided_we_stand_Description"									"Переверик призывает на помощь своих друзей перевериков, которые если умрут понесут Переверика тоже в могилу"
+		"Dota_Tooltip_ability_chaos_knight_chaos_strike_lua"										"ПеревериФантомы"
+		"Dota_Tooltip_ability_chaos_knight_chaos_strike_lua_Description"							"Переверик призывает с потустороннего мира свои фантомные копии при каждом ударе, фантомы не имеют предметы и живут малый промежуток времени"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Алижа
 		"npc_dota_hero_undying"				   "Чивокуня"
