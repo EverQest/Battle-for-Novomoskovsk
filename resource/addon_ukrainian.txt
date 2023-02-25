@@ -203,10 +203,14 @@
 		"Dota_Tooltip_ability_beastmaster_wild_axes_Description"									"Перевере топоры для переверика чтобы переверно наносить перевереурон переверетивникам"
 		"Dota_Tooltip_ability_lone_druid_spirit_bear_datadriven"									"ПеревереМедверза"
 		"Dota_Tooltip_ability_lone_druid_spirit_bear_datadriven_Description"						"Перевере ведмедь у которого есть своё альтер-эго и страсть к насилию"
-		"Dota_Tooltip_ability_meepo_divided_we_stand"												"ПеревериДрузья"
-		"Dota_Tooltip_ability_meepo_divided_we_stand_Description"									"Переверик призывает на помощь своих друзей перевериков, которые если умрут понесут Переверика тоже в могилу"
-		"Dota_Tooltip_ability_chaos_knight_chaos_strike_lua"										"ПеревериФантомы"
-		"Dota_Tooltip_ability_chaos_knight_chaos_strike_lua_Description"							"Переверик призывает с потустороннего мира свои фантомные копии при каждом ударе, фантомы не имеют предметы и живут малый промежуток времени"
+		"Dota_Tooltip_ability_meepo_divided_we_stand"												"ПеревереДрузья"
+		"Dota_Tooltip_ability_meepo_divided_we_stand_Description"									"Переверек призывает на помощь своих друзей перевериков, которые если умрут понесут Переверика тоже в могилу"
+		"Dota_Tooltip_ability_phantom_lancer_juxtapose"												"ПеревереФантомы"
+		"Dota_Tooltip_ability_phantom_lancer_juxtapose_Description"									"Переверек призывает с потустороннего мира свои фантомные копии при каждом ударе, фантомы не имеют предметы и живут малый промежуток времени"
+		"Dota_Tooltip_ability_chaos_knight_chaos_strike_lua"										"Переверекрит"
+		"Dota_Tooltip_ability_chaos_knight_chaos_strike_lua_Description"							"Ведмедь может нанести большой урон своей лапой"
+		"Dota_Tooltip_ability_troll_warlord_fervor"													"Переверескорость"
+		"Dota_Tooltip_ability_bear_entangling_claws"												"Переверекорни"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Алижа
 		"npc_dota_hero_undying"				   "Чивокуня"
@@ -259,6 +263,8 @@
 		"DOTA_Tooltip_Ability_item_aegis"								"Сердце Гатиловича"
 		//
 		"DOTA_Tooltip_Ability_item_aghanims_shard"						"Star Shard"
+		//
+		"DOTA_Tooltip_Ability_item_ethereal_blade"						"Bazuka"
 		//
 	}
 }

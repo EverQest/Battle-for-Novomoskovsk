@@ -6460,7 +6460,7 @@
 	
 		    "FireSound"
 		    {
-		    	"EffectName"	"CustomYes" 
+		    	"EffectName"	"CustomPere" 
 		    	"Target"		"CASTER"
 		    }
 		}
@@ -6507,9 +6507,19 @@
 	//=================================================================================================================
 	"phantom_lancer_juxtapose"
 	{
-		"AbilityTextureName"			"phantom_lancer_juxtapose"	
+		"AbilityTextureName"			"perik_illusion"	
+	}
 
-		
+	//=================================================================================================================
+	// BEAR: Abilities (Perik)
+	//=================================================================================================================
+	"troll_warlord_fervor"
+	{
+		"AbilityTextureName"			"perik_fevor"	
+	}
+	"unit_entangling_claws"
+	{
+		"AbilityTextureName"			"perik_pekos"	
 	}
 
 	//=================================================================================================================
@@ -6521,7 +6531,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"chaos_knight_chaos_strike_lua"
-		"AbilityTextureName"			"chaos_knight_chaos_strike"
+		"AbilityTextureName"			"perik_crit"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"precache"
