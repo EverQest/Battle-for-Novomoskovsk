@@ -13,6 +13,7 @@
 	//Try to do our items as "Шлем Тараса"
 	//Complete all characters (2 remaining)
 	//Create unique talents in 25 lvl 
+	//Custom models
 
 
 	//--------------- ENABLED -----------------

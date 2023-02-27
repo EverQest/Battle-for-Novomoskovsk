@@ -119,6 +119,14 @@
 		"TeamName"					"DOTA_TEAM_NEUTRALS"
 	}
 
+	"npc_dota_templar_assassin_psionic_trap"
+	{
+		// Abilities
+		//----------------------------------------------------------------
+		//"Ability1"					"templar_assassin_self_trap"			// Ability 1
+		"Ability1"					"imba_templar_assassin_self_trap"		// Ability 2
+	}
+
 	//=================================================================================
 	// Lone Druid Spirit Bears	
 	//=================================================================================

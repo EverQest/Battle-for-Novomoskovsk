@@ -1,6 +1,3 @@
--- Editors:
---    AltiV, November 3rd, 2019
-
 LinkLuaModifier("modifier_imba_templar_assassin_trap_slow", "hero_templar_assassin", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_imba_templar_assassin_trap_limbs", "hero_templar_assassin", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_imba_templar_assassin_trap_eyes", "hero_templar_assassin", LUA_MODIFIER_MOTION_NONE)
@@ -24,6 +21,8 @@ imba_templar_assassin_psionic_trap					= class({})
 modifier_imba_templar_assassin_psionic_trap_handler	= class({})
 modifier_imba_templar_assassin_psionic_trap			= class({})
 modifier_imba_templar_assassin_psionic_trap_counter	= class({})
+
+imba_templar_assassin_self_trap						= class({})
 
 --------------------------------
 -- IMBA_TEMPLAR_ASSASSIN_TRAP --
@@ -147,7 +146,7 @@ end
 -- MODIFIER_IMBA_TEMPLAR_ASSASSIN_TRAP_LIMBS --
 -----------------------------------------------
 
-function modifier_imba_templar_assassin_trap_limbs:GetTexture()	return "templar_assassin_psionic_trap" end
+function modifier_imba_templar_assassin_trap_limbs:GetTexture()	return "custom_purple_tag" end
 
 function modifier_imba_templar_assassin_trap_limbs:OnCreated(params)
 	if self:GetAbility() then
@@ -194,7 +193,7 @@ end
 -- MODIFIER_IMBA_TEMPLAR_ASSASSIN_TRAP_EYES --
 ----------------------------------------------
 
-function modifier_imba_templar_assassin_trap_eyes:GetTexture()	return "templar_assassin/psionic_trap_eyes" end
+function modifier_imba_templar_assassin_trap_eyes:GetTexture()	return "custom_red_tag" end
 
 function modifier_imba_templar_assassin_trap_eyes:OnCreated(params)
 	if self:GetAbility() then
@@ -225,7 +224,7 @@ end
 -- MODIFIER_IMBA_TEMPLAR_ASSASSIN_TRAP_NERVES --
 ------------------------------------------------
 
-function modifier_imba_templar_assassin_trap_nerves:GetTexture()	return "templar_assassin/psionic_trap_nerves" end
+function modifier_imba_templar_assassin_trap_nerves:GetTexture()	return "custom_dark_tag" end
 
 function modifier_imba_templar_assassin_trap_nerves:OnCreated(params)
 	if self:GetAbility() then
@@ -347,6 +346,13 @@ end
 function imba_templar_assassin_trap_teleport:GetAssociatedSecondaryAbilities()	return "imba_templar_assassin_psionic_trap" end
 function imba_templar_assassin_trap_teleport:ProcsMagicStick() return false end
 
+function imba_templar_assassin_trap_teleport:OnInventoryContentsChanged()
+	if self:GetCaster():HasScepter() then
+		self:SetHidden(false)
+	else
+		self:SetHidden(false)
+	end
+end
 
 function imba_templar_assassin_trap_teleport:OnHeroCalculateStatBonus()
 	self:OnInventoryContentsChanged()
@@ -405,9 +411,9 @@ function imba_templar_assassin_psionic_trap:GetAbilityTextureName()
 	if self:GetCaster():GetModifierStackCount("modifier_imba_templar_assassin_psionic_trap_handler", self:GetCaster()) <= 0 then
 		return "custom_purple_tag"
 	elseif self:GetCaster():GetModifierStackCount("modifier_imba_templar_assassin_psionic_trap_handler", self:GetCaster()) == 1 then
-		return "custom_dark_tag"
-	elseif self:GetCaster():GetModifierStackCount("modifier_imba_templar_assassin_psionic_trap_handler", self:GetCaster()) == 2 then
 		return "custom_red_tag"
+	elseif self:GetCaster():GetModifierStackCount("modifier_imba_templar_assassin_psionic_trap_handler", self:GetCaster()) == 2 then
+		return "custom_dark_tag"
 	else
 		return "templar_assassin_psionic_trap"
 	end
@@ -449,7 +455,6 @@ function imba_templar_assassin_psionic_trap:OnSpellStart()
 		
 		local trap_modifier = trap:AddNewModifier(self:GetCaster(), self, "modifier_imba_templar_assassin_psionic_trap", {})
 		trap:SetControllableByPlayer(self:GetCaster():GetPlayerID(), true)
-		
 		if trap:HasAbility("imba_templar_assassin_self_trap") then
 			trap:FindAbilityByName("imba_templar_assassin_self_trap"):SetHidden(false) -- TODO: Temp line
 			trap:FindAbilityByName("imba_templar_assassin_self_trap"):SetLevel(self:GetLevel())
@@ -669,4 +674,30 @@ function modifier_imba_templar_assassin_psionic_trap_counter:OnDestroy()
 	if not IsServer() then return end
 
 	self:GetParent():RemoveModifierByName("modifier_imba_templar_assassin_psionic_trap_handler")
+end
+
+-------------------------------------
+-- IMBA_TEMPLAR_ASSASSIN_SELF_TRAP --
+-------------------------------------
+
+function imba_templar_assassin_self_trap:IsStealable()	return false end
+function imba_templar_assassin_self_trap:ProcsMagicStick() return false end
+
+function imba_templar_assassin_self_trap:OnSpellStart()
+	if self:GetCaster():GetOwner() then
+		self.trap_counter_modifier = self:GetCaster():GetOwner():FindModifierByName("modifier_imba_templar_assassin_psionic_trap_counter")
+		
+		-- I accidentally a FIFO
+		-- if self:GetCaster():HasModifier("modifier_imba_templar_assassin_psionic_trap") and self.trap_counter_modifier and self.trap_counter_modifier.trap_table and #self.trap_counter_modifier.trap_table and self.trap_counter_modifier.trap_table[1] and not self.trap_counter_modifier.trap_table[1]:IsNull() and self:GetCaster():GetOwner():HasAbility("imba_templar_assassin_psionic_trap") then
+			-- self.trap_counter_modifier.trap_table[1]:Explode(self:GetCaster():GetOwner():FindAbilityByName("imba_templar_assassin_psionic_trap"), self:GetSpecialValueFor("trap_radius"), self:GetSpecialValueFor("trap_duration"), true)
+			
+			-- -- I don't think this is vanilla to re-select the hero but it seems like a QOL thing to have it
+			-- PlayerResource:NewSelection(self:GetCaster():GetOwner():GetPlayerID(), self:GetCaster():GetOwner())
+		
+		
+		if self:GetCaster():HasModifier("modifier_imba_templar_assassin_psionic_trap") then
+			self:GetCaster():FindModifierByName("modifier_imba_templar_assassin_psionic_trap"):Explode(self, self:GetSpecialValueFor("trap_radius"), self:GetSpecialValueFor("trap_duration"), true)
+			
+		end
+	end
 end
