@@ -5,7 +5,9 @@
 	//=================================================================================================================
 	"npc_dota_hero_chicha"
 	{
-		"override_hero"		   "npc_dota_hero_ogre_magi"	
+		"override_hero"		  			"npc_dota_hero_ogre_magi"	
+		"AttributePrimary"				"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeIntelligenceGain"		"3.8"	
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -29,7 +31,9 @@
 	//=================================================================================================================
 	"npc_dota_hero_danya"
 	{
-		"override_hero"		   "npc_dota_hero_tinker"	
+		"override_hero"		    		"npc_dota_hero_tinker"	
+		"AttributePrimary"	    		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeIntelligenceGain"		"2.8"	
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -55,7 +59,6 @@
 	{
 		"override_hero"		   		"npc_dota_hero_morphling"	
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
-		"AttributeAgilityGain"		"1.4"
 		"AttributeStrengthGain"		"3.4"
 		"AttackDamageMin"			"70"
 		"AttackDamageMax"			"110"
@@ -83,9 +86,10 @@
 	"npc_dota_hero_temich"
 	{
 		"override_hero"		   		"npc_dota_hero_storm_spirit"	
+		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
 		"AttackRate"				"1.3"
 		"ProjectileSpeed"			"200"
-		"AttributeAgilityGain"		"1.5"
+		"AttributeAgilityGain"		"2.3"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -111,8 +115,7 @@
 	{
 		"override_hero"		   		"npc_dota_hero_clinkz"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
-		"AttributeAgilityGain"		"1.2"
-		"AttributeStrengthGain"		"3.4"
+		"AttributeStrengthGain"		"2.8"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -140,7 +143,8 @@
 		"override_hero"		   		"npc_dota_hero_lycan"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
 		"AttributeAgilityGain"		"3.8"
-		"AttributeStrengthGain"		"1.2"
+		"AttackDamageMin"			"70"
+		"AttackDamageMax"			"80"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -164,7 +168,9 @@
 	//=================================================================================================================
 	"npc_dota_hero_nekit"
 	{
-		"override_hero"		   "npc_dota_hero_phantom_lancer"
+		"override_hero"		   			"npc_dota_hero_phantom_lancer"
+		"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeAgilityGain"			"2.8"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -189,8 +195,9 @@
 	//=================================================================================================================
 	"npc_dota_hero_senya"
 	{
-		"override_hero"		   "npc_dota_hero_techies"	
-		"AttributePrimary"	   "DOTA_ATTRIBUTE_STRENGTH"
+		"override_hero"		   		"npc_dota_hero_techies"	
+		"AttributePrimary"	   		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeStrengthGain"		"2.4"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -215,6 +222,7 @@
 	"npc_dota_hero_vyashich"
 	{
 		"override_hero"		   		"npc_dota_hero_wisp"	
+		"AttributePrimary"	   		"DOTA_ATTRIBUTE_ALL"
 		"MagicalResistance"			"10"
 		"MovementTurnRate"			"50"
 		"StatusHealthRegen"			"12.0"
@@ -244,6 +252,7 @@
 	"npc_dota_hero_yarik"
 	{
 		"override_hero"		   			"npc_dota_hero_nevermore"	
+		"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeIntelligenceGain"		"2.8"
 		
 		// Talents 
@@ -269,6 +278,8 @@
 	"npc_dota_hero_zanzak"
 	{
 		"override_hero"		   		"npc_dota_hero_enigma"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeStrengthGain"		"2.4"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -293,6 +304,8 @@
 	"npc_dota_hero_rostik"
 	{
 		"override_hero"		   		"npc_dota_hero_gyrocopter"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
+		"AttributeAgilityGain"		"2.4"
 		
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -372,6 +385,11 @@
 	"npc_dota_hero_oleg"
 	{
 		"override_hero"		   		"npc_dota_hero_undying"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"	
+		"AttributeIntelligenceGain"		"2.9"	
+		"AttackDamageMin"			"60"
+		"AttackDamageMax"			"110"
+		
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"

@@ -11,7 +11,7 @@
 	//Fix loading screen
 	//Fix team names on english version
 	//Try to do our items as "Шлем Тараса"
-	//Complete all characters (2 remaining)
+	//Complete all characters (1 remaining)
 	//Create unique talents in 25 lvl 
 	//Custom models
 

@@ -2435,7 +2435,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stack_bonus_damage" 	"70"
+				"stack_bonus_damage" 	"120"
 			}
 			"06"
 			{
@@ -2508,7 +2508,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "70"
+				"stack_bonus_damage" "120"
 			}
 			"06"
 			{
@@ -2582,7 +2582,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "70"
+				"stack_bonus_damage" "120"
 			}
 			"06"
 			{
@@ -2656,7 +2656,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "70"
+				"stack_bonus_damage" "120"
 			}
 			"06"
 			{
@@ -2710,12 +2710,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"50 100 150 200"	
+				"shadowraze_damage"	"50 100 150 200"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"		
+				"shadowraze_radius"	"250"
 			}
 			"03"
 			{
@@ -2730,7 +2730,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "70"
+				"stack_bonus_damage" "120"
 			}
 			"06"
 			{
@@ -2804,7 +2804,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "70"
+				"stack_bonus_damage" "120"
 			}
 			"06"
 			{
@@ -2850,7 +2850,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"100 90 80 70"
 		"AbilityManaCost"				"200 300 400"
 		"AbilityDuration"				"6 7 8"
 		"AbilityCastRange"				"1200 1400 1600"
@@ -2870,12 +2870,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"6 7 8"
+				"duration"					"5 6 7"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"slow"						"100"
+				"slow"						"0"
 			}
 			"04"
 			{
@@ -3461,7 +3461,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"10 20 30 40"
+				"duration"				"10 30 50 90"
 			}
 		}
 	}
@@ -4986,7 +4986,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_move_speed"		"200 240 280 320"
+			"bonus_move_speed"		"180 220 260 300"
 		}
 		"03"
 		{	
@@ -4996,12 +4996,12 @@
 		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"base_attack_time"		"1.8 1.5 1.0 0.5"
+			"base_attack_time"		"1.8 1.5 1.0 0.7"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_hp"				"500"
+			"bonus_hp"				"0"
 		}
 		"06"
 		{
@@ -5170,7 +5170,7 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCritChance"					"0.5 1 3"
+		"AbilityCritChance"					"1 1.5 4"
 		"AbilityCritBonus"					"1000 2000 3000"
 
 		// Special
@@ -5180,7 +5180,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"crit_chance"				"0.5 1 3"
+				"crit_chance"				"1 1.5 4"
 			}
 			"02"
 			{
@@ -5257,7 +5257,7 @@
 		    "03"
 		    {
 		        "var_type"          			"FIELD_INTEGER"
-		        "bonus_attack_speed"             "30 40 50 60"
+		        "bonus_attack_speed"             "35 45 55 65"
 		    }
 			"04"
 		    {
@@ -6916,7 +6916,7 @@
 			"02"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"trap_fade_time"				"4.0 3.0 1.5"
+				"trap_fade_time"				"2.5 2.0 1.0"
 			}
 			"03"
 			{
@@ -7029,7 +7029,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"trap_bonus_damage"			"450 800 1250"
+				"trap_bonus_damage"			"850 1600 2500"
 			}
 			"04"
 			{
@@ -7125,7 +7125,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"20 18 15"
-		"AbilityDamage"					"450 800 1250"
+		"AbilityDamage"					"850 1600 2500"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -7148,7 +7148,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"trap_bonus_damage"			"450 800 1250"
+				"trap_bonus_damage"			"850 1600 2500"
 			}
 			"04"
 			{
