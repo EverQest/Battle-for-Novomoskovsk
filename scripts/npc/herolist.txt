@@ -8,7 +8,6 @@
 	//Add aghanim's scepter
 	//Add aghanim's shard
 	//Fix Perik bears
-	//Fix loading screen
 	//Fix team names on english version
 	//Try to do our items as "Шлем Тараса"
 	//Complete all characters (1 remaining)

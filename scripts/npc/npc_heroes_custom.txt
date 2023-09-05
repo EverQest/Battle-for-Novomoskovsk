@@ -7,7 +7,7 @@
 	{
 		"override_hero"		  			"npc_dota_hero_ogre_magi"	
 		"AttributePrimary"				"DOTA_ATTRIBUTE_INTELLECT"
-		"AttributeIntelligenceGain"		"3.8"	
+		"AttributeIntelligenceGain"		"3.9"	
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -25,6 +25,7 @@
 	    	"Ability4"             "generic_hidden"	
 	    	"Ability5"             "generic_hidden"	
 	    "Ability6"             "ogre_magi_multicast_lua"	
+		"Ability7"             	   "generic_hidden"	
 	}
 	//=================================================================================================================
 	// HERO: Tinker (Danya)
@@ -90,6 +91,8 @@
 		"AttackRate"				"1.3"
 		"ProjectileSpeed"			"200"
 		"AttributeAgilityGain"		"2.3"
+
+		"ProjectileModel"    "particles/storm_spirit_base_attack.vpcf"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -377,7 +380,7 @@
 		"Ability3"					"phantom_lancer_juxtapose"
 	    	"Ability4"					"generic_hidden"
 	    	"Ability5"					"generic_hidden"
-	    "Ability6"					"meepo_divided_we_stand"
+	    "Ability6"						"generic_hidden"
 	}
 	//=================================================================================================================
 	// HERO: Undying (Oleg)

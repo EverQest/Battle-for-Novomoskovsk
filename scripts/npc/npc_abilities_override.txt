@@ -1412,8 +1412,8 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8.0 6.0 4.0 2.0"
-		"AbilityDuration"				"50.0"
+		"AbilityCooldown"				"8.0 6.0 4.0 3.0"
+		"AbilityDuration"				"20.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -1431,7 +1431,7 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"str_steal"						"6 8 10 12"
+				"str_steal"						"3 4 5 6"
 			}	
 			"03"
 			{
@@ -1578,7 +1578,7 @@
 
 	// Stats		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"10 9 8 7"
+	"AbilityCooldown"				"20 18 16 14"
 	"AbilityCastPoint"				"0 0 0 0"
 	"AbilityManaCost"				"70 60 50 40"
 
@@ -1749,7 +1749,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"1000 1500 2000 2500"
+				"damage"					"1500 2000 2500 3000"
 			}
 
 			"02"
@@ -2098,17 +2098,17 @@
 			}
 			"05"
 			{
-				"var_type"				"FIELD_FLOAT"
+				"var_type"						"FIELD_FLOAT"
 				"multicast_2_times_tooltip"		"75"
 			}
 			"06"
 			{
-				"var_type"				"FIELD_FLOAT"
+				"var_type"						"FIELD_FLOAT"
 				"multicast_3_times_tooltip"		"0 30 30 30"
 			}
 			"07"
 			{
-				"var_type"				"FIELD_FLOAT"
+				"var_type"						"FIELD_FLOAT"
 				"multicast_4_times_tooltip"		"0 0 15 15"
 			}
 		}
@@ -2125,7 +2125,7 @@
 		"ScriptFile"					"lina_laguna_blade_lua"
 		"AbilityTextureName"			"chicha_laguna"
 		"FightRecapLevel"				"2"
-		"MaxLevel"						"3"
+		"MaxLevel"						"5"
 		"HasScepterUpgrade"			"1"
 
 		"precache"
@@ -2147,15 +2147,15 @@
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"900"
-		"AbilityCastPoint"				"0.45 0.45 0.45"
+		"AbilityCastPoint"				"0.45 0.45 0.45 0.45 0.45"
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 20 15"
-		"AbilityManaCost"				"280 420 480"
+		"AbilityCooldown"				"30 20 15 13 10"
+		"AbilityManaCost"				"280 420 480 500 520"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"600 800 1000"
+		"AbilityDamage"					"600 800 1000 1200 1400"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2164,7 +2164,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"600 800 1000"
+				"damage"					"600 800 1000 1200 1400"
 			}
 			"02"
 			{
@@ -2174,7 +2174,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"damage_delay"				"0.20"
+				"damage_delay"				"0.30"
 			}
 		}
 	}
@@ -2190,7 +2190,7 @@
 		"ScriptFile"					"lion_finger_of_death_lua"
 		"AbilityTextureName"			"chicha_finger"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"3"
+		"MaxLevel"						"5"
 		"HasScepterUpgrade"				"1"
 
 		"precache"
@@ -2215,12 +2215,12 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 20 15"
-		"AbilityManaCost"				"200 420 650"
+		"AbilityCooldown"				"30 20 15 13 10"
+		"AbilityManaCost"				"280 420 480 500 520"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"600 800 1000"
+		"AbilityDamage"					"600 800 1000 1200 1400"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2229,22 +2229,22 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"600 800 1000"
+				"damage"					"600 800 1000 1200 1400"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_scepter"			"725 875 1025"
+				"damage_scepter"			"725 875 1025 1600 1800"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"mana_cost_scepter"			"200 420 625"
+				"mana_cost_scepter"			"200 420 625 700 800"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"damage_delay"				"0.25"
+				"damage_delay"				"0.30"
 			}
 			"05"
 			{
@@ -2270,7 +2270,7 @@
 		"ScriptFile"					"snapfire_firesnap_cookie_lua"
 		"AbilityTextureName"			"chicha_bounce"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"4"
+		"MaxLevel"						"5"
 		"precache"
 		{
 			"soundfile"	"soundevents/Chicha.vsndevts"
@@ -2296,13 +2296,13 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20 18 14 10"
-		"AbilityManaCost"				"100"
+		"AbilityCooldown"				"20 18 14 10 7"
+		"AbilityManaCost"				"100 110 120 130 140"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"			"100 160 230 300"
-		"AbilityDuration"		"2.5 2.6 2.7 2.8"
+		"AbilityDamage"			"100 160 230 300 350"
+		"AbilityDuration"		"2.5 2.6 2.7 2.8 3.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2326,12 +2326,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"jump_height"			"200 300 450 500"
+				"jump_height"			"200 300 450 500 550"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"jump_horizontal_distance"	"300 450 600 650"
+				"jump_horizontal_distance"	"300 450 600 650 650"
 			}
 			"06"
 			{
@@ -2351,12 +2351,12 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"impact_damage"			"100 160 230 300"
+				"impact_damage"			"100 160 230 300 350"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"impact_stun_duration"	"2.5 2.6 2.7 2.8"
+				"impact_stun_duration"	"2.5 2.6 2.7 2.8 3.0"
 			}
 			"11"
 			{
@@ -2852,7 +2852,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"100 90 80 70"
 		"AbilityManaCost"				"200 300 400"
-		"AbilityDuration"				"6 7 8"
+		"AbilityDuration"				"3 5 7"
 		"AbilityCastRange"				"1200 1400 1600"
 
 		// Damage
@@ -2885,7 +2885,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"face_duration"				"1.0"
+				"face_duration"				"2.0"
 			}
 			"06"
 			{
@@ -3036,27 +3036,27 @@
 		"04"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"illusion_duration"			"12.0"
+			"illusion_duration"			"6.0 8.0 10.0 12.0"
 		}
 		"05"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"first_illusion_outgoing_damage"	"30.0"
+			"first_illusion_outgoing_damage"	"10.0"
 		}
 		"06"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"first_illusion_incoming_damage"	"-80.0"
+			"first_illusion_incoming_damage"	"-60.0"
 		}
 		"07"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"second_illusion_outgoing_damage"	"30.0"
+			"second_illusion_outgoing_damage"	"10.0"
 		}
 		"08"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"second_illusion_incoming_damage"	"-80.0"
+			"second_illusion_incoming_damage"	"-60.0"
 		}
 	}
 	
@@ -3731,7 +3731,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"speed"						"400 430 460"
+			"speed"						"450 500 550"
 		}
 		"03"
 		{
@@ -4154,7 +4154,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"100.0 80.0 60.0"
+		"AbilityCooldown"				"180.0 150.0 100.0"
 		"AbilityManaCost"				"275 325 375"
 
 		// Damage
@@ -4358,7 +4358,7 @@
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"100 130 160 190"
-	"AbilityDamage"					"100 120 140 160"
+	"AbilityDamage"					"120 140 160 200"
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -4367,17 +4367,17 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"radius"				"180 250 330 350"
+			"radius"				"190 260 340 360"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"0.1 0.1 0.1 0.1"
+			"duration"				"0.5 0.5 0.5 0.5"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"damage"				"100 120 140 160"
+			"damage"				"120 140 160 200"
 		}
 		"04"
 		{
@@ -4914,7 +4914,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60.0 56.0 44.0"
+		"AbilityCooldown"				"100.0 80.0 60.0"
 		"AbilityDuration"				"25.0 25.0 25.0"
 	
 		// Cost
@@ -4981,12 +4981,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"15 25 35 45"
+			"bonus_damage"			"0 0 0 0"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_move_speed"		"180 220 260 300"
+			"bonus_move_speed"		"120 140 160 170"
 		}
 		"03"
 		{	
@@ -5571,12 +5571,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"5 6 7 8"
+				"duration"				"6 7 8 10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"agility"				"5 10 15 20"
+				"agility"				"10 15 20 30"
 			}
 			"03"
 			{
@@ -5586,7 +5586,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"atribute"				"3 6 10 15"
+				"atribute"				"15 20 25 30"
 			}
 		}
 
@@ -5770,7 +5770,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"20.0 18.0 16.0 14.0"
 	"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
-	"AbilityCastRange"				"350 350 350 350"
+	"AbilityCastRange"				"1800 1800 1800 1800"
 	"AbilityDamage"					"140 180 240 280"
 
 	// Cost
@@ -6071,7 +6071,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hook_speed"			"500.0"
+				"hook_speed"			"550.0"
 			}
 			"03"
 			{
