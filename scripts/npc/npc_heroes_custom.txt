@@ -39,12 +39,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_armor_10"
-		"Ability13"				"special_bonus_magic_resistance_25"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_danya_laser_dmg" // laser damage + 150
+		"Ability13"				"special_bonus_danya_acrane_boots" // can refresh arcane boots
+		"Ability14"				"special_bonus_danya_laser_pure" // pure laser damage
+		"Ability15"				"special_bonus_danya_cobolds_army" // cobolds x2
+		"Ability16"				"special_bonus_danya_cobolds_dmg" // cobolds dmg x2 
+		"Ability17"				"special_bonus_danya_ult_manacost" // ultimate manacost / 4
 
 		"Ability1"		       "tinker_laser_lua"
 	    "Ability2"             "lion_hex_lua"	

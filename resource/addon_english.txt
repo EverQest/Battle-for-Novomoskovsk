@@ -114,6 +114,12 @@
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
 
+		"Dota_Tooltip_ability_special_bonus_danya_laser_dmg"					 "+ 150 dmg to laser"
+		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "arcane boots are now refreshable"
+		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "laser deals PURE dmg"
+		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "you now summon ARMY of cobolds"
+		"Dota_Tooltip_ability_special_bonus_danya_cobolds_dmg"					 "cobolds dmg x2"
+		"Dota_Tooltip_ability_special_bonus_danya_ult_manacost"					 "ultimate manacost reduced by 75%"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Некит
 		"npc_dota_hero_phantom_lancer"         "Некит"
