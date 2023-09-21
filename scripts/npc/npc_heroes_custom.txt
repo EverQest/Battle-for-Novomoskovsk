@@ -381,7 +381,7 @@
 		"Ability3"					"phantom_lancer_juxtapose"
 	    	"Ability4"					"generic_hidden"
 	    	"Ability5"					"generic_hidden"
-	    "Ability6"						"generic_hidden"
+	    "Ability6"					"tidehunter_ravage_lua"
 	}
 	//=================================================================================================================
 	// HERO: Undying (Oleg)
