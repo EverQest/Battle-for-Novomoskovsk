@@ -52,19 +52,19 @@ function shadowraze.OnSpellStart( this )
 	local is_Talent_25_R = this:GetCaster():FindAbilityByName("special_bonus_yarik_attack_dmg_to_coils"):GetLevel()
 	local is_Talent_25_L = this:GetCaster():FindAbilityByName("special_bonus_yarik_pure_coils"):GetLevel()
 
-	if is_Talent_15_L > 0 then
+	if is_Talent_15_R > 0 then
 		base_damage = base_damage + 150
 	end
 	
-	if is_Talent_20_R > 0 then
+	if is_Talent_20_L > 0 then
 		stack_damage = stack_damage + 130
 	end
 	
-	if is_Talent_25_L > 0 then
+	if is_Talent_25_R > 0 then
 		base_damage = base_damage +  this:GetCaster():GetAverageTrueAttackDamage(caster)
 	end
 	
-	if is_Talent_25_R > 0 then
+	if is_Talent_25_L > 0 then
 		dmg_type = DAMAGE_TYPE_PURE
 	end
 
