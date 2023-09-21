@@ -261,12 +261,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_armor_10"
-		"Ability13"				"special_bonus_magic_resistance_25"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_yarik_coils_dmg" // coils dmg
+		"Ability13"				"special_bonus_attack_damage_50"
+		"Ability14"				"special_bonus_20_bash_2" 
+		"Ability15"				"special_bonus_yarik_stack_dmg" // coils stack dmg
+		"Ability16"				"special_bonus_yarik_attack_dmg_to_coils" //attack dmg coils
+		"Ability17"				"special_bonus_yarik_pure_coils" //pure coils
 
 		"Ability1"             "shadow_fiend_shadowraze_a_lua"	
 		"Ability2"		       "shadow_fiend_shadowraze_b_lua"

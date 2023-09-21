@@ -96,6 +96,11 @@
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_e_lua_Description"	 			 "ReeShadowrazeYarikPenis"
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua"							 "ReeZox"
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua_Description"	 			 "ReeShadowrazeOneShot"
+
+		"Dota_Tooltip_ability_special_bonus_yarik_coils_dmg"							 "+ 150 dmg to shadowraze"
+		"Dota_Tooltip_ability_special_bonus_yarik_stack_dmg"							 "+ 130 dmg for stack of shadowraze "
+		"Dota_Tooltip_ability_special_bonus_yarik_attack_dmg_to_coils"					 "shadowraze deals bonus damage from attack"
+		"Dota_Tooltip_ability_special_bonus_yarik_pure_coils"							 "shadowraze are now PURE"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Ботаник Дюк
 		"npc_dota_hero_tinker"     	   "Ботаник Дюк"
