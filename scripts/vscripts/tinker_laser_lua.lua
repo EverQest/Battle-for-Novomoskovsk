@@ -27,6 +27,19 @@ function tinker_laser_lua:OnSpellStart()
 	local duration_hero = self:GetSpecialValueFor("duration_hero")
 	local duration_creep = self:GetSpecialValueFor("duration_creep")
 	local damage = self:GetSpecialValueFor("laser_damage")
+	local dmg_type = DAMAGE_TYPE_MAGICAL
+
+	-- Talents
+	local is_Talent_15_R = caster:FindAbilityByName("special_bonus_danya_laser_dmg"):GetLevel() -- 150
+	local is_Talent_20_R = caster:FindAbilityByName("special_bonus_danya_laser_pure"):GetLevel()
+
+	if is_Talent_15_R > 0 then
+		damage = damage + 150
+	end
+
+	if is_Talent_20_R > 0 then
+		dmg_type = DAMAGE_TYPE_PURE
+	end
 
 	-- get targets
 	local targets = {}
@@ -40,7 +53,7 @@ function tinker_laser_lua:OnSpellStart()
 		-- victim = hTarget,
 		attacker = caster,
 		damage = damage,
-		damage_type = DAMAGE_TYPE_PURE,
+		damage_type = dmg_type,
 		ability = self
 	}
 	for _,enemy in pairs(targets) do

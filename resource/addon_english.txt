@@ -96,6 +96,11 @@
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_e_lua_Description"	 			 "ReeShadowrazeYarikPenis"
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua"							 "ReeZox"
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua_Description"	 			 "ReeShadowrazeOneShot"
+
+		"Dota_Tooltip_ability_special_bonus_yarik_coils_dmg"							 "+ 150 dmg to shadowraze"
+		"Dota_Tooltip_ability_special_bonus_yarik_stack_dmg"							 "+ 130 dmg for stack of shadowraze "
+		"Dota_Tooltip_ability_special_bonus_yarik_attack_dmg_to_coils"					 "shadowraze deals bonus damage from attack"
+		"Dota_Tooltip_ability_special_bonus_yarik_pure_coils"							 "shadowraze are now PURE"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Ботаник Дюк
 		"npc_dota_hero_tinker"     	   "Ботаник Дюк"
@@ -109,6 +114,12 @@
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
 
+		"Dota_Tooltip_ability_special_bonus_danya_laser_dmg"					 "+ 150 dmg to laser"
+		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "arcane boots are now refreshable"
+		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "laser deals PURE dmg"
+		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "you now summon ARMY of cobolds"
+		"Dota_Tooltip_ability_special_bonus_danya_cobolds_dmg"					 "cobolds dmg x2"
+		"Dota_Tooltip_ability_special_bonus_danya_ult_manacost"					 "ultimate manacost reduced by 75%"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Некит
 		"npc_dota_hero_phantom_lancer"         "Некит"

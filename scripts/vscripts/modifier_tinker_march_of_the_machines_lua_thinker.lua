@@ -46,6 +46,18 @@ function modifier_tinker_march_of_the_machines_lua_thinker:OnCreated( kv )
 
 		self.center_start = center - direction*self.radius
 
+		-- Talents
+		local is_Talent_20_L = self:GetCaster():FindAbilityByName("special_bonus_danya_cobolds_army"):GetLevel() -- 150
+		local is_Talent_25_R = self:GetCaster():FindAbilityByName("special_bonus_danya_cobolds_dmg"):GetLevel()
+
+		if is_Talent_20_L > 0 then
+			interval = interval / 2
+		end
+
+		if is_Talent_25_R > 0 then
+			splash_damage = splash_damage + splash_damage
+		end
+
 		-- Precache projectile info
 		self.projectile_info = {
 			Source = self:GetCaster(),

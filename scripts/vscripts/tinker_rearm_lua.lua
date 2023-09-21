@@ -1,5 +1,17 @@
 tinker_rearm_lua = class({})
 
+-- Talent manacost
+function tinker_rearm_lua:GetManaCost( level )
+	local caster = self:GetCaster()
+	local is_Talent_25_L = caster:FindAbilityByName("special_bonus_danya_ult_manacost"):GetLevel()
+	local deflt_mnc = self.BaseClass.GetManaCost( self, level )
+	if is_Talent_25_L > 0 then
+		deflt_mnc = deflt_mnc / 4
+	end
+
+	return deflt_mnc
+end
+
 --------------------------------------------------------------------------------
 -- Ability Start
 function tinker_rearm_lua:OnSpellStart()
@@ -50,6 +62,12 @@ end
 --------------------------------------------------------------------------------
 -- Helper
 function tinker_rearm_lua:IsItemException( item )
+	--Talent
+	local is_Talent_15_L = self:GetCaster():FindAbilityByName("special_bonus_danya_acrane_boots"):GetLevel()
+
+	if item:GetName() == "item_arcane_boots" and is_Talent_15_L > 0 then
+		return false
+	end
 	return self.ItemException[item:GetName()]
 end
 tinker_rearm_lua.ItemException = {
