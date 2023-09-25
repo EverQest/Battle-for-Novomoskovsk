@@ -66,14 +66,14 @@
 		"AttackDamageMax"			"110"
 
 		// Talents 
-		"Ability10"				"special_bonus_all_stats_20"
-		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_armor_10"
-		"Ability13"				"special_bonus_magic_resistance_25"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability15"				"special_bonus_all_stats_20"
+		"Ability16"				"special_bonus_exp_boost_25"
+		"Ability17"				"special_bonus_armor_10"
+		"Ability18"				"special_bonus_magic_resistance_25"
+		"Ability19"				"special_bonus_lifesteal_20"
+		"Ability20"				"special_bonus_cooldown_reduction_20"
+		"Ability21"				"special_bonus_attack_damage_100"
+		"Ability22"				"special_bonus_spell_amplify_25"
 
 		"Ability1"		      		"magnus_skewer_lua"
 		"Ability2"		     		"magnus_push_horn_toss"
@@ -81,6 +81,8 @@
 		"Ability4"		     		"tidehunter_kraken_shell_lua"
 			"Ability5"		      		"generic_hidden"
 		"Ability6"		     		"tiny_toss_lua"
+			"Ability7"		      		"generic_hidden"
+			"Ability8"		      		"generic_hidden"
 	}
 	//=================================================================================================================
 	// HERO: Storm Spirit  (Temich)
