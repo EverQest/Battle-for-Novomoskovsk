@@ -1,3 +1,7 @@
+# IDEs
+.vs
+.vscode
+
 # Cache crap that Valve autogenerates
 *.bin
 *.cfg
