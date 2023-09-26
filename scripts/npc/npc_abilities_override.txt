@@ -6522,6 +6522,11 @@
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
 		
+		"precache"
+		{
+			"soundfile"	"soundevents/Perik.vsndevts"
+		}
+
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -6672,30 +6677,26 @@
 		}
 
 	//=================================================================================================================
-	// Meepo: Divided We Stand (Perik) + Axes
+	// Beastmaster_wild_axes: Wild Axes (Perik)
 	//=================================================================================================================
-	"meepo_divided_we_stand"
-	{
-	"AbilityTextureName"			"perik_we_stand"
-	}
 	"beastmaster_wild_axes"
 	{
-	"AbilityTextureName"			"perik_axes"
+		"AbilityTextureName"			"perik_axes"
 
-	"precache"
-	{
-	"soundfile"	"soundevents/Perik.vsndevts"
-	}
-
-	"OnSpellStart"
+		"precache"
 		{
+		"soundfile"	"soundevents/Perik.vsndevts"
+		}
+
+		"OnSpellStart"
+		{
+	
 		    "FireSound"
 		    {
-		    	"EffectName"	"CustomAra" 
+		    	"EffectName"	"CustomPere"
 		    	"Target"		"CASTER"
 		    }
 		}
-
 	}
 
 	//=================================================================================================================

@@ -7,7 +7,7 @@ LinkLuaModifier( "modifier_generic_stunned_lua", "modifier_generic_stunned_lua",
 --------------------------------------------------------------------------------
 -- Init Abilities
 function tidehunter_ravage_lua:Precache( context )
-	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_tidehunter.vsndevts", context )
+	PrecacheResource( "soundfile", "soundevents/Perik.vsndevts", context )
 	PrecacheResource( "particle", "particles/tide_2021_gold_ravage_edge_parent.vpcf", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_tidehunter/tidehunter_spell_ravage_hit.vpcf", context )
 end
@@ -100,7 +100,7 @@ end
 function tidehunter_ravage_lua:PlayEffects1( center, radius, speed )
 	-- Get Resources
 	local particle_cast = "particles/tide_2021_gold_ravage_edge_parent.vpcf"
-	local sound_cast = "Ability.Ravage"
+	local sound_cast = "CustomAra"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, self:GetCaster() )
@@ -117,6 +117,7 @@ function tidehunter_ravage_lua:PlayEffects1( center, radius, speed )
 end
 
 function tidehunter_ravage_lua:PlayEffects2( enemy )
+
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_tidehunter/tidehunter_spell_ravage_hit.vpcf"
 
