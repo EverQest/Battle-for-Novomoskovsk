@@ -2,30 +2,22 @@ LinkLuaModifier( "modifier_shadow_fiend_shadowraze_lua", "modifier_shadow_fiend_
 
 --------------------------------------------------------------------------------
 shadow_fiend_shadowraze_a_lua = class({})
-shadow_fiend_shadowraze_b_lua = class({})
-shadow_fiend_shadowraze_c_lua = class({})
-shadow_fiend_shadowraze_d_lua = class({})
-shadow_fiend_shadowraze_e_lua = class({})
-shadow_fiend_shadowraze_f_lua = class({})
 
 function shadow_fiend_shadowraze_a_lua:OnSpellStart()
 	shadowraze.OnSpellStart( self )
 end
-function shadow_fiend_shadowraze_b_lua:OnSpellStart()
-	shadowraze.OnSpellStart( self )
+
+function shadow_fiend_shadowraze_a_lua:GetCastAnimation(  )
+	-- animations
+	local coil_animation = {ACT_DOTA_RAZE_1, ACT_DOTA_RAZE_2, ACT_DOTA_RAZE_3}
+	return coil_animation[math.random( 1, 3 )]
 end
-function shadow_fiend_shadowraze_c_lua:OnSpellStart()
-	shadowraze.OnSpellStart( self )
-end
-function shadow_fiend_shadowraze_d_lua:OnSpellStart()
-	shadowraze.OnSpellStart( self )
-end
-function shadow_fiend_shadowraze_e_lua:OnSpellStart()
-	shadowraze.OnSpellStart( self )
-end
-function shadow_fiend_shadowraze_f_lua:OnSpellStart()
-	shadowraze.OnSpellStart( self )
-end
+
+shadow_fiend_shadowraze_b_lua = shadow_fiend_shadowraze_a_lua
+shadow_fiend_shadowraze_c_lua = shadow_fiend_shadowraze_a_lua
+shadow_fiend_shadowraze_d_lua = shadow_fiend_shadowraze_a_lua
+shadow_fiend_shadowraze_e_lua = shadow_fiend_shadowraze_a_lua
+shadow_fiend_shadowraze_f_lua = shadow_fiend_shadowraze_a_lua
 
 --------------------------------------------------------------------------------
 
