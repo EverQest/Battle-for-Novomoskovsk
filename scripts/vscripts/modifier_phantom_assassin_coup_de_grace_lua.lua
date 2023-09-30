@@ -60,11 +60,8 @@ end
 --------------------------------------------------------------------------------
 -- Helper
 function modifier_phantom_assassin_coup_de_grace_lua:RollChance( chance )
-	local rand = math.random()
-	if rand<chance/100 then
-		return true
-	end
-	return false
+	-- roll pseudo random
+	return RollPseudoRandomPercentage( chance , DOTA_PSEUDO_RANDOM_CUSTOM_GENERIC, self:GetParent() )
 end
 
 --------------------------------------------------------------------------------
