@@ -1,4 +1,5 @@
 --------------------------------------------------------------------------------
+require( "utility_functions" )
 magnus_skewer_lua = class({})
 LinkLuaModifier( "modifier_magnus_skewer_lua", "modifier_magnus_skewer_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
 LinkLuaModifier( "modifier_magnus_skewer_lua_debuff", "modifier_magnus_skewer_lua_debuff", LUA_MODIFIER_MOTION_HORIZONTAL )
@@ -30,6 +31,14 @@ function magnus_skewer_lua:GetManaCost( level )
 	return self.BaseClass.GetManaCost( self, level )
 end
 
+function magnus_skewer_lua:GetCastRange( vLocation, hTarget )
+	local range =  self.BaseClass.GetCastRange(self, Vector(0,0,0), nil )
+	if IsTalentLearned(self:GetCaster(), "special_bonus_dima_skiwer_range_x2") then
+		range = range * 2
+	end
+	return range
+end
+
 --------------------------------------------------------------------------------
 -- Ability Start
 function magnus_skewer_lua:OnSpellStart()
@@ -39,6 +48,9 @@ function magnus_skewer_lua:OnSpellStart()
 
 	-- load data
 	local maxrange = self:GetSpecialValueFor( "range" )
+	if IsTalentLearned(self:GetCaster(), "special_bonus_dima_skiwer_range_x2") then
+		maxrange = maxrange * 2
+	end
 
 	local direction = point-caster:GetOrigin()
 	if direction:Length2D() > maxrange then

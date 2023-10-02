@@ -53,8 +53,15 @@
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 		 "Снюс KRAKEN SHELL☆☆☆☆☆"
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_damage_reduction"		 "damage reduction:"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "Tossed enemys now fall faster"
+		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 250 damage reduction"
+		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Барьба max range x2" 
+		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на левый третий have 2 charges" 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"

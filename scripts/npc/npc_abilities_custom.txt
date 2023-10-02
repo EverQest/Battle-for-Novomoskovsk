@@ -664,157 +664,126 @@
     //=================================================================================================================
 	// Talents
 	//=================================================================================================================
+	//DEFAULT
+	"special_bonus_magic_resistance_50"
+	{
+		"BaseClass"          			    "special_bonus_base"
+		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magicresist"				"50" // kv that will be changed
+				"ability"					"generic" // ability name
+			}
+		}
+	}
+
 	//Yarik
 	"special_bonus_yarik_coils_dmg"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_yarik_stack_dmg"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_yarik_attack_dmg_to_coils"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_yarik_pure_coils"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}
 
 	//DYUK
 	"special_bonus_danya_laser_dmg"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_danya_acrane_boots"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_danya_laser_pure"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_danya_cobolds_army"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_danya_cobolds_dmg"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
-			}
-		}
 	}	
 	"special_bonus_danya_ult_manacost"
 	{
-		"BaseClass"          			    "special_bonus_undefined"
+		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
+	}	
+	// DIMA
+	"special_bonus_dima_toss_duration"
+	{
+		"BaseClass"          			    "special_bonus_base"
+		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_dima_kraken_buff"
+	{
+		"BaseClass"          			    "special_bonus_base"
+		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_dima_skiwer_range_x2"
+	{
+		"BaseClass"          			    "special_bonus_base"
+		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_dima_toss_charges"
+	{
+		"BaseClass"          			    "special_bonus_base"
+		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"						"1"
+				"AbilityCharges"			"1" // kv that will be changed
+				"ability"					"tiny_toss_lua" // ability name
 			}
 		}
-	}	
+	}
 }

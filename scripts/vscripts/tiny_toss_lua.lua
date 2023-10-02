@@ -78,7 +78,7 @@ function tiny_toss_lua:OnAbilityPhaseInterrupted()
 
 end
 function tiny_toss_lua:OnAbilityPhaseStart()
-	return self:FindEnemies()
+	return (self:FindEnemies() ~= nil)
 	-- return true -- if success
 end
 

@@ -44,6 +44,12 @@ function modifier_tiny_toss_lua:OnCreated( kv )
 	self.target = EntIndexToHScript( kv.target )
 	local height = 850
 
+	-- Talents
+	local talent_15_L = IsTalentLearned(self.caster, "special_bonus_dima_toss_duration")
+	if	talent_15_L then
+		duration = duration - 4 -- 8 sec
+	end
+
 	-- add arc modifier for vertical only
 	self.arc = self.parent:AddNewModifier(
 		self.caster, -- player source

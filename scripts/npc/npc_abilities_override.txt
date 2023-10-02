@@ -1195,9 +1195,10 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"69"
+		"AbilityCooldown"				"0" // If using charges, AbiltyCooldown must be 0
 		"AbilityManaCost"				"220"
-
+		"AbilityCharges"				"1"
+		"AbilityChargeRestoreTime"		"69"	// must also use ability_lua:GetAbilityChargeRestoreTime() in code
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityDamage"					"3000 4000 6000 8000"
@@ -1230,11 +1231,6 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"toss_damage"				"3000 4000 6000 8000"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"AbilityCharges"		""
 			}
 		}
 	}
