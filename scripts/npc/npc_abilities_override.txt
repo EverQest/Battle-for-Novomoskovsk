@@ -7574,8 +7574,10 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"7.0 7.0 7.0 7.0"
+		"AbilityCooldown"				"0"
 		"AbilityManaCost"				"100 110 120 130"
+		"AbilityCharges"				"65"
+		"AbilityChargeRestoreTime"		"10 9 8 7"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -7599,7 +7601,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"light_strike_array_stun_duration"	"0 0 0 0"
+				"light_strike_array_stun_duration"	"0.1"
 			}
 			"04"
 			{
