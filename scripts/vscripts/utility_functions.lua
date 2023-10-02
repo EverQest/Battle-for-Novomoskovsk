@@ -127,3 +127,8 @@ function SetTimer( cmdName, time )
     print( "Set the timer to: " .. time )
     nCOUNTDOWNTIMER = time
 end
+
+function IsTalentLearned(caster, talent_name)
+    local talent_level = caster:FindAbilityByName(talent_name):GetLevel()
+    return talent_level > 0
+end
