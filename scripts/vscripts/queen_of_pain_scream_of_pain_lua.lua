@@ -89,7 +89,7 @@ end
 function queen_of_pain_scream_of_pain_lua:PlayEffects( location )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
-	local sound_cast = "Hero_QueenOfPain.ScreamOfPain"
+	local sound_cast = "Gul scream"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN, self:GetCaster() )

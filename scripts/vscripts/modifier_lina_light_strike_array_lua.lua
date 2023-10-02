@@ -100,7 +100,7 @@ end
 function modifier_lina_light_strike_array_lua:PlayEffects2()
 	-- Get Resources
 	local particle_cast = "particles/lina_spell_light_strike_array.vpcf"
-	local sound_cast = "Ability.LightStrikeArray"
+	local sound_cast = "65 layers"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, nil )

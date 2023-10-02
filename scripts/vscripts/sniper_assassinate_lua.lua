@@ -29,7 +29,7 @@ function sniper_assassinate_lua:OnAbilityPhaseStart()
 	self.modifier = self:AddATValue( modifier )
 
 	-- play effects
-	local sound_cast = "Ability.AssassinateLoad"
+	local sound_cast = "Montana"
 	EmitSoundOnClient( sound_cast, caster:GetPlayerOwner() )
 
 	return true -- if success
@@ -59,7 +59,7 @@ function sniper_assassinate_lua:OnSpellStart()
 	}
 
 	-- effects
-	local sound_cast = "Ability.Assassinate"
+	local sound_cast = "BamTank"
 	local sound_target = "Hero_Sniper.AssassinateProjectile"
 
 	ProjectileManager:CreateTrackingProjectile(info)

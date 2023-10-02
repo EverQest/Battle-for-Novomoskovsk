@@ -7326,12 +7326,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"sniper_assassinate_lua"
-		"AbilityTextureName"			"earthshaker_enchant_totem"
+		"AbilityTextureName"			"gul_montana"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+			"soundfile"	"soundevents/Gul.vsndevts"
 			"particle"	"particles/units/heroes/hero_sniper/sniper_assassinate.vpcf"
 			"particle"	"particles/units/heroes/hero_sniper/sniper_crosshair.vpcf"
 		}
@@ -7354,7 +7354,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20.0 15.0 10.0"
+		"AbilityCooldown"				"100.0 90.0 80.0"
 		"AbilityManaCost"				"175 275 375"
 
 		// Damage
@@ -7400,12 +7400,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"queen_of_pain_scream_of_pain_lua"
-		"AbilityTextureName"			"earthshaker_enchant_totem"
+		"AbilityTextureName"			"gul_chaika"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+			"soundfile"	"soundevents/Gul.vsndevts"
 			"particle"	"particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
 			"particle"	"particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
 		}
@@ -7455,14 +7455,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"earthshaker_enchant_totem_lua"
-		"AbilityTextureName"			"earthshaker_enchant_totem"
+		"AbilityTextureName"			"gul_dulo"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"HasScepterUpgrade"				"1"
 
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+			"soundfile"	"soundevents/Gul.vsndevts"
 			"particle"	"particles/units/heroes/hero_earthshaker/earthshaker_totem_buff.vpcf"
 		}
 		
@@ -7482,7 +7482,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5.0"
+		"AbilityCooldown"				"20.0 18.0 16.0 14.0"
 		"AbilityManaCost"				"35 40 45 50"
 
 		// Damage
@@ -7548,12 +7548,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"lina_light_strike_array_lua"
-		"AbilityTextureName"			"earthshaker_enchant_totem"
+		"AbilityTextureName"			"gul_sloi"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+			"soundfile"	"soundevents/Gul.vsndevts"
 			"particle"	"particles/units/heroes/hero_lina/lina_spell_light_strike_array_ray_team.vpcf"
 			"particle"	"particles/units/heroes/hero_lina/lina_spell_light_strike_array.vpcf"
 		}
@@ -7618,12 +7618,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"snapfire_lil_shredder_lua"
-		"AbilityTextureName"			"earthshaker_enchant_totem"
+		"AbilityTextureName"			"gul_nunchak"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_snapfire.vsndevts"
+			"soundfile"	"soundevents/Gul.vsndevts"
 			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_shells_projectile.vpcf"
 			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_shells_buff.vpcf"
 			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_slow_debuff.vpcf"

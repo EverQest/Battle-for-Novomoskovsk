@@ -116,6 +116,6 @@ function earthshaker_enchant_totem_lua:OnSpellStart()
 	)
 
 	-- Effects
-	local sound_cast = "Hero_EarthShaker.Totem"
+	local sound_cast = "Tank shot"
 	EmitSoundOn( sound_cast, caster )
 end

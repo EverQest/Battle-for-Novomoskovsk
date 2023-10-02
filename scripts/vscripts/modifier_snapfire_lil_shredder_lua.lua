@@ -38,7 +38,7 @@ function modifier_snapfire_lil_shredder_lua:OnCreated( kv )
 
 	-- play Effects & Sound
 	self:PlayEffects()
-	local sound_cast = "Hero_Snapfire.ExplosiveShells.Cast"
+	local sound_cast = "Nynchaks1"
 	EmitSoundOn( sound_cast, self:GetParent() )
 end
 
@@ -97,7 +97,7 @@ function modifier_snapfire_lil_shredder_lua:OnAttack( params )
 	self.records[params.record] = true
 
 	-- play sound
-	local sound_cast = "Hero_Snapfire.ExplosiveShellsBuff.Attack"
+	local sound_cast = "Bam"
 	EmitSoundOn( sound_cast, self:GetParent() )
 
 	-- decrement stack
