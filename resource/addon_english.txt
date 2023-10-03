@@ -257,7 +257,7 @@
 		"Dota_Tooltip_ability_snapfire_lil_shredder_lua"						"Нунчаки"
 		"Dota_Tooltip_ability_snapfire_lil_shredder_lua_Description"			"Гуль хочет показать свои нунчаки, дым с ушей даёт понять что он явно не в настроении что нунчаки не понравились. Получает несколько быстрых атак по противникам"
 		"Dota_Tooltip_ability_lina_light_strike_array_lua"						"65 слоев"
-		"Dota_Tooltip_ability_lina_light_strike_array_lua_Description"			"Рисуя гуль накланыдает 50 слоев ужаса, наносит урон по области, немного по-гейски"
+		"Dota_Tooltip_ability_lina_light_strike_array_lua_Description"			"Рисуя гуль накланыдает 65 слоев ужаса, наносит урон по области, немного по-гейски"
 		"Dota_Tooltip_ability_earthshaker_enchant_totem_lua"					"Навести дуло танка"
 		"Dota_Tooltip_ability_earthshaker_enchant_totem_lua_Description"		"Не зря гуль учился на наводчика танка, свой опыт он показывает на полях сражений. Получает прирост в процентах к урону в следующей атаке"
 		"Dota_Tooltip_ability_queen_of_pain_scream_of_pain_lua"					"Одесская чайка"
