@@ -471,12 +471,12 @@
 		"Ability24"				"special_bonus_spell_amplify_25"
 		"Ability25"				"special_bonus_attributes" //plusiki
 		
-		"Ability1"					"dawnbreaker_starbreaker_lua" // downbreaker Q
-		"Ability2"					"ursa_enrage_lua" // enrage
-		"Ability3"					"antimage_mana_void_lua" // smert barigam
+		"Ability1"					"dawnbreaker_starbreaker_lua"
+		"Ability2"					"ursa_enrage_lua"
+		"Ability3"					"antimage_mana_void_lua"
 	    "Ability4"					"rip_opz" // pause after death passive
 	    	"Ability5"					"generic_hidden"
-	    "Ability6"					"slardar_bash_of_the_deep_lua" // DJOUK slardar bash
+	    "Ability6"					"slardar_bash_of_the_deep_lua"
 
 
 		//Hiden

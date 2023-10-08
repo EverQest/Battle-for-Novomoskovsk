@@ -7843,7 +7843,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance"				"60 70 80"
+				"chance"				"40 50 60"
 			}
 			"02"
 			{
@@ -7916,7 +7916,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"1.0 1.5 2.0 2.5"
+				"duration"					"1.5 2.0 3.0 4.5"
 			}
 			"04"
 			{

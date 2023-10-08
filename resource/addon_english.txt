@@ -264,8 +264,20 @@
 		"Dota_Tooltip_ability_queen_of_pain_scream_of_pain_lua_Description"		"Просто крич без ведомой на то причины. Осторожно, может быть громко"
 		"Dota_Tooltip_ability_sniper_assassinate_lua"							"Козырная Монтана"
 		"Dota_Tooltip_ability_sniper_assassinate_lua_Description"				"Заряжает козырную монтану в противника, после чего стреляет 3 раза и наносит урон. Такое сложно пережить"
-
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Evgen
+		"npc_dota_hero_Invoker"			   "Евген"
+		
+		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua"					"Удар МЕЛЬНИЦА"
+		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua_Description"		"Очень опасный удар Евгена, начинает местить все что находиться впереди, крутит своими руками в большом радиусе вокруг себя"
+		"Dota_Tooltip_ability_ursa_enrage_lua"								"ШШШаленство"
+		"Dota_Tooltip_ability_ursa_enrage_lua_Description"					"Вы знаете что такое безумие? Евген впадает в ярость получая имуннитет к любому типу урона на время и увеличивает себя в размерах"
+		"Dota_Tooltip_ability_antimage_mana_void_lua"						"Смэрть баригам!"
+		"Dota_Tooltip_ability_antimage_mana_void_lua_Description"			"Наносит урон равный количеству золота у противника, максимальная прибавка 50% от золота. Взрывает на части всех барыг!"
+		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua"					"Джоук"
+		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua_Description"		"Евген любит говорить джоук, от чего его противники получают микро-стан. Осторожно, он очень любит шутить"
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
 		//
 		"DOTA_Tooltip_modifier_invis_revealed"							"Нашли лоха"
 		//
