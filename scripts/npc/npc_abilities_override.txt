@@ -7696,4 +7696,304 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Dawnbreaker: Starbreaker (Evgen)
+	//=================================================================================================================
+	"dawnbreaker_starbreaker_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"dawnbreaker_starbreaker_lua"
+		"AbilityTextureName"			"placeholder"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"			"120"
+		"AbilityCastPoint"				"0.2"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17 15 13 11"
+		"AbilityManaCost"				"80"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"1.1"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"swipe_radius"				"220"			
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"swipe_damage"				"25 35 45 55"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"smash_radius"				"220"
+			}	
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"smash_damage"				"40 65 90 115"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"			"500 550 600 650"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"total_attacks"				"8 10 12 14"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"smash_stun_duration"		"0.8 1.0 1.2 1.4"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"sweep_stun_duration"		"0.30"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"self_stun_duration"		"0.2"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"swipe_slow"				"-20"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"smash_distance_from_hero"	"110"
+			}		
+			"14"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"animation_rate"			"0"
+			}	
+		}
+	}
+	//=================================================================================================================
+	// Slardar: Bash of the Deep (Evgen)
+	//=================================================================================================================
+	"slardar_bash_of_the_deep_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"slardar_bash_of_the_deep_lua"
+		"AbilityTextureName"			"placeholder"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
+	//		"particle"	"particles/units/heroes/hero_<hero>/<hero>_<ability>.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance"				"60 70 80"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"20 40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"0.1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_creep"		"2.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ursa: Enrage (Evgen)
+	//=================================================================================================================
+	"ursa_enrage_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"ursa_enrage_lua"
+		"AbilityTextureName"			"placeholder"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+			"particle"	"particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+		}
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		"HasScepterUpgrade"				"1"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50 45 35 25"
+		"AbilityManaCost"				"100"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"enrage_multiplier"			"1.5 1.75 2.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_reduction"			"80"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"1.0 1.5 2.0 2.5"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown_scepter"			"20"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Anti-mage: Mana Void (Evgen) (smert_barigam)
+	//=================================================================================================================
+	"antimage_mana_void_lua"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"antimage_mana_void_lua"
+		"AbilityTextureName"			"placeholder"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"5"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+			"particle"	"particles/antimage_manavoid.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"55 50 45 40 35"
+		"AbilityManaCost"				"200 300 400 500 600"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"mana_void_damage_per_grn"		"0.25 0.30 0.35 0.40 0.50"
+			}
+			
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"mana_void_ministun"			"0.3"
+			}
+			
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"mana_void_aoe_radius"			"500"
+			}
+
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"default_damage"				"100 150 200 250 300"
+			}
+		}
+	}
+
 }

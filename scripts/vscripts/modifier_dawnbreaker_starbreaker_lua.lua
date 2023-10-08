@@ -260,7 +260,7 @@ end
 -- Graphics & Animations
 function modifier_dawnbreaker_starbreaker_lua:PlayEffects1()
 	-- Get Resources
-	local particle_cast = "particles/units/heroes/hero_dawnbreaker/dawnbreaker_fire_wreath_sweep_cast.vpcf"
+	local particle_cast = "particles/dawnbreaker_fire_wreath_sweep_cast.vpcf"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self.parent )
@@ -269,7 +269,7 @@ end
 
 function modifier_dawnbreaker_starbreaker_lua:PlayEffects2()
 	-- Get Resources
-	local particle_cast = "particles/units/heroes/hero_dawnbreaker/dawnbreaker_fire_wreath_sweep.vpcf"
+	local particle_cast = "particles/dawnbreaker_fire_wreath_sweep.vpcf"
 	local sound_cast = "Hero_Dawnbreaker.Fire_Wreath.Sweep"
 
 	-- Get Data

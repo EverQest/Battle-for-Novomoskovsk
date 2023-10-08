@@ -101,7 +101,7 @@ end
 
 function antimage_mana_void_lua:PlayEffects2( target, radius )
 	-- Get Resources
-	local particle_target = "particles/units/heroes/hero_antimage/antimage_manavoid.vpcf"
+	local particle_target = "particles/antimage_manavoid.vpcf"
 	local sound_target = "Hero_Antimage.ManaVoid"
 
 	-- Create Particle

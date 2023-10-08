@@ -20,8 +20,8 @@ LinkLuaModifier( "modifier_generic_arc_lua", "modifier_generic_arc_lua", LUA_MOD
 function dawnbreaker_starbreaker_lua:Precache( context )
 	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dawnbreaker.vsndevts", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_dawnbreaker/hero_dawnbreaker_combo_strike_range_finder_aoe.vpcf", context )
-	PrecacheResource( "particle", "particles/units/heroes/hero_dawnbreaker/dawnbreaker_fire_wreath_sweep.vpcf", context )
-	PrecacheResource( "particle", "particles/units/heroes/hero_dawnbreaker/dawnbreaker_fire_wreath_smash.vpcf", context )
+	PrecacheResource( "particle", "particles/dawnbreaker_fire_wreath_sweep_cast.vpcf", context )
+	PrecacheResource( "particle", "particles/dawnbreaker_fire_wreath_sweep.vpcf", context )
 end
 --------------------------------------------------------------------------------
 -- Ability Cast Filter
