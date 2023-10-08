@@ -30,6 +30,7 @@
 	"npc_dota_hero_phantom_lancer"		"1"
 	"npc_dota_hero_storm_spirit"		"1"
 	"npc_dota_hero_arc_warden"			"1"
+	"npc_dota_hero_invoker"				"1"
 
 
 	//--------------- OTHERS ------------------
@@ -99,7 +100,6 @@
 	"npc_dota_hero_earth_spirit"		"0"
 	"npc_dota_hero_ember_spirit"		"0"
 	"npc_dota_hero_huskar"				"0"
-	"npc_dota_hero_invoker"				"0"
 	"npc_dota_hero_jakiro"				"0"	
 	"npc_dota_hero_keeper_of_the_light"	"0"
 	"npc_dota_hero_phantom_assassin"	"0"

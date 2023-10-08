@@ -445,5 +445,51 @@
 	    	"Ability5"					"generic_hidden"
 	    "Ability6"					"sniper_assassinate_lua"
 	}
+	//=================================================================================================================
+	// HERO: Invoker (Evgen)
+	//=================================================================================================================
+	"npc_dota_hero_invoker"
+	{
+		"override_hero"		   		"npc_dota_hero_invoker"
+
+		"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"	
+		"AttributeStrengthGain"			"2.0"
+		"AttributeAgilityGain"			"2.0"
+		"AttributeIntelligenceGain"		"2.0"
+		"AttackDamageMin"				"30"
+		"AttackDamageMax"				"35"
+
+
+		// Talents 
+		"Ability17"				"special_bonus_all_stats_20"
+		"Ability18"				"special_bonus_exp_boost_25"
+		"Ability19"				"special_bonus_armor_10"
+		"Ability20"				"special_bonus_magic_resistance_25"
+		"Ability21"				"special_bonus_lifesteal_20"
+		"Ability22"				"special_bonus_cooldown_reduction_20"
+		"Ability23"				"special_bonus_attack_damage_100"
+		"Ability24"				"special_bonus_spell_amplify_25"
+		"Ability25"				"special_bonus_attributes" //plusiki
+		
+		"Ability1"					"dawnbreaker_starbreaker_lua" // downbreaker Q
+		"Ability2"					"ursa_enrage_lua" // enrage
+		"Ability3"					"antimage_mana_void_lua" // smert barigam
+	    "Ability4"					"rip_opz" // pause after death passive
+	    	"Ability5"					"generic_hidden"
+	    "Ability6"					"slardar_bash_of_the_deep_lua" // DJOUK slardar bash
+
+
+		//Hiden
+			"Ability7"					"generic_hidden"
+			"Ability8"					"generic_hidden"
+			"Ability9"					"generic_hidden"
+			"Ability10"					"generic_hidden"
+			"Ability11"					"generic_hidden"
+			"Ability12"					"generic_hidden"
+			"Ability13"					"generic_hidden"
+			"Ability14"					"generic_hidden"
+			"Ability15"					"generic_hidden"
+			"Ability16"					"generic_hidden"
+	}
 
 }
