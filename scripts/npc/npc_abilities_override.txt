@@ -7905,20 +7905,15 @@
 		{
 			"01"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"enrage_multiplier"			"1.5 1.75 2.0"
-			}
-			"02"
-			{
 				"var_type"					"FIELD_INTEGER"
 				"damage_reduction"			"80"
 			}
-			"03"
+			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"1.5 2.0 3.0 4.5"
 			}
-			"04"
+			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"cooldown_scepter"			"20"
