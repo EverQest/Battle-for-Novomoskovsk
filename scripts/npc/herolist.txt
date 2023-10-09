@@ -7,9 +7,10 @@
 	//Add new unique items
 	//Add aghanim's scepter
 	//Add aghanim's shard
-	//Try to do our items as "Шлем Тараса"
-	//Complete all characters (2 remaining)
-	//Create unique talents in 25 lvl 
+	//Complete "Шлем Тараса"
+	//Complete all characters (2 remaining "TiT" "SOVA")
+	//Create unique talents for heroes
+	//Fix carapace of Senya
 
 
 	//--------------- ENABLED -----------------
