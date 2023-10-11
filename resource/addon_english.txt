@@ -59,7 +59,7 @@
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "Tossed enemys now fall faster"
-		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 250 damage reduction"
+		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 180 damage reduction"
 		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Барьба max range x2" 
 		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на левый третий have 2 charges" 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
