@@ -1,13 +1,3 @@
--- Created by Elfansoer
---[[
-Ability checklist (erase if done/checked):
-- Scepter Upgrade
-- Break behavior
-- Linken/Reflect behavior
-- Spell Immune/Invulnerable/Invisible behavior
-- Illusion behavior
-- Stolen behavior
-]]
 --------------------------------------------------------------------------------
 modifier_dawnbreaker_starbreaker_lua = class({})
 
@@ -61,6 +51,12 @@ function modifier_dawnbreaker_starbreaker_lua:OnCreated( kv )
 	-- Start interval
 	self:StartIntervalThink( interval )
 	self:OnIntervalThink()
+
+	-- Create Sound
+	local sound2 = math.random( 1, 4 )
+	local sound_cast2 = "Melnica" .. sound2
+	EmitSoundOn( sound_cast2, self:GetCaster())
+
 end
 
 function modifier_dawnbreaker_starbreaker_lua:OnRefresh( kv )

@@ -44,7 +44,7 @@ end
 
 function ursa_enrage_lua:PlayEffects()
 	-- get resources
-	local sound_cast = "Hero_Ursa.Enrage"
+	local sound_cast = "Shalentstvo"
 
 	-- play sound
 	EmitSoundOn( sound_cast, self:GetCaster() )

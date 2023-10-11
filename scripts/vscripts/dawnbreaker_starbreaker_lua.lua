@@ -1,13 +1,3 @@
--- Created by Elfansoer
---[[
-Ability checklist (erase if done/checked):
-- Scepter Upgrade
-- Break behavior
-- Linken/Reflect behavior
-- Spell Immune/Invulnerable/Invisible behavior
-- Illusion behavior
-- Stolen behavior
-]]
 --------------------------------------------------------------------------------
 dawnbreaker_starbreaker_lua = class({})
 LinkLuaModifier( "modifier_dawnbreaker_starbreaker_lua", "modifier_dawnbreaker_starbreaker_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
@@ -19,6 +9,7 @@ LinkLuaModifier( "modifier_generic_arc_lua", "modifier_generic_arc_lua", LUA_MOD
 -- Init Abilities
 function dawnbreaker_starbreaker_lua:Precache( context )
 	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dawnbreaker.vsndevts", context )
+	PrecacheResource( "soundfile", "soundevents/Evgen.vsndevts", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_dawnbreaker/hero_dawnbreaker_combo_strike_range_finder_aoe.vpcf", context )
 	PrecacheResource( "particle", "particles/dawnbreaker_fire_wreath_sweep_cast.vpcf", context )
 	PrecacheResource( "particle", "particles/dawnbreaker_fire_wreath_sweep.vpcf", context )

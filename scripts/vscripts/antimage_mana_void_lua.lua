@@ -51,8 +51,8 @@ function antimage_mana_void_lua:OnSpellStart()
 
 	-- Get damage value
 	local target_gold = target:GetGold()
-	print("target gold is: ")
-	print(target_gold)
+	-- print("target gold is: ")
+	-- print(target_gold)
 	local grn_damage_pct = target_gold * grn_damage_pct
 
 	-- Apply Damage	 
@@ -102,10 +102,15 @@ end
 function antimage_mana_void_lua:PlayEffects2( target, radius )
 	-- Get Resources
 	local particle_target = "particles/antimage_manavoid.vpcf"
-	local sound_target = "Hero_Antimage.ManaVoid"
+
+	-- Create Sound
+	local sound2 = math.random( 1, 3 )
+	local sound_cast2 = "Barig" .. sound2
+	local sound_cast = "Moneydrop"
+	EmitSoundOn( sound_cast2, self:GetCaster())
+	EmitSoundOn( sound_cast, self.target )
 
 	-- Create Particle
-	-- local effect_target = assert(loadfile("lua_abilities/rubick_spell_steal_lua/rubick_spell_steal_lua_arcana"))(self, particle_target, PATTACH_POINT_FOLLOW, target )
 	local effect_target = ParticleManager:CreateParticle( particle_target, PATTACH_POINT_FOLLOW, target )
 	ParticleManager:SetParticleControl( effect_target, 1, Vector( radius, 0, 0 ) )
 	ParticleManager:ReleaseParticleIndex( effect_target )

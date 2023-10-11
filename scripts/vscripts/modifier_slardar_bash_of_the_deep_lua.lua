@@ -78,7 +78,7 @@ function modifier_slardar_bash_of_the_deep_lua:GetModifierProcAttack_Feedback( p
 			)
 
 			-- Effects
-			EmitSoundOn( "Hero_Slardar.Bash", params.target )
+			EmitSoundOn( "Joke", params.target )
 		end
 	end
 end

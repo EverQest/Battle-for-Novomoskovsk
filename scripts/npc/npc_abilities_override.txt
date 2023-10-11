@@ -7815,8 +7815,7 @@
 		"MaxLevel"						"3"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
-	//		"particle"	"particles/units/heroes/hero_<hero>/<hero>_<ability>.vpcf"
+			"soundfile"	"soundevents/Evgen.vsndevts"
 		}
 		
 		// Ability General
@@ -7875,7 +7874,7 @@
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+			"soundfile"	"soundevents/Evgen.vsndevts"
 			"particle"	"particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
 		}
 		// Ability General
@@ -7933,7 +7932,7 @@
 		"MaxLevel"						"5"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+			"soundfile"	"soundevents/Evgen.vsndevts"
 			"particle"	"particles/antimage_manavoid.vpcf"
 		}
 		
