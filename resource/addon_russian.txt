@@ -58,10 +58,10 @@
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
 		
 		//Talents
-		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "(((Прибытие))) на левый третий происходит быстрее"
-		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL поглощяет 250 физ урона"
-		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Дальность Барьбы x2" 
-		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на левый третий имеет 2 заряда" 
+		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "Tossed enemys now fall faster"
+		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 180 damage reduction"
+		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Барьба max range x2" 
+		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на левый третий have 2 charges" 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"
