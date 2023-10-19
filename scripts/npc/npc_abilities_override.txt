@@ -5582,7 +5582,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"atribute"				"15 20 25 30"
+				"atribute"				"10 12 14 18"
 			}
 		}
 

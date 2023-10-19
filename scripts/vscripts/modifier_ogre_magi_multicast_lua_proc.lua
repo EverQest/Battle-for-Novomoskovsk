@@ -187,7 +187,7 @@ function modifier_ogre_magi_multicast_lua_proc:PlayEffects( value )
 	ParticleManager:ReleaseParticleIndex( effect_cast )
 
 	-- Create Sound
-	local sound = math.min( value-1, 3 )
+	local sound = math.random( 1, 3 )
 	local sound_cast = "CustomMulti" .. sound
 	if sound>0 then
 		EmitSoundOn( sound_cast, self.caster )
