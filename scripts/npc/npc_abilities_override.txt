@@ -4345,7 +4345,7 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"180 250 330 350"
-	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+	"AbilityCastPoint"				"0 0 0 0"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -4368,7 +4368,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"0.5 0.5 0.5 0.5"
+			"duration"				"0.8 0.8 0.8 0.8"
 		}
 		"03"
 		{
@@ -4813,6 +4813,11 @@
 	"BaseClass"						"ability_lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	"MaxLevel"						"1"
+	"precache"
+		{
+			"soundfile"	"soundevents/Evgen.vsndevts"
+		}
+
 	"ScriptFile"					"rip_opz.lua"
 	//	Casting
 	//-----------------------------------------------------------------------------------------------------------------

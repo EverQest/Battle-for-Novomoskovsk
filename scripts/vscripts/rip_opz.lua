@@ -8,11 +8,14 @@ function rip_opz:SpeakTrigger ()
     return DOTA_ABILITY_SPEAK_CAST
 end
 
-
 function rip_opz:OnOwnerDied ()
-    local sound_cast = "FelixCustomSong1"
-	EmitSoundOn( sound_cast, self:GetCaster() )
-    PauseGame(true)
+    local sound = math.random( 1, 3 )
+	local sound_cast = "SadSong" .. sound
+    EmitSoundOn(sound_cast, self:GetCaster())
+    Timers:CreateTimer( 3.0 , function()
+        PauseGame(true)
+   end)
+
 end
 
 function rip_opz:GetTexture()
