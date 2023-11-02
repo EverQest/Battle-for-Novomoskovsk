@@ -7391,6 +7391,12 @@
 				"var_type"					"FIELD_INTEGER"
 				"scepter_crit_bonus"		"280"
 			}
+			//for better description
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"total_shots"				"3"
+			}
 		}
 	}
 	//=================================================================================================================
@@ -7570,12 +7576,12 @@
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"625"
-		"AbilityCastPoint"				"0.45 0.35 0.25 0.15"
+		"AbilityCastPoint"				"0"
 		"AbilityDuration"				"0 0 0 0"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0"
+		"AbilityCooldown"				"0.45 0.35 0.25 0.15"
 		"AbilityManaCost"				"100 110 120 130"
 		"AbilityCharges"				"65"
 		"AbilityChargeRestoreTime"		"10 9 8 7"
@@ -7601,8 +7607,8 @@
 						
 			"03"
 			{
-				"var_type"						"FIELD_FLOAT"
-				"light_strike_array_stun_duration"	"0.2"
+				"var_type"							"FIELD_FLOAT"
+				"light_strike_array_stun_duration"	"0.15 0.2 0.25 0.3"
 			}
 			"04"
 			{
@@ -7671,7 +7677,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_speed_bonus"		"400"
+				"attack_speed_bonus"		"400 450 500 550"
 			}
 			"04"
 			{
