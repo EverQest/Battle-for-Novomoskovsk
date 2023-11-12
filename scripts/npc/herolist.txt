@@ -14,7 +14,7 @@
 
 
 	//--------------- ENABLED -----------------
-	"npc_dota_hero_elder_titan"			"0"
+	"npc_dota_hero_elder_titan"			"1"
 	"npc_dota_hero_undying"				"1"
 	"npc_dota_hero_enigma"				"1"
 	"npc_dota_hero_gyrocopter"			"1"

@@ -132,3 +132,12 @@ function IsTalentLearned(caster, talent_name)
     local talent_level = caster:FindAbilityByName(talent_name):GetLevel()
     return talent_level > 0
 end
+
+function IsHalfOfTheBrainOn( caster )
+    local buff = nil
+    pcall(function()
+        buff = caster:FindModifierByName( "modifier_half_of_the_brain_health" )
+    end)
+
+    return (buff ~= nil)
+end
