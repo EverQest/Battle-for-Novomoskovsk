@@ -250,6 +250,46 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//TimurTheTitan
 		"npc_dota_hero_elder_titan"        	   "TimurTheTitan"
+
+		"Dota_Tooltip_ability_elder_titan_dagon"								"Драгон (small)"
+		"Dota_Tooltip_ability_elder_titan_dagon_Description"					"TODO"
+		"Dota_Tooltip_ability_elder_titan_dagon_damage_spread"					"DAMAGE SPREAD:"
+		"Dota_Tooltip_ability_elder_titan_dagon_cd_per_stack"					"CD PER STACK:"
+		"Dota_Tooltip_ability_elder_titan_dagon_dmg_per_stack"					"DMG PER STACK:"
+		"Dota_Tooltip_ability_elder_titan_dagon_mana_cost_per_stack"			"MANA COST PER STACK:"
+		"Dota_Tooltip_ability_elder_titan_dagon_max_mana_cost"					"MAX MANA COST:"
+		"Dota_Tooltip_ability_elder_titan_dagon_max_cd"							"MAX CD:"
+		// modifier_elder_titan_dagon
+		"DOTA_Tooltip_modifier_elder_titan_dagon"								"Dagon stacks"
+		"DOTA_Tooltip_modifier_elder_titan_dagon_Description"					"Increase dagon damage, cooldown and cost"
+
+
+
+		"Dota_Tooltip_ability_windranger_powershot_lua"							"Удар двоечка"
+		"Dota_Tooltip_ability_windranger_powershot_lua_Description"				"TODO"
+		"Dota_Tooltip_ability_windranger_powershot_lua_basic_damage"			"BASIC DAMAGE:"
+		"Dota_Tooltip_ability_windranger_powershot_lua_mana_cost_pct"			"%MANA COST:"
+		"Dota_Tooltip_ability_windranger_powershot_lua_powershot_damage_pct"	"%COST AS DAMAGE:"
+		"Dota_Tooltip_ability_windranger_powershot_lua_arrow_speed"				"PROJECTILE SPEED:"
+
+		"Dota_Tooltip_ability_half_of_the_brain"								"Пол мозга"
+		"Dota_Tooltip_ability_half_of_the_brain_Description"					"TODO"
+		"Dota_Tooltip_ability_half_of_the_brain_bonus_mana_per_dagon"			"BONUS MANA PER DAGON:"
+		"Dota_Tooltip_ability_half_of_the_brain_bonus_hp_per_dagon"				"BONUS HP PER DAGON:"
+		//modifiers half_of_the_brain
+		"DOTA_Tooltip_modifier_half_of_the_brain_health"						"Физическая половина мозга"
+		"DOTA_Tooltip_modifier_half_of_the_brain_health_Description"			"Increase health by %dMODIFIER_PROPERTY_HEALTH_BONUS% for each dagon stack"
+
+		"DOTA_Tooltip_modifier_half_of_the_brain_mana"							"Магическая половина мозга"
+		"DOTA_Tooltip_modifier_half_of_the_brain_mana_Description"				"Increase mana by %dMODIFIER_PROPERTY_MANA_BONUS% for each dagon stack"
+
+
+		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua"					"Показать комикс"
+		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_Description"		"TODO"
+		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_total_lines"		"TOTAL LINES:"
+		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_stun_duration"		"STUN DURATION:"
+		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_silence_duration"	"SILENCE DURATION:"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Gul
 		"npc_dota_hero_arc_warden"			   "Гуль"
