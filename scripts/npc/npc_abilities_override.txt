@@ -8005,13 +8005,10 @@
 	//=================================================================================================================
 	"shadow_fiend_requiem_of_souls_lua"
 	{
-		// Ability Technical Aspect
-		// base script folder	: scripts/vscripts
-		// base texture folder	: resource/flash3/images/spellicons
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"shadow_fiend_requiem_of_souls_lua"
-		"AbilityTextureName"			"placeholder"
+		"AbilityTextureName"			"tit_requem"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
 
@@ -8140,7 +8137,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"elder_titan_dagon"
-		"AbilityTextureName"			"placeholder"
+		"AbilityTextureName"			"tit_dagon"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"5"
 
@@ -8214,13 +8211,10 @@
 	//=================================================================================================================
 	"windranger_powershot_lua"
 	{
-		// Ability Technical Aspect
-		// base script folder	: scripts/vscripts
-		// base texture folder	: resource/flash3/images/spellicons
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"windranger_powershot_lua"
-		"AbilityTextureName"			"placeholder"
+		"AbilityTextureName"			"tit_punch"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		"precache"
@@ -8319,7 +8313,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"1"
 		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"placeholder"
+		"AbilityTextureName"			"tit_brain"
 		"ScriptFile"					"half_of_the_brain"
 		
 		// Casting
