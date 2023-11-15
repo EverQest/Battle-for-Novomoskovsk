@@ -12,8 +12,11 @@ function half_of_the_brain:GetIntrinsicModifierName() -- default passive modifie
 	return "modifier_half_of_the_brain_mana"
 end
 --------------------------------------------------------------------------------
-
-function half_of_the_brain:OnToggle()
+function half_of_the_brain:OnUpgrade()
+	self:CheckIfOn()
+end
+--------------------------------------------------------------------------------
+function half_of_the_brain:CheckIfOn()
 	self.caster = self:GetCaster()
 	if self:GetToggleState() then
 		self.caster:AddNewModifier( self.caster, self, "modifier_half_of_the_brain_health", nil )
@@ -22,9 +25,9 @@ function half_of_the_brain:OnToggle()
 			mana_buff:Destroy()
 		end
 
-		if not self.caster:IsChanneling() then
-			self.caster:StartGesture( ACT_DOTA_CAST_ABILITY_ROT )
-		end
+		-- if not self.caster:IsChanneling() then
+		-- 	self.caster:StartGesture( ACT_DOTA_CAST_ABILITY_ROT )
+		-- end
 	else
 		self.caster:AddNewModifier( self.caster, self, "modifier_half_of_the_brain_mana", nil )
 		local phys_buff = self.caster:FindModifierByName( "modifier_half_of_the_brain_health" )
@@ -34,4 +37,8 @@ function half_of_the_brain:OnToggle()
 	end
 end
 
+--------------------------------------------------------------------------------
+function half_of_the_brain:OnToggle()
+	self:CheckIfOn()
+end
 --------------------------------------------------------------------------------

@@ -139,6 +139,24 @@ function elder_titan_dagon:OnSpellStart()
 	else
 		modifier:IncrementStackCount()
 	end
+
+	local half_of_the_brain_mod_h = nil
+	local half_of_the_brain_mod_m = nil
+
+	pcall(function()
+		half_of_the_brain_mod_h = caster:FindModifierByName( "modifier_half_of_the_brain_health" )
+	end)
+	if half_of_the_brain_mod_h ~= nil then
+		half_of_the_brain_mod_h:UpdateValues()
+	end
+
+	pcall(function()
+		half_of_the_brain_mod_m = caster:FindModifierByName( "modifier_half_of_the_brain_mana" )
+	end)
+	if half_of_the_brain_mod_m ~= nil then
+		half_of_the_brain_mod_m:UpdateValues()
+	end
+
 end
 --------------------------------------------------------------------------------
 function elder_titan_dagon:PlayEffects( target )
