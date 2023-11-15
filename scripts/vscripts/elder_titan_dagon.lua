@@ -145,7 +145,7 @@ end
 function elder_titan_dagon:PlayEffects( target )
 
 	-- Get Resources
-	local particle_cast = "particles/items_fx/dagon.vpcf"
+	local particle_cast = "particles/dagon.vpcf"
 	local sound_cast = "CustomLags"
 
 	-- Create Particle

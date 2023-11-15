@@ -110,7 +110,7 @@ function shadow_fiend_requiem_of_souls_lua:Explode( lines )
 	end
 
 	-- get projectile
-	local particle_line = "particles/units/heroes/hero_lina/lina_spell_dragon_slave.vpcf"
+	local particle_line = "particles/lina_spell_dragon_slave.vpcf"
 	local line_length = self:GetSpecialValueFor("requiem_radius")
 	local width_start = self:GetSpecialValueFor("requiem_line_width_start")
 	local width_end = self:GetSpecialValueFor("requiem_line_width_end")
@@ -207,7 +207,7 @@ end
 -- Effects
 function shadow_fiend_requiem_of_souls_lua:PlayEffects1()
 	-- Get Resources
-	local particle_precast = "particles/units/heroes/hero_nevermore/nevermore_wings.vpcf"
+	local particle_precast = "particles/nevermore_wings.vpcf"
 	local sound_precast = "Hero_Nevermore.RequiemOfSoulsCast"
 
 	-- Create Particles

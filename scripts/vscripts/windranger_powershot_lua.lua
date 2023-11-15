@@ -1,13 +1,3 @@
--- Created by Elfansoer
---[[
-Ability checklist (erase if done/checked):
-- Scepter Upgrade
-- Break behavior
-- Linken/Reflect behavior
-- Spell Immune/Invulnerable/Invisible behavior
-- Illusion behavior
-- Stolen behavior
-]]
 --------------------------------------------------------------------------------
 windranger_powershot_lua = class({})
 LinkLuaModifier( "modifier_windranger_powershot_lua", "modifier_windranger_powershot_lua", LUA_MODIFIER_MOTION_NONE )
@@ -74,7 +64,7 @@ function windranger_powershot_lua:OnChannelFinish( bInterrupted )
 	local reduction = 1-self:GetSpecialValueFor( "damage_reduction" )
 	local vision_radius = self:GetSpecialValueFor( "vision_radius" )
 	
-	local projectile_name = "particles/units/heroes/hero_windrunner/windrunner_spell_powershot.vpcf"
+	local projectile_name = "particles/windrunner_spell_powershot.vpcf"
 	local projectile_speed = self:GetSpecialValueFor( "arrow_speed" )
 	local projectile_distance = self:GetSpecialValueFor( "arrow_range" )
 	local projectile_radius = self:GetSpecialValueFor( "arrow_width" )
