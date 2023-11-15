@@ -215,7 +215,11 @@ function shadow_fiend_requiem_of_souls_lua:PlayEffects1()
 
 	-- Play Sounds
 	EmitSoundOn(sound_precast, self:GetCaster())
+
+	-- Gesture 
+	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_1)
 end
+
 function shadow_fiend_requiem_of_souls_lua:StopEffects1( success )
 	-- Get Resources
 	local sound_precast = "CustomPrecastTit"

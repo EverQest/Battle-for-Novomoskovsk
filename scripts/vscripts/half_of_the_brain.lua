@@ -22,16 +22,11 @@ function half_of_the_brain:CheckIfOn()
 	local sound_cast = "CustomSwitch" .. sound
 	EmitSoundOn( sound_cast, self:GetCaster() )
 	if self:GetToggleState() then
-
 		self.caster:AddNewModifier( self.caster, self, "modifier_half_of_the_brain_health", nil )
 		local mana_buff = self.caster:FindModifierByName( "modifier_half_of_the_brain_mana" )
 		if mana_buff ~= nil then
 			mana_buff:Destroy()
 		end
-
-		-- if not self.caster:IsChanneling() then
-		-- 	self.caster:StartGesture( ACT_DOTA_CAST_ABILITY_ROT )
-		-- end
 	else
 		self.caster:AddNewModifier( self.caster, self, "modifier_half_of_the_brain_mana", nil )
 		local phys_buff = self.caster:FindModifierByName( "modifier_half_of_the_brain_health" )

@@ -74,9 +74,12 @@ function elder_titan_dagon:OnSpellStart()
 	local caster = self:GetCaster()
 	local target = self:GetCursorTarget()
 
+	-- Gesture 
+	caster:StartGesture(ACT_DOTA_ANCESTRAL_SPIRIT)
+
 	local damage_type = DAMAGE_TYPE_MAGICAL
 
-	if IsHalfOfTheBrainOn(self:GetCaster()) then
+	if IsHalfOfTheBrainOn(caster) then
 		damage_type = DAMAGE_TYPE_PHYSICAL
 	end
 

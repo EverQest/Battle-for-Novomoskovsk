@@ -42,6 +42,9 @@ function windranger_powershot_lua:OnSpellStart()
 	-- Play effects
 	local sound_cast = "Ability.PowershotPull"
 	EmitSoundOnLocationForAllies( caster:GetOrigin(), sound_cast, caster )
+
+	-- Gesture 
+	caster:StartGesture(ACT_DOTA_ATTACK)
 end
 
 --------------------------------------------------------------------------------
@@ -98,6 +101,9 @@ function windranger_powershot_lua:OnChannelFinish( bInterrupted )
 		iVisionRadius = vision_radius,
 		iVisionTeamNumber = caster:GetTeamNumber(),
 	}
+
+	-- Gesture 
+	caster:StartGesture(ACT_DOTA_ATTACK)
 
 	local first_projectile = ProjectileManager:CreateLinearProjectile(info)
 	-- register projectile data
