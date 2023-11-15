@@ -32,23 +32,22 @@ function modifier_half_of_the_brain_health:OnDestroy()
 end
 
 function modifier_half_of_the_brain_health:UpdateValues()
+	if not IsServer() then
+		return
+	end
 	-- references
 	local caster = self:GetAbility():GetCaster()
 	self.bonus_hp_per_dagon = self:GetAbility():GetSpecialValueFor( "bonus_hp_per_dagon" )
 	self.stacks = 1
 
-	pcall(function()
-		local modifier = caster:FindModifierByName( "modifier_elder_titan_dagon" )
-		if modifier ~= nil then
-			self.stacks = modifier:GetStackCount() + 1
-		end
-	end)
+	local modifier = caster:FindModifierByName( "modifier_elder_titan_dagon" )
+	if modifier ~= nil then
+		self.stacks = modifier:GetStackCount() + 1
+	end
 
 	self.bonus_hp = self.bonus_hp_per_dagon * self.stacks
 
-	if IsServer() then
-		self:GetParent():CalculateStatBonus(true)
-	end
+	self:GetParent():CalculateStatBonus(true)
 end
 --------------------------------------------------------------------------------
 -- Modifier Effects

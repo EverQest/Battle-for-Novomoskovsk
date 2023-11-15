@@ -30,7 +30,7 @@ end
 --------------------------------------------------------------------------------
 -- Specil healthcost
 function windranger_powershot_lua:GetHealthCost( level )
-	if not IsHalfOfTheBrainOn(self:GetCaster()) then
+	if not IsHalfOfTheBrainOn(self:GetCaster()) and IsServer() then -- for always displaying health 
 		return 0
 	end
 	-- references

@@ -26,23 +26,22 @@ function modifier_half_of_the_brain_mana:OnRefresh( kv )
 end
 
 function modifier_half_of_the_brain_mana:UpdateValues()
+	if not IsServer() then
+		return
+	end
 	-- references
 	local caster = self:GetAbility():GetCaster()
 	self.bonus_mana_per_dagon = self:GetAbility():GetSpecialValueFor( "bonus_mana_per_dagon" )
 	self.stacks = 1
 
-	pcall(function()
-		local modifier = caster:FindModifierByName( "modifier_elder_titan_dagon" )
-		if modifier ~= nil then
-			self.stacks = modifier:GetStackCount() + 1
-		end
-	end)
+	local modifier = caster:FindModifierByName( "modifier_elder_titan_dagon" )
+	if modifier ~= nil then
+		self.stacks = modifier:GetStackCount() + 1
+	end
 
 	self.bonus_mana = self.bonus_mana_per_dagon * self.stacks
 	
-	if IsServer() then
-		self:GetParent():CalculateStatBonus(true)
-	end
+	self:GetParent():CalculateStatBonus(true)
 end
 
 --------------------------------------------------------------------------------

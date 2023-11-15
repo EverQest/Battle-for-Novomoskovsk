@@ -135,9 +135,10 @@ end
 
 function IsHalfOfTheBrainOn( caster )
     local buff = nil
-    pcall(function()
+
+    if IsServer() then
         buff = caster:FindModifierByName( "modifier_half_of_the_brain_health" )
-    end)
+    end
 
     return (buff ~= nil)
 end

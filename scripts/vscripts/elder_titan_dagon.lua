@@ -10,18 +10,14 @@ function elder_titan_dagon:GetCastAnimation(  )
 end
 
 function elder_titan_dagon:GetManaCost( level )
-	local modifier = {}
-
+	if not IsServer() then
+		return
+	end
 	if IsHalfOfTheBrainOn(self:GetCaster()) then
 		return 0
 	end
 
-	if not pcall(function()
-		modifier = self:GetCaster():FindModifierByName( "modifier_elder_titan_dagon" )
-	end) then
-		return self.BaseClass.GetManaCost( self, level )
-	end
-
+	local modifier = self:GetCaster():FindModifierByName( "modifier_elder_titan_dagon" )
 	local mana_cost_per_stack =	self:GetSpecialValueFor("mana_cost_per_stack")
 	local max_mana_cost = self:GetSpecialValueFor("max_mana_cost")
 
@@ -34,40 +30,32 @@ function elder_titan_dagon:GetManaCost( level )
 end
 
 function elder_titan_dagon:GetHealthCost( level )
+	if not IsServer() then
+		return
+	end
 	if not IsHalfOfTheBrainOn(self:GetCaster()) then
 		return 0
-	else
-		local modifier = {}
-
-		if not pcall(function()
-			modifier = self:GetCaster():FindModifierByName( "modifier_elder_titan_dagon" )
-		end) then
-			return self.BaseClass.GetManaCost( self, level )
-		end
-	
-		local health_cost_per_stack = self:GetSpecialValueFor("mana_cost_per_stack")
-		local max_health_cost =	self:GetSpecialValueFor("max_mana_cost")
-	
-		if modifier ~= nil then
-			local health_cost = modifier:GetStackCount() * health_cost_per_stack + self.BaseClass.GetManaCost( self, level )
-			return math.min(max_health_cost, health_cost)
-		else
-			return self.BaseClass.GetManaCost( self, level )
-		end
 	end
+
+	local modifier = self:GetCaster():FindModifierByName( "modifier_elder_titan_dagon" )
+	local health_cost_per_stack = self:GetSpecialValueFor("mana_cost_per_stack")
+	local max_health_cost =	self:GetSpecialValueFor("max_mana_cost")
+
+	if modifier ~= nil then
+		local health_cost = modifier:GetStackCount() * health_cost_per_stack + self.BaseClass.GetManaCost( self, level )
+		return math.min(max_health_cost, health_cost)
+	end
+	
+	return self.BaseClass.GetManaCost( self, level )
 end
 
 
 function elder_titan_dagon:GetCooldown( level )
-	local modifier = {}
-
-	if not pcall(function()
-		modifier = self:GetCaster():FindModifierByName( "modifier_elder_titan_dagon" )
-	end) then
-		return self.BaseClass.GetCooldown( self, level )
+	if not IsServer() then
+		return
 	end
-
-
+	
+	local modifier = self:GetCaster():FindModifierByName( "modifier_elder_titan_dagon" )
 	local cd_per_stack = self:GetSpecialValueFor("cd_per_stack")
 	local max_cd = self:GetSpecialValueFor("max_cd")
 
@@ -140,21 +128,16 @@ function elder_titan_dagon:OnSpellStart()
 		modifier:IncrementStackCount()
 	end
 
-	local half_of_the_brain_mod_h = nil
-	local half_of_the_brain_mod_m = nil
-
-	pcall(function()
-		half_of_the_brain_mod_h = caster:FindModifierByName( "modifier_half_of_the_brain_health" )
-	end)
-	if half_of_the_brain_mod_h ~= nil then
-		half_of_the_brain_mod_h:UpdateValues()
-	end
-
-	pcall(function()
-		half_of_the_brain_mod_m = caster:FindModifierByName( "modifier_half_of_the_brain_mana" )
-	end)
-	if half_of_the_brain_mod_m ~= nil then
-		half_of_the_brain_mod_m:UpdateValues()
+	
+	if IsServer() then
+		local half_of_the_brain_mod_h = caster:FindModifierByName( "modifier_half_of_the_brain_health" )
+		local half_of_the_brain_mod_m = caster:FindModifierByName( "modifier_half_of_the_brain_mana" )
+		if   half_of_the_brain_mod_m ~= nil then
+			half_of_the_brain_mod_m:UpdateValues()
+		end
+		if half_of_the_brain_mod_h ~= nil then
+			half_of_the_brain_mod_h:UpdateValues()
+		end
 	end
 
 end
