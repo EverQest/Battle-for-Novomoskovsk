@@ -13,6 +13,7 @@
 *.vmat_c
 *.vagrp_c
 *.vmesh_c
+*.vcss_c
 
 # Gen folders
 maps
@@ -22,8 +23,6 @@ panorama
 particles
 soundevents
 sounds
-
-# Map files
 
 # Map overviews
 resource/overviews/*
@@ -35,36 +34,8 @@ resource/overviews/*
 .idea
 
 node_modules
-.tools_thumbnail_cache.bin
 
-materials/models/props_structures/midas_throne/kobold_underboss_crown.vmat_c
-materials/overviews/temple_quartet.vmat_c
-panorama/styles/custom_game/overthrow_team_icon.vcss_c
-panorama/images/custom_game/team_icons/team_icon_rat_01_png.vtex_c
-materials/overviews/temple_quartet.vmat_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines.vmat_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines_specmask_psd_a7490714.vtex_c
-maps/forest_solo.vpk
-materials/models/props_structures/midas_throne/kobold_overboss_mines.vmat_c
-
-materials/models/props_structures/midas_throne/midas_kobold_props_mines_metalnessmask_psd_34164ec0.vtex_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines_specmask_psd_a7490714.vtex_c
+# Bin files
 tools_asset_info.bin
 tools_thumbnail_cache.bin
-maps/desert_duo.vpk
-materials/models/props_structures/midas_throne/kobold_overboss_mines.vmat_c
-materials/models/props_structures/midas_throne/kobold_underboss_crown.vmat_c
-materials/models/props_structures/midas_throne/kobold_underboss.vmat_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines_color_psd_2e65b31e.vtex_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines_metalnessmask_psd_34164ec0.vtex_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines_specmask_psd_a7490714.vtex_c
-materials/models/props_structures/midas_throne/midas_kobold_props_mines.vmat_c
-materials/models/props_structures/midas_throne/midas_throne_backplate_mines.vmat_c
-materials/models/props_structures/midas_throne/midas_throne_gems.vmat_c
 tools_asset_info.bin
-tools_thumbnail_cache.bin
-tools_thumbnail_cache.bin
-tools_asset_info.bin
-resource/addon_ukrainian.txt
-materials/overviews/mines_trio.vmat_c
-materials/overviews/temple_quartet.vmat_c
