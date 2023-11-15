@@ -261,9 +261,7 @@
 		"Dota_Tooltip_ability_elder_titan_dagon_max_cd"								"MAX CD:"
 		// modifier_elder_titan_dagon
 		"DOTA_Tooltip_modifier_elder_titan_dagon"									"Dagon stacks"
-		"DOTA_Tooltip_modifier_elder_titan_dagon_Description"						"Increase dagon damage, cooldown and cost"
-
-
+		"DOTA_Tooltip_modifier_elder_titan_dagon_Description"						"Increase dagon damage by %dMODIFIER_PROPERTY_TOOLTIP% and cost by %dMODIFIER_PROPERTY_TOOLTIP2%"
 
 		"Dota_Tooltip_ability_windranger_powershot_lua"								"Удар двоечка"
 		"Dota_Tooltip_ability_windranger_powershot_lua_Description"					"Фирменная вертушечка. Махает руками перед собой и наносит пару ударов. Такое противникам явно не понравится"
@@ -278,11 +276,9 @@
 		"Dota_Tooltip_ability_half_of_the_brain_bonus_hp_per_dagon"					"BONUS HP PER DAGON:"
 		//modifiers half_of_the_brain
 		"DOTA_Tooltip_modifier_half_of_the_brain_health"							"Физическая половина мозга"
-		"DOTA_Tooltip_modifier_half_of_the_brain_health_Description"				"Increase health by %dMODIFIER_PROPERTY_HEALTH_BONUS% for each dagon stack"
-
+		"DOTA_Tooltip_modifier_half_of_the_brain_health_Description"				"Increase health by %dMODIFIER_PROPERTY_TOOLTIP% for each dagon stack"
 		"DOTA_Tooltip_modifier_half_of_the_brain_mana"								"Магическая половина мозга"
-		"DOTA_Tooltip_modifier_half_of_the_brain_mana_Description"					"Increase mana by %dMODIFIER_PROPERTY_MANA_BONUS% for each dagon stack"
-
+		"DOTA_Tooltip_modifier_half_of_the_brain_mana_Description"					"Increase mana by %dMODIFIER_PROPERTY_TOOLTIP% for each dagon stack"
 
 		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua"					"Показать комикс"
 		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_Description"		"Так хочется показать людям комикс что это доводит до всплеска эмоций! После взрыва с включенным физическим уроном, противник получает стан. При магическом уроне - противник получает безмолвие"

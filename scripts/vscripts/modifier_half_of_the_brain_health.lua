@@ -54,6 +54,7 @@ end
 function modifier_half_of_the_brain_health:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_HEALTH_BONUS,
+		MODIFIER_PROPERTY_TOOLTIP,
 	}
 
 	return funcs
@@ -63,6 +64,9 @@ function modifier_half_of_the_brain_health:GetModifierHealthBonus()
 	return self.bonus_hp
 end
 
+function modifier_half_of_the_brain_health:OnTooltip()
+	return self:GetAbility():GetSpecialValueFor( "bonus_hp_per_dagon" )
+end
 --------------------------------------------------------------------------------
 --Efects
 

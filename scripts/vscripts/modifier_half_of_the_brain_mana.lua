@@ -49,6 +49,7 @@ end
 function modifier_half_of_the_brain_mana:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_MANA_BONUS,
+		MODIFIER_PROPERTY_TOOLTIP,
 	}
 
 	return funcs
@@ -56,6 +57,10 @@ end
 
 function modifier_half_of_the_brain_mana:GetModifierManaBonus()
 	return self.bonus_mana
+end
+
+function modifier_half_of_the_brain_mana:OnTooltip()
+	return self:GetAbility():GetSpecialValueFor( "bonus_mana_per_dagon" )
 end
 
 --------------------------------------------------------------------------------
