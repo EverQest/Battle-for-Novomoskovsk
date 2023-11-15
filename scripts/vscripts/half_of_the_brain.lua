@@ -18,7 +18,11 @@ end
 --------------------------------------------------------------------------------
 function half_of_the_brain:CheckIfOn()
 	self.caster = self:GetCaster()
+	local sound = math.random( 1, 3 )
+	local sound_cast = "CustomSwitch" .. sound
+	EmitSoundOn( sound_cast, self:GetCaster() )
 	if self:GetToggleState() then
+
 		self.caster:AddNewModifier( self.caster, self, "modifier_half_of_the_brain_health", nil )
 		local mana_buff = self.caster:FindModifierByName( "modifier_half_of_the_brain_mana" )
 		if mana_buff ~= nil then

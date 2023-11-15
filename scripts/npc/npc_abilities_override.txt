@@ -8014,9 +8014,7 @@
 
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
-			"particle"	"particles/units/heroes/hero_nevermore/nevermore_wings.vpcf"
-			"particle"	"particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
+			"soundfile"	"soundevents/Tit.vsndevts"
 		}
 
 		// Ability General
@@ -8141,11 +8139,10 @@
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"5"
 
-		//"precache"
-		//{
-		//	"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
-		//	"particle"	"particles/antimage_manavoid.vpcf"
-		//}
+		"precache"
+		{
+			"soundfile"	"soundevents/Tit.vsndevts"
+		}
 		
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
@@ -8219,8 +8216,7 @@
 		"MaxLevel"						"4"
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
-			"particle"	"particles/units/heroes/hero_windrunner/windrunner_spell_powershot.vpcf"
+			"soundfile"	"soundevents/Tit.vsndevts"
 		}
 		
 		// Ability General
@@ -8317,6 +8313,10 @@
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"tit_brain"
 		"ScriptFile"					"half_of_the_brain"
+		"precache"
+		{
+			"soundfile"	"soundevents/Tit.vsndevts"
+		}
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

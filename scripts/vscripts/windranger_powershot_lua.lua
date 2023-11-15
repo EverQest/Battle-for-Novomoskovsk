@@ -107,8 +107,13 @@ function windranger_powershot_lua:OnChannelFinish( bInterrupted )
  
  
 	-- Play effects
-	local sound_cast = "Ability.Powershot"
+	local sound = math.random( 1, 3 )
+	local sound_cast = "CustomPunch" .. sound
+	local sound_punch = "CustomPunches"
 	EmitSoundOn( sound_cast, caster )
+	EmitSoundOn( sound_punch, caster )
+
+	
 
 	--second projectile
 	Timers:CreateTimer( 0.25 , function()
@@ -156,9 +161,6 @@ function windranger_powershot_lua:OnProjectileHitHandle( target, location, handl
 	-- reduce damage
 	data.damage = damage * data.reduction
 
-	-- Play effects
-	local sound_cast = "Hero_Windrunner.PowershotDamage"
-	EmitSoundOn( sound_cast, target )
 end
 
 function windranger_powershot_lua:OnProjectileThink( location )

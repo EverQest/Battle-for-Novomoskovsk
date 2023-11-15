@@ -208,7 +208,7 @@ end
 function shadow_fiend_requiem_of_souls_lua:PlayEffects1()
 	-- Get Resources
 	local particle_precast = "particles/nevermore_wings.vpcf"
-	local sound_precast = "Hero_Nevermore.RequiemOfSoulsCast"
+	local sound_precast = "CustomPrecastTit"
 
 	-- Create Particles
 	self.effect_precast = ParticleManager:CreateParticle( particle_precast, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )	
@@ -218,7 +218,7 @@ function shadow_fiend_requiem_of_souls_lua:PlayEffects1()
 end
 function shadow_fiend_requiem_of_souls_lua:StopEffects1( success )
 	-- Get Resources
-	local sound_precast = "Hero_Nevermore.RequiemOfSoulsCast"
+	local sound_precast = "CustomPrecastTit"
 
 	-- Destroy Particles
 	if not success then
@@ -232,7 +232,9 @@ end
 function shadow_fiend_requiem_of_souls_lua:PlayEffects2( lines )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
-	local sound_cast = "Hero_Nevermore.RequiemOfSouls"
+	local sound_cast_req = "CustomReq"
+	local sound_cast = "СustomComics2"
+	
 
 	-- Create Particles
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
@@ -241,6 +243,7 @@ function shadow_fiend_requiem_of_souls_lua:PlayEffects2( lines )
 	ParticleManager:ReleaseParticleIndex( effect_cast )
 
 	-- Play Sounds
+	EmitSoundOn(sound_cast_req, self:GetCaster())
 	EmitSoundOn(sound_cast, self:GetCaster())
 end
 

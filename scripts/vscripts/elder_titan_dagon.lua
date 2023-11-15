@@ -146,7 +146,7 @@ function elder_titan_dagon:PlayEffects( target )
 
 	-- Get Resources
 	local particle_cast = "particles/dagon.vpcf"
-	local sound_cast = "CustomLags"
+	local sound_cast = "CustomDagon"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_CUSTOMORIGIN, nil )
