@@ -7966,7 +7966,7 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"55 50 45 40 35"
-		"AbilityManaCost"				"200 300 400 500 600"
+		"AbilityManaCost"				"200 200 300 300 400"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -7996,7 +7996,7 @@
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"default_damage"				"100 150 200 250 300"
+				"default_damage"				"400"
 			}
 		}
 	}
@@ -8035,11 +8035,11 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"80 70 60"
-		"AbilityManaCost"				"150 175 200"
+		"AbilityManaCost"				"150 200 250"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"120 140 180"
+		"AbilityDamage"					"100 150 200"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8058,7 +8058,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"requiem_reduction_ms"	"-25"
+				"requiem_reduction_ms"	"-40"
 			}
 			"04"
 			{
@@ -8073,7 +8073,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"requiem_slow_duration"	"5.0"
+				"requiem_slow_duration"	"8.0"
 			}
 			"07"
 			{
@@ -8118,12 +8118,12 @@
 			"15"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"stun_duration"				"1 1.5 2"
+				"stun_duration"				"2 3 4"
 			}	
-			"15"
+			"16"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"silence_duration"			"2 3 4"
+				"silence_duration"			"3 4 6"
 			}	
 		}
 	}
@@ -8161,7 +8161,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5 15 20 25 30 35"
+		"AbilityCooldown"				"0 0 5 5 10"
 		"AbilityManaCost"				"100"
 
 		// Damage
@@ -8189,7 +8189,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_cost_per_stack"	"25 50 75 100 150"
+				"mana_cost_per_stack"	"25 50 75 100 125"
 			}
 			"05"
 			{
@@ -8199,7 +8199,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"max_cd"			"100"
+				"max_cd"			"45"
 			}
 		}
 	}
@@ -8228,7 +8228,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"400 "
+		"AbilityCastRange"				"400"
 		"AbilityCastPoint"				"0.0"
 		"AbilityChannelTime"			"1.0 0.75 0.5 0.25"
 
@@ -8249,7 +8249,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"powershot_damage_pct"	"10 15 20 25"
+				"powershot_damage_pct"	"15 20 25 30"
 			}
 			"02"
 			{
@@ -8259,7 +8259,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"arrow_width"			"300"
+				"arrow_width"			"600"
 			}
 			"04"
 			{
