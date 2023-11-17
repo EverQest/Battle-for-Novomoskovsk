@@ -7,7 +7,7 @@ function modifier_generic_silenced_lua:IsDebuff()
 end
 
 function modifier_generic_silenced_lua:IsStunDebuff()
-	return true
+	return false
 end
 
 --------------------------------------------------------------------------------

@@ -5524,7 +5524,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"0.8 1 1.8 2.3"
+				"bash_duration"			"0.2 0.4 0.6 0.8"
 			}
 			"02"
 			{
@@ -5534,7 +5534,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"1.5 2.5 3.5 4.5"
+				"duration"				"0.2 0.4 0.6 0.8"
 			}
 		}
     }
