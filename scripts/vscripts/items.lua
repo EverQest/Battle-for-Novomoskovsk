@@ -133,7 +133,10 @@ function COverthrowGameMode:SpecialItemAdd( event )
 	}
 
 	local tier5 =
-	{
+	{	
+		"item_havoc_hammer",			--
+		"item_timeless_relic",			--
+		"item_spell_prism",				--
 		"item_force_boots",				--
 		"item_desolator_2",				--
 		"item_seer_stone",				--
@@ -160,22 +163,22 @@ function COverthrowGameMode:SpecialItemAdd( event )
 	local nLeaderKills = GetTeamHeroKills( leader )
 
 	if nLeaderKills <= 5 then
-		spawnedItem = t3
+		spawnedItem = t5
 	elseif nLeaderKills > 5 and nLeaderKills <= 13 then
 		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
 			spawnedItem = t5
 		elseif ownerTeam == lastPlace then
 			spawnedItem = t5
 		else
-			spawnedItem = t4
+			spawnedItem = t5
 		end
 	elseif nLeaderKills > 13 and nLeaderKills <= 21 then
 		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t4
+			spawnedItem = t5
 		elseif ownerTeam == lastPlace then
 			spawnedItem = t5
 		else
-			spawnedItem = t4
+			spawnedItem = t5
 		end
 	elseif nLeaderKills > 21 then
 		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then

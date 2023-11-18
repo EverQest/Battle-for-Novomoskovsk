@@ -5,13 +5,11 @@
 {
 	//-------------- TODOLIST -----------------
 	//Add new unique items
+	//Complete "Шлем Тараса"
 	//Add aghanim's scepter
 	//Add aghanim's shard
-	//Complete "Шлем Тараса"
-	//Complete all characters (2 remaining "TiT" "SOVA")
 	//Create unique talents for heroes
-	//Fix carapace of Senya
-
+	//Fix Oleg traps damage
 
 	//--------------- ENABLED -----------------
 	"npc_dota_hero_elder_titan"			"1"
