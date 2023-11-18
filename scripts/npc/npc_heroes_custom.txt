@@ -217,7 +217,7 @@
 
 		"Ability1"             "imba_undying_decay"	
 	    "Ability2"        	   "terrorblade_metamorphosis_lua"	
-		"Ability3"             "nyx_assassin_spiked_carapace_datadriven"
+		"Ability3"             "spiked_carapace_reworked"
 	    	"Ability4"             "generic_hidden"	
 	    	"Ability5"             "generic_hidden"	
 		"Ability6"		       "mina_explosion_jump"
@@ -514,11 +514,10 @@
 		"Ability16"				"special_bonus_attack_damage_100"
 		"Ability17"				"special_bonus_spell_amplify_25"
 
-		// comments for to do
-		"Ability1"					"elder_titan_dagon" // (everything OK)
-		"Ability2"					"windranger_powershot_lua" // (punch projectile + funny sound)
-		"Ability3"					"half_of_the_brain" // (gesture on togle + sound)???
-	    "Ability6"					"shadow_fiend_requiem_of_souls_lua" // (projectile change and sounds)
+		"Ability1"					"elder_titan_dagon"
+		"Ability2"					"windranger_powershot_lua"
+		"Ability3"					"half_of_the_brain"
+	    "Ability6"					"shadow_fiend_requiem_of_souls_lua"
 
 	    	"Ability4"					"generic_hidden"
 	    	"Ability5"					"generic_hidden"

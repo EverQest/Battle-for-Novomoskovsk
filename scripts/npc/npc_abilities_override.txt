@@ -1705,6 +1705,53 @@
 	}
 
 	//=================================================================================================================
+	// REWORKED!!! Nyx Assassin Carapace(Senya)
+	//=================================================================================================================
+	"spiked_carapace_reworked"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"senya_antimat"
+		"ScriptFile"					"spiked_carapace_reworked"
+		"AbilityCooldown"				"1.0 1.5 2.0 2.5"
+
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"						"soundevents/Senya.vsndevts"
+			"particle"						"particles/generic_gameplay/generic_stunned.vpcf"
+			"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace_b.vpcf"
+			"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace_hit.vpcf"
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1.0 1.5 2.0 2.5"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"chance_pct"				"15 20 25 30"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown"					"1.0 1.5 2.0 2.5"
+			}
+		}
+	}
+
+	//=================================================================================================================
 	// Techies' Blast Off (Senya)
 	//=================================================================================================================
 	"mina_explosion_jump"
@@ -5524,7 +5571,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"0.2 0.4 0.6 0.8"
+				"bash_duration"			"0.8 1 1.8 2.3"
 			}
 			"02"
 			{
@@ -5534,7 +5581,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"0.2 0.4 0.6 0.8"
+				"duration"				"1.5 2.5 3.5 4.5"
 			}
 		}
     }
