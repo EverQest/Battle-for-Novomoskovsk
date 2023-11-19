@@ -1442,7 +1442,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"str_steal_scepter"				"10 10 10 10"
+				"str_steal_scepter"				"10"
 				"RequiresScepter"	"1"
 			}
 			"06"

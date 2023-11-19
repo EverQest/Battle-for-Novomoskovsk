@@ -68,8 +68,8 @@
 
 		"Dota_Tooltip_ability_mina_explosion_jump"				 						 "Підвернути ногу"
 		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 					 "Сєня стрибає і калічить ногу, що наносить багато шкоди. АЛЕ, цим хер влучиш у ворога, тому працюєм"
-		"Dota_Tooltip_ability_nyx_assassin_spiked_carapace_datadriven"				 	 "Відбиття"
-		"Dota_Tooltip_ability_nyx_assassin_spiked_carapace_datadriven_Description"		 "Сєня відбиває будь-яку образу в його сторону, змушуючи ворогів подумати над своєю поведінкою"
+		"Dota_Tooltip_ability_spiked_carapace_reworked"				 	 				 "Відбиття"
+		"Dota_Tooltip_ability_spiked_carapace_reworked_Description"		 				 "Сєня відбиває будь-яку образу в його сторону, змушуючи ворогів подумати над своєю поведінкою"
 		"Dota_Tooltip_ability_imba_undying_decay"										 "Схавати"
 		"Dota_Tooltip_ability_imba_undying_decay_Description"							 "Сєня хаває по області атрибути ворога, чим набирає масу, досягаючи маштабів планети"
 		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 			 "Арсюша після SЭkSУ"
