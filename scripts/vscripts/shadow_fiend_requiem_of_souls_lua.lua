@@ -237,7 +237,7 @@ function shadow_fiend_requiem_of_souls_lua:PlayEffects2( lines )
 	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
 	local sound_cast = "CustomDroch"
-	
+	local sound_comics = "СustomComics2"
 
 	-- Create Particles
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
@@ -247,6 +247,7 @@ function shadow_fiend_requiem_of_souls_lua:PlayEffects2( lines )
 
 	-- Play Sounds
 	EmitSoundOn(sound_cast, self:GetCaster())
+	EmitSoundOn(sound_comics, self:GetCaster())
 end
 
 --------------------------------------------------------------------------------

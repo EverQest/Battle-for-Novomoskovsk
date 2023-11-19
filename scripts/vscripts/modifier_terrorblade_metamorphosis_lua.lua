@@ -48,7 +48,7 @@ function modifier_terrorblade_metamorphosis_lua:OnCreated( kv )
 	end, FrameTime())
 
 	-- transform time
-	self.stun = true
+	self.stun = false
 	self:StartIntervalThink( delay )
 
 	-- play effects
