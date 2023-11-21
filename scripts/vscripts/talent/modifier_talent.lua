@@ -84,6 +84,7 @@ function modifier_talent:DeclareFunctions()
 		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
 		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE,
+		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE,
 		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
@@ -166,6 +167,10 @@ end
 
 function modifier_talent:GetModifierMoveSpeedBonus_Percentage()
 	return self.generics["movespeed"]
+end
+
+function modifier_talent:GetModifierMoveSpeedBonus_Constant()
+	return self.generics["movespeed_const"]
 end
 
 function modifier_talent:GetModifierPreAttack_BonusDamage()

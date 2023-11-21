@@ -29,6 +29,7 @@ For generic bonus, set kv-pair "ability" "generic". Possible generic talent bonu
 - magicresist
 - attackspeed
 - movespeed
+- movespeed_const
 - basedamage
 - attackdamage
 - spellamp
@@ -68,6 +69,7 @@ local propertylist = {
 	["magicresist"] = MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
 	["attackspeed"] = MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 	["movespeed"] = MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE,
+	["movespeed_const"] = MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
 	["basedamage"] = MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE,
 	["attackdamage"] = MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 	["spellamp"] = MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
