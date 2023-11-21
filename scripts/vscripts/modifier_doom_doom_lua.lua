@@ -101,15 +101,6 @@ function modifier_doom_doom_lua:OnIntervalThink()
 	-- Apply damage
 	ApplyDamage( self.damageTable )
 
-	-- scepter time check
-	if self.scepter then
-		-- get distance
-		local distance = (self:GetParent():GetOrigin()-self:GetCaster():GetOrigin()):Length2D()
-		if distance<self.check_radius then
-			-- increment duration
-			self:SetDuration( self:GetRemainingTime() + self.interval, true )
-		end
-	end
 end
 
 --------------------------------------------------------------------------------
