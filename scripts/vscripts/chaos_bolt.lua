@@ -63,6 +63,6 @@ function chaos_bolt:OnProjectileHit_ExtraData( target, location, extradata )
 	)
 
 	-- effects
-	local sound_cast = "Hero_Sniper.AssassinateDamage"
+	local sound_cast = "CustomStunPrivet"
 	EmitSoundOn( sound_cast, target )
 end

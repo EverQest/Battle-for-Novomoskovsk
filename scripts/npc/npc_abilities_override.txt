@@ -4211,7 +4211,7 @@
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"180 250 330 350"
+	"AbilityCastRange"				"280 350 430 550"
 	"AbilityCastPoint"				"0 0 0 0"
 
 	// Time		
@@ -4230,12 +4230,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"radius"				"190 260 340 360"
+			"radius"				"280 350 430 550"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"0.8 0.8 0.8 0.8"
+			"duration"				"0.8 1.2 1.4 1.6"
 		}
 		"03"
 		{
@@ -4245,7 +4245,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"radius_tree"			"180 250 300 350"
+			"radius_tree"			"280 350 430 550"
 		}
 	}
 

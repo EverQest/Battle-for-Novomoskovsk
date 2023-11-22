@@ -337,8 +337,8 @@
 	"npc_dota_hero_bigbobr"
 	{
 		"override_hero"		   		"npc_dota_hero_obsidian_destroyer"
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
-		"AttributeStrengthGain"		"2.4"	
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeStrengthGain"		"2.4"
 		"AttributeIntelligenceGain"	"1.8"
 
 		// Talents 
@@ -392,7 +392,7 @@
 	{
 		"override_hero"		   		"npc_dota_hero_undying"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"	
-		"AttributeIntelligenceGain"		"2.9"	
+		"AttributeIntelligenceGain"	"2.9"	
 		"AttackDamageMin"			"60"
 		"AttackDamageMax"			"110"
 
