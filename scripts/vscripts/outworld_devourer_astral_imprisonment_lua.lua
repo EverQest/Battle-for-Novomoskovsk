@@ -9,6 +9,9 @@ function outworld_devourer_astral_imprisonment_lua:OnSpellStart()
 	local caster = self:GetCaster()
 	local target = self:GetCursorTarget()
 
+	-- cancel if linken
+	if target:TriggerSpellAbsorb( self ) then return end
+
 	-- load data
 	local duration = self:GetSpecialValueFor( "prison_duration" )
 

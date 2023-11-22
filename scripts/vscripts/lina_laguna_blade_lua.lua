@@ -35,6 +35,9 @@ function lina_laguna_blade_lua:OnSpellStart()
 	-- Play effects
 	self:PlayEffects( target )
 
+	-- cancel if linken
+	if target:TriggerSpellAbsorb( self ) then return end
+	
 	-- load data
 	local delay = self:GetSpecialValueFor( "damage_delay" )
 
