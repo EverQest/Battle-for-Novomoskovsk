@@ -12,7 +12,10 @@
 	//Vyasich rot damage ally
 	//Add TimurTheTitan dagons stack
 	//Change TimurTheTitan health cost on "half_of_the_brain"
-	//
+	//Fix cast in linken's sphere
+	//Add scale for techies and morphling's ultimate for late game
+	//Fix gold of killing lone_druid bears (300g -> 0g)
+	//Fix panaroma image size (now it's too big)
 
 	//--------------- ENABLED -----------------
 	"npc_dota_hero_elder_titan"			"1"
@@ -25,10 +28,10 @@
 	"npc_dota_hero_wisp"				"1"
 	"npc_dota_hero_lycan"				"1"
 	"npc_dota_hero_ogre_magi"			"1"
-	"npc_dota_hero_nevermore"			"1"
-	"npc_dota_hero_morphling"			"1"
+	"npc_dota_hero_nevermore"			"1" //unique talents done
+	"npc_dota_hero_morphling"			"1" //unique talents done
 	"npc_dota_hero_clinkz"				"1"
-	"npc_dota_hero_tinker"				"1"
+	"npc_dota_hero_tinker"				"1" //unique talents done
 	"npc_dota_hero_phantom_lancer"		"1"
 	"npc_dota_hero_storm_spirit"		"1"
 	"npc_dota_hero_arc_warden"			"1"
