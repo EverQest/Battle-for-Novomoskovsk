@@ -166,7 +166,7 @@
 		"Ability2"					"alchemist_unstable_concoction_lua"
 		"Ability3"					"slark_essence_shift_lua"
 	 	   "Ability4"					"generic_hidden"
-	    "Ability5"					"primal_roar_datadriven"
+	    "Ability5"					"primal_roar"
 	    "Ability6"					"lycan_shapeshift_datadriven"
 	}
 	//=================================================================================================================

@@ -69,9 +69,6 @@ function alchemist_unstable_concoction_throw_lua:OnSpellStart()
 	local caster = self:GetCaster()
 	local target = self:GetCursorTarget()
 
-	-- cancel if linken
-	if target:TriggerSpellAbsorb( self ) then return end
-
 	-- load data
 	local max_brew = self:GetSpecialValueFor( "brew_time" )
 	local projectile_name = "particles/units/heroes/hero_alchemist/alchemist_unstable_concoction_projectile.vpcf"
@@ -142,7 +139,10 @@ end
 --------------------------------------------------------------------------------
 -- Projectile
 function alchemist_unstable_concoction_throw_lua:OnProjectileHit_ExtraData( target, location, ExtraData )
-	if not target then return end
+	-- cancel if gone
+	if (not target) or target:IsInvulnerable() or target:IsOutOfGame() or target:TriggerSpellAbsorb( self ) then
+		return
+	end
 
 	-- obtain data
 	local brew_time = ExtraData.brew_time
