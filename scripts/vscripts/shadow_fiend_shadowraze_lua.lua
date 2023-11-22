@@ -117,6 +117,7 @@ function shadowraze.PlayEffects( this, position, radius )
 	-- Create Sound
 	local sound_mt = math.random( 1, 5 )
 	local sound_cast = "Coil" .. sound_mt
+	local sound_cast_hit = "CustomCoilHit"
 
 	-- create particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, nil )
@@ -127,4 +128,5 @@ function shadowraze.PlayEffects( this, position, radius )
 	
 	-- create sound
 	EmitSoundOnLocationWithCaster( position, sound_cast, this:GetCaster() )
+	EmitSoundOnLocationWithCaster( position, sound_cast_hit, this:GetCaster() )
 end

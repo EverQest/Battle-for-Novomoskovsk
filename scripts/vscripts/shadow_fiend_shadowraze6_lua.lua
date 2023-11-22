@@ -3,6 +3,12 @@ LinkLuaModifier( "modifier_shadow_fiend_shadowraze_lua", "modifier_shadow_fiend_
 --------------------------------------------------------------------------------
 shadow_fiend_shadowraze_f_lua = class({})
 
+function shadow_fiend_shadowraze_f_lua:OnAbilityPhaseStart()
+	local sound_precast = "CustomSirenPrecast"
+	EmitSoundOn(sound_precast, self:GetCaster())
+end
+
+
 function shadow_fiend_shadowraze_f_lua:OnSpellStart()
 	shadowraze.OnSpellStart( self )
 end
@@ -79,6 +85,7 @@ function shadowraze.PlayEffects( this, position, radius )
 	-- Create Sound
 	local sound_mt = math.random( 1, 5 )
 	local sound_cast = "Coil6a" .. sound_mt
+	local sound_cast_hit_ultimate = "CustomCoilHitUltimate"
 
 	-- create particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, nil )
@@ -89,4 +96,5 @@ function shadowraze.PlayEffects( this, position, radius )
 	
 	-- create sound
 	EmitSoundOnLocationWithCaster( position, sound_cast, this:GetCaster() )
+	EmitSoundOnLocationWithCaster( position, sound_cast_hit_ultimate, this:GetCaster() )
 end
