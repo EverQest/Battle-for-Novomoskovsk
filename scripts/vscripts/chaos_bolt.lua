@@ -1,59 +1,68 @@
---[[Author: Pizzalol
-	Date: 08.04.2015.
-	Rolls the dice and then determines the damage and stun duration according to that]]
-function ChaosBolt( keys )
-	local caster = keys.caster
-	local target = keys.target
-	local target_location = target:GetAbsOrigin()
-	local ability = keys.ability
-	local ability_level = ability:GetLevel() - 1
+chaos_bolt = class({})
 
-	-- Ability variables
-	local stun_min = ability:GetLevelSpecialValueFor("stun_min", ability_level)
-	local stun_max = ability:GetLevelSpecialValueFor("stun_max", ability_level) 
-	local damage_min = ability:GetLevelSpecialValueFor("damage_min", ability_level) 
-	local damage_max = ability:GetLevelSpecialValueFor("damage_max", ability_level)
-	local chaos_bolt_particle = keys.chaos_bolt_particle
+LinkLuaModifier( "modifier_generic_stunned_dispellable", "modifier_generic_stunned_dispellable", LUA_MODIFIER_MOTION_NONE )
 
-	-- Calculate the stun and damage values
-	local random = RandomFloat(0, 1)
-	local stun = stun_min + (stun_max - stun_min) * random
-	local damage = damage_min + (damage_max - damage_min) * (1 - random)
+function chaos_bolt:OnSpellStart()
+	-- unit identifier
+	local caster = self:GetCaster()
+	local target = self:GetCursorTarget()
 
-	-- Calculate the number of digits needed for the particle
-	local stun_digits = string.len(tostring(math.floor(stun))) + 1
-	local damage_digits = string.len(tostring(math.floor(damage))) + 1
+	-- load data
+	local projectile_name = "particles/chaos_knight_chaos_bolt.vpcf"
+	local projectile_speed = self:GetSpecialValueFor("projectile_speed")
 
-	-- Create the stun and damage particle for the spell
-	local particle = ParticleManager:CreateParticle(chaos_bolt_particle, PATTACH_OVERHEAD_FOLLOW, target)
-	ParticleManager:SetParticleControl(particle, 0, target_location) 
+	local info = {
+		Target = target,
+		Source = caster,
+		Ability = self,	
+		
+		EffectName = projectile_name,
+		iMoveSpeed = projectile_speed,
+		bDodgeable = true -- Optional
+	}
 
-	-- Damage particle
-	ParticleManager:SetParticleControl(particle, 1, Vector(9,damage,4)) -- prefix symbol, number, postfix symbol
-	ParticleManager:SetParticleControl(particle, 2, Vector(2,damage_digits,0)) -- duration, digits, 0
+	-- effects
+    local sound = math.random( 1, 3 )
+    local sound_cast = "CustomDarova" .. sound
+    EmitSoundOn( sound_cast, caster )
 
-	-- Stun particle
-	ParticleManager:SetParticleControl(particle, 3, Vector(8,stun,0)) -- prefix symbol, number, postfix symbol
-	ParticleManager:SetParticleControl(particle, 4, Vector(2,stun_digits,0)) -- duration, digits, 0
-	ParticleManager:ReleaseParticleIndex(particle)
-
-	-- Apply the stun duration
-	target:AddNewModifier(caster, ability, "modifier_stunned", {duration = stun})
-
-	-- Initialize the damage table and deal the damage
-	local damage_table = {}
-	damage_table.attacker = caster
-	damage_table.victim = target
-	damage_table.ability = ability
-	damage_table.damage_type = ability:GetAbilityDamageType()
-	damage_table.damage = damage
-
--- Create Sound
-local sound = math.random( 1, 3 )
-local sound_cast = "CustomDarova" .. sound
-if sound>0 then
-	EmitSoundOn( sound_cast, caster )
+	ProjectileManager:CreateTrackingProjectile(info)
 end
 
-	ApplyDamage(damage_table)
+function chaos_bolt:OnProjectileHit_ExtraData( target, location, extradata )
+	-- cancel if gone
+	if (not target) or target:IsInvulnerable() or target:IsOutOfGame() or target:TriggerSpellAbsorb( self ) then
+		return
+	end
+
+    -- init values 
+    local damage_max = self:GetSpecialValueFor("damage_max")
+    local damage_min = self:GetSpecialValueFor("damage_min")
+    local stun_max = self:GetSpecialValueFor("stun_max")
+    local stun_min = self:GetSpecialValueFor("stun_min")
+
+    local damage = math.random(damage_min, damage_max)
+    local stun_duration = math.random(stun_min, stun_max)
+
+	-- apply damage
+	local damageTable = {
+		victim = target,
+		attacker = self:GetCaster(),
+		damage = damage,
+		damage_type = DAMAGE_TYPE_MAGICAL,
+		ability = self, --Optional.
+	}
+	ApplyDamage(damageTable)
+
+    -- debuf
+    target:AddNewModifier(
+		self:GetCaster(), -- player source
+		self, -- ability source
+		"modifier_generic_stunned_dispellable", -- modifier name
+		{ duration = stun_duration } -- kv
+	)
+
+	-- effects
+	local sound_cast = "Hero_Sniper.AssassinateDamage"
+	EmitSoundOn( sound_cast, target )
 end

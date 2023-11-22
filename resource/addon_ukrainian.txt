@@ -182,8 +182,8 @@
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
 		
-		"Dota_Tooltip_ability_chaos_bolt_datadriven"								"Дай п'ять!"
-		"Dota_Tooltip_ability_chaos_bolt_datadriven_Description"					"Здарова братва! оглушує обраного братана"
+		"Dota_Tooltip_ability_chaos_bolt"											"Дай п'ять!"
+		"Dota_Tooltip_ability_chaos_bolt_Description"								"Здарова братва! оглушує обраного братана"
 		"Dota_Tooltip_ability_usa_rage"												"На всіх парах до Канади"
 		"Dota_Tooltip_ability_usa_rage_Description"									"Занзак так прагне виїхати в Канаду, що його не зупинити, велика швидкість, але може втратити глузд і оглушитися і оглушити інших"
 		"Dota_Tooltip_ability_vacuum_datadriven"									"Кучніше пацанва!"

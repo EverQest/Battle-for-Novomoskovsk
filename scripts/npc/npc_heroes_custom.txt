@@ -298,7 +298,7 @@
 		"Ability17"				"special_bonus_spell_amplify_25"
 
 		"Ability1"					"usa_rage"	
-		"Ability2"					"chaos_bolt_datadriven"
+		"Ability2"					"chaos_bolt"
 		"Ability3"					"vacuum_datadriven"
 	    	"Ability4"					"generic_hidden"
 	    	"Ability5"					"generic_hidden"
