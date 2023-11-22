@@ -12,9 +12,7 @@
 	//Vyasich rot damage ally
 	//Add TimurTheTitan dagons stack
 	//Change TimurTheTitan health cost on "half_of_the_brain"
-	//Fix cast in linken's sphere
 	//Add scale for techies and morphling's ultimate for late game
-	//Fix gold of killing lone_druid bears (300g -> 0g)
 	//Fix panaroma image size (now it's too big)
 
 	//--------------- ENABLED -----------------

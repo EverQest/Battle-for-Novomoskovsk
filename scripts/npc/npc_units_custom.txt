@@ -132,39 +132,47 @@
 	//=================================================================================
   	"npc_dota_lone_druid_bear1"
   	{                   
-	"ModelScale"                                          "0.35"
+		"ModelScale"		"0.35"
 
-	"Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "chaos_knight_chaos_strike_lua"    
-	"Ability5" 			"troll_warlord_fervor"
+		"BountyGoldMin"		"0"		// Gold earned min.
+		"BountyGoldMax"		"10"		// Gold earned max.
+		"Ability1"			"beastmaster_wild_axes"
+		"Ability2"			"chaos_knight_chaos_strike_lua"    
+		"Ability5"			"troll_warlord_fervor"
   	}
 
   	"npc_dota_lone_druid_bear2"
- 	 {                   
-	"ModelScale"                                          "0.65"
+ 	{                   
+		"ModelScale"		"0.65"
 
-    "Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "chaos_knight_chaos_strike_lua"    
-	"Ability5" 			"troll_warlord_fervor"
-  	}
+		"BountyGoldMin"		"5"		// Gold earned min.
+		"BountyGoldMax"		"20"		// Gold earned max.
+		"Ability1"			"beastmaster_wild_axes"
+		"Ability2"			"chaos_knight_chaos_strike_lua"    
+		"Ability5"			"troll_warlord_fervor"
+		}
 
   	"npc_dota_lone_druid_bear3"
   	{   
-	"ModelScale"                                          "1.2"
-                
-    "Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "chaos_knight_chaos_strike_lua"    
-	"Ability5" 			"troll_warlord_fervor"
- 	 }
+		"ModelScale"		"1.2"
+					
+		"BountyGoldMin"		"10"		// Gold earned min.
+		"BountyGoldMax"		"30"		// Gold earned max.
+		"Ability1"			"beastmaster_wild_axes"
+		"Ability2"			"chaos_knight_chaos_strike_lua"    
+		"Ability5"			"troll_warlord_fervor"
+ 	}
 
- 	 "npc_dota_lone_druid_bear4"
+ 	"npc_dota_lone_druid_bear4"
   	{        
-	"ModelScale"                                          "1.6"
-           
-    "Ability1"			"beastmaster_wild_axes"
-    "Ability2"          "chaos_knight_chaos_strike_lua"    
-	"Ability5" 			"troll_warlord_fervor"
- 	 }
+		"ModelScale"		"1.6"
+			
+		"BountyGoldMin"		"15"		// Gold earned min.
+		"BountyGoldMax"		"40"		// Gold earned max.
+		"Ability1"			"beastmaster_wild_axes"
+		"Ability2"			"chaos_knight_chaos_strike_lua"    
+		"Ability5"			"troll_warlord_fervor"
+ 	}
 
 	//=================================================================================	
 	// Creature: Basic Zombie
