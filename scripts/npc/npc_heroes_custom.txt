@@ -395,7 +395,6 @@
 		"AttributeIntelligenceGain"		"2.9"	
 		"AttackDamageMin"			"60"
 		"AttackDamageMax"			"110"
-		
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -453,11 +452,12 @@
 		"override_hero"		   		"npc_dota_hero_invoker"
 
 		"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"	
-		"AttributeStrengthGain"			"2.0"
-		"AttributeAgilityGain"			"2.0"
+		"AttributeStrengthGain"			"3.4"
+		"AttributeAgilityGain"			"2.5"
 		"AttributeIntelligenceGain"		"2.0"
 		"AttackDamageMin"				"30"
 		"AttackDamageMax"				"35"
+		"MovementSpeed"					"325"
 
 
 		// Talents 
@@ -469,12 +469,12 @@
 		"Ability22"				"special_bonus_cooldown_reduction_20"
 		"Ability23"				"special_bonus_attack_damage_100"
 		"Ability24"				"special_bonus_spell_amplify_25"
-		"Ability25"				"special_bonus_attributes" //plusiki
+		"Ability25"				"special_bonus_attributes"
 		
 		"Ability1"					"dawnbreaker_starbreaker_lua"
 		"Ability2"					"ursa_enrage_lua"
 		"Ability3"					"antimage_mana_void_lua"
-	    "Ability4"					"rip_opz" // pause after death passive
+	    "Ability4"					"rip_opz"
 	    	"Ability5"					"generic_hidden"
 	    "Ability6"					"slardar_bash_of_the_deep_lua"
 

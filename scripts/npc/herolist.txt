@@ -9,7 +9,6 @@
 	//Add aghanim's scepter
 	//Add aghanim's shard
 	//Create unique talents for heroes
-	//Fix Oleg traps damage
 
 	//--------------- ENABLED -----------------
 	"npc_dota_hero_elder_titan"			"1"
