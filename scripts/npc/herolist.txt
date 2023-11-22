@@ -5,10 +5,14 @@
 {
 	//-------------- TODOLIST -----------------
 	//Add new unique items
-	//Complete "Шлем Тараса"
 	//Add aghanim's scepter
 	//Add aghanim's shard
-	//Create unique talents for heroes
+	//Create unique talents for all heroes
+	//Fix Vyasich teather
+	//Vyasich rot damage ally
+	//Add TimurTheTitan dagons stack
+	//Change TimurTheTitan health cost on "half_of_the_brain"
+	//
 
 	//--------------- ENABLED -----------------
 	"npc_dota_hero_elder_titan"			"1"
