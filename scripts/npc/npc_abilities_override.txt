@@ -1718,7 +1718,7 @@
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"senya_antimat"
 		"ScriptFile"					"spiked_carapace_reworked"
-		"AbilityCooldown"				"1.0 1.5 2.0 2.5"
+		"AbilityCooldown"				"5"
 
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
@@ -1736,7 +1736,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.0 1.5 2.0 2.5"
+				"stun_duration"				"0.5 1 1.5 2"
 			}
 			"02"
 			{
@@ -1746,7 +1746,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown"					"1.0 1.5 2.0 2.5"
+				"cooldown"					"5"
 			}
 		}
 	}
