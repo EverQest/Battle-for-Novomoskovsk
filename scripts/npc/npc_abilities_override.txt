@@ -8028,11 +8028,8 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0 0 5 5 10"
-		"AbilityManaCost"				"100"
-
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"24 23 22 21 20"
+		"AbilityManaCost"				"200 300 400 500 600"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8041,43 +8038,23 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage_spread"		"100 200 300 400 500"
+				"base_damage"		"100 200 300 400 500"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"cd_per_stack"		"5"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"dmg_per_stack"		"100 150 200 250 300"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"mana_cost_per_stack"	"25 50 75 100 125"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"max_mana_cost"		"3000"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"max_cd"			"45"
+				"dmg_per_stack"		"20 40 60 80 100"
 			}
 		}
 	}
 	//=================================================================================================================
-	// Windranger: Powershot (TimurTheTitan)
+	// Custom: TitPunch (TimurTheTitan)
 	//=================================================================================================================
-	"windranger_powershot_lua"
+	"elder_titan_punch"
 	{
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
-		"ScriptFile"					"windranger_powershot_lua"
+		"ScriptFile"					"elder_titan_punch"
 		"AbilityTextureName"			"tit_punch"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
@@ -8089,22 +8066,24 @@
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"400"
-		"AbilityCastPoint"				"0.0"
-		"AbilityChannelTime"			"1.0 0.75 0.5 0.25"
+		"AbilityCastRange"				"175"
+		"AbilityCastPoint"				"0"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 25 25 20"
-		"AbilityManaCost"				"100" //half of mana
-		"AbilityHealthCost"				"100"
-
+		"AbilityCooldown"				"20 25 30 35"
+		"AbilityManaCost"				"10" //%
+		"AbilityHealthCost"				"10" //%
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -8116,52 +8095,27 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"powershot_damage_pct"	"15 20 25 30"
+				"crit_pct"				"200 300 400 500"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"damage_reduction"		"0.2 0.1 0.1 0"
+				"var_type"				"FIELD_INTEGER"
+				"mgc_resist_pct"		"-40 -60 -80 -100"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"arrow_width"			"600"
+				"var_type"				"FIELD_FLOAT"
+				"debuf_duration"		"6.66"
 			}
 			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"arrow_range"			"400"
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.337"
 			}
 			"05"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"arrow_speed"			"280"
-			}
-			"06"
-			{
 				"var_type"				"FIELD_INTEGER"
-				"tree_width"			"75"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vision_radius"			"400"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vision_duration"		"3"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"mana_cost_pct"			"20 30 40 50"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"basic_damage"			"100 150 200 250"
+				"cost_pct"				"10 15 20 25"
 			}
 		}
 	}
@@ -8197,12 +8151,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana_per_dagon"	"50 100 200 300"
+				"bonus_int_per_dagon"	"5 7.5 10 12.5"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp_per_dagon"	"50 100 200 300"
+				"bonus_str_per_dagon"	"5 7.5 10 12.5"
 			}
 		}
 	}

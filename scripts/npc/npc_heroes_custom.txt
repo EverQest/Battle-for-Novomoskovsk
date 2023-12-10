@@ -500,9 +500,10 @@
 
 		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"	
 		"AttributeIntelligenceGain"		"1"
-		"AttributeAgilityGain"			"1"
+		"AttributeAgilityGain"			"-10"
 		"AttributeStrengthGain"			"1"
 		"StatusManaRegen"				"5.0"
+		"AttributeBaseAgility"			"0"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
@@ -515,7 +516,7 @@
 		"Ability17"				"special_bonus_spell_amplify_25"
 
 		"Ability1"					"elder_titan_dagon"
-		"Ability2"					"windranger_powershot_lua"
+		"Ability2"					"elder_titan_punch"
 		"Ability3"					"half_of_the_brain"
 	    "Ability6"					"shadow_fiend_requiem_of_souls_lua"
 

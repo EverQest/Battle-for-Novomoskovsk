@@ -31,7 +31,7 @@ function modifier_half_of_the_brain_mana:UpdateValues()
 	end
 	-- references
 	local caster = self:GetAbility():GetCaster()
-	self.bonus_mana_per_dagon = self:GetAbility():GetSpecialValueFor( "bonus_mana_per_dagon" )
+	self.bonus_int_per_dagon = self:GetAbility():GetSpecialValueFor( "bonus_int_per_dagon" )
 	self.stacks = 1
 
 	local modifier = caster:FindModifierByName( "modifier_elder_titan_dagon" )
@@ -39,7 +39,7 @@ function modifier_half_of_the_brain_mana:UpdateValues()
 		self.stacks = modifier:GetStackCount() + 1
 	end
 
-	self.bonus_mana = self.bonus_mana_per_dagon * self.stacks
+	self.bonus_int = self.bonus_int_per_dagon * self.stacks
 	
 	self:GetParent():CalculateStatBonus(true)
 end
@@ -48,19 +48,19 @@ end
 -- Modifier Effects
 function modifier_half_of_the_brain_mana:DeclareFunctions()
 	local funcs = {
-		MODIFIER_PROPERTY_MANA_BONUS,
+		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
 		MODIFIER_PROPERTY_TOOLTIP,
 	}
 
 	return funcs
 end
 
-function modifier_half_of_the_brain_mana:GetModifierManaBonus()
-	return self.bonus_mana
+function modifier_half_of_the_brain_mana:GetModifierBonusStats_Intellect()
+	return self.bonus_int
 end
 
 function modifier_half_of_the_brain_mana:OnTooltip()
-	return self:GetAbility():GetSpecialValueFor( "bonus_mana_per_dagon" )
+	return self:GetAbility():GetSpecialValueFor( "bonus_int_per_dagon" )
 end
 
 --------------------------------------------------------------------------------

@@ -19,13 +19,14 @@ function modifier_elder_titan_dagon:OnCreated( kv )
 	self.dmg_per_stack = self:GetAbility():GetSpecialValueFor( "dmg_per_stack" )
 	self.mana_cost_per_stack = self:GetAbility():GetSpecialValueFor( "mana_cost_per_stack" )
 
-	self:SetStackCount(1)
+	if IsServer() then
+		self:SetStackCount( self:GetAbility():GetDagonStacks() )
+	end
 end
 
 function modifier_elder_titan_dagon:OnRefresh( kv )
 	self.dmg_per_stack = self:GetAbility():GetSpecialValueFor( "dmg_per_stack" )
 	self.mana_cost_per_stack = self:GetAbility():GetSpecialValueFor( "mana_cost_per_stack" )
-
 end
 
 --------------------------------------------------------------------------------
@@ -40,11 +41,11 @@ function modifier_elder_titan_dagon:DeclareFunctions()
 end
 
 function modifier_elder_titan_dagon:OnTooltip()
-	return self.dmg_per_stack *  self:GetStackCount()
+	return self.dmg_per_stack * self:GetStackCount()
 end
 
 function modifier_elder_titan_dagon:OnTooltip2()
-	return self.mana_cost_per_stack *  self:GetStackCount()
+	return self.mana_cost_per_stack * self:GetStackCount()
 end
 --------------------------------------------------------------------------------
 
