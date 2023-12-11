@@ -40,7 +40,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_elder_titan_punch:GetEffectName()
-	return "particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
+	return "particles/nevermore_shadowraze_debuff_custom.vpcf"
 end
 
 function modifier_elder_titan_punch:GetEffectAttachType()

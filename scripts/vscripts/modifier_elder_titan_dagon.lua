@@ -50,7 +50,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_elder_titan_dagon:GetEffectName()
-	return "particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
+	return "particles/econ/events/ti9/ti9_monkey_debuff.vpcf"
 end
 
 function modifier_elder_titan_dagon:GetEffectAttachType()
