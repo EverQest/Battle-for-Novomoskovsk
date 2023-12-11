@@ -137,7 +137,7 @@ function imba_undying_decay:OnSpellStart()
 				table.insert(clone_owner_units[enemy:GetPlayerOwner():GetAssignedHero():entindex()], enemy:entindex())
 			end
 		else		
-			if enemy:IsHero() and not enemy:IsIllusion() then
+			if enemy:IsHero() and not enemy:IsIllusion() and self:NotBear(enemy) then
 				enemy:EmitSound("Hero_Undying.Decay.Target")
 				self:GetCaster():EmitSound("Hero_Undying.Decay.Transfer")
 				
@@ -346,3 +346,8 @@ end
 ------------------------------------------------
 
 function modifier_imba_undying_decay_debuff_counter:IsPurgable()	return false end
+
+function imba_undying_decay:NotBear( unit )
+	local unit_name = unit:GetName()
+	return unit_name ~= "npc_dota_lone_druid_bear"
+end
