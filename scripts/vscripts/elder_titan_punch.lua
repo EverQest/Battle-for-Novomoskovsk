@@ -100,12 +100,19 @@ end
 
 --------------------------------------------------------------------------------
 -- Play effects
-function elder_titan_punch:PlayEffects1( )
-	local sound_cast = "CustomPunch" .. math.random( 1, 3 )
+function elder_titan_punch:PlayEffects1( ) -- tit voiceline
+	local sound_cast = "CustomPunchMagical"
+    if IsHalfOfTheBrainOn(self:GetCaster()) then
+        sound_cast = "CustomPunchPhysical"
+    end
 	EmitSoundOn( sound_cast, self:GetCaster() )
 end
 
-function elder_titan_punch:PlayEffects2( )
-	local sound_punch = "CustomPunches"
+function elder_titan_punch:PlayEffects2( ) -- punch sound effect
+    
+	local sound_punch = "CustomPunchMagicalSound"
+    if IsHalfOfTheBrainOn(self:GetCaster()) then
+        sound_punch = "CustomPunchPhysicalSound"
+    end
 	EmitSoundOn( sound_punch, self:GetCaster() )
 end
