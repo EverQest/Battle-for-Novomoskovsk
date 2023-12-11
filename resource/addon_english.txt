@@ -363,8 +363,6 @@
 		//
 		"DOTA_Tooltip_Ability_item_travel_boots"						"Пингвины"
 		//
-		"DOTA_Tooltip_Ability_item_headdress"							"Шлем Тараса"
-		//
 		"DOTA_Tooltip_Ability_item_arcane_boots"						"Бумбокс"
 		//
 		"DOTA_Tooltip_Ability_item_refresher"							"Макс Корж"
@@ -382,6 +380,49 @@
 		"DOTA_Tooltip_Ability_item_aghanims_shard"						"Star Shard"
 		//
 		"DOTA_Tooltip_Ability_item_ethereal_blade"						"Bazuka"
+		//
+		"DOTA_Tooltip_Ability_item_diffusal_blade_2"						"Книга Геометрии"
+		"DOTA_Tooltip_Ability_item_diffusal_blade_2_damage"  				"+$damage"
+		"DOTA_Tooltip_Ability_item_diffusal_blade_2_armor"  				"+$armor"
+		"DOTA_Tooltip_Ability_item_diffusal_blade_2_regen"  				"+$hp_regen"
+		"DOTA_Tooltip_Ability_item_diffusal_blade_2_agility"  				"+$agi"
+		"DOTA_Tooltip_Ability_item_diffusal_blade_2_intellect"  			"+$int"
+		//
+		"DOTA_Tooltip_Ability_item_butter2"									"Бабушка"
+		"DOTA_Tooltip_Ability_item_butter2_lore"							"Легендарные бабушкины ботиночки связаные с душой, имеют особый эффект липучки, то даёт владельцу скорость бега по болотам"
+		"DOTA_Tooltip_Ability_item_butter2_Note0"							"Dispellable"
+		"DOTA_Tooltip_ability_item_butter2_Description"  					"<h1>Active: Бабушка</h1> Бабушкины сапоги дают скорость бега по любым поверхностям на 3 секунды."
+		"DOTA_Tooltip_Ability_item_butter2_agi"  							"+$agi"
+		"DOTA_Tooltip_Ability_item_butter2_ev"  							"%+$evasion"
+		"DOTA_Tooltip_Ability_item_butter2_attack"  						"+$attack"
+		"DOTA_Tooltip_Ability_item_butter2_dmg"  							"+$damage"
+		//
+		"DOTA_Tooltip_Ability_item_tar2"									"Шлем Тараса"
+		"DOTA_Tooltip_Ability_item_tar2_lore"								"Це гладіаторський шолом претендента Тараса за 17-й сезон великих битв, який він загубив у битві за Дарнас"
+		"DOTA_Tooltip_ability_item_tar2_Description"  						"<h1>Passive: Сила богов</h1> Каждую секунду Шлем Тараса регенерирует по 10% от максимального запаса здоровья"
+		"DOTA_Tooltip_Ability_item_tar2_str"								"+$str"
+		"DOTA_Tooltip_Ability_item_tar2_hp"									"+$health"
+		"DOTA_Tooltip_Ability_item_tar2_health_regen_percent_per_second"	"%+$hp_regen"
+		//
+		"DOTA_Tooltip_Ability_item_super_octarine"							"Stasyan Ultraplanetary Core"
+		"DOTA_Tooltip_Ability_item_super_octarine_lore"						"Стасян долго развивал свои навыки в магии что привело к огромному пролапсу галактики, теперь этот планетарий и есть тессеракт этой вселенной"
+		"DOTA_Tooltip_ability_item_super_octarine_Description"				"<h1>Passive: Планетариум</h1> Планетарий уменьшает перезарядку способностей и предметов на 32%"
+		"DOTA_Tooltip_Ability_item_super_octarine_hp"			        	"+$health"
+		"DOTA_Tooltip_Ability_item_super_octarine_mp"			        	"+$mana"
+		"DOTA_Tooltip_Ability_item_super_octarine_int"			        	"+$int"
+		//
+		"DOTA_Tooltip_Ability_item_imba_meteor_hammer_4"					"Meteorizm Hammer"
+		"DOTA_Tooltip_Ability_item_imba_meteor_hammer_4_lore"				"Древний артефакт посланый богом токсичности - Ленедисем, тот кто держит в руках этот молот получает язву и может создавать болота гнили"
+		"DOTA_Tooltip_Ability_item_imba_meteor_hammer_4_Description"		"<h1>Passive: Токсичный шквал</h1> ЗАРЯЖАЕМОЕ - После зарядки молота гнили, после небольшой задержки в 3 секунды, обрушивает порчу в зону поражения"
+		"DOTA_Tooltip_Ability_item_imba_meteor_hammer_4_bonus_strength"		"+$all"
+		"DOTA_Tooltip_Ability_item_imba_meteor_hammer_4_bonus_health_regen"	"+$hp_regen"
+		"DOTA_Tooltip_Ability_item_imba_meteor_hammer_4_bonus_mana_regen"	"+$mana_regen"
+		//
+		"DOTA_Tooltip_Ability_item_imba_bladestorm_mail"					"Tentacle Mail"
+		"DOTA_Tooltip_Ability_item_imba_bladestorm_mail_lore"				"Современный симбиот вселился в рюкзак и это назвали Доспехом из Тентаклей"
+		"DOTA_Tooltip_Ability_item_imba_bladestorm_mail_Description"		"<h1>Active: Возвращение урона</h1> Увеличивает возвращение урона от всех источников на 95%. Длится 4.5 сек. \n<h1>Passive: Icy touch</h1> Возвращает 40 + 30% урона от каждой атаки атакующим вас существам."
+		"DOTA_Tooltip_Ability_item_imba_bladestorm_mail_bonus_damage"		"+$damage"
+		"DOTA_Tooltip_Ability_item_imba_bladestorm_mail_bonus_armor"		"+$armor"
 		//
 	}
 

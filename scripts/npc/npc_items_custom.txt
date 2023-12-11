@@ -68,76 +68,6 @@
 		"ItemCastOnPickup"				"1"
 	}
 
-
-	//=================================================================================================================
-	// Recipe: Helm Of Tarras
-	//=================================================================================================================
-	"item_recipe_helm_of_tarras"
-	{
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "300" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_helm_of_tarras" //the result of combining the ItemRequirements
-    "ItemRequirements"
-    {
-        "01" "item_heart;item_heart;item_heart"
-    }
-	}
-
-	//=================================================================================================================
-	// Helm of tarras
-	//=================================================================================================================
-	"item_helm_of_tarras"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Stats		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"3.0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"14850"
-		"ItemShopTags"					"str;regen_health;health_pool"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"hot;helm of tarrasque"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"AbilityTextureName" 			"helm_of_tarras"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"150"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"1000"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"health_regen_rate"		"15"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cooldown_melee"		"3"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cooldown_ranged_tooltip"		"3"
-			}
-		}
-	}
-
 	//=================================================================================================================
 	// Recipe: Travel Boots
 	//=================================================================================================================
@@ -305,5 +235,744 @@
 	{
 		"AbilityTextureName" 			"aegis_custom"
 		"ItemCost"						"5000"
+	}
+	
+	//=================================================================================================================
+	// Тараска и бабочка
+	//=================================================================================================================
+	
+	"item_recipe_butter2"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_butter2"
+		"ItemRequirements"
+		{
+			"01" "item_butterfly;item_butterfly;item_butterfly"
+		}
+  	}
+	
+	"item_recipe_tar2"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_tar2"
+		"ItemRequirements"
+		{
+			"01" "item_heart;item_heart;item_heart"
+		}
+  	}
+	
+	"item_tar2"
+	{
+		"BaseClass"                 "item_datadriven"
+		"AbilityTextureName"        "helm_of_tarras"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"					"15600"
+		"ID"						"2185"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDroppable" 			"1"
+		"AbilityCooldown"			"6.0"
+			
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"str;regen_health;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"hot;heart of tarrasque"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"str"								"105"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"hp"								"750"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"health_regen_percent_per_second"	"10"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"cooldown_melee"					"5"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"heal_interval"						"0.03"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_heart_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%str"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%hp"
+				}
+			}
+			
+			"modifier_item_heart_datadriven_regen"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
+				"ThinkInterval" 		"%heal_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"					"items/item_heart.lua"
+						"Function"						"modifier_item_heart_datadriven_regen_on_interval_think"
+						"HealthRegenPercentPerSecond"	"%health_regen_percent_per_second"
+						"HealInterval"					"%heal_interval"
+					}
+				}
+				
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_heart.lua"
+						"Function"			"modifier_item_heart_datadriven_regen_on_take_damage"
+						"CooldownMelee"		"%cooldown_melee"
+					}
+				}
+				
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_heart.lua"
+						"Function"			"modifier_item_heart_datadriven_regen_on_destroy"
+					}
+				}
+			}
+			
+			"modifier_item_heart_datadriven_regen_visible"  //A modifier that will appear on the unit's modifier bar while they are being healed.
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+			}
+		}
+	}
+	
+	"item_butter2"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "babushka_custom"
+ 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+  		"ItemCost"					"14925"
+  		"ID"						"2200"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCooldown"			"30.0"
+	    "AbilityManaCost"			"100"
+		"ItemDroppable" 			"1"
+
+		"Modifiers"
+		{
+		    "modifier_bf2"
+		    {
+		        "Passive"           "1"
+		        "IsHidden"          "1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%agi"
+		            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%dmg"
+		            "MODIFIER_PROPERTY_EVASION_CONSTANT"			"%ev"
+		            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack"
+		        }
+		    }
+			
+		    "modifier_bf2_active"
+		    {
+		        "Isbuff"				"1"
+				"IsHidden" 			 	"0"
+		        "Passive"				"0"
+				"EffectName"			"particles/econ/items/windrunner/windranger_arcana/windranger_arcana_focusfire_v2_wind_tube_pnt.vpcf"
+			    "EffectAttachType"		"follow_origin"
+				"Duration" 				"3"
+				
+				"TextureName"	"babushka_custom"
+
+		        "States"
+		        {
+		            "MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"   "MODIFIER_STATE_VALUE_ENABLED"
+		            "MODIFIER_STATE_NO_UNIT_COLLISION"					"MODIFIER_STATE_VALUE_ENABLED"
+		        }
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms" 
+		        }
+		    }
+			
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"					"items/butter2.lua"
+				"Function"						"butteractive"
+			}
+		}
+		"AbilitySpecial"
+		{
+		    "01"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "agi"             	"105"
+		    }
+		    "02"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "dmg"          		"100"
+		    }
+		    "03"
+		    {
+		    	"var_type"			"FIELD_FLOAT"
+		    	"ev"				"68"
+			}	
+		    "04"
+		    {
+		    	"var_type"			"FIELD_FLOAT"
+		    	"attack"			"80"
+		    }
+		    "05"
+		    {
+		    	"var_type"			"FIELD_INTEGER"
+		    	"ms"				"80"
+		    }
+		}
+  	}
+
+	//=================================================================================================================
+	// Stasyan Ultraplanetary Core
+	//=================================================================================================================
+	
+	"item_super_octarine"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"ID"						"2163"
+  		"AbilityTextureName"        "stasyan_ultraplanetary_core_custom"
+  		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+  		"ItemCost"					"8250"
+		"ItemShopTags"				"damage"
+		"ItemQuality"				"magicks"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		
+		"Modifiers"
+		{
+		    "modifier_spell"
+		    {
+		        "Passive"           "1"
+		        "IsHidden"          "1"
+		        "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+		        "AllowIllusionDuplicate"     "1"
+
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
+		            "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"		"%cd"
+		        }
+		    }
+			
+		    "modifier_stats"
+		    {
+		        "Passive"           "1"
+		        "IsHidden"          "1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_MANA_BONUS" "%mp"
+		            "MODIFIER_PROPERTY_HEALTH_BONUS" "%hp" 
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int"
+		        }
+		    }
+		}
+	
+		"AbilitySpecial"
+		{
+		    "01"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "cd"       			"32"
+		    }
+		    "02"
+		    {
+		    	"var_type"			"FIELD_INTEGER"
+		    	"dmg"				"15"
+		    }
+		    "03"
+		    {
+		    	"var_type"			"FIELD_INTEGER"
+		    	"hp"				"835"
+		    }
+		    "04"
+		    {
+		    	"var_type"			"FIELD_INTEGER"
+		    	"mp"				"835"
+		    }
+		    "05"
+		    {
+		    	"var_type"			"FIELD_INTEGER"
+		    	"int"				"50"
+		    }
+		}
+  	}
+	
+  	"item_recipe_super_octarine"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				" "
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_super_octarine"
+		"ItemRequirements"
+		{
+			"01" "item_octarine_core;item_kaya"
+		}
+  	}
+
+	//=================================================================================================================
+	// Recipe: Meteorizm Hammer
+	//=================================================================================================================
+	"item_recipe_imba_meteor_hammer_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"recipe"
+		
+		"ID"							"2303"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					" "
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_imba_meteor_hammer_4"
+		"ItemRequirements"
+		{
+			"01"						"item_meteor_hammer;item_reaver"
+		}
+	}
+	
+	//=================================================================================================================
+	// Meteorizm Hammer
+	//=================================================================================================================
+	"item_imba_meteor_hammer_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_meteor_hammer.lua"
+		"AbilityTextureName"			"meteorizm_hammer_custom"
+		
+		"ID"							"2304"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySharedCooldown"			"item_meteor_hammer"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"2.0"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCooldown"				"28.0"
+		"AbilityManaCost"				"125"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"7125"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"mh;meteor hammer"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		"MaxUpgradeLevel"				"4"
+		"ItemBaseLevel"					"4"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"18"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"18"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"7.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"6.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"burn_dps_buildings"	"50 55 60 65"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"burn_dps_units"		"180"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"burn_duration"		"6"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_duration"		"3.0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_interval"			"0.5"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"land_time"				"0.5"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"impact_radius"			"480"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_duration"			"2.0"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"impact_damage_buildings"	"75 100 125 150"
+			}
+			"14"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"impact_damage_units"		"400 475 550 625"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_reduction_pct"	"50"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Tentacle mail
+	//=================================================================================================================
+	"item_recipe_imba_bladestorm_mail"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"		
+		
+		"ID"							"2343"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_imba_bladestorm_mail"
+		"ItemRequirements"
+		{
+			"01"						"item_blade_mail;item_demon_edge;item_platemail;"
+		}
+	}
+	
+	//=================================================================================================================
+	// Tentacle mail
+	//=================================================================================================================
+	"item_imba_bladestorm_mail"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_blade_mail.lua"
+		"AbilityTextureName"			"tentacle_mail_custom"
+		
+		"ID"							"2344"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"
+		"ItemCost"						"7000"
+		"ItemShopTags"					"damage;armor;int;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bm;bladestorm mail;bladestorm"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		"AbilitySharedCooldown"			"item_blade_mail"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"58"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"17"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4.5"
+			}
+			
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lacerate_pct"			"40"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lacerate_duration"		"10"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"justice_pct"			"50"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"passive_return_damage"	"40"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"passive_return_damage_pct"	"30" // %
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Diffusal Blade 2
+	//=================================================================================================================
+	
+	"item_recipe_diffusal_blade_2"
+	{
+		"ID"							"3096"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"recipe"
+		"Model"							"models/props_gameplay/recipe.mdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_diffusal_blade_2"
+		"ItemRequirements"
+		{
+			"01"						"item_diffusal_blade;item_nullifier"
+		}
+	}
+	
+	"item_diffusal_blade_2"
+	{
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityTextureName"			"geom_custom"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityCooldown"				"15"
+		"AbilityCastRange"				"600"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_hit"			"80"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_burn"		"1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_movespeed"		"-80"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"75"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor"					"10"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"regen"					"6"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agility"				"30"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"intellect"				"20"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"items/diffusal_blade.lua"
+				"Function"		"ManaPurge"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_diffusal_blade"
+			{
+				"IsHidden"			"1"
+				"Passive"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%regen"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%agility"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%intellect"
+				}
+				
+				"OnAttackLanded"
+				{
+					"FireEffect"
+					{
+						"EffectName"	"particles/generic_gameplay/generic_manaburn.vpcf"
+						"EffectAttachType"	"attach_hitloc"
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_MANA_ONLY"
+						}
+					}
+					
+					"RunScript"
+					{
+						"ScriptFile"	"items/diffusal_blade.lua"
+						"Function"		"ManaBreak"
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_MANA_ONLY"
+						}
+					}
+				}
+			}
+			"modifier_diffusal_blade_2"
+			{
+				"Duration"			"6"
+				"IsDebuff"			"1"
+				"EffectName"		"particles/items4_fx/nullifier_mute.vpcf"
+				"EffectAttachType"	"follow_overhead"
+				"TextureName"		"geom_custom"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%slow_movespeed"
+				}
+			}
+		}
 	}
 }
