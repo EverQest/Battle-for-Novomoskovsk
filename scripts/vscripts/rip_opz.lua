@@ -9,7 +9,7 @@ function rip_opz:SpeakTrigger ()
 end
 
 function rip_opz:OnOwnerDied ()
-    local sound = math.random( 1, 3 )
+    local sound = math.random( 1, 4 )
 	local sound_cast = "SadSong" .. sound
     EmitSoundOn(sound_cast, self:GetCaster())
     Timers:CreateTimer( 3.0 , function()
