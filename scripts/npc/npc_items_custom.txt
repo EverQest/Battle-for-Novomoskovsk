@@ -825,6 +825,130 @@
 	}
 
 	//=================================================================================================================
+	// Desolator II
+	//=================================================================================================================
+	"item_imba_desolator_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2199"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_desolator.lua"
+		"AbilityTextureName"			"shreksolator_custom"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"18"
+		"AbilityManaCost"				"75"
+		"AbilitySharedCooldown"			"item_desolator"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/item/desolator/desolator2_active.vpcf"
+		}		
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6900"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"stygian desolator;desolator 2"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage"						"100"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_reduction"		"12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_reduction"		"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"15"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_radius"		"125"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_length"		"800"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"400"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_cone"		"70"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_amount"		"4"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"active_damage"					"180"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Desolator II
+	//=================================================================================================================
+	"item_recipe_imba_desolator_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2198"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_imba_desolator_2"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator;item_desolator"
+		}
+	}
+
+	//=================================================================================================================
 	// Diffusal Blade 2
 	//=================================================================================================================
 	
