@@ -1,7 +1,6 @@
 if item_imba_blight_stone == nil then item_imba_blight_stone = class({}) end
-LinkLuaModifier( "modifier_item_imba_blight_stone", "item_desolator.lua", LUA_MODIFIER_MOTION_NONE )			-- Owner's bonus attributes, stackable
-LinkLuaModifier( "modifier_item_imba_blight_stone_debuff", "item_desolator.lua", LUA_MODIFIER_MOTION_NONE )	-- Armor/vision debuff
-PrecacheResource( "soundfile", "soundevents/Items.vsndevts", context )
+LinkLuaModifier( "modifier_item_imba_blight_stone", "items/item_desolator", LUA_MODIFIER_MOTION_NONE )			-- Owner's bonus attributes, stackable
+LinkLuaModifier( "modifier_item_imba_blight_stone_debuff", "items/item_desolator", LUA_MODIFIER_MOTION_NONE )	-- Armor/vision debuff
 function item_imba_blight_stone:GetIntrinsicModifierName()
 	return "modifier_item_imba_blight_stone"
 end
@@ -23,16 +22,10 @@ function modifier_item_imba_blight_stone:OnCreated()
         if not self:GetAbility() then self:Destroy() end
     end
 
-	if IsServer() then
-		ChangeAttackProjectileImba(self:GetParent())
-	end
+
 end
 
-function modifier_item_imba_blight_stone:OnDestroy()
-	if IsServer() then
-		ChangeAttackProjectileImba(self:GetParent())
-	end
-end
+
 
 -- Declare modifier events/properties
 function modifier_item_imba_blight_stone:DeclareFunctions()
@@ -118,8 +111,8 @@ function modifier_item_imba_blight_stone_debuff:GetBonusNightVision()
 -----------------------------------------------------------------------------------------------------------
 
 if item_imba_desolator == nil then item_imba_desolator = class({}) end
-LinkLuaModifier( "modifier_item_imba_desolator", "item_desolator.lua", LUA_MODIFIER_MOTION_NONE )				-- Owner's bonus attributes, stackable
-LinkLuaModifier( "modifier_item_imba_desolator_debuff", "item_desolator.lua", LUA_MODIFIER_MOTION_NONE )		-- Armor/vision debuff
+LinkLuaModifier( "modifier_item_imba_desolator", "items/item_desolator", LUA_MODIFIER_MOTION_NONE )				-- Owner's bonus attributes, stackable
+LinkLuaModifier( "modifier_item_imba_desolator_debuff", "items/item_desolator", LUA_MODIFIER_MOTION_NONE )		-- Armor/vision debuff
 
 function item_imba_desolator:GetIntrinsicModifierName()
 	return "modifier_item_imba_desolator" end
@@ -212,16 +205,10 @@ function modifier_item_imba_desolator:OnCreated()
         if not self:GetAbility() then self:Destroy() end
     end
 
-	if IsServer() then
-		ChangeAttackProjectileImba(self:GetParent())
-	end
+
 end
 
-function modifier_item_imba_desolator:OnDestroy()
-	if IsServer() then
-		ChangeAttackProjectileImba(self:GetParent())
-	end
-end
+
 
 -- Declare modifier events/properties
 function modifier_item_imba_desolator:DeclareFunctions()
@@ -305,11 +292,9 @@ function modifier_item_imba_desolator_debuff:GetBonusNightVision()
 -----------------------------------------------------------------------------------------------------------
 --	Stygian Desolator definition
 -----------------------------------------------------------------------------------------------------------
-
 if item_imba_desolator_2 == nil then item_imba_desolator_2 = class({}) end
-LinkLuaModifier( "modifier_item_imba_desolator_2", "item_desolator.lua", LUA_MODIFIER_MOTION_NONE )			-- Owner's bonus attributes, stackable
-LinkLuaModifier( "modifier_item_imba_desolator_2_debuff", "item_desolator.lua", LUA_MODIFIER_MOTION_NONE )	-- Armor/vision debuff
-PrecacheResource( "soundfile", "soundevents/Item_sound.vsndevts", context )
+LinkLuaModifier( "modifier_item_imba_desolator_2", "items/item_desolator", LUA_MODIFIER_MOTION_NONE )			-- Owner's bonus attributes, stackable
+LinkLuaModifier( "modifier_item_imba_desolator_2_debuff", "items/item_desolator", LUA_MODIFIER_MOTION_NONE )	-- Armor/vision debuff
 function item_imba_desolator_2:GetIntrinsicModifierName()
 	return "modifier_item_imba_desolator_2" end
 
@@ -417,16 +402,9 @@ function modifier_item_imba_desolator_2:OnCreated()
         if not self:GetAbility() then self:Destroy() end
     end
 
-	if IsServer() then
-		ChangeAttackProjectileImba(self:GetParent())
-	end
 end
 
-function modifier_item_imba_desolator_2:OnDestroy()
-	if IsServer() then
-		ChangeAttackProjectileImba(self:GetParent())
-	end
-end
+
 
 -- Declare modifier events/properties
 function modifier_item_imba_desolator_2:DeclareFunctions()

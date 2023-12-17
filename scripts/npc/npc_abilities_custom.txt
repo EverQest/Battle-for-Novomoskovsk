@@ -301,6 +301,11 @@
 		"BaseClass"          			    "ability_datadriven"
 		"AbilityName"           			"dota_ability_health_granter"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"precache"
+		{
+			"soundfile"					"soundevents/Item.vsndevts"
+		}
 	
 		"Modifiers"
 		{
