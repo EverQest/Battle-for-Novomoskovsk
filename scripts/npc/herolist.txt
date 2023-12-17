@@ -12,6 +12,7 @@
 	//Vyasich rot damage ally
 	//Add scale for techies and morphling's ultimate for late game
 	//Fix panaroma image size (now it's too big)
+	//Fix Rostik's duel
 
 	//--------------- ENABLED -----------------
 	"npc_dota_hero_arc_warden"			"1"
