@@ -1282,8 +1282,8 @@
 				{
 					"RemoveModifier"
 					{
-						"ModifierName"  "modifier_item_cheese_striker_crit"
-						"Target"   		 "CASTER"    
+						"ModifierName" 		"modifier_item_cheese_striker_crit"
+						"Target"   			"CASTER"    
 					}
 
 					// Basic blood particle effect
@@ -1292,6 +1292,11 @@
 						"EffectName" 		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
 						"EffectAttachType"  "follow_origin"
 						"Target"    		"TARGET"
+					}
+					"FireSound"
+					{
+						"EffectName"		"ItemDaedalusCrit"
+						"Target"			"TARGET"
 					}
 				}
 			}
