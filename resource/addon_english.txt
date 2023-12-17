@@ -434,6 +434,14 @@
 		"DOTA_Tooltip_Ability_item_imba_bloodstone_720_bonus_health"		"+$health"
 		"DOTA_Tooltip_Ability_item_imba_bloodstone_720_bonus_mana"			"+$mana"
 		"dota_tooltip_ability_item_imba_bloodstone_720_spell_amp" 			"%+к урону от заклинаний"
+		//
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb"							"Curse Of Deceit"
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb_description"				"<h1>Active: Echo Shell</h1> Создаёт вокруг цели щит, отражающий большинство направленных заклинаний обратно во врага 3 раза. Действует 7 сек."
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb_lore"						"Проклятие 3х стулов, которое отражает все обиды обратно во врага. Никакой пощады!"
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb_bonus_health_regen"		"+$hp_regen"
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb_bonus_mana_regen"			"+$mana_regen"
+		"DOTA_Tooltip_Ability_item_imba_lotus_orb_bonus_mana"				"+$mana"
 	}
 
 }
