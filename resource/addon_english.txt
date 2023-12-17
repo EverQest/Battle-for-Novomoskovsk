@@ -381,6 +381,9 @@
 		//
 		"DOTA_Tooltip_Ability_item_ethereal_blade"						"Bazuka"
 		//
+		"DOTA_Tooltip_Ability_item_manacles_of_power"						"Chain lasso"
+		"DOTA_Tooltip_Ability_item_manacles_of_power_Description"			"<h1>Active: Chain therapy</h1> Захватывает цель на 5 секунд, при этом цель можно везти за собой. Также владелец получает 30 Силы"
+		//
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2"						"Книга Геометрии"
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2_damage"  				"+$damage"
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2_armor"  				"+$armor"
