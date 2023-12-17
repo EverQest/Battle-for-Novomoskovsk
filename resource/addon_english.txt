@@ -428,6 +428,12 @@
 		"DOTA_Tooltip_Ability_item_imba_desolator_2_lore"					"Великая колупалка в носу шрека, осталась после его смерти в 1962 году. Помним, любим, скорбим"
 		"DOTA_Tooltip_Ability_item_imba_desolator_2_Description"			"<h1>Active: Сопелька</h1> Запускает сопельку которая наносит врагам 180 урона \n<h1>Passive: Corruption</h1> Атаки уменьшают броню цели на 12. Эффект длится 15 сек. \n<h1>Passive: Soul Stealer</h1> Когда умирает герой, броня которого была уменьшена этим предметом, бонус к урону увеличивается на 2. Максимум: 30 урона."
 		"DOTA_Tooltip_Ability_item_imba_desolator_2_damage"					"+$damage"
+		//
+		"DOTA_Tooltip_Ability_item_imba_bloodstone_720"						"Bloodborne Vasich finger"
+		"dota_tooltip_ability_item_imba_bloodstone_720_description" 		"<h1>Active: Bloodpact</h1>%mana_cost_percentage%%% макс. маны в восст. здоровья на %restore_duration% сек. Уменьшает на %active_cdr%%% перезарядку и стоимость следующей применяемой способности на %active_duration% сек.\n<h1>Passive: Mana Battery</h1>+%mana_regen_multiplier%%% к восст. маны. Заряд: Изначально: %initial_charges_tooltip% За убийство рядом: +%kill_charges% Cмерть: -%death_charges% Восст. маны: +%regen_per_charge% \n<h1> Active: Lingering Will</font></h1>Bloodpact не даёт здоровью упасть ниже стоимости потраченной на его активацию. Блокирует способности мгновенного убийства. Перезарядка равна Bloodpact и не сбрасывается.\n<h1> Passive: Blood Fountain</font></h1>Увеличение восст. маны от нескольких Bloodstone полностью складывается."
+		"DOTA_Tooltip_Ability_item_imba_bloodstone_720_bonus_health"		"+$health"
+		"DOTA_Tooltip_Ability_item_imba_bloodstone_720_bonus_mana"			"+$mana"
+		"dota_tooltip_ability_item_imba_bloodstone_720_spell_amp" 			"%+к урону от заклинаний"
 	}
 
 }
