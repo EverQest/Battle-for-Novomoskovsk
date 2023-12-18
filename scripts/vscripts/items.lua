@@ -132,6 +132,7 @@ function COverthrowGameMode:SpecialItemAdd( event )
 		"item_penta_edged_sword",		--
 		"item_princes_knife",			--
 		"item_ancient_perseverance",	--
+		"item_lunar_crest",				--
 	}
 
 	local tier5 =
