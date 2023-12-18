@@ -381,10 +381,12 @@
 		//
 		"DOTA_Tooltip_Ability_item_ethereal_blade"						"Bazuka"
 		//
-		"DOTA_Tooltip_Ability_item_lunar_crest"							"MATUKALKA"
+		"DOTA_Tooltip_Ability_item_lunar_crest"							"Bayraktar"
 		//
 		"DOTA_Tooltip_Ability_item_manacles_of_power"						"Chain lasso"
 		"DOTA_Tooltip_Ability_item_manacles_of_power_Description"			"<h1>Active: Chain therapy</h1> Захватывает цель на 5 секунд, при этом цель можно везти за собой. Также владелец получает 30 Силы"
+		//
+		"DOTA_Tooltip_Ability_item_hermes_sandals"							"Чоботи Вергілія"
 		//
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2"						"Книга Геометрии"
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2_damage"  				"+$damage"
@@ -459,6 +461,12 @@
 		"DOTA_Tooltip_Ability_item_imba_assault_bonus_all_stats"			"+$all"
 		"DOTA_Tooltip_Ability_item_imba_assault_bonus_as"					"+$attack"
 		"DOTA_Tooltip_Ability_item_imba_assault_bonus_armor"				"+$armor"
+		//
+		"DOTA_Tooltip_Ability_item_imba_shivas_guard"						"Transmatteriator"
+		"DOTA_Tooltip_Ability_item_imba_shivas_guard_Description"			"<h1>Active: Arctic Blast</h1> Выпускает огненую волну, которая наносит противникам 550 магического урона и на 4 сек. снижает их скорость передвижения на 40%. \n<h1>Passive: Flaming Aura</h1> Снижает скорость атаки противников на 80, а их лечение, восстановление здоровья и вампиризм — на 25%."
+		"DOTA_Tooltip_Ability_item_imba_shivas_guard_lore"					"Адский артефакт для приготовлении курочек при температуре 40 градусов по Цельсию"
+		"DOTA_Tooltip_Ability_item_imba_shivas_guard_bonus_int"				"+$int"
+		"DOTA_Tooltip_Ability_item_imba_shivas_guard_bonus_armor"			"+$armor"
 	}
 
 }

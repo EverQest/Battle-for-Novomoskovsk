@@ -242,10 +242,150 @@
 	//=================================================================================================================
 	"item_lunar_crest" 
 	{
-		"AbilityTextureName" 			"recipe"
+		"AbilityTextureName" 			"bayraktar"
+		"ItemIsNeutralDrop"				"1"
+	}
+	//=================================================================================================================
+	// Hermes Sandals
+	//=================================================================================================================
+	"item_hermes_sandals" 
+	{
+		"AbilityTextureName" 			"boots_of_vergil"
 		"ItemIsNeutralDrop"				"1"
 	}
 	
+	//=================================================================================================================
+	// Recipe: Transmatteriator
+	//=================================================================================================================
+	"item_recipe_imba_shivas_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2055"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"shiva"
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_imba_shivas_guard"
+		"ItemRequirements"
+		{
+			"01"						"item_shivas_guard;item_shivas_guard;item_mystic_staff"
+		}
+	}
+
+	//=================================================================================================================
+	// Transmatteriator
+	//=================================================================================================================
+	"item_imba_shivas_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2146"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_shiva.lua"
+		"AbilityTextureName" 			"transmatteriator"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySharedCooldown"			"item_shivas_guard"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"
+		"ItemCost"						"4700"
+		"ItemShopTags"					"int;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_int"				"40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_as_reduction"		"20"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_radius"			"1800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_speed"			"820"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage"						"550"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"initial_slow_tooltip"	"300"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_stack"			"-20"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_initial_stacks"	"5"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_duration_tooltip"	"5"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"aura_linger_duration"	"1.0"
+			}
+			
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_intellect"		"12"
+			}
+		}
+	}
+
 	//=================================================================================================================
 	// Тараска и бабочка
 	//=================================================================================================================

@@ -130,9 +130,6 @@ function COverthrowGameMode:SpecialItemAdd( event )
 		"item_trickster_cloak",			--
 		"item_stormcrafter",			--
 		"item_penta_edged_sword",		--
-		"item_princes_knife",			--
-		"item_ancient_perseverance",	--
-		"item_lunar_crest",				--
 	}
 
 	local tier5 =
@@ -159,6 +156,10 @@ function COverthrowGameMode:SpecialItemAdd( event )
 		"item_unwavering_condition",	--
 		"item_vengeances_shadow",		--
 		"item_manacles_of_power",		--
+		"item_princes_knife",			--
+		"item_ancient_perseverance",	--
+		"item_lunar_crest",				--
+		"item_hermes_sandals",			--
 	}
 
 	local t1 = PickRandomShuffle( tier1, self.tier1ItemBucket )
