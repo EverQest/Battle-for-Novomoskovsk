@@ -453,7 +453,7 @@
 		"DOTA_Tooltip_Ability_item_cheese_striker_lore"						"Сырное царство на краю земли было самым сильным блягодоря своему сырному оружию, которое насквозь прорубало конечности врагов"
 		"DOTA_Tooltip_Ability_item_cheese_striker_bonus_damage"				"+$damage"
 		//
-		"DOTA_Tooltip_Ability_item_imba_assault"							"Смокинг"
+		"DOTA_Tooltip_Ability_item_imba_assault"							"ТЮК топ жир"
 		"DOTA_Tooltip_Ability_item_imba_assault_Description"				"<h1>Passive: Assault Aura</h1> Увеличивает броню союзных построек и существ на 15, а их скорость атаки — на 30. Снижает броню врагов поблизости на 15."
 		"DOTA_Tooltip_Ability_item_imba_assault_lore"						"Красивый костюм для деловых встреч, он настолько идеальный что вы чувствуете комфорт и силу"
 		"DOTA_Tooltip_Ability_item_imba_assault_bonus_all_stats"			"+$all"
