@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 tidehunter_kraken_shell_lua = class({})
-LinkLuaModifier( "modifier_tidehunter_kraken_shell_lua", "modifier_tidehunter_kraken_shell_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_tidehunter_kraken_shell_lua", "modifiers/modifier_tidehunter_kraken_shell_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

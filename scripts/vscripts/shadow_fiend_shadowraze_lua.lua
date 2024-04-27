@@ -1,4 +1,4 @@
-LinkLuaModifier( "modifier_shadow_fiend_shadowraze_lua", "modifier_shadow_fiend_shadowraze_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_shadow_fiend_shadowraze_lua", "modifiers/modifier_shadow_fiend_shadowraze_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 shadow_fiend_shadowraze_a_lua = class({})

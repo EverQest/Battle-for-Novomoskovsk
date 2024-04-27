@@ -1,5 +1,5 @@
 ursa_enrage_lua = class({})
-LinkLuaModifier( "modifier_ursa_enrage_lua", "modifier_ursa_enrage_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_ursa_enrage_lua", "modifiers/modifier_ursa_enrage_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 function ursa_enrage_lua:GetBehavior()

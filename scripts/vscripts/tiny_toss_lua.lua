@@ -10,8 +10,8 @@ Ability checklist (erase if done/checked):
 ]]
 --------------------------------------------------------------------------------
 tiny_toss_lua = class({})
-LinkLuaModifier( "modifier_tiny_toss_lua", "modifier_tiny_toss_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_generic_arc_lua", "modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
+LinkLuaModifier( "modifier_tiny_toss_lua", "modifiers/modifier_tiny_toss_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_generic_arc_lua", "modifiers/modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
 
 --------------------------------------------------------------------------------
 -- Custom KV

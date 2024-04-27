@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 pudge_meat_hook_lua = class({})
-LinkLuaModifier( "modifier_pudge_meat_hook_lua", "modifier_pudge_meat_hook_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_pudge_meat_hook_lua_self", "modifier_pudge_meat_hook_lua_self", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_pudge_meat_hook_lua", "modifiers/modifier_pudge_meat_hook_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_pudge_meat_hook_lua_self", "modifiers/modifier_pudge_meat_hook_lua_self", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

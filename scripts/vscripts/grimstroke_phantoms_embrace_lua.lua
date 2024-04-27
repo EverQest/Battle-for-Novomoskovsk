@@ -1,7 +1,7 @@
 grimstroke_phantoms_embrace_lua = class({})
-LinkLuaModifier( "modifier_grimstroke_phantoms_embrace_lua_thinker", "modifier_grimstroke_phantoms_embrace_lua_thinker", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_grimstroke_phantoms_embrace_lua_target", "modifier_grimstroke_phantoms_embrace_lua_target", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_grimstroke_phantoms_embrace_lua_debuff", "modifier_grimstroke_phantoms_embrace_lua_debuff", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_grimstroke_phantoms_embrace_lua_thinker", "modifiers/modifier_grimstroke_phantoms_embrace_lua_thinker", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_grimstroke_phantoms_embrace_lua_target", "modifiers/modifier_grimstroke_phantoms_embrace_lua_target", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_grimstroke_phantoms_embrace_lua_debuff", "modifiers/modifier_grimstroke_phantoms_embrace_lua_debuff", LUA_MODIFIER_MOTION_NONE )
 local tempTable = require("tempTable")
 --------------------------------------------------------------------------------
 -- Ability Start

@@ -1,7 +1,7 @@
 require( "utility_functions" )
 
 elder_titan_dagon = class({})
-LinkLuaModifier( "modifier_elder_titan_dagon", "modifier_elder_titan_dagon", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_elder_titan_dagon", "modifiers/modifier_elder_titan_dagon", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- CastAnimation

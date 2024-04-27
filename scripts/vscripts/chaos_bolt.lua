@@ -1,6 +1,6 @@
 chaos_bolt = class({})
 
-LinkLuaModifier( "modifier_generic_stunned_dispellable", "modifier_generic_stunned_dispellable", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_stunned_dispellable", "modifiers/modifier_generic_stunned_dispellable", LUA_MODIFIER_MOTION_NONE )
 
 function chaos_bolt:OnSpellStart()
 	-- unit identifier

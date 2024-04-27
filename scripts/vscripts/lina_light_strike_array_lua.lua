@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 lina_light_strike_array_lua = class({})
-LinkLuaModifier( "modifier_generic_stunned_lua", "modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_lina_light_strike_array_lua", "modifier_lina_light_strike_array_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_lina_light_strike_array_lua", "modifiers/modifier_lina_light_strike_array_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Custom KV

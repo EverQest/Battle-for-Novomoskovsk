@@ -1,5 +1,5 @@
 lion_hex_lua = class({})
-LinkLuaModifier( "modifier_lion_hex_lua", "modifier_lion_hex_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_lion_hex_lua", "modifiers/modifier_lion_hex_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

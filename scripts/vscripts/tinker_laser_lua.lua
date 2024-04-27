@@ -1,5 +1,5 @@
 tinker_laser_lua = class({})
-LinkLuaModifier( "modifier_tinker_laser_lua", "modifier_tinker_laser_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_tinker_laser_lua", "modifiers/modifier_tinker_laser_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Phase Start

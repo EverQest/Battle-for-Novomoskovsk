@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 doom_doom_lua = class({})
-LinkLuaModifier( "modifier_doom_doom_lua", "modifier_doom_doom_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_doom_doom_lua", "modifiers/modifier_doom_doom_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

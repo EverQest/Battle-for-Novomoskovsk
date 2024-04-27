@@ -1,5 +1,5 @@
 pudge_rot_lua = class({})
-LinkLuaModifier( "modifier_pudge_rot_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_pudge_rot_lua", "modifiers/modifier_pudge_rot_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 

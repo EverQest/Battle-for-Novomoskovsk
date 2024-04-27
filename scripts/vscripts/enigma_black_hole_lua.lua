@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 enigma_black_hole_lua = class({})
-LinkLuaModifier( "modifier_enigma_black_hole_lua_thinker", "modifier_enigma_black_hole_lua_thinker", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_enigma_black_hole_lua_debuff", "modifier_enigma_black_hole_lua_debuff", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_enigma_black_hole_lua_thinker", "modifiers/modifier_enigma_black_hole_lua_thinker", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_enigma_black_hole_lua_debuff", "modifiers/modifier_enigma_black_hole_lua_debuff", LUA_MODIFIER_MOTION_HORIZONTAL )
 
 --------------------------------------------------------------------------------
 -- Custom KV

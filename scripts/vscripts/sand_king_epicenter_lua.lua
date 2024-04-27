@@ -1,6 +1,6 @@
 sand_king_epicenter_lua = class({})
-LinkLuaModifier( "modifier_sand_king_epicenter_lua", "modifier_sand_king_epicenter_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_sand_king_epicenter_lua_slow", "modifier_sand_king_epicenter_lua_slow", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_sand_king_epicenter_lua", "modifiers/modifier_sand_king_epicenter_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_sand_king_epicenter_lua_slow", "modifiers/modifier_sand_king_epicenter_lua_slow", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

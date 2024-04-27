@@ -1,7 +1,7 @@
 mirana_leap_lua = class({})
-LinkLuaModifier( "modifier_mirana_leap_lua", "modifier_mirana_leap_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_charges", "modifier_generic_charges", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_arc_lua", "modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
+LinkLuaModifier( "modifier_mirana_leap_lua", "modifiers/modifier_mirana_leap_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_charges", "modifiers/modifier_generic_charges", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_arc_lua", "modifiers/modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
 
 --------------------------------------------------------------------------------
 -- Passive modifier

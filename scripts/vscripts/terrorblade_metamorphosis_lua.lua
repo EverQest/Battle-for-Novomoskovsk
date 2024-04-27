@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 terrorblade_metamorphosis_lua = class({})
-LinkLuaModifier( "modifier_terrorblade_metamorphosis_lua", "modifier_terrorblade_metamorphosis_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_terrorblade_metamorphosis_lua_aura", "modifier_terrorblade_metamorphosis_lua_aura", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_terrorblade_metamorphosis_lua", "modifiers/modifier_terrorblade_metamorphosis_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_terrorblade_metamorphosis_lua_aura", "modifiers/modifier_terrorblade_metamorphosis_lua_aura", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

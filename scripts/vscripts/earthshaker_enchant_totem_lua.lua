@@ -1,8 +1,8 @@
 -- Created by Elfansoer
 --------------------------------------------------------------------------------
 earthshaker_enchant_totem_lua = class({})
-LinkLuaModifier( "modifier_earthshaker_enchant_totem_lua", "modifier_earthshaker_enchant_totem_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_arc_lua", "modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
+LinkLuaModifier( "modifier_earthshaker_enchant_totem_lua", "modifiers/modifier_earthshaker_enchant_totem_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_arc_lua", "modifiers/modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
 
 --------------------------------------------------------------------------------
 -- Behavior

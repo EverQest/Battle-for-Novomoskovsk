@@ -1,6 +1,6 @@
 half_of_the_brain = class({})
-LinkLuaModifier( "modifier_half_of_the_brain_health", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_half_of_the_brain_mana", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_half_of_the_brain_health", "modifiers/modifier_half_of_the_brain_health", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_half_of_the_brain_mana", "modifiers/modifier_half_of_the_brain_mana", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 function half_of_the_brain:ProcsMagicStick()

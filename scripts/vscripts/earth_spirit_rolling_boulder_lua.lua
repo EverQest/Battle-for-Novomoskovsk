@@ -1,6 +1,6 @@
 earth_spirit_rolling_boulder_lua = class({})
-LinkLuaModifier( "modifier_earth_spirit_rolling_boulder_lua", "modifier_earth_spirit_rolling_boulder_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_earth_spirit_rolling_boulder_lua_slow", "modifier_earth_spirit_rolling_boulder_lua_slow", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_earth_spirit_rolling_boulder_lua", "modifiers/modifier_earth_spirit_rolling_boulder_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_earth_spirit_rolling_boulder_lua_slow", "modifiers/modifier_earth_spirit_rolling_boulder_lua_slow", LUA_MODIFIER_MOTION_HORIZONTAL )
 
 --------------------------------------------------------------------------------
 -- Ability Start

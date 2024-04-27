@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 outworld_devourer_astral_imprisonment_lua = class({})
-LinkLuaModifier( "modifier_outworld_devourer_astral_imprisonment_lua", "modifier_outworld_devourer_astral_imprisonment_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_outworld_devourer_astral_imprisonment_lua", "modifiers/modifier_outworld_devourer_astral_imprisonment_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

@@ -1,4 +1,4 @@
-LinkLuaModifier("modifier_spectre_dispersion_lua", "modifier_spectre_dispersion_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("modifier_spectre_dispersion_lua", "modifiers/modifier_spectre_dispersion_lua", LUA_MODIFIER_MOTION_NONE )
 
 function ApplyModifier (keys)
 

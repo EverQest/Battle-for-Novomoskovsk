@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 spiked_carapace_reworked = class({})
-LinkLuaModifier( "modifier_spiked_carapace_reworked", "modifier_spiked_carapace_reworked", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_spiked_carapace_reworked", "modifiers/modifier_spiked_carapace_reworked", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Passive Modifier

@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 require( "utility_functions" )
 magnus_skewer_lua = class({})
-LinkLuaModifier( "modifier_magnus_skewer_lua", "modifier_magnus_skewer_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_magnus_skewer_lua_debuff", "modifier_magnus_skewer_lua_debuff", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_magnus_skewer_lua_slow", "modifier_magnus_skewer_lua_slow", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_magnus_skewer_lua", "modifiers/modifier_magnus_skewer_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_magnus_skewer_lua_debuff", "modifiers/modifier_magnus_skewer_lua_debuff", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_magnus_skewer_lua_slow", "modifiers/modifier_magnus_skewer_lua_slow", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

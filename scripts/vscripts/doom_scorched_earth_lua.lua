@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 doom_scorched_earth_lua = class({})
-LinkLuaModifier( "modifier_doom_scorched_earth_lua", "modifier_doom_scorched_earth_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_doom_scorched_earth_lua", "modifiers/modifier_doom_scorched_earth_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

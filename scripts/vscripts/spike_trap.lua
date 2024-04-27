@@ -1,6 +1,6 @@
 spike_trap = class({})
-LinkLuaModifier( "modifier_spike_trap_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_spike_trap_thinker_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_spike_trap_lua", "modifiers/modifier_spike_trap_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_spike_trap_thinker_lua", "modifiers/modifier_spike_trap_thinker_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 

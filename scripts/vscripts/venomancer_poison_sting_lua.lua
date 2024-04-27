@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 venomancer_poison_sting_lua = class({})
-LinkLuaModifier( "modifier_venomancer_poison_sting_lua", "modifier_venomancer_poison_sting_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_venomancer_poison_sting_lua_debuff", "modifier_venomancer_poison_sting_lua_debuff", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_venomancer_poison_sting_lua", "modifiers/modifier_venomancer_poison_sting_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_venomancer_poison_sting_lua_debuff", "modifiers/modifier_venomancer_poison_sting_lua_debuff", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

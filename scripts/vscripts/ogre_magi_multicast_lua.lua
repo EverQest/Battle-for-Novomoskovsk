@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 ogre_magi_multicast_lua = class({})
-LinkLuaModifier( "modifier_ogre_magi_multicast_lua", "modifier_ogre_magi_multicast_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_ogre_magi_multicast_lua_proc", "modifier_ogre_magi_multicast_lua_proc", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_ogre_magi_multicast_lua", "modifiers/modifier_ogre_magi_multicast_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_ogre_magi_multicast_lua_proc", "modifiers/modifier_ogre_magi_multicast_lua_proc", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Passive Modifier

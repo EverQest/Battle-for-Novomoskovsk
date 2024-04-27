@@ -1,5 +1,5 @@
 tinker_march_of_the_machines_lua = class({})
-LinkLuaModifier( "modifier_tinker_march_of_the_machines_lua_thinker", "modifier_tinker_march_of_the_machines_lua_thinker", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_tinker_march_of_the_machines_lua_thinker", "modifiers/modifier_tinker_march_of_the_machines_lua_thinker", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

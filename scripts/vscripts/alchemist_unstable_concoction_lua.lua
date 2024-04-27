@@ -1,5 +1,5 @@
-LinkLuaModifier( "modifier_alchemist_unstable_concoction_lua", "modifier_alchemist_unstable_concoction_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_stunned_lua", "modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_alchemist_unstable_concoction_lua", "modifiers/modifier_alchemist_unstable_concoction_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- MAIN

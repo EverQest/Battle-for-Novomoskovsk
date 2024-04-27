@@ -4,11 +4,11 @@ Shoud be revised:
 ]]
 --------------------------------------------------------------------------------
 mars_arena_of_blood_lua = class({})
-LinkLuaModifier( "modifier_generic_knockback_lua", "modifier_generic_knockback_lua", LUA_MODIFIER_MOTION_BOTH )
-LinkLuaModifier( "modifier_mars_arena_of_blood_lua", "modifier_mars_arena_of_blood_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_mars_arena_of_blood_lua_blocker", "modifier_mars_arena_of_blood_lua_blocker", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_mars_arena_of_blood_lua_thinker", "modifier_mars_arena_of_blood_lua_thinker", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_mars_arena_of_blood_lua_wall_aura", "modifier_mars_arena_of_blood_lua_wall_aura", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_knockback_lua", "modifiers/modifier_generic_knockback_lua", LUA_MODIFIER_MOTION_BOTH )
+LinkLuaModifier( "modifier_mars_arena_of_blood_lua", "modifiers/modifier_mars_arena_of_blood_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_mars_arena_of_blood_lua_blocker", "modifiers/modifier_mars_arena_of_blood_lua_blocker", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_mars_arena_of_blood_lua_thinker", "modifiers/modifier_mars_arena_of_blood_lua_thinker", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_mars_arena_of_blood_lua_wall_aura", "modifiers/modifier_mars_arena_of_blood_lua_wall_aura", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Custom KV

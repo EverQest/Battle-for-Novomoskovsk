@@ -1,5 +1,5 @@
 lion_finger_of_death_lua = class({})
-LinkLuaModifier( "modifier_lion_finger_of_death_lua", "modifier_lion_finger_of_death_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_lion_finger_of_death_lua", "modifiers/modifier_lion_finger_of_death_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Custom KV

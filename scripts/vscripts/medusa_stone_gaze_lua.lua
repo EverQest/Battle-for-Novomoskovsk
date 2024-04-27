@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
 medusa_stone_gaze_lua = class({})
-LinkLuaModifier( "modifier_medusa_stone_gaze_lua", "modifier_medusa_stone_gaze_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_medusa_stone_gaze_lua_debuff", "modifier_medusa_stone_gaze_lua_debuff", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_medusa_stone_gaze_lua_petrified", "modifier_medusa_stone_gaze_lua_petrified", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_medusa_stone_gaze_lua", "modifiers/modifier_medusa_stone_gaze_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_medusa_stone_gaze_lua_debuff", "modifiers/modifier_medusa_stone_gaze_lua_debuff", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_medusa_stone_gaze_lua_petrified", "modifiers/modifier_medusa_stone_gaze_lua_petrified", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

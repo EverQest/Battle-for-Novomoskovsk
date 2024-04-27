@@ -1,5 +1,5 @@
-LinkLuaModifier("modifier_shapeshift_model_lua", "modifier_shapeshift_model_lua.lua", LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier("modifier_shapeshift_speed_lua", "modifier_shapeshift_speed_lua.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_shapeshift_model_lua", "modifiers/modifier_shapeshift_model_lua.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_shapeshift_speed_lua", "modifiers/modifier_shapeshift_speed_lua.lua", LUA_MODIFIER_MOTION_NONE)
 
 --[[Author: Pizzalol
 	Date: 26.09.2015.

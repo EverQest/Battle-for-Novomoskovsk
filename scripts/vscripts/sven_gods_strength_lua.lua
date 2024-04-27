@@ -1,6 +1,6 @@
 sven_gods_strength_lua = class({})
-LinkLuaModifier( "modifier_sven_gods_strength_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_sven_gods_strength_child_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_sven_gods_strength_lua", "modifiers/modifier_sven_gods_strength_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_sven_gods_strength_child_lua", "modifiers/modifier_sven_gods_strength_child_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 

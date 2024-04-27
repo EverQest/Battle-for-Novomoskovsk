@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 windranger_powershot_lua = class({})
-LinkLuaModifier( "modifier_windranger_powershot_lua", "modifier_windranger_powershot_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_windranger_powershot_lua", "modifiers/modifier_windranger_powershot_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Specil manacost

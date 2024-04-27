@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 lina_laguna_blade_lua = class({})
-LinkLuaModifier( "modifier_lina_laguna_blade_lua", "modifier_lina_laguna_blade_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_lina_laguna_blade_lua", "modifiers/modifier_lina_laguna_blade_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Cast Filter

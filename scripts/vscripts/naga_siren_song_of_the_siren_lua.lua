@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
 naga_siren_song_of_the_siren_lua = class({})
-LinkLuaModifier( "modifier_naga_siren_song_of_the_siren_lua", "modifier_naga_siren_song_of_the_siren_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_naga_siren_song_of_the_siren_lua_debuff", "modifier_naga_siren_song_of_the_siren_lua_debuff", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_naga_siren_song_of_the_siren_lua_scepter", "modifier_naga_siren_song_of_the_siren_lua_scepter", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_naga_siren_song_of_the_siren_lua", "modifiers/modifier_naga_siren_song_of_the_siren_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_naga_siren_song_of_the_siren_lua_debuff", "modifiers/modifier_naga_siren_song_of_the_siren_lua_debuff", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_naga_siren_song_of_the_siren_lua_scepter", "modifiers/modifier_naga_siren_song_of_the_siren_lua_scepter", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

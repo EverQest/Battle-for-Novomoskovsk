@@ -1,7 +1,7 @@
 elder_titan_punch = class({})
-LinkLuaModifier( "modifier_generic_orb_effect_lua", "modifier_generic_orb_effect_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_stunned_lua", "modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_elder_titan_punch", "modifier_elder_titan_punch", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_orb_effect_lua", "modifiers/modifier_generic_orb_effect_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_elder_titan_punch", "modifiers/modifier_elder_titan_punch", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Passive Modifier

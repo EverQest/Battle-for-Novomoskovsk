@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 storm_spirit_ball_lightning_lua = class({})
-LinkLuaModifier( "modifier_storm_spirit_ball_lightning_lua", "modifier_storm_spirit_ball_lightning_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_storm_spirit_ball_lightning_lua", "modifiers/modifier_storm_spirit_ball_lightning_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

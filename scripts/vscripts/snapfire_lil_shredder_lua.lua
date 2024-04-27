@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 snapfire_lil_shredder_lua = class({})
-LinkLuaModifier( "modifier_snapfire_lil_shredder_lua", "modifier_snapfire_lil_shredder_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_snapfire_lil_shredder_lua_debuff", "modifier_snapfire_lil_shredder_lua_debuff", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_snapfire_lil_shredder_lua", "modifiers/modifier_snapfire_lil_shredder_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_snapfire_lil_shredder_lua_debuff", "modifiers/modifier_snapfire_lil_shredder_lua_debuff", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start

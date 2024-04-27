@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 dawnbreaker_starbreaker_lua = class({})
-LinkLuaModifier( "modifier_dawnbreaker_starbreaker_lua", "modifier_dawnbreaker_starbreaker_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
-LinkLuaModifier( "modifier_dawnbreaker_starbreaker_lua_slow", "modifier_dawnbreaker_starbreaker_lua_slow", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_stunned_lua", "modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_arc_lua", "modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
+LinkLuaModifier( "modifier_dawnbreaker_starbreaker_lua", "modifiers/modifier_dawnbreaker_starbreaker_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_dawnbreaker_starbreaker_lua_slow", "modifiers/modifier_dawnbreaker_starbreaker_lua_slow", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_arc_lua", "modifiers/modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
 
 --------------------------------------------------------------------------------
 -- Init Abilities

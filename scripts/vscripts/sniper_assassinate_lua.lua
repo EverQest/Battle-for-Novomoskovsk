@@ -1,5 +1,5 @@
 sniper_assassinate_lua = class({})
-LinkLuaModifier( "modifier_sniper_assassinate_lua", "modifier_sniper_assassinate_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_sniper_assassinate_lua", "modifiers/modifier_sniper_assassinate_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Phase Start

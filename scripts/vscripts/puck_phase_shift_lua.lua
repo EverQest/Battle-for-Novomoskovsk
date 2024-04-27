@@ -1,5 +1,5 @@
 puck_phase_shift_lua = class({})
-LinkLuaModifier( "modifier_puck_phase_shift_lua", "modifier_puck_phase_shift_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_puck_phase_shift_lua", "modifiers/modifier_puck_phase_shift_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start
