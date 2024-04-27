@@ -731,13 +731,13 @@
 	}
 
 	//Yarik
-	"special_bonus_yarik_coils_dmg"
+	"special_bonus_unique_yarik_3"
 	{
 		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	}	
-	"special_bonus_yarik_stack_dmg"
+	"special_bonus_unique_yarik_6"
 	{
 		"BaseClass"          			    "special_bonus_base"
 		"AbilityType"   					"DOTA_ABILITY_TYPE_ATTRIBUTES"

@@ -2446,45 +2446,24 @@
 		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"60"
 
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"				"50 100 150 200"
-
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"shadowraze_damage"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"50 100 150 200"	
+				"value" 						"50 100 150 200"
+				"special_bonus_unique_yarik_3" 	"+150"
 			}
-			"02"
+			"shadowraze_radius"		"250"
+			"shadowraze_range"		"200"
+			"shadowraze_cooldown"	"10"
+			"stack_bonus_damage" 	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"		
+				"value" 						"120"
+				"special_bonus_unique_yarik_6" 	"+130"
 			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"200"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"shadowraze_cooldown"	"10"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"stack_bonus_damage" 	"120"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"15"
-			}
+			"duration"				"15"
 		}
 	}
 
@@ -2520,44 +2499,24 @@
 		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"60"
 
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"				"50 100 150 200"
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"shadowraze_damage"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"50 100 150 200"	
+				"value" 						"50 100 150 200"
+				"special_bonus_unique_yarik_3" 	"+150"
 			}
-			"02"
+			"shadowraze_radius"		"250"
+			"shadowraze_range"		"350"
+			"shadowraze_cooldown"	"10"
+			"stack_bonus_damage" 	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"		
+				"value" 						"120"
+				"special_bonus_unique_yarik_6" 	"+130"
 			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"350"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"10"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "120"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"15"
-			}
+			"duration"				"15"
 		}
 	}
 
@@ -2594,44 +2553,27 @@
 		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"60"
 
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"				"50 100 150 200"
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
+		"AbilityValues"
+		{
+			"shadowraze_damage"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"50 100 150 200"	
+				"value" 						"50 100 150 200"
+				"special_bonus_unique_yarik_3" 	"+150"
 			}
-			"02"
+			"shadowraze_radius"		"250"
+			"shadowraze_range"		"500"
+			"shadowraze_cooldown"	"10"
+			"stack_bonus_damage" 	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"		
+				"value" 						"120"
+				"special_bonus_unique_yarik_6" 	"+130"
 			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"500"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"10"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "120"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"	"15"
-			}
+			"duration"				"15"
+		}
 		}
 	}
 
@@ -2668,44 +2610,24 @@
 		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"60"
 
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"				"50 100 150 200"
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"shadowraze_damage"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"50 100 150 200"	
+				"value" 						"50 100 150 200"
+				"special_bonus_unique_yarik_3" 	"+150"
 			}
-			"02"
+			"shadowraze_radius"		"250"
+			"shadowraze_range"		"650"
+			"shadowraze_cooldown"	"10"
+			"stack_bonus_damage" 	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"		
+				"value" 						"120"
+				"special_bonus_unique_yarik_6" 	"+130"
 			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"650"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"10"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "120"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"15"
-			}
+			"duration"				"15"
 		}
 	}
 
@@ -2742,44 +2664,24 @@
 		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"60"
 
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"				"50 100 150 200"
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"shadowraze_damage"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"50 100 150 200"
+				"value" 						"50 100 150 200"
+				"special_bonus_unique_yarik_3" 	"+150"
 			}
-			"02"
+			"shadowraze_radius"		"250"
+			"shadowraze_range"		"800"
+			"shadowraze_cooldown"	"10"
+			"stack_bonus_damage" 	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"
+				"value" 						"120"
+				"special_bonus_unique_yarik_6" 	"+130"
 			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"800"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"10"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "120"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"15"
-			}
+			"duration"				"15"
 		}
 	}
 
@@ -2816,44 +2718,16 @@
 		"AbilityCooldown"				"60 40 20"
 		"AbilityManaCost"				"500"
 
-		// Damage
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"				"999999"
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_damage"	"999999"	
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_radius"	"250"		
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_range"	"950"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shadowraze_cooldown"	"40 30 20"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"stack_bonus_damage" "120"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"15"
-			}
+			"shadowraze_damage"		"999999"
+			"shadowraze_radius"		"250"
+			"shadowraze_range"		"950"
+			"shadowraze_cooldown"	"40 30 20"		
+			"stack_bonus_damage" 	"120"
+			"duration"				"15"
 		}
 	}
 

@@ -104,8 +104,8 @@
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua"							 "РііЗокс"
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua_Description"	 			 "ReeShadowrazeOneShot"
 
-		"Dota_Tooltip_ability_special_bonus_yarik_coils_dmg"							 "+ 150 до школи кайлів"
-		"Dota_Tooltip_ability_special_bonus_yarik_stack_dmg" 							 "+ 130 до шкоди за стак кайлів"
+		"Dota_Tooltip_ability_special_bonus_unique_yarik_3"							 "+ 150 до школи кайлів"
+		"Dota_Tooltip_ability_special_bonus_unique_yarik_6" 							 "+ 130 до шкоди за стак кайлів"
 		"Dota_Tooltip_ability_special_bonus_yarik_attack_dmg_to_coils"					 "кайли наносять бонусну шкоду від удару"
 		"Dota_Tooltip_ability_special_bonus_yarik_pure_coils"							 "кайли наносять ЧИСТУ шкоду"
 
