@@ -40,7 +40,7 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_danya_laser_dmg" // laser damage + 150
+		"Ability12"				"special_bonus_unique_danya_laser_dmg" // laser damage + 150
 		"Ability13"				"special_bonus_danya_acrane_boots" // can refresh arcane boots
 		"Ability14"				"special_bonus_danya_laser_pure" // pure laser damage
 		"Ability15"				"special_bonus_danya_cobolds_army" // cobolds x2
@@ -64,14 +64,15 @@
 		"AttributeStrengthGain"		"3.4"
 		"AttackDamageMin"			"-100"
 		"AttackDamageMax"			"130"
+		"AbilityLayout"    			"5"
 
 		// Talents 
 		"Ability15"				"special_bonus_all_stats_20"
 		"Ability16"				"special_bonus_exp_boost_25"
 		"Ability17"				"special_bonus_attack_speed_60" 
-		"Ability18"				"special_bonus_dima_toss_duration" 
-		"Ability19"				"special_bonus_dima_kraken_buff"
-		"Ability20"				"special_bonus_dima_skiwer_range_x2" 
+		"Ability18"				"special_bonus_unique_dima_toss_duration" 
+		"Ability19"				"special_bonus_unique_dima_kraken_buff"
+		"Ability20"				"special_bonus_unique_dima_skiwer_range_x2" 
 		"Ability21"				"special_bonus_magic_resistance_50"
 		"Ability22"				"special_bonus_dima_toss_charges"
 
@@ -83,6 +84,7 @@
 		"Ability6"		     		"tiny_toss_lua"
 			"Ability7"		      		"generic_hidden"
 			"Ability8"		      		"generic_hidden"
+			"Ability9"		      		"generic_hidden"
 	}
 	//=================================================================================================================
 	// HERO: Storm Spirit  (Temich)

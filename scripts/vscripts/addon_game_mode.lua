@@ -133,7 +133,7 @@ function COverthrowGameMode:InitGameMode()
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
 
 	self.m_bFillWithBots = GlobalSys:CommandLineCheck( "-addon_bots" )
-	self.m_bFastPlay = GlobalSys:CommandLineCheck( "-addon_fastplay" )
+	self.m_bFastPlay = true
 
 	self.m_TeamColors = {}
 	self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }	--		Teal
@@ -169,10 +169,10 @@ function COverthrowGameMode:InitGameMode()
 	self.m_GatheredShuffledTeams = {}
 	self.numSpawnCamps = 5
 	self.specialItem = ""
-	self.spawnTime = 60
+	self.spawnTime = 45
 	self.warnTime = 7
 	self.nNextSpawnItemNumber = 1
-	self.nMaxItemSpawns = 30
+	self.nMaxItemSpawns = 99999
 	self.hasWarnedSpawn = false
 	self.allSpawned = false
 	self.leadingTeam = -1
@@ -183,11 +183,6 @@ function COverthrowGameMode:InitGameMode()
 	self.countdownEnabled = false
 	self.itemSpawnIndex = 1
 	self.itemSpawnLocation = Entities:FindByName( nil, "greevil" )
-	self.tier1ItemBucket = {}
-	self.tier2ItemBucket = {}
-	self.tier3ItemBucket = {}
-	self.tier4ItemBucket = {}
-	self.tier5ItemBucket = {}
 
 	self.itemSpawnLocations = nil
 	self.KILLS_TO_WIN_SINGLES = 25
@@ -594,24 +589,19 @@ function COverthrowGameMode:ExecuteOrderFilter( filterTable )
 
 			-- determine if we can scoop the neutral or not
 			-- we need either a free backpack slot or a free neutral item slot
-			local bAllowPickup = false
-			local hNeutralItem = hero:GetItemInSlot( DOTA_ITEM_NEUTRAL_SLOT )
-			if hNeutralItem == nil then
+			local bAllowPickup = true
+			
+			local numBackpackItems = 0
+			for nItemSlot = 0,DOTA_ITEM_INVENTORY_SIZE - 1 do 
+				local hItem = hero:GetItemInSlot( nItemSlot )
+				if hItem and hItem:IsInBackpack() then
+					numBackpackItems = numBackpackItems + 1
+				end
+			end
+			--print( '^^^Backpack slots = ' .. numBackpackItems )
+			if numBackpackItems < 3 then
 				bAllowPickup = true
-				--print( '^^^Empty neutral slot!' )
-			else
-				local numBackpackItems = 0
-				for nItemSlot = 0,DOTA_ITEM_INVENTORY_SIZE - 1 do 
-					local hItem = hero:GetItemInSlot( nItemSlot )
-					if hItem and hItem:IsInBackpack() then
-						numBackpackItems = numBackpackItems + 1
-					end
-				end
-				--print( '^^^Backpack slots = ' .. numBackpackItems )
-				if numBackpackItems < 3 then
-					bAllowPickup = true
-				end
-			end		
+			end
 
 			if bAllowPickup then
 				--print("inventory has space")

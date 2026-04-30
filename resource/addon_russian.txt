@@ -59,8 +59,8 @@
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "Tossed enemys now fall faster"
-		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 180 damage reduction"
-		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Барьба max range x2" 
+		"Dota_Tooltip_ability_special_bonus_unique_dima_kraken_buff"					 "Kraken SHELL +100 damage reduction"
+		"Dota_Tooltip_ability_special_bonus_unique_dima_skiwer_range_x2"				 "Барьба max range x2" 
 		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на левый третий have 2 charges" 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня
@@ -122,7 +122,7 @@
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
 
-		"Dota_Tooltip_ability_special_bonus_danya_laser_dmg"					 "+ 150 к урону от Лазер-ка"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 "+ 150 к урону от Лазер-ка"
 		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "Арканы можно рефрешить"
 		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "Лазер ок наност ЧИСТЫЙ урон"
 		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "Призывает АРМИЮ кобольдов"

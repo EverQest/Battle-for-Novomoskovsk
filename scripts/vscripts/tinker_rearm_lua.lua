@@ -34,7 +34,7 @@ function tinker_rearm_lua:OnChannelFinish( bInterrupted )
 	-- find all refreshable abilities
 	for i=0,caster:GetAbilityCount()-1 do
 		local ability = caster:GetAbilityByIndex( i )
-		if ability and ability:GetAbilityType()~=DOTA_ABILITY_TYPE_ATTRIBUTES then
+		if ability and ability:GetAbilityType()~=ABILITY_TYPE_ATTRIBUTES then
 			ability:RefreshCharges()
 			ability:EndCooldown()
 		end

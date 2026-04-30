@@ -58,151 +58,12 @@ function COverthrowGameMode:SpecialItemAdd( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	local owner = EntIndexToHScript( event.HeroEntityIndex )
 	local hero = owner:GetClassname()
-	local ownerTeam = owner:GetTeamNumber()
-	local sortedTeams = {}
-	for _, team in pairs( self.m_GatheredShuffledTeams ) do
-		table.insert( sortedTeams, { teamID = team, teamScore = GetTeamHeroKills( team ) } )
-	end
-
-	-- reverse-sort by score
-	table.sort( sortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
-	local n = TableCount( sortedTeams )
-	local leader = sortedTeams[1].teamID
-	local lastPlace = sortedTeams[n].teamID
-
-	local tableindex = 0
-
-	local tier1 = 
-	{
-		"item_keen_optic",				--
-		--"item_ocean_heart",			-- !no water!
-		"item_broom_handle",			--
-		"item_trusty_shovel",			--
-		"item_arcane_ring",				--
-		"item_chipped_vest",			--
-		"item_possessed_mask",			--
-		"item_mysterious_hat",			-- fairy's trinket
-		"item_unstable_wand",			-- pig pole
-		"item_pogo_stick",				-- tumbler's toy
-	}
-
-	local tier2 =
-	{
-		"item_ring_of_aquila",			--
-		"item_nether_shawl",			--
-		"item_dragon_scale",			--
-		"item_pupils_gift",				--
-		"item_vambrace",				--
-		"item_misericorde",				-- brigand's blade
-		"item_grove_bow",				--
-		--"item_philosophers_stone",	-- !game is not long enough for bonus gold to matter!
-		"item_essence_ring",			--
-		"item_paintball",				-- fae grenade
-		"item_bullwhip",				--
-		"item_quicksilver_amulet",		--
-	}
-
-	local tier3 =
-	{
-		"item_quickening_charm",		--
-		"item_black_powder_bag",		-- blast rig
-		"item_spider_legs",				--
-		"item_paladin_sword",			--
-		"item_titan_sliver",			--
-		"item_mind_breaker",			--
-		"item_enchanted_quiver",		--
-		"item_elven_tunic",				--
-		"item_cloak_of_flames",			--
-		"item_ceremonial_robe",			--
-		"item_psychic_headband",		--
-	}
-
-	local tier4 =
-	{
-		"item_timeless_relic",			--
-		"item_spell_prism",				--
-		"item_ascetic_cap",				--
-		"item_heavy_blade",				-- witchbane
-		"item_flicker",					--
-		"item_ninja_gear",				--
-		"item_the_leveller",			--
-		"item_spy_gadget",				-- telescope
-		"item_trickster_cloak",			--
-		"item_stormcrafter",			--
-		"item_penta_edged_sword",		--
-	}
-
-	local tier5 =
-	{	
-		"item_havoc_hammer",			--
-		"item_timeless_relic",			--
-		"item_spell_prism",				--
-		"item_force_boots",				--
-		"item_desolator_2",				--
-		"item_seer_stone",				--
-		"item_mirror_shield",			--
-		"item_apex",					--
-		"item_demonicon",				--
-		"item_fallen_sky",				--
-		"item_force_field",				-- arcanist's armor
-		"item_pirate_hat",				--
-		"item_ex_machina",				--
-		"item_giants_ring",				--
-		"item_book_of_shadows",			--
-		"item_avianas_feather",			--		
-		"item_ballista",				--
-		"item_woodland_striders",		--
-		"item_phoenix_ash",				--
-		"item_unwavering_condition",	--
-		"item_vengeances_shadow",		--
-		"item_manacles_of_power",		--
-		"item_princes_knife",			--
-		"item_ancient_perseverance",	--
-		"item_lunar_crest",				--
-		"item_hermes_sandals",			--
-	}
-
-	local t1 = PickRandomShuffle( tier1, self.tier1ItemBucket )
-	local t2 = PickRandomShuffle( tier2, self.tier2ItemBucket )
-	local t3 = PickRandomShuffle( tier3, self.tier3ItemBucket )
-	local t4 = PickRandomShuffle( tier4, self.tier4ItemBucket )
-	local t5 = PickRandomShuffle( tier5, self.tier5ItemBucket )
-
-	local spawnedItem = ""
-
-	-- pick the item we're giving them
-	local nLeaderKills = GetTeamHeroKills( leader )
-
-	if nLeaderKills <= 5 then
-		spawnedItem = t5
-	elseif nLeaderKills > 5 and nLeaderKills <= 13 then
-		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t5
-		elseif ownerTeam == lastPlace then
-			spawnedItem = t5
-		else
-			spawnedItem = t5
-		end
-	elseif nLeaderKills > 13 and nLeaderKills <= 21 then
-		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t5
-		elseif ownerTeam == lastPlace then
-			spawnedItem = t5
-		else
-			spawnedItem = t5
-		end
-	elseif nLeaderKills > 21 then
-		if ownerTeam == leader and ( self.leadingTeamScore - self.runnerupTeamScore > 3 ) then
-			spawnedItem = t5
-		elseif ownerTeam == lastPlace then
-			spawnedItem = t5
-		else
-			spawnedItem = t5
-		end
-	end
+	local spawnedItem = "item_madstone_bundle"
 
 	-- add the item to the inventory and broadcast
-	owner:AddItemByName( spawnedItem )
+	for i = 1, 5 do
+		owner:AddItemByName( spawnedItem )
+	end
 	EmitGlobalSound("Overthrow.Item.Claimed")
 	local overthrow_item_drop =
 	{
@@ -373,12 +234,14 @@ function COverthrowGameMode:TreasureDrop( treasureCourier )
 	EmitGlobalSound( "lockjaw_Courier.gold_big" )
 
 	--Spawn the treasure chest at the selected item spawn location
-	local newItem = CreateItem( "item_treasure_chest", nil, nil )
-	local drop = CreateItemOnPositionForLaunch( spawnPoint, newItem )
-	drop:SetForwardVector( treasureCourier:GetRightVector() ) -- oriented differently
-	newItem:LaunchLootInitialHeight( false, 0, 50, 0.25, spawnPoint )
-
-	self.hCurrentItemSpawnLocation.hDrop = drop
+	for i = 1, 5 do
+		local newItem = CreateItem( "item_madstone_bundle", nil, nil )
+		local drop = CreateItemOnPositionForLaunch( spawnPoint, newItem )
+		drop:SetForwardVector( treasureCourier:GetRightVector() ) -- oriented differently
+		newItem:LaunchLootInitialHeight( false, 0, 50, 0.25, spawnPoint )
+	
+		self.hCurrentItemSpawnLocation.hDrop = drop
+	end
 
 	--print( '^^^ITEM SPAWN LOCATIONS' )
 	--PrintTable( self.itemSpawnLocations )

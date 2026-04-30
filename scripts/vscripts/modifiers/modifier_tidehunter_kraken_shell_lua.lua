@@ -82,9 +82,7 @@ end
 
 function modifier_tidehunter_kraken_shell_lua:GetModifierPhysical_ConstantBlock()
 	if self.parent:PassivesDisabled() then return 0 end
-	if IsTalentLearned(self:GetCaster(), "special_bonus_dima_kraken_buff") then
-		return 180
-	end
+
 	return self.block
 end
 

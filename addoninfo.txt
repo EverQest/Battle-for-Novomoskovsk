@@ -4,7 +4,7 @@
 	HeroGuidesSupported = 1
 	ForceDefaultGuide = 0
 	EnablePickRules = 1
-	PenaltiesEnabled = 1
+	PenaltiesEnabled = 0
 	EventGame = 1
 	DrawCustomTeamHeroesOnMinimap = 1
 	map_options = 

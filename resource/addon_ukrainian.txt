@@ -59,8 +59,8 @@
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "Tossed enemys now fall faster"
-		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 180 damage reduction"
-		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Боротьба max range x2" 
+		"Dota_Tooltip_ability_special_bonus_unique_dima_kraken_buff"					 "Kraken SHELL +100 damage reduction"
+		"Dota_Tooltip_ability_special_bonus_unique_dima_skiwer_range_x2"				 "Боротьба max range x2" 
 		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на Лівобережний-3 have 2 charges" 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня
@@ -104,7 +104,7 @@
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua"							 "РііЗокс"
 		"Dota_Tooltip_ability_shadow_fiend_shadowraze_f_lua_Description"	 			 "ReeShadowrazeOneShot"
 
-		"Dota_Tooltip_ability_special_bonus_unique_yarik_3"							 "+ 150 до школи кайлів"
+		"Dota_Tooltip_ability_special_bonus_unique_yarik_3"							 	 "+ 150 до шкоди кайлів"
 		"Dota_Tooltip_ability_special_bonus_unique_yarik_6" 							 "+ 130 до шкоди за стак кайлів"
 		"Dota_Tooltip_ability_special_bonus_yarik_attack_dmg_to_coils"					 "кайли наносять бонусну шкоду від удару"
 		"Dota_Tooltip_ability_special_bonus_yarik_pure_coils"							 "кайли наносять ЧИСТУ шкоду"
@@ -122,7 +122,7 @@
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Душі кобальдів"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня кличе душі забутих кобальдів, вони злі, голодні та холодні"
 
-		"Dota_Tooltip_ability_special_bonus_danya_laser_dmg"					 "+ 150 ддо шкоди від Лазер-ка"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 "+ 150 ддо шкоди від Лазер-ка"
 		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "Аркани можно оновлювати"
 		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "Лазер-ок наносить ЧИСТУ шкоду"
 		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "Кличе ватагу кобальдів"

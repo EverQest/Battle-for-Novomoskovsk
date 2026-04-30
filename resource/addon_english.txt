@@ -46,10 +46,12 @@
 		"npc_dota_hero_morphling"        "Снюсовый морфлинг"	
 
 		"Dota_Tooltip_ability_magnus_skewer_lua"                 				 "Барьба"
+		"Dota_Tooltip_ability_magnus_skewer_lua_AbilityCastRange"                "RANGE:"
 		"Dota_Tooltip_ability_magnus_skewer_lua_Description"     				 "Не зря он учил этот приём, теперь он его будт отрабатывать"
 		"Dota_Tooltip_ability_magnus_push_horn_toss"     						 "Прогиб"
 		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	 "Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
 		"Dota_Tooltip_ability_tiny_toss_lua"									 "ТОСС на левый третий"
+		"Dota_Tooltip_ability_tiny_toss_lua_duration"							 "DURATION:"
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 		 "Снюс KRAKEN SHELL☆☆☆☆☆"
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
@@ -58,10 +60,14 @@
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
 		
 		//Talents
-		"Dota_Tooltip_ability_special_bonus_dima_toss_duration"					 "Tossed enemys now fall faster"
-		"Dota_Tooltip_ability_special_bonus_dima_kraken_buff"					 "Kraken SHELL 180 damage reduction"
-		"Dota_Tooltip_ability_special_bonus_dima_skiwer_range_x2"				 "Барьба max range x2" 
-		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 "ТОСС на левый третий have 2 charges" 
+		"Dota_Tooltip_ability_special_bonus_unique_dima_toss_duration"			    "Tossed enemys now fall faster"
+		"Dota_Tooltip_ability_special_bonus_unique_dima_toss_duration_description"  "DURATION: 12 sec -> 6 sec"
+		"Dota_Tooltip_ability_special_bonus_unique_dima_kraken_buff"				"Kraken SHELL +100 damage reduction"
+		"Dota_Tooltip_ability_special_bonus_unique_dima_skiwer_range_x2"				 	"Барьба max range x2" 
+		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 	"ТОСС x 2" 
+		"Dota_Tooltip_ability_special_bonus_dima_toss_charges_description"		  	"ТОСС на левый третий have 2 charges" 
+		"Dota_Tooltip_ability_special_bonus_dima_toss_charges_SummaryDescription" 	"ТОСС на левый третий have 2 charges"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"
@@ -76,6 +82,8 @@
 		"Dota_Tooltip_ability_spiked_carapace_reworked_stun_duration"					 "STUN DURATION:"
 		
 		"Dota_Tooltip_ability_imba_undying_decay"										 "Схавать"
+		"Dota_Tooltip_ability_imba_undying_decay_AbilityDuration"						 "DURATION:"
+		"Dota_Tooltip_ability_imba_undying_decay_radius"								 "RADIUS:"
 		"Dota_Tooltip_ability_imba_undying_decay_Description"							 "Сеня хавает по области атрибуты противника и набирает массу, достигая масштабов планеты"
 		"Dota_Tooltip_ability_imba_undying_decay_str_steal"								 "STR STEAL:"
 		"Dota_Tooltip_ability_imba_undying_decay_str_steal_scepter"						 "SCEPTER STR STEAL:"
@@ -139,15 +147,18 @@
 		"npc_dota_hero_tinker"     	   "Ботаник Дюк"
 
 		"Dota_Tooltip_ability_tinker_laser_lua"									 "Лазер oK?"
+		"Dota_Tooltip_ability_tinker_laser_lua_laser_damage"					 "DAMAGE:"
 		"Dota_Tooltip_ability_tinker_laser_lua_Description"						 "Этот придурок начитался так много книг что теперь сделал эту хрень и хуячит во всех!!!"
 		"Dota_Tooltip_ability_lion_hex_lua"							  			 "КОООООББАААЛЬЬДД!!"
+		"Dota_Tooltip_ability_lion_hex_lua_duration"							 "DURATION:"
 		"Dota_Tooltip_ability_lion_hex_lua_Description"							 "Как же он любит кобальдов (можно применить на кого угодно)"
 		"Dota_Tooltip_ability_tinker_rearm_lua"									 "Переосмысление..."
 		"Dota_Tooltip_ability_tinker_rearm_lua_Description"				 		 "Взяв сигу, Даня начинает слишком много думать, заставляя свой мозг перезагрузить всё что он знал"
+		"Dota_Tooltip_ability_tinker_rearm_lua_AbilityChannelTime"				 "CHANNEL TIME:"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
 
-		"Dota_Tooltip_ability_special_bonus_danya_laser_dmg"					 "+ 150 dmg to laser"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 "+ 150 dmg to laser"
 		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "arcane boots are now refreshable"
 		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "laser deals PURE dmg"
 		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "you now summon ARMY of cobolds"
@@ -184,6 +195,8 @@
 		"npc_dota_hero_clinkz" 				   "Felix"
 
 		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven"						"Стойка Керамбита"
+		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_bonus_move_speed"    "BONUS MOVE SPEED:"
+		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_base_attack_time"    "BASE ATTACK TIME:"
 		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_Description"			"Тот самый легендарный деревяный нож КЕРАМБИТ, когда он у него в руках он очень быстрый и страшный"
 		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua"								"Выключай компьютер!"
 		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_Description"					"АНУ БЫСТРО ВЫКЛЮЧАЙ КОМПЬЮТЕР Я ТЕБЕ СКАЗАЛА!"
@@ -210,6 +223,7 @@
 		"Dota_Tooltip_ability_chaos_bolt"											"Дать пять!"
 		"Dota_Tooltip_ability_chaos_bolt_Description"								"Здарова братва! оглушает выбранного братана"
 		"Dota_Tooltip_ability_usa_rage"												"На всех парах в Канаду"
+		"Dota_Tooltip_ability_usa_rage_AbilityDuration"								"DURATION:"
 		"Dota_Tooltip_ability_usa_rage_Description"									"Занзак так стремиться уехать в Канаду что его не остановить, большая скорость но может потерять рассудок и оглушиться и оглушить других"
 		"Dota_Tooltip_ability_vacuum_datadriven"									"Кучнее пацанва!"
 		"Dota_Tooltip_ability_vacuum_datadriven_Description"				 		"Занзак собирает всех в одну группу людей, притягивая всех в центр"
@@ -238,6 +252,7 @@
 		"Dota_Tooltip_ability_Azazin_Spinner"												"БКБ для лохов"
 		"Dota_Tooltip_ability_Azazin_Spinner_Description"									"Только попробуй сказать что бкб предмет, персонаж получает невосприимчивость к статус эффектам и магии на 10 секунд, нанося урон всем кто находиться близко"
 		"Dota_Tooltip_ability_doom_doom_lua"					 							"Осёл, как же ты меня заебал"
+		"Dota_Tooltip_ability_doom_doom_lua_AbilityDuration"					 			"DURATION:"
 		"Dota_Tooltip_ability_doom_doom_lua_Description"		 							"Дай мут ослам и покажи кто тут батя, накладывает сильнейший мут на персонажа, что он не может даже нажать кнопки"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Перик
