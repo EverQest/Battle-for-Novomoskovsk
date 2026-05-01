@@ -89,7 +89,7 @@ function modifier_test_on_destroy(keys)
 	local caster = keys.caster
 	local target = keys.target
 	
-	caster:StopSound("PistoletovDeathfight")
+	-- caster:StopSound("PistoletovDeathfight")
 	
 	if caster.legion_commander_duel_datadriven_particle ~= nil then
 		ParticleManager:DestroyParticle(caster.legion_commander_duel_datadriven_particle, false)

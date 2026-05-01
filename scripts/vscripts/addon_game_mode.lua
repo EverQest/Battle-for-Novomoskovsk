@@ -36,7 +36,6 @@ function Precache( context )
 		PrecacheUnitByNameSync( "npc_dota_creature_basic_zombie", context )
         PrecacheUnitByNameSync( "npc_dota_creature_berserk_zombie", context )
         PrecacheUnitByNameSync( "npc_dota_treasure_courier", context )
-
     --Cache new particles
        	PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
        	PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
@@ -55,6 +54,14 @@ function Precache( context )
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_axe", context )
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_life_stealer", context )
 
+	--Cache particles for skils
+		PrecacheResource( "particle_folder", "particles/units/heroes/hero_undying/", context )
+		PrecacheResource( "particle_folder", "particles/units/heroes/hero_techies/", context )
+		PrecacheResource( "particle_folder", "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/", context )
+		PrecacheResource( "particle_folder", "particles/generic_gameplay/", context )
+		PrecacheResource( "particle_folder", "particles/items_fx/", context )
+		PrecacheResource( "particle_folder", "particles/econ/events/ti9/ti9_monkey_debuff.vpcf", context )
+
 	--Cache sounds for traps
 		PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
 		PrecacheResource( "soundfile", "soundevents/soundevents_conquest.vsndevts", context )
@@ -64,6 +71,9 @@ function Precache( context )
 
 	-- Custom skils sounds
 		PrecacheResource( "soundfile", "soundevents/bruh.vsnd_c", context )
+	
+	-- Cache needed models
+	PrecacheResource("model", "models/items/undying/flesh_golem/deathmatch_dominator_golem/deathmatch_dominator_golem.vmdl", context)
 
 end
 
@@ -133,7 +143,7 @@ function COverthrowGameMode:InitGameMode()
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
 
 	self.m_bFillWithBots = GlobalSys:CommandLineCheck( "-addon_bots" )
-	self.m_bFastPlay = true
+	self.m_bFastPlay = GlobalSys:CommandLineCheck( "-addon_fastplay" )
 
 	self.m_TeamColors = {}
 	self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }	--		Teal

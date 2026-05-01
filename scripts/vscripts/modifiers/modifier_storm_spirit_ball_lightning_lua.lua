@@ -175,7 +175,7 @@ function modifier_storm_spirit_ball_lightning_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/econ/items/storm_spirit/storm_spirit_orchid_hat_retro/stormspirit_orchid_retro_ball_lightning.vpcf"
 	local sound_cast = "CustomLightning"
-	local sound_loop = "CustomLightning.Loop"
+	-- local sound_loop = "CustomLightning.Loop"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self.parent )
@@ -205,5 +205,5 @@ function modifier_storm_spirit_ball_lightning_lua:PlayEffects()
 
 	-- Create Sound
 	EmitSoundOn( sound_cast, self.parent )
-	EmitSoundOn( sound_loop, self.parent )
+	-- EmitSoundOn( sound_loop, self.parent )
 end

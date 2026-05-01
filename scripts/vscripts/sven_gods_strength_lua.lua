@@ -13,11 +13,15 @@ function sven_gods_strength_lua:OnSpellStart()
 	ParticleManager:SetParticleControlEnt( nFXIndex, 1, self:GetCaster(), PATTACH_ABSORIGIN_FOLLOW, nil, self:GetCaster():GetOrigin(), true )
 	ParticleManager:ReleaseParticleIndex( nFXIndex )
 
-	
+	if self.last_sound then
+		StopSoundOn( self.last_sound, self:GetCaster() )
+	end
 
 	-- Create Sound
 	local sound_mt = math.random( 1, 5 )
 	local sound_cast = "FelixCustomSong" .. sound_mt
+	self.last_sound = sound_cast
+
 
 	EmitSoundOn( sound_cast, self:GetCaster() )
 

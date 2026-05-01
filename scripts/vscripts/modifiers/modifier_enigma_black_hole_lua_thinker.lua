@@ -60,8 +60,6 @@ function modifier_enigma_black_hole_lua_thinker:OnRemoved()
 end
 
 function modifier_enigma_black_hole_lua_thinker:OnDestroy()
-	if IsServer() then
-	end
 end
 
 --------------------------------------------------------------------------------

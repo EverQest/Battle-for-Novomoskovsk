@@ -332,7 +332,7 @@
 
 	// Damage
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"8 12 16 20"
+	//"AbilityDamage"					"8 12 16 20"
 
 
 	// Special
@@ -758,6 +758,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Vyashich.vsndevts"
+			"particle"	"particles/units/heroes/hero_pudge/pudge_rot.vpcf"
+			"particle"	"particles/units/heroes/hero_pudge/pudge_rot_recipient.vpcf"
 		}
 
 		// Casting
@@ -1562,13 +1564,13 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"multicast_2_times"				"0.8 0.5 0.4 0.2"
-			"multicast_3_times"				"0.0 0.8 0.5 0.4"
-			"multicast_4_times"				"0.0 0.0 0.4 0.5"
+			"multicast_2_times"				"0.6 0.7 0.8 0.9"
+			"multicast_3_times"				"0.0 0.2 0.4 0.6"
+			"multicast_4_times"				"0.0 0.0 0.2 0.4"
 			"bloodlust_aoe"					"575.0"
-			"multicast_2_times_tooltip"		"75.0"
-			"multicast_3_times_tooltip"		"0.0 30.0 30.0 30.0"
-			"multicast_4_times_tooltip"		"0.0 0.0 15.0 15.0"
+			"multicast_2_times_tooltip"		"60.0 70.0 80.0 90.0"
+			"multicast_3_times_tooltip"		"0.0 20.0 40.0 60.0"
+			"multicast_4_times_tooltip"		"0.0 0.0 20.0 40.0"
 		}
 	}
 
@@ -1613,13 +1615,13 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"500 600 700 800 900"
+		"AbilityDamage"					"300 400 600 800 1000"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage"					"500 600 700 800 900"
+			"damage"					"300 400 600 800 1000"
 			"cast_range_scepter"		"900"
 			"damage_delay"				"0.30"
 		}
@@ -1666,13 +1668,13 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"500 600 700 800 900"
+		"AbilityDamage"					"300 400 600 800 1000"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage"					"500 600 700 800 900"
+			"damage"					"300 400 600 800 1000"
 			"damage_scepter"			"725 875 1025 1600 1800"
 			"mana_cost_scepter"			"200 420 625 700 800"
 			"damage_delay"				"0.30"
@@ -1723,8 +1725,8 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"			"100 160 230 300 350"
-		"AbilityDuration"		"2.5 2.6 2.7 2.8 3.0"
+		"AbilityDamage"			"100 150 200 250 300"
+		"AbilityDuration"		"2.2 2.4 2.6 2.8 3.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1738,8 +1740,8 @@
 			"pre_land_anim_time"			"0.14"
 			"landing_gesture_duration"		"0.6"
 			"impact_radius"					"300"
-			"impact_damage"					"100 160 230 300 350"
-			"impact_stun_duration"			"2.5 2.6 2.7 2.8 3.0"
+			"impact_damage"					"100 150 200 250 300"
+			"impact_stun_duration"			"2.2 2.4 2.6 2.8 3.0"
 			"self_cast_delay"				"0.4"
 		}
 	}
@@ -2101,7 +2103,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"100 90 80 70"
 		"AbilityManaCost"				"200 300 400"
-		"AbilityDuration"				"3 5 7"
+		"AbilityDuration"				"5.0 7.5 10.0"
 		"AbilityCastRange"				"1200 1400 1600"
 
 		// Damage
@@ -2112,7 +2114,7 @@
 		"AbilityValues"
 		{
 			"radius"					"1200 1400 1600"
-			"duration"					"5.0 6.0 7.0"
+			"duration"					"5.0 7.5 10.0"
 			"slow"						"0"
 			"stone_duration"			"5.5"
 			"face_duration"				"2.0"
@@ -2135,8 +2137,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Nekit.vsndevts"
-			"particle"	"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison.vpcf"
-			"particle"	"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_ring.vpcf"
+			"particle"	"particles/obsidian_destroyer_prison.vpcf"
+			"particle"	"particles/obsidian_destroyer_prison_ring.vpcf"
 		}
 		
 		// Ability General
@@ -2171,7 +2173,7 @@
 		"AbilityValues"
 		{
 
-			"prison_duration"					"4.0"
+			"prison_duration"					"1.5 2.5 3.5 4.5"
 			"damage"							"140 180 200 250"
 			"radius"							"400"
 			"cast_range_tooltip"				"225 300 375 450"
@@ -2314,7 +2316,7 @@
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
  		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -2338,7 +2340,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"duration"					"6.4"
+			"duration"					"3 4 5 6"
 			"radius"					"450"
 			"width"						"50"
 			"spear_damage"				"150 200 250"
@@ -2635,6 +2637,7 @@
 	"precache"
 	{
 		"soundfile"		"soundevents/Kaki.vsndevts"		
+		"model"			"models/heroes/viper/viper.vmdl"		
 		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_buff.vpcf"
 		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_cast.vpcf"
 		"particle"		"particles/units/heroes/hero_lycan/lycan_shapeshift_revert.vpcf"	
@@ -3055,7 +3058,6 @@
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"140"
-		"AbilityDamage"					"200 225 250 275"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -3546,6 +3548,14 @@
 		"FightRecapLevel"				"1"
 		"ScriptFile"					"sven_gods_strength_lua"
 		
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_sven/sven_spell_gods_strength_ambient.vpcf"
+			"particle"					"particles/units/heroes/hero_sven/sven_gods_strength_hero_effect.vpcf"
+			"particle"					"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+			"particle"					"particles/status_fx/status_effect_gods_strength.vpcf"
+		}
+
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.3"
@@ -3736,10 +3746,11 @@
 		"ScriptFile"					"phantom_assassin_coup_de_grace_lua"
 		"AbilityTextureName"			"temich_crit"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"3"
+		"MaxLevel"						"4"
 		"precache"
 		{
 			"soundfile"	"soundevents/Temich.vsndevts"
+			"particle"	"particles/phantom_assassin_crit_impact.vpcf"
 		}
 		
 		// Ability General
@@ -3756,15 +3767,15 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCritChance"					"1 1.5 4"
-		"AbilityCritBonus"					"1000 2000 3000"
+		"AbilityCritChance"					"1 2 3 4"
+		"AbilityCritBonus"					"1000 1500 2000 3000"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"crit_chance"				"1.0 1.5 4.0"
-			"crit_bonus"				"1000 2000 3000"
+			"crit_chance"				"1.0 2.0 3.0 4.0"
+			"crit_bonus"				"1000 1500 2000 3000"
 		}
 	}
 
@@ -3777,10 +3788,15 @@
 		"AbilityTextureName"        "temich_attspeed"
 		"MaxLevel"                  "4"
 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"           "24 22 20"
+		"AbilityCooldown"           "24 22 20 18"
 		"AbilityManaCost"           "300 200 100"
-		"AbilityDuration"           "5 7 10"
+		"AbilityDuration"           "5 7 10 13"
 
+		precache
+		{
+			"soundfile"   "soundevents/Temich.vsndevts"
+			"particle"    "particles/units/heroes/hero_ogre_magi/ogre_magi_bloodlust_buff.vpcf"
+		}
 
 		"OnSpellStart"
 		{
@@ -3823,7 +3839,7 @@
 		"AbilityValues"
 		{
 		    "bonus_movement_speed"			"20 25 30 35"
-		    "duration"						"5.0 7.0 10.0"
+		    "duration"						"5.0 7.0 10.0 13.0"
 		    "bonus_attack_speed"			"35 45 55 65"
 		    "regen"							"50 60 70 80"
 		}
@@ -3840,6 +3856,13 @@
 		"AbilityTextureName"			"temich_lightning"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"3"
+
+		precache
+		{
+			"soundfile"	"soundevents/Temich.vsndevts"
+			"particle"	"particles/econ/items/storm_spirit/storm_spirit_orchid_hat_retro/stormspirit_orchid_retro_ball_lightning.vpcf"
+
+		}
 		
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
@@ -3869,7 +3892,7 @@
 			"ball_lightning_move_speed"						"1500 2500 3500"
 			"ball_lightning_aoe"							"0"
 			"ball_lightning_travel_cost_base"				"0"
-			"ball_lightning_travel_cost_percent"			"1.5"
+			"ball_lightning_travel_cost_percent"			"1.5 1.25 1.0"
 			"ball_lightning_vision_radius"					"800"
 			"blocker_duration"								"5.0"
 			"scepter_remnant_interval"						"300"
@@ -3890,6 +3913,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Temich.vsndevts"
+			"particle"	"particles/sandking_epicenter.vpcf"
+			"particle"	"particles/sandking_epicenter_ring.vpcf"
 		}
 		
 		// Ability General
@@ -3913,7 +3938,7 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"200 350 400 500"
+		"AbilityDamage"					"200 350 500"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -3921,7 +3946,7 @@
 		{
 			"epicenter_radius"						"275 325 375 425 475 525 575 650 675 700 725 750 775 800"
 			"epicenter_pulses"						"10 15 20"
-			"epicenter_damage"						"200 350 400 500"
+			"epicenter_damage"						"200 350 500"
 			"epicenter_slow"						"-50 -80 -120"
 			"epicenter_slow_as"						"-30"
 			"epicenter_slow_duration_tooltip"		"3"
@@ -4042,11 +4067,13 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"2"
 		"AbilityTextureName"			"rostik_rage"
+		"MaxLevel"						"4"
+
 
 		"precache"
 		{
 			"soundfile"				"soundevents/Rostik.vsndevts"
-			"particle"				"particles/duel/legion_duel_ring_arcana.vpcf"
+			"particle"				"particles/econ/items/legion/legion_weapon_voth_domosh/legion_duel_start_ring_arcana.vpcf"
 			"particle"				"particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
 		}
 
@@ -4245,7 +4272,7 @@
 	"AbilityCooldown"				"20.0 18.0 16.0 14.0"
 	"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
 	"AbilityCastRange"				"1800"
-	"AbilityDamage"					"140 180 240 280"
+	//"AbilityDamage"				"140 180 220 260"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -4255,7 +4282,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
 	{
-		"damage_per_second"				"140.0 180.0 240.0 280.0"
+		"damage_per_second"				"140.0 180.0 220.0 260.0"
 		"radius"						"350"
 		"range"							"1550"
 		"speed"							"1050.0"
@@ -4266,6 +4293,7 @@
 		"channel_vision_interval"		"0.5"
 		"channel_vision_duration"		"10.34"
 		"channel_vision_step"			"150"
+		"max_damage_tooltip"			"280 540 880 1300"
 	}
 
 	"OnSpellStart"
@@ -4718,9 +4746,11 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"ability_datadriven"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"DisplayAdditionalHeroes"	"1"
 		"AbilityTextureName"		"perik_bear"
+		"MaxLevel"					"1"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -4728,21 +4758,21 @@
 	
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 28 25 20"
+		"AbilityCooldown"				"60"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75"
+		"AbilityManaCost"				"200"
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bear_hp"					"1400 1800 2300 2700"
-			"bear_regen_tooltip"		"2 5 10 15"
-			"bear_bat"					"1.75 1.65 1.55 1.45"
-			"bear_armor"				"3 4 5 6"
-			"backlash_damage"			"10.0"
+			"bear_hp"					"1500"
+			"bear_regen_tooltip"		"5"
+			"bear_bat"					"1.5"
+			"bear_armor"				"5"
+			"backlash_damage"			"100.0"
 		}
 	
 		"precache"
@@ -4963,7 +4993,9 @@
 
 		"precache"
 		{
-		"soundfile"	"soundevents/Perik.vsndevts"
+			"soundfile"	"soundevents/Perik.vsndevts"
+			"particle"	"particles/status_fx/status_effect_ancestral_spirit.vpcf"
+			"particle"	"particles/units/heroes/hero_beastmaster/beastmaster_wildaxe.vpcf"
 		}
 
 		"OnSpellStart"
@@ -4991,8 +5023,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Oleg.vsndevts"
-			"particle"	"particles/units/heroes/hero_earth_spirit/espirit_rollingboulder.vpcf"
-			"particle"	"particles/econ/items/earth_spirit/earth_spirit_ti6_boulder/espirit_ti6_rollingboulder.vpcf"
+			"particle"	"particles/espirit_ti6_rollingboulder.vpcf"
+			"model"		"models/items/courier/hamster_courier/hamster_courier_lv1.vmdl"
 		}
 		
 		// Ability General
@@ -5071,7 +5103,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"duration"					"1.0 2.0 3.0 4.0"
+			"duration"					"2.0 3.0 4.0 6.0"
 		}
 	}
 
@@ -5138,6 +5170,15 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilitySound"					"Hero_TemplarAssassin.Trap"
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+			"particle"	"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_slow.vpcf"
+			"particle"	"particles/units/heroes/hero_templar_assassin/templar_assassin_trap.vpcf"
+			"particle"	"particles/templar_assassin_trap.vpcf"
+			"model"	"models/heroes/lanaya/lanaya_trap_crystal_invis.vmdl"
+		}
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -5505,8 +5546,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Gul.vsndevts"
-			"particle"	"particles/units/heroes/hero_lina/lina_spell_light_strike_array_ray_team.vpcf"
-			"particle"	"particles/units/heroes/hero_lina/lina_spell_light_strike_array.vpcf"
+			"particle"	"particles/lina_spell_light_strike_array_ray_team.vpcf"
+			"particle"	"particles/lina_spell_light_strike_array.vpcf"
 		}
 		
 		// Ability General
@@ -5613,6 +5654,11 @@
 		"AbilityTextureName"			"evgen_mlyn"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
+
+		precache
+		{
+			"particle"	"particles/units/heroes/hero_dawnbreaker/dawnbreaker_fire_wreath_smash.vpcf"
+		}
 		
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
@@ -5809,6 +5855,10 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Tit.vsndevts"
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
+			"particle"	"particles/units/heroes/hero_lina/lina_spell_dragon_slave.vpcf"
+			"particle"	"particles/lina_spell_dragon_slave.vpcf"
+			"particle"	"particles/nevermore_wings.vpcf"
 		}
 
 		// Ability General
@@ -5872,6 +5922,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Tit.vsndevts"
+			"particle"	"particles/dagon.vpcf"
+
 		}
 		
 		// Ability General

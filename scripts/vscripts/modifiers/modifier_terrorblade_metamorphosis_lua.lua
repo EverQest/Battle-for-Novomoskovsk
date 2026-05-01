@@ -110,7 +110,7 @@ function modifier_terrorblade_metamorphosis_lua:GetModifierAttackRangeBonus()
 end
 
 function modifier_terrorblade_metamorphosis_lua:GetModifierModelChange()
-	return "models/items/undying/flesh_golem/grim_harvest_golem/grim_harvest_golem.vmdl"
+	return "models/items/undying/flesh_golem/deathmatch_dominator_golem/deathmatch_dominator_golem.vmdl"
 end
 
 function modifier_terrorblade_metamorphosis_lua:GetModifierModelScale()

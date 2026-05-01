@@ -36,7 +36,7 @@ end
 --------------------------------------------------------------------------------
 -- Ability Channeling
 function enigma_black_hole_lua:OnChannelFinish( bInterrupted )
-	if self.thinker and not self.thinker:IsNull() then
-		self.thinker:Destroy()
-	end
+	if not IsServer() then return end
+
+	UTIL_Remove( self.thinker:GetParent() )
 end

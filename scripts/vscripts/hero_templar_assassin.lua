@@ -516,9 +516,9 @@ function modifier_imba_templar_assassin_psionic_trap:IsPurgable()		return false 
 
 function modifier_imba_templar_assassin_psionic_trap:GetTexture()		return "templar_assassin_psionic_trap" end
 
--- function modifier_imba_templar_assassin_psionic_trap:GetEffectName()
-	-- return "particles/units/heroes/hero_templar_assassin/templar_assassin_trap.vpcf"
--- end
+function modifier_imba_templar_assassin_psionic_trap:GetEffectName()
+	return "particles/units/heroes/hero_templar_assassin/templar_assassin_trap.vpcf"
+end
 
 function modifier_imba_templar_assassin_psionic_trap:OnCreated()
 	self.trap_fade_time				= self:GetAbility():GetSpecialValueFor("trap_fade_time")
