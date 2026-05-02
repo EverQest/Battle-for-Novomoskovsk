@@ -4994,6 +4994,7 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Perik.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
 			"particle"	"particles/status_fx/status_effect_ancestral_spirit.vpcf"
 			"particle"	"particles/units/heroes/hero_beastmaster/beastmaster_wildaxe.vpcf"
 		}
