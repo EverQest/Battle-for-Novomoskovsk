@@ -44,7 +44,7 @@
 	"npc_dota_kobold_radiantboss"
 	{
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/midas_throne/kobold_overboss.vmdl"
+		"Model"						"models/props_structures/midas_throne/kobold_radiantboss.vmdl"
 		"Ability1"					"dota_ability_throw_coin"
 		"Ability2"					"dota_ability_throw_coin_long"
 		"Ability3"					"dota_ability_celebrate"
@@ -172,7 +172,7 @@
 		"Ability1"			"beastmaster_wild_axes"
 		"Ability2"			"chaos_knight_chaos_strike_lua"    
 		"Ability5"			"troll_warlord_fervor"
- 	}
+	}
 
 	//=================================================================================	
 	// Creature: Basic Zombie

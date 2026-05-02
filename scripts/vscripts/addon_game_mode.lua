@@ -211,14 +211,14 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity().COverthrowGameMode = self
 
 	-- Adding Many Players
-	if GetMapName() == "desert_quintet" then
+	if GetMapName() == "novomoskovsk_desert_quintet" then
 		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 5 )
 		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 5 )
 		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 5 )
 		self.m_GoldRadiusMin = 300
 		self.m_GoldRadiusMax = 1400
 		self.m_GoldDropPercent = 8
-	elseif GetMapName() == "temple_quartet" then
+	elseif GetMapName() == "novomoskovsk_temple_quartet" then
 		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 4 )
 		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 4 )
 		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 4 )
@@ -274,11 +274,11 @@ function COverthrowGameMode:InitGameMode()
 	local nTeamSize = GameRules:GetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS )
 	--print( '^^^Setting BANS PER TEAM to Team Size = ' .. nTeamSize )
 	GameRules:SetCustomGameBansPerTeam( nTeamSize )
-	GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 15.0 )
+	GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 8.0 )
 	if self.m_bFastPlay then
 		GameRules:GetGameModeEntity():SetDraftingBanningTimeOverride( 1.0 )
 	end
-	GameRules:GetGameModeEntity():SetDraftingHeroPickSelectTimeOverride( 60.0 )
+	GameRules:GetGameModeEntity():SetDraftingHeroPickSelectTimeOverride( 30.0 )
 
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( COverthrowGameMode, 'OnGameRulesStateChange' ), self )
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( COverthrowGameMode, "OnNPCSpawned" ), self )
@@ -601,17 +601,17 @@ function COverthrowGameMode:ExecuteOrderFilter( filterTable )
 			-- we need either a free backpack slot or a free neutral item slot
 			local bAllowPickup = true
 			
-			local numBackpackItems = 0
-			for nItemSlot = 0,DOTA_ITEM_INVENTORY_SIZE - 1 do 
-				local hItem = hero:GetItemInSlot( nItemSlot )
-				if hItem and hItem:IsInBackpack() then
-					numBackpackItems = numBackpackItems + 1
+				local numBackpackItems = 0
+				for nItemSlot = 0,DOTA_ITEM_INVENTORY_SIZE - 1 do 
+					local hItem = hero:GetItemInSlot( nItemSlot )
+					if hItem and hItem:IsInBackpack() then
+						numBackpackItems = numBackpackItems + 1
+					end
 				end
-			end
-			--print( '^^^Backpack slots = ' .. numBackpackItems )
-			if numBackpackItems < 3 then
-				bAllowPickup = true
-			end
+				--print( '^^^Backpack slots = ' .. numBackpackItems )
+				if numBackpackItems < 3 then
+					bAllowPickup = true
+			end		
 
 			if bAllowPickup then
 				--print("inventory has space")

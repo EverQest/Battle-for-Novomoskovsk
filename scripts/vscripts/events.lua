@@ -23,13 +23,13 @@ function COverthrowGameMode:OnGameRulesStateChange()
 			nCOUNTDOWNTIMER = 1800
 		end
 		
-		if GetMapName() == "forest_solo" then
+		if GetMapName() == "novomoskovsk_solo" then
 			self.TEAM_KILLS_TO_WIN = self.KILLS_TO_WIN_SINGLES
-		elseif GetMapName() == "desert_duo" then
+		elseif GetMapName() == "novomoskovsk_duo" then
 			self.TEAM_KILLS_TO_WIN = self.KILLS_TO_WIN_DUOS
-		elseif GetMapName() == "temple_quartet" then
+		elseif GetMapName() == "novomoskovsk_temple_quartet" then
 			self.TEAM_KILLS_TO_WIN = self.KILLS_TO_WIN_QUADS
-		elseif GetMapName() == "desert_quintet" then
+		elseif GetMapName() == "novomoskovsk_desert_quintet" then
 			self.TEAM_KILLS_TO_WIN = self.KILLS_TO_WIN_QUINTS
 		else
 			self.TEAM_KILLS_TO_WIN = self.KILLS_TO_WIN_TRIOS
@@ -72,8 +72,8 @@ function COverthrowGameMode:OnNPCSpawned( event )
 			spawnedUnit:DeleteAttribute( "effectsID" )
 		end
 		if self.allSpawned == false then
-			if GetMapName() == "mines_trio" then
-				--print("mines_trio is the map")
+			if GetMapName() == "novomoskovsk_trio" then
+				--print("novomoskovsk_trio is the map")
 				--print("self.allSpawned is " .. tostring(self.allSpawned) )
 				local unitTeam = spawnedUnit:GetTeam()
 				local particleSpawn = ParticleManager:CreateParticleForTeam( "particles/addons_gameplay/player_deferred_light.vpcf", PATTACH_ABSORIGIN, spawnedUnit, unitTeam )

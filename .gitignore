@@ -19,13 +19,9 @@
 maps
 materials
 models
-panorama
 particles
 soundevents
 sounds
-
-# Map overviews
-resource/overviews/*
 
 # eclipse
 .project

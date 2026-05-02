@@ -11,23 +11,23 @@
 	[
 		{
 			MaxPlayers = 16
-			map = "temple_quartet"
+			map = "novomoskovsk_temple_quartet"
 		},
 		{
 			MaxPlayers = 15
-			map = "desert_quintet"
+			map = "novomoskovsk_desert_quintet"
 		},
 		{
 			MaxPlayers = 10
-			map = "forest_solo"
+			map = "novomoskovsk_solo"
 		},
 		{
 			MaxPlayers = 10
-			map = "desert_duo"
+			map = "novomoskovsk_duo"
 		},
 		{
 			MaxPlayers = 9
-			map = "mines_trio"
+			map = "novomoskovsk_trio"
 		},
 	]
 }
