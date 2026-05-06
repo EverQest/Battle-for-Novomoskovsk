@@ -10,14 +10,6 @@
 	map_options = 
 	[
 		{
-			MaxPlayers = 16
-			map = "novomoskovsk_temple_quartet"
-		},
-		{
-			MaxPlayers = 15
-			map = "novomoskovsk_desert_quintet"
-		},
-		{
 			MaxPlayers = 10
 			map = "novomoskovsk_solo"
 		},

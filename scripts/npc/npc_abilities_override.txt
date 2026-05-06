@@ -1393,7 +1393,7 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Danya.vsndevts"
-			"particle"	"particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+			"particle"	"particles/econ/items/tinker/boots_of_travel/teleport_start_bots_top.vpcf"
 		}
 		
 		// Ability General
@@ -2544,7 +2544,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDuration"					"10 20 30 40"
+		"AbilityDuration"					"10.0 30.0 50.0 90.0"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -4699,6 +4699,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Bigbobr.vsndevts"
+			"particle"	"particles/status_fx/status_effect_doom.vpcf"
+			"particle"	"particles/rubick_doom.vpcf"
 		}
 		
 		// Ability General
@@ -4719,7 +4721,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"34 26 23 15"
+		"AbilityCooldown"				"30 25 20 15"
 		"AbilityManaCost"				"150 200 250 300"
 		"AbilityDuration"				"3 4 5"
 
@@ -4734,7 +4736,7 @@
 			"damage"				"0"
 			"duration_scepter"		"16.0"
 			"damage_scepter"		"0"
-			"deniable_pct"			"25"
+			"deniable_pct"			"100"
 		}
 	}
 

@@ -21,6 +21,7 @@ require('timers')
 require( "events" )
 require( "items" )
 require( "utility_functions" )
+require( "talent/talent" )
 
 ---------------------------------------------------------------------------
 -- Precache
@@ -78,6 +79,9 @@ function Precache( context )
 end
 
 function Activate()
+	-- Set GameMode
+	GameRules.GameMode = COverthrowGameMode()
+
 	-- Create our game mode and initialize it
 	COverthrowGameMode:InitGameMode()
 	-- Custom Spawn
@@ -95,6 +99,8 @@ end
 ---------------------------------------------------------------------------
 function COverthrowGameMode:InitGameMode()
 	print( "Battle is loaded." )
+
+	TalentSystem = {}
 	
 	-- levelcap 35
 	XP_PER_LEVEL_TABLE = {

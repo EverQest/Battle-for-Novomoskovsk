@@ -57,13 +57,12 @@ end
 function COverthrowGameMode:SpecialItemAdd( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	local owner = EntIndexToHScript( event.HeroEntityIndex )
+	local player_id = event.PlayerID
 	local hero = owner:GetClassname()
 	local spawnedItem = "item_madstone_bundle"
 
 	-- add the item to the inventory and broadcast
-	for i = 1, 5 do
-		owner:AddItemByName( spawnedItem )
-	end
+	GiveBundlesStaggeredToPlayer(player_id, 10)
 	EmitGlobalSound("Overthrow.Item.Claimed")
 	local overthrow_item_drop =
 	{
@@ -234,14 +233,12 @@ function COverthrowGameMode:TreasureDrop( treasureCourier )
 	EmitGlobalSound( "lockjaw_Courier.gold_big" )
 
 	--Spawn the treasure chest at the selected item spawn location
-	for i = 1, 5 do
-		local newItem = CreateItem( "item_madstone_bundle", nil, nil )
-		local drop = CreateItemOnPositionForLaunch( spawnPoint, newItem )
-		drop:SetForwardVector( treasureCourier:GetRightVector() ) -- oriented differently
-		newItem:LaunchLootInitialHeight( false, 0, 50, 0.25, spawnPoint )
-	
-		self.hCurrentItemSpawnLocation.hDrop = drop
-	end
+	local newItem = CreateItem( "item_treasure_chest", nil, nil )
+	local drop = CreateItemOnPositionForLaunch( spawnPoint, newItem )
+	drop:SetForwardVector( treasureCourier:GetRightVector() ) -- oriented differently
+	newItem:LaunchLootInitialHeight( false, 0, 50, 0.25, spawnPoint )
+
+	self.hCurrentItemSpawnLocation.hDrop = drop
 
 	--print( '^^^ITEM SPAWN LOCATIONS' )
 	--PrintTable( self.itemSpawnLocations )

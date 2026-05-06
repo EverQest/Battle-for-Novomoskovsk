@@ -142,3 +142,20 @@ function IsHalfOfTheBrainOn( caster )
 
     return (buff ~= nil)
 end
+
+function GiveBundlesStaggeredToPlayer(playerId, count)
+    for b = 0, count - 1 do
+        Timers:CreateTimer(b * 0.4, function()
+            local player = PlayerResource:GetPlayer(playerId)
+            
+            if player then
+                local hero = player:GetAssignedHero()
+                if hero then
+                    hero:AddItemByName("item_madstone_bundle")
+                end
+            end
+            return nil
+        end)
+    end
+end
+

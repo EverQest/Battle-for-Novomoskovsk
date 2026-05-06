@@ -9,7 +9,7 @@
                         },
 
                         {
-                        "path": "../../../content/dota_addons/overthrow",
+                        "path": "../../../content/dota_addons/b_f_n",
                         "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", 
                                         "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-workspace", "*.vxml_c", "*.vcss_c", "*.*_c",
                                         "*.fbx", "*.ani", "*.wav", "*.mp3", "*.wav", "*.png", "*.dmx", "*.dem", "*.vcs","*.vmdl","*.ma","*.tga","*.vtex","*.avi", "*.bin", "*.vmap", "*.vpk", "*.vmat", "*.vpcf"]

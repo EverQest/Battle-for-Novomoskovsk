@@ -81,6 +81,7 @@ local propertylist = {
 }
 
 function TalentSystem:Init()
+	print("TalentSystem:Init()")
 	self.PATH = debug.getinfo(1).source:sub(2):gsub('\\','/'):match( 'scripts/vscripts.*/' )
 
 	-- init files
