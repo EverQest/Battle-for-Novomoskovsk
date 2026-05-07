@@ -21,7 +21,6 @@ require('timers')
 require( "events" )
 require( "items" )
 require( "utility_functions" )
-require( "talent/talent" )
 
 ---------------------------------------------------------------------------
 -- Precache
@@ -56,12 +55,7 @@ function Precache( context )
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_life_stealer", context )
 
 	--Cache particles for skils
-		PrecacheResource( "particle_folder", "particles/units/heroes/hero_undying/", context )
-		PrecacheResource( "particle_folder", "particles/units/heroes/hero_techies/", context )
-		PrecacheResource( "particle_folder", "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/", context )
 		PrecacheResource( "particle_folder", "particles/generic_gameplay/", context )
-		PrecacheResource( "particle_folder", "particles/items_fx/", context )
-		PrecacheResource( "particle_folder", "particles/econ/events/ti9/ti9_monkey_debuff.vpcf", context )
 
 	--Cache sounds for traps
 		PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
@@ -69,13 +63,6 @@ function Precache( context )
 
 	-- Cache overthrow-specific sounds
 		PrecacheResource( "soundfile", "soundevents/game_sounds_overthrow.vsndevts", context )
-
-	-- Custom skils sounds
-		PrecacheResource( "soundfile", "soundevents/bruh.vsnd_c", context )
-	
-	-- Cache needed models
-	PrecacheResource("model", "models/items/undying/flesh_golem/deathmatch_dominator_golem/deathmatch_dominator_golem.vmdl", context)
-
 end
 
 function Activate()
@@ -99,8 +86,6 @@ end
 ---------------------------------------------------------------------------
 function COverthrowGameMode:InitGameMode()
 	print( "Battle is loaded." )
-
-	TalentSystem = {}
 	
 	-- levelcap 35
 	XP_PER_LEVEL_TABLE = {

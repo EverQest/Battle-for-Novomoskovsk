@@ -1163,6 +1163,14 @@
 		"FightRecapLevel"				"1"
 		"HasScepterUpgrade"				"1"
 
+		"precache"
+		{
+			"soundfile"						"soundevents/Senya.vsndevts"
+			"particle"						"particles/units/heroes/hero_undying/undying_decay_strength_buff.vpcf"
+			"particle"						"particles/units/heroes/hero_undying/undying_decay_strength_xfer.vpcf"
+			"particle"						"particles/units/heroes/hero_undying/undying_decay.vpcf"
+		}
+
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastAnimation"			"ACT_DOTA_UNDYING_DECAY"
@@ -1204,6 +1212,14 @@
 		"MaxLevel"						"4"
 
         "HasScepterUpgrade"			"1"
+
+			"precache"
+		{	
+			"model"						"models/items/undying/flesh_golem/deathmatch_dominator_golem/deathmatch_dominator_golem.vmdl"
+			"particle"					"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+			"particle"					"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+			"particle"					"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+		}
 		
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
@@ -1302,7 +1318,9 @@
 		{
 			"soundfile"						"soundevents/Senya.vsndevts"
 			"soundfile"						"soundevents/voscripts/game_sounds_vo_techies.vsndevts"			
-			"particle"						"particles/heroes/hero_mina/explosivejump.vpcf"
+			"particle"						"particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_launch.vpcf"
+			"particle"						"particles/units/heroes/hero_techies/techies_blast_off_trail.vpcf"
+			"particle"						"particles/units/heroes/hero_techies/techies_blast_off.vpcf"
 		}
 
 		// Casting
@@ -3409,7 +3427,8 @@
 			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_ambient.vpcf"
 			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_attacked.vpcf"
 			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_death.vpcf"
-			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_return.vpcf"
+			"particle"	"particles/units/heroes/hero_grimstroke/grimstroke_phantom_return_impact.vpcf"
+			"particle"	"particles/grimstroke_phantom_return_custom.vpcf"
 		}
 		
 		// Ability General
@@ -5926,7 +5945,7 @@
 		{
 			"soundfile"	"soundevents/Tit.vsndevts"
 			"particle"	"particles/dagon.vpcf"
-
+			"particle"	"particles/econ/events/ti9/ti9_monkey_debuff.vpcf"
 		}
 		
 		// Ability General

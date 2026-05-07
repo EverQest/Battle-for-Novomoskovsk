@@ -4,7 +4,7 @@ modifier_terrorblade_metamorphosis_lua = class({})
 --------------------------------------------------------------------------------
 -- Classifications
 function modifier_terrorblade_metamorphosis_lua:IsHidden()
-	return false
+	return true
 end
 
 function modifier_terrorblade_metamorphosis_lua:IsDebuff()

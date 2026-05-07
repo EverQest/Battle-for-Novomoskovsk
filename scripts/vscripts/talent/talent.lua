@@ -82,10 +82,9 @@ local propertylist = {
 
 function TalentSystem:Init()
 	print("TalentSystem:Init()")
-	self.PATH = debug.getinfo(1).source:sub(2):gsub('\\','/'):match( 'scripts/vscripts.*/' )
 
 	-- init files
-	LinkLuaModifier( "modifier_talent", self.PATH .. "modifier_talent", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_talent", "talent/modifier_talent", LUA_MODIFIER_MOTION_NONE )
 	ListenToGameEvent("dota_player_learned_ability", Dynamic_Wrap(TalentSystem, 'OnAbilityLearned'), self)
 	ListenToGameEvent("npc_spawned", Dynamic_Wrap(TalentSystem, 'OnNPCSpawned'), self)
 

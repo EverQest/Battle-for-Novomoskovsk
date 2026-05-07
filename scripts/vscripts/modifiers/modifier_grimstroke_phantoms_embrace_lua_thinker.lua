@@ -31,7 +31,7 @@ function modifier_grimstroke_phantoms_embrace_lua_thinker:OnCreated( kv )
 		self.tick_interval = self:GetAbility():GetSpecialValueFor( "tick_interval" )
 		local tick_damage = self:GetAbility():GetSpecialValueFor( "damage_per_tick" )
 		self.pop_damage = self:GetAbility():GetSpecialValueFor( "pop_damage" )
-		self.return_projectile = "particles/grimstroke_phantom_return.vpcf"
+		self.return_projectile = "particles/grimstroke_phantom_return_custom.vpcf"
 
 		-- attacks
 		self.health = self:GetAbility():GetSpecialValueFor( "destroy_attacks" )
