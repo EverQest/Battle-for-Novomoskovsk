@@ -129,7 +129,7 @@
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -314,7 +314,7 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -438,7 +438,7 @@
 		"ItemAliases"					"hot;heart of tarrasque"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -587,7 +587,7 @@
 				"Function"						"butteractive"
 			}
 		}
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 		    "01"
 		    {
@@ -665,7 +665,7 @@
 		    }
 		}
 	
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 		    "01"
 		    {
@@ -780,7 +780,7 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -922,7 +922,7 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -1013,7 +1013,7 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -1158,7 +1158,7 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -1310,7 +1310,7 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -1453,7 +1453,7 @@
 			
 		}
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -1523,7 +1523,7 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{
@@ -1600,7 +1600,7 @@
 		"AbilityCooldown"				"15"
 		"AbilityCastRange"				"600"
 
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"01"
 			{

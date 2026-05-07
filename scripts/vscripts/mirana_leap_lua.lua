@@ -1,13 +1,7 @@
 mirana_leap_lua = class({})
 LinkLuaModifier( "modifier_mirana_leap_lua", "modifiers/modifier_mirana_leap_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_generic_charges", "modifiers/modifier_generic_charges", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_generic_arc_lua", "modifiers/modifier_generic_arc_lua", LUA_MODIFIER_MOTION_BOTH )
 
---------------------------------------------------------------------------------
--- Passive modifier
-function mirana_leap_lua:GetIntrinsicModifierName()
-	return "modifier_generic_charges"
-end
 --------------------------------------------------------------------------------
 -- Ability Start
 function mirana_leap_lua:OnSpellStart()
@@ -52,4 +46,12 @@ function mirana_leap_lua:OnSpellStart()
 	-- effects
 	local sound_cast = "CustomSonic"
 	EmitSoundOn( sound_cast, caster )
+end
+
+function mirana_leap_lua:GetAbilityChargeRestoreTime( level )
+	return self:GetSpecialValueFor( "charge_restore_time" )
+end
+
+function mirana_leap_lua:GetManaCost( level )
+	return self:GetSpecialValueFor( "ability_mana_cost" )
 end

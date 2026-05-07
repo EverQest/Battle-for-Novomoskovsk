@@ -1,3 +1,4 @@
+require( "utility_functions" )
 --------------------------------------------------------------------------------
 modifier_doom_doom_lua = class({})
 
@@ -26,6 +27,8 @@ function modifier_doom_doom_lua:OnCreated( kv )
 	local damage = self:GetAbility():GetSpecialValueFor( "damage" )
 	self.deniable = self:GetAbility():GetSpecialValueFor( "deniable_pct" )
 	self.interval = 1
+	self.ms_slow = -self:GetAbility():GetSpecialValueFor( "ms_slow_pct" )
+	self.disable_heal = self:GetAbility():GetSpecialValueFor( "disable_heal" )
 
 	-- scepter
 	self.scepter = self:GetCaster():HasScepter()
@@ -88,11 +91,34 @@ function modifier_doom_doom_lua:CheckState()
 	local state = {
 		[MODIFIER_STATE_SILENCED] = true,
 		[MODIFIER_STATE_MUTED] = true,
-		[MODIFIER_STATE_PASSIVES_DISABLED] = self.scepter,
+		[MODIFIER_STATE_PASSIVES_DISABLED] = IsTalentLearned(self:GetCaster(), "special_bonus_unique_valik_doom_break"),
 		[MODIFIER_STATE_SPECIALLY_DENIABLE] = self:GetParent():GetHealthPercent()<self.deniable,
 	}
 
 	return state
+end
+
+--------------------------------------------------------------------------------
+-- DeclareFunctions
+function modifier_doom_doom_lua:DeclareFunctions()
+	local funcs = {
+		MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE,
+		MODIFIER_PROPERTY_DISABLE_HEALING,
+	}
+
+	return funcs
+end
+
+--------------------------------------------------------------------------------
+-- Slow
+function modifier_doom_doom_lua:GetModifierMoveSpeedBonus_Percentage()
+	return self.ms_slow
+end
+
+--------------------------------------------------------------------------------
+-- No HP regen
+function modifier_doom_doom_lua:GetDisableHealing()
+	return self.disable_heal
 end
 
 --------------------------------------------------------------------------------

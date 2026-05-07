@@ -62,12 +62,12 @@ function pudge_meat_hook_lua:OnSpellStart()
 	self.projectiles[id] = data
 
 	-- add self stun modifier
-	local duration = projectile_distance/projectile_speed
+	local cast_duration = self:GetSpecialValueFor( "cast_duration" )
 	caster:AddNewModifier(
 		caster, -- player source
 		self, -- ability source
 		"modifier_pudge_meat_hook_lua_self", -- modifier name
-		{ duration = duration } -- kv
+		{ duration = cast_duration } -- kv
 	)
 
 	-- play effects

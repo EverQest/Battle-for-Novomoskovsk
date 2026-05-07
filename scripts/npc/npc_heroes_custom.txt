@@ -346,12 +346,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_unique_valik_dash"
+		"Ability13"				"special_bonus_unique_valik_doom_slow" 
+		"Ability14"				"special_bonus_unique_valik_hook"
+		"Ability15"				"special_bonus_unique_valik_doom_break" 
+		"Ability16"				"special_bonus_unique_valik_bkb"
+		"Ability17"				"special_bonus_unique_valik_doom_necrotic"
 
 		"Ability1"					"pudge_meat_hook_lua"
 		"Ability2"					"mirana_leap_lua"

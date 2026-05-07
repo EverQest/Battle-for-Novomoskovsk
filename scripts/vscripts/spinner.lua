@@ -1,7 +1,14 @@
+require( "utility_functions" )
+
 function Damage(event)
 	local caster = event.caster
 	local ability = event.ability
 	local damage = ability:GetSpecialValueFor("damage") * ability:GetSpecialValueFor("spinner_damage_tick")
+
+	-- Add Max healths as damage
+	if IsTalentLearned(caster, "special_bonus_unique_valik_bkb") then
+		damage = damage + ( caster:GetMaxHealth() * 0.05)
+	end
 
 	local targets = FindUnitsInRadius(caster:GetTeamNumber(),
 		caster:GetAbsOrigin(),

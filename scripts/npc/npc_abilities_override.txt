@@ -4514,6 +4514,8 @@
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"ABILITY_TYPE_BASIC"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
@@ -4542,6 +4544,7 @@
 			"hook_distance"			"1300 1400 1600 1800"
 			"vision_radius"			"500"
 			"vision_duration"		"4.0"
+			"cast_duration"			"3.5 3.0 2.5 2.0"
 		}
 	}
 
@@ -4566,6 +4569,7 @@
 		"AbilityType"					"ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityCharges"				"3"
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -4573,8 +4577,7 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35 25 20 15"
-		"AbilityManaCost"				"60"
+		"AbilityCooldown"				"0.3"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -4583,14 +4586,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"leap_distance"			"850"
-			"leap_speed"			"1800.0"
-			"leap_acceleration"		"8000.0"
-			"leap_speedbonus"		"8 16 24 32"
-			"leap_speedbonus_as"	"25 50 75 100"
-			"leap_bonus_duration"	"3.0"
-			"max_charges"			"3"
-			"charge_restore_time"	"15 12 10 5"
+			"leap_distance"								"850"
+			"leap_speed"								"1800.0"
+			"leap_acceleration"							"8000.0"
+			"leap_speedbonus"							"8 16 24 32"
+			"leap_speedbonus_as"						"0"
+			"leap_bonus_duration"						"3.0"
+			"charge_restore_time" 						"30 25 20 15"
+			"ability_mana_cost"							"75 70 65 60"
 		}
 	}
 
@@ -4735,14 +4738,14 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"550"
-		"AbilityCastPoint"				"0.5"
+		"AbilityCastRange"				"450 500 550 600"
+		"AbilityCastPoint"				"0.5 0.4 0.3 0.2"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30 25 20 15"
 		"AbilityManaCost"				"150 200 250 300"
-		"AbilityDuration"				"3 4 5"
+		"AbilityDuration"				"3 4 5 6"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -4751,11 +4754,21 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"duration"				"3.0 4.0 5.0"
+			"duration"				"3.0 4.0 5.0 6.0"
 			"damage"				"0"
 			"duration_scepter"		"16.0"
 			"damage_scepter"		"0"
 			"deniable_pct"			"100"
+			"ms_slow_pct"
+			{
+				"value"										"0"
+				"special_bonus_unique_valik_doom_slow" 		"50"
+			}
+			"disable_heal"
+			{
+				"value"											"0"
+				"special_bonus_unique_valik_doom_necrotic" 		"1"
+			}
 		}
 	}
 
@@ -4767,7 +4780,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"ability_datadriven"
-		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"DisplayAdditionalHeroes"	"1"
 		"AbilityTextureName"		"perik_bear"

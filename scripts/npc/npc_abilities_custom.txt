@@ -768,4 +768,52 @@
 			}
 		}
 	}
+
+	"special_bonus_unique_valik_dash"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"charge_restore_time"		"-5" // kv that will be changed
+				"ability"					"mirana_leap_lua" // ability name
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"ability_mana_cost"			"0" // kv that will be changed
+				"ability"					"mirana_leap_lua" // ability name
+				"bonus_type"				"*"
+			}
+		}
+	}
+
+	"special_bonus_unique_valik_hook"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_duration"				"0" // kv that will be changed
+				"ability"					"pudge_meat_hook_lua" // ability name
+				"bonus_type"				"*"
+			}
+		}
+	}
 }
