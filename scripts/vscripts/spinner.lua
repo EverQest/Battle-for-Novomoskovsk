@@ -7,7 +7,7 @@ function Damage(event)
 
 	-- Add Max healths as damage
 	if IsTalentLearned(caster, "special_bonus_unique_valik_bkb") then
-		damage = damage + ( caster:GetMaxHealth() * 0.05)
+		damage = damage + ( caster:GetMaxHealth() * 0.025)
 	end
 
 	local targets = FindUnitsInRadius(caster:GetTeamNumber(),
