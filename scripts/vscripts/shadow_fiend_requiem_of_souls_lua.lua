@@ -1,7 +1,33 @@
+require( "utility_functions" )
+
 shadow_fiend_requiem_of_souls_lua = class({})
 LinkLuaModifier( "modifier_shadow_fiend_requiem_of_souls_lua", "modifiers/modifier_shadow_fiend_requiem_of_souls_lua", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_generic_silenced_lua", "modifiers/modifier_generic_silenced_lua", LUA_MODIFIER_MOTION_NONE )
+
+
+--------------------------------------------------------------------------------
+-- Ability cost
+function shadow_fiend_requiem_of_souls_lua:GetManaCost( level )
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_tit_no_skill_cost") then
+		return 0
+	end
+	if IsHalfOfTheBrainOn(self:GetCaster()) then
+		return 0
+	end
+	return self.BaseClass.GetManaCost( self, level )
+end
+
+function shadow_fiend_requiem_of_souls_lua:GetHealthCost( level )
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_tit_no_skill_cost") then
+		return 0
+	end
+	if not IsHalfOfTheBrainOn(self:GetCaster()) and IsServer() then -- for always displaying health 
+		return 0
+	end
+	return self.BaseClass.GetHealthCost( self, level )
+end
+
 
 --------------------------------------------------------------------------------
 -- Ability Phase Start

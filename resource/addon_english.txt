@@ -340,7 +340,7 @@
 		"Dota_Tooltip_ability_special_bonus_unique_valik_hook"							"Hook casting duration is set to 0"
 		"Dota_Tooltip_ability_special_bonus_unique_valik_hook_description"				"Anoughth standing still like an idiot"
 		"Dota_Tooltip_ability_special_bonus_unique_valik_bkb"							"BKB damage scales with max HP"
-		"Dota_Tooltip_ability_special_bonus_unique_valik_bkb_description"				"Additionally deals 5% of your MAX HP"
+		"Dota_Tooltip_ability_special_bonus_unique_valik_bkb_description"				"Additionally deals 2.5% of your MAX HP"
 		"Dota_Tooltip_ability_special_bonus_unique_valik_doom_slow"						"Donkey applies 50% slow"
 		"Dota_Tooltip_ability_special_bonus_unique_valik_doom_break"					"Donkey applies break"
 		"Dota_Tooltip_ability_special_bonus_unique_valik_doom_necrotic"					"Donkey applies necrotic"
@@ -403,10 +403,10 @@
 		"DOTA_Tooltip_modifier_elder_titan_dagon"									"Dagon stacks"
 		"DOTA_Tooltip_modifier_elder_titan_dagon_Description"						"Increase dagon damage by %dMODIFIER_PROPERTY_TOOLTIP%"
 
-		"Dota_Tooltip_ability_elder_titan_punch"									"Удар идиничка"
+		"Dota_Tooltip_ability_elder_titan_punch"									"Удар одиничка"
 		"Dota_Tooltip_ability_elder_titan_punch_Description"						"Фирменный хук с ... а вот слева или справа зависит от мозга. Если дать вялого мага то можно нехуйно приголубить дагоном, а если физикой то уже и так ебнет неплохо"
-		"Dota_Tooltip_ability_elder_titan_punch_crit_pct"							"%CRIT:"
-		"Dota_Tooltip_ability_elder_titan_punch_mgc_resist_pct"						"%BONUS MAGIC RESIST:"
+		"Dota_Tooltip_ability_elder_titan_punch_crit_pct"							"%CRIT DAMAGE:"
+		"Dota_Tooltip_ability_elder_titan_punch_mgc_resist_pct"						"%MAGIC RESIST REDUCTION:"
 		"Dota_Tooltip_ability_elder_titan_punch_debuf_duration"						"DEBUF DURATION:"
 		"Dota_Tooltip_ability_elder_titan_punch_stun_duration"						"STUN DURATION:"
 		"Dota_Tooltip_ability_elder_titan_punch_cost_pct"							"%MAXIMUM HEALTH OR MANA COST:"
@@ -414,10 +414,12 @@
 		"DOTA_Tooltip_modifier_elder_titan_punch"									"Магический раскумар"
 		"DOTA_Tooltip_modifier_elder_titan_punch_Description"						"Decrease magic resist by %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%%"
 
-		"Dota_Tooltip_ability_half_of_the_brain"									"Пол мозга"
-		"Dota_Tooltip_ability_half_of_the_brain_Description"						"Имея лишь половину мозга, нужно выбирать что нужнее. Ваши способности наносят физический урон либо магический. Также когда выбран режим физического урона, способности используют ваше здоровье вместо маны. Так что думайте полной головой"
-		"Dota_Tooltip_ability_half_of_the_brain_bonus_int_per_dagon"				"BONUS INT PER DAGON:"
-		"Dota_Tooltip_ability_half_of_the_brain_bonus_str_per_dagon"				"BONUS STR PER DAGON:"
+		"Dota_Tooltip_ability_half_of_the_brain"										"Пів мозку"
+		"Dota_Tooltip_ability_half_of_the_brain_Description"							"Имея лишь половину мозга, нужно выбирать что нужнее. Ваши способности наносят физический урон либо магический. Также когда выбран режим физического урона, способности используют ваше здоровье вместо маны. Так что думайте полной головой"
+		"Dota_Tooltip_ability_half_of_the_brain_bonus_int_per_dagon"					"BONUS INT PER DAGON:"
+		"Dota_Tooltip_ability_half_of_the_brain_bonus_str_per_dagon"					"BONUS STR PER DAGON:"
+		"Dota_Tooltip_ability_half_of_the_brain_bonus_magic_resist_per_int"				"%BONUS MAGIC RESIST PER INT:"
+		"Dota_Tooltip_ability_half_of_the_brain_bonus_armor_per_str_pct"				"BONUS ARMOR PER STR:"
 		//modifiers half_of_the_brain
 		"DOTA_Tooltip_modifier_half_of_the_brain_health"							"Физическая половина мозга"
 		"DOTA_Tooltip_modifier_half_of_the_brain_health_Description"				"Increase strength by %dMODIFIER_PROPERTY_TOOLTIP% for each dagon stack"
@@ -429,6 +431,17 @@
 		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_total_lines"		"TOTAL LINES:"
 		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_stun_duration"		"STUN DURATION:"
 		"Dota_Tooltip_ability_shadow_fiend_requiem_of_souls_lua_silence_duration"	"SILENCE DURATION:"
+
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_tit_punch_stun"					"Increases stun duration of Удар одиничка by 1.75 sec"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_punch_duration"				"Increases debuff duration of Удар одиничка by 4 sec"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_half_atr"					"Increase Пів мозку attribute gain by 5"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_half_atr_description"		"Affects strength and intellect gain for each dagon stack"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_dagon_cd"					"Reduces cooldown of Dagon by 5 sec"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_half_stats"					"Increase Пів мозку stats bonuses by 0.2"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_half_stats_description"		"Affects magic resistance and bonus armor scaling"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_no_skill_cost"				"Removes all skill costs"
+		"Dota_Tooltip_ability_special_bonus_unique_tit_no_skill_cost_description"	"Просто вимкни свої мізки"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Gul

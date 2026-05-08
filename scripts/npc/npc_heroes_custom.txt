@@ -514,12 +514,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_unique_tit_punch_stun" // half of the brain zero cooldown
+		"Ability13"				"special_bonus_unique_tit_punch_duration" // punch debuff duration x 2
+		"Ability14"				"special_bonus_unique_tit_half_atr" //  half of the brain bonus stats
+		"Ability15"				"special_bonus_unique_tit_dagon_cd" // dagon cooldown reduction
+		"Ability16"				"special_bonus_unique_tit_half_stats" // half of the brain bonus secondary stats
+		"Ability17"				"special_bonus_unique_tit_no_skill_cost" // removes all skill cost
 
 		"Ability1"					"elder_titan_dagon"
 		"Ability2"					"elder_titan_punch"

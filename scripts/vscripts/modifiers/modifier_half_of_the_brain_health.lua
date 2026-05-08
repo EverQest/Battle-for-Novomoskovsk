@@ -37,7 +37,9 @@ function modifier_half_of_the_brain_health:UpdateValues()
 	end
 	-- references
 	local caster = self:GetAbility():GetCaster()
-	self.bonus_str_per_dagon = self:GetAbility():GetSpecialValueFor( "bonus_str_per_dagon" )
+	local bonus_str_per_dagon = self:GetAbility():GetSpecialValueFor( "bonus_str_per_dagon" )
+	local bonus_armor_per_str = self:GetAbility():GetSpecialValueFor( "bonus_armor_per_str_pct" )
+	
 	self.stacks = 1
 
 	local modifier = caster:FindModifierByName( "modifier_elder_titan_dagon" )
@@ -45,7 +47,9 @@ function modifier_half_of_the_brain_health:UpdateValues()
 		self.stacks = modifier:GetStackCount() + 1
 	end
 
-	self.bonus_str = self.bonus_str_per_dagon * self.stacks
+	self.bonus_str = bonus_str_per_dagon * self.stacks
+
+	self.armor = caster:GetStrength() * bonus_armor_per_str
 
 	self:GetParent():CalculateStatBonus(true)
 end
@@ -54,6 +58,7 @@ end
 function modifier_half_of_the_brain_health:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
+		MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
 		MODIFIER_PROPERTY_TOOLTIP,
 	}
 
@@ -62,6 +67,13 @@ end
 
 function modifier_half_of_the_brain_health:GetModifierBonusStats_Strength()
 	return self.bonus_str
+end
+
+function modifier_half_of_the_brain_health:GetModifierPhysicalArmorBonus()
+	local bonus_armor_per_str = self:GetAbility():GetSpecialValueFor( "bonus_armor_per_str_pct" )
+	self.armor = self:GetAbility():GetCaster():GetStrength() * bonus_armor_per_str
+
+	return self.armor
 end
 
 function modifier_half_of_the_brain_health:OnTooltip()

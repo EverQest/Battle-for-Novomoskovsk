@@ -5929,7 +5929,8 @@
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"80 70 60"
-		"AbilityManaCost"				"150 200 250"
+		"AbilityManaCost"				"250 500 750"
+		"AbilityHealthCost"				"500 1000 1500"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -5995,6 +5996,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"24 23 22 21 20"
 		"AbilityManaCost"				"200 300 400 500 600"
+		"AbilityHealthCost"				"400 600 800 1000 1200"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -6026,7 +6028,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 
@@ -6038,9 +6040,9 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20 25 30 35"
+		"AbilityCooldown"				"20"
 		"AbilityManaCost"				"10" //%
-		"AbilityHealthCost"				"10" //%
+		"AbilityHealthCost"				"20" //%
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -6050,9 +6052,17 @@
 		"AbilityValues"
 		{
 			"crit_pct"				"200 300 400 500"
-			"mgc_resist_pct"		"-40 -60 -80 -100"
-			"debuf_duration"		"6.66"
-			"stun_duration"			"1.337"
+			"mgc_resist_pct"		"-20 -30 -40 -50"
+			"debuf_duration"		
+			{
+				"value"										"3 4 5 6"
+				"special_bonus_unique_tit_punch_duration"	"4"
+			}			
+			"stun_duration"			
+			{
+				"value"										"0.5 0.75 1.0 1.25"
+				"special_bonus_unique_tit_punch_stun"		"1.75"
+			}		
 			"cost_pct"				"10 15 20 25"
 		}
 	}
@@ -6065,7 +6075,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"1"
 		"BaseClass"						"ability_lua"
@@ -6085,8 +6094,26 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_int_per_dagon"	"5 7.5 10 12.5"
-			"bonus_str_per_dagon"	"5 7.5 10 12.5"
+			"bonus_int_per_dagon"
+			{
+				"value"										"4 6 8 10"
+				"special_bonus_unique_tit_half_atr"			"5"
+			}			
+			"bonus_str_per_dagon"
+			{
+				"value"										"4 6 8 10"
+				"special_bonus_unique_tit_half_atr"			"5"
+			}	
+			"bonus_magic_resist_per_int"					
+			{
+				"value"										"0.05 0.1 0.15 0.2"
+				"special_bonus_unique_tit_half_stats"		"0.2"
+			}	
+			"bonus_armor_per_str_pct"						
+			{
+				"value"										"0.05 0.1 0.15 0.2"
+				"special_bonus_unique_tit_half_stats"		"0.2"
+			}
 		}
 	}
 

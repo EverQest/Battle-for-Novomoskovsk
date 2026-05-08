@@ -19,14 +19,24 @@ end
 --------------------------------------------------------------------------------
 -- Ability cost
 function elder_titan_dagon:GetManaCost( level )
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_tit_no_skill_cost") then
+		return 0
+	end
+	if IsHalfOfTheBrainOn(self:GetCaster()) then
+		return 0
+	end
 	return self.BaseClass.GetManaCost( self, level )
 end
 
 function elder_titan_dagon:GetHealthCost( level )
-	if not IsHalfOfTheBrainOn(self:GetCaster()) then
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_tit_no_skill_cost") then
 		return 0
 	end
-	return self.BaseClass.GetManaCost( self, level )
+	if not IsHalfOfTheBrainOn(self:GetCaster()) and IsServer() then -- for always displaying health 
+		return 0
+	end
+
+	return self.BaseClass.GetHealthCost( self, level )
 end
 
 --------------------------------------------------------------------------------

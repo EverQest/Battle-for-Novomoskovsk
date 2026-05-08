@@ -816,4 +816,23 @@
 			}
 		}
 	}
+	"special_bonus_unique_tit_dagon_cd"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"AbilityCooldown"			"-5" // kv that will be changed
+				"ability"					"elder_titan_dagon" // ability name
+			}
+		}
+	}
 }

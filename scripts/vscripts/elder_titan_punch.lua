@@ -12,6 +12,9 @@ end
 --------------------------------------------------------------------------------
 -- manacost
 function elder_titan_punch:GetManaCost( level )
+    if IsTalentLearned(self:GetCaster(), "special_bonus_unique_tit_no_skill_cost") then
+		return 0
+	end
 	if IsHalfOfTheBrainOn(self:GetCaster()) then
 		return 0
 	end
@@ -19,23 +22,26 @@ function elder_titan_punch:GetManaCost( level )
 	local mana_cost_pct = self:GetSpecialValueFor( "cost_pct" )
 
 	-- get data
-	local current_mana = self:GetCaster():GetMana()
+	local max_mana = self:GetCaster():GetMaxMana()
 
-	return current_mana * mana_cost_pct/100
+	return max_mana * mana_cost_pct/100
 end
 
 -- healthcost
 function elder_titan_punch:GetHealthCost( level )
+    if IsTalentLearned(self:GetCaster(), "special_bonus_unique_tit_no_skill_cost") then
+		return 0
+	end
 	if not IsHalfOfTheBrainOn(self:GetCaster()) and IsServer() then -- for always displaying health 
 		return 0
 	end
 	-- references
-	local health_cost = self:GetSpecialValueFor( "cost_pct" )
+	local health_cost = self:GetSpecialValueFor( "cost_pct" ) * 2
 
 	-- get data
-	local current_health = self:GetCaster():GetHealth()
+	local max_health = self:GetCaster():GetMaxHealth()
 
-	return current_health * health_cost/100
+	return max_health * health_cost/100
 end
 
 --------------------------------------------------------------------------------
