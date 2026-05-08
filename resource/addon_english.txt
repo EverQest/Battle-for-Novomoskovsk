@@ -220,15 +220,38 @@
 		"npc_dota_hero_clinkz" 				   "Felix"
 
 		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven"						"Стойка Керамбита"
+		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_bonus_range"    		"ATTACK RANGE REDUCTION:"
 		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_bonus_move_speed"    "BONUS MOVE SPEED:"
 		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_base_attack_time"    "BASE ATTACK TIME:"
 		"Dota_Tooltip_ability_troll_warlord_berserkers_rage_datadriven_Description"			"Тот самый легендарный деревяный нож КЕРАМБИТ, когда он у него в руках он очень быстрый и страшный"
 		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua"								"Выключай компьютер!"
+		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_dps_tooltip"					"DAMAGE PER SECOND:"
+		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_pop_damage"					"POP DAMAGE:"
+		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_destroy_attacks_tooltip"		"ATTACKS TO DESTROY:"
+		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_latch_duration"				"SILENCE DURATION:"
 		"Dota_Tooltip_ability_grimstroke_phantoms_embrace_lua_Description"					"АНУ БЫСТРО ВЫКЛЮЧАЙ КОМПЬЮТЕР Я ТЕБЕ СКАЗАЛА!"
+		"Dota_Tooltip_modifier_grimstroke_phantoms_embrace_lua_debuff"						"Замутився в дс"
 		"Dota_Tooltip_ability_doom_scorched_earth_lua"										"Согревай меня FX..."
+		"Dota_Tooltip_ability_doom_scorched_earth_lua_duration"								"DURATION:"
+		"Dota_Tooltip_ability_doom_scorched_earth_lua_damage_per_second"					"DAMAGE PER SECOND:"
 		"Dota_Tooltip_ability_doom_scorched_earth_lua_Description"				 			"Старый добрый процесор Андрюхи который согревает его зимой... Как мило, жаль что он всё вокруг выжигает"
+		"Dota_Tooltip_modifier_doom_scorched_earth_lua"										"Процессор перегрівся"
 		"Dota_Tooltip_ability_sven_gods_strength_lua"					 					"Клубняковая музыка"
+		"Dota_Tooltip_ability_sven_gods_strength_lua_gods_strength_duration"				"DURATION:"
+		"Dota_Tooltip_ability_sven_gods_strength_lua_gods_strength_damage"					"%BONUS ATTACK DAMAGE:"
 		"Dota_Tooltip_ability_sven_gods_strength_lua_Description"		 					"Тебе одиноко? грустно? хочешь потанцевать? Самое время подрубить нормальный музон для нормального движа!!!"
+		"Dota_Tooltip_modifier_sven_gods_strength_lua"										"Слухає клубняк"
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_felix_babka_health"						"Babka needs 3 more attacks to destroy"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_gds_duration"						"+5 sec Klubniakova muzyka duration"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_babka_dps"							"Babka additionaly deals 10% of your attack damage"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_procesor_ms"						"Согревай меня FX increase move speed by 25%"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_babka_inf"							"Babka has infinite duration"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_babka_inf_description"				"Babka will never leave target until she's killed or dispelled"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_karambit_ranged"					"Kerambit has no attack range reduction"
+		"Dota_Tooltip_ability_special_bonus_unique_felix_karambit_ranged_description"		"Knifes can be thrown you know?"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Тёмыч
 		"npc_dota_hero_storm_spirit"           "Тёмыч"

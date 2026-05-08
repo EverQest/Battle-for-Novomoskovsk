@@ -125,15 +125,17 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"	
 		"AttributeStrengthGain"		"2.8"
 
+		"ProjectileModel"			"particles/felix_base_attack.vpcf"
+
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_unique_felix_babka_health"
+		"Ability13"				"special_bonus_unique_felix_gds_duration"
+		"Ability14"				"special_bonus_unique_felix_babka_dps"  
+		"Ability15"				"special_bonus_unique_felix_procesor_ms"
+		"Ability16"				"special_bonus_unique_felix_babka_inf"
+		"Ability17"				"special_bonus_unique_felix_karambit_ranged"
 
 	    "Ability1"					"troll_warlord_berserkers_rage_datadriven"
 		"Ability2"       			"grimstroke_phantoms_embrace_lua"
@@ -141,6 +143,8 @@
 	 		"Ability4"					"generic_hidden"
 			"Ability5"					"generic_hidden"	
 	    "Ability6"					"sven_gods_strength_lua"
+			"Ability7"					"generic_hidden"	// Remove Innate ability
+
 	}
 	
 	//=================================================================================================================

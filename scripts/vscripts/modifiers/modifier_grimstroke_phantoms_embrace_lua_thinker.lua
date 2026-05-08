@@ -1,3 +1,5 @@
+require( "utility_functions" )
+
 modifier_grimstroke_phantoms_embrace_lua_thinker = class({})
 local tempTable = require("tempTable")
 --------------------------------------------------------------------------------
@@ -38,13 +40,18 @@ function modifier_grimstroke_phantoms_embrace_lua_thinker:OnCreated( kv )
 		self.hero_attack = self.health/self:GetAbility():GetSpecialValueFor( "destroy_attacks_tooltip" )
 		self.max_health = self.health
 
+		-- attack damage to tick bonus
+		if IsTalentLearned(self:GetCaster(), "special_bonus_unique_felix_babka_dps") then
+			tick_damage = tick_damage + (self:GetCaster():GetAverageTrueAttackDamage(caster) * 0.1)
+		end
+
 		-- initialization
 		self.latching = false
 		self.damageTable = {
 			victim = self.target,
 			attacker = self:GetCaster(),
 			damage = tick_damage,
-			damage_type = DAMAGE_TYPE_MAGICAL,
+			damage_type = DAMAGE_TYPE_PURE,
 			ability = self:GetAbility(), --Optional.
 			damage_flags = DOTA_DAMAGE_FLAG_NONE, --Optional.
 		}
@@ -138,6 +145,12 @@ function modifier_grimstroke_phantoms_embrace_lua_thinker:OnAttacked( params )
 
 	-- play effects
 	self:PlayEffects2()
+
+	if self.health == 0 then
+		self:GetParent():ForceKill( false )
+		self:Destroy()
+		UTIL_Remove( self:GetParent() )
+	end
 end
 
 function modifier_grimstroke_phantoms_embrace_lua_thinker:GetOverrideAnimation()
@@ -173,6 +186,12 @@ end
 -- Motion Effects
 function modifier_grimstroke_phantoms_embrace_lua_thinker:UpdateHorizontalMotion( me, dt )
 	-- check target
+	if not self.target:IsAlive() then
+		self.forcedKill = false
+		self:Destroy()
+		return
+	end
+	
 	if self.target:IsInvisible() or self.target:IsMagicImmune() or self.target:IsInvulnerable() then
 		self.forcedKill = true
 		self:Destroy()
@@ -231,16 +250,26 @@ function modifier_grimstroke_phantoms_embrace_lua_thinker:SetLatching()
 	-- tell the target modifier
 	self.target_modifier:Destroy()
 
-	-- add stack modifier
-	self.modifier = self.target:AddNewModifier(
-		self:GetCaster(), -- player source
-		self:GetAbility(), -- ability source
-		"modifier_grimstroke_phantoms_embrace_lua_debuff", -- modifier name
-		{ duration = self.latch_duration } -- kv
-	)
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_felix_babka_inf") then
+		-- add stack modifier
+		self.modifier = self.target:AddNewModifier(
+			self:GetCaster(), -- player source
+			self:GetAbility(), -- ability source
+			"modifier_grimstroke_phantoms_embrace_lua_debuff", -- modifier name
+			{} -- kv
+		)
+	else
+		-- add stack modifier
+		self.modifier = self.target:AddNewModifier(
+			self:GetCaster(), -- player source
+			self:GetAbility(), -- ability source
+			"modifier_grimstroke_phantoms_embrace_lua_debuff", -- modifier name
+			{ duration = self.latch_duration } -- kv
+		)
 
-	-- set latching duration
-	self:SetDuration( self.latch_duration, false )
+		-- set latching duration
+		self:SetDuration( self.latch_duration, false )
+	end
 
 	-- start dps
 	self:StartIntervalThink( self.tick_interval )
