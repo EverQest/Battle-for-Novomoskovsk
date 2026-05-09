@@ -1,3 +1,5 @@
+require("utility_functions")
+--------------------------------------
 if mina_explosion_jump == nil then mina_explosion_jump = class({}) end
 
 LinkLuaModifier( "modifier_mina_explosion_jump", "explosive_jump", LUA_MODIFIER_MOTION_BOTH )
@@ -9,6 +11,11 @@ function mina_explosion_jump:OnAbilityPhaseStart()
         self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_2_ES_ROLL_START)
     end
     return true
+end
+
+-- AOE ring display
+function mina_explosion_jump:GetAOERadius()
+	return self:GetSpecialValueFor("radius")
 end
 
 function mina_explosion_jump:OnSpellStart()
@@ -118,6 +125,11 @@ function modifier_mina_explosion_jump:OnDestroy()
 		self.radius  = self:GetAbility():GetSpecialValueFor("radius")
 		self.damage  = self:GetAbility():GetSpecialValueFor("damage")
 		self.silence  = self:GetAbility():GetSpecialValueFor("silence")
+
+        -- radius scale with model size
+        if IsTalentLearned(self:GetCaster(), "special_bonus_unique_senya_jump_radius") then
+            self.radius = self.radius * self:GetCaster():GetModelScale()
+        end
 		
 		local modifier_silence = "modifier_mina_explosive_jump_silence"
 		local modifier_muted = "modifier_mina_explosive_jump_muted"

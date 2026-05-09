@@ -73,6 +73,9 @@ function imba_undying_decay:OnSpellStart()
 
 	self:GetCaster():EmitSound("CustomOpa")
 
+	-- Set buff/debuff duration
+	local decay_duration = self:GetSpecialValueFor("decay_duration")
+
 	if self:GetCaster():GetName() == "npc_dota_hero_undying" and RollPercentage(50) then
 		if not self.responses then
 			self.responses = 
@@ -147,12 +150,12 @@ function imba_undying_decay:OnSpellStart()
 				ParticleManager:ReleaseParticleIndex(strength_transfer_particle)
 				
 				-- "Steals strength before applying its damage."
-				enemy:AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_debuff_counter", {duration = 20 * (1 - enemy:GetStatusResistance())})
-				debuff_modifier = enemy:AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_debuff", {duration = 20 * (1 - enemy:GetStatusResistance())})
+				enemy:AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_debuff_counter", {duration = decay_duration * (1 - enemy:GetStatusResistance())})
+				debuff_modifier = enemy:AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_debuff", {duration = decay_duration * (1 - enemy:GetStatusResistance())})
 				table.insert(self.debuff_modifier_table, debuff_modifier)
 				
-				self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_buff_counter", {duration = "15"})
-				buff_modifier = self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_buff", {duration = "15"})
+				self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_buff_counter", {duration = decay_duration})
+				buff_modifier = self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_imba_undying_decay_buff", {duration = decay_duration})
 			end
 			
 			ApplyDamage({
@@ -212,7 +215,7 @@ function modifier_imba_undying_decay_buff:OnCreated()
 
 	self.str_steal			= self:GetAbility():GetSpecialValueFor("str_steal")
 	self.str_steal_scepter	= self:GetAbility():GetSpecialValueFor("str_steal_scepter")
-	self.hp_gain_per_str = 35
+	self.hp_gain_per_str = self:GetAbility():GetSpecialValueFor("hp_gain_per_str")
 	
 	if not IsServer() then return end
 	
@@ -225,7 +228,7 @@ function modifier_imba_undying_decay_buff:OnCreated()
 	end
 	
 	-- "The strength gain on Undying does not keep the current health percentage either, and instead adds 20 health per strength to the current health pool."	
-	self:GetCaster():Heal(self.strength_gain * 35, self:GetCaster())
+	self:GetCaster():Heal(self.strength_gain * self.hp_gain_per_str, self:GetCaster())
 end
 
 function modifier_imba_undying_decay_buff:OnDestroy()
@@ -285,7 +288,7 @@ function modifier_imba_undying_decay_debuff:OnCreated()
 	self.str_steal			= self:GetAbility():GetSpecialValueFor("str_steal")
 	self.str_steal_scepter	= self:GetAbility():GetSpecialValueFor("str_steal_scepter")
 	self.brains_int_pct	= self:GetAbility():GetSpecialValueFor("brains_int_pct")
-	self.hp_removal_per_str = 30
+	self.hp_removal_per_str = self:GetAbility():GetSpecialValueFor("hp_removal_per_str")
 
 	if not IsServer() then return end
 
@@ -297,7 +300,7 @@ function modifier_imba_undying_decay_debuff:OnCreated()
 		self.strength_reduction = self.str_steal_scepter
 	end
 
-	-- "The strength loss on the target does not keep the current health percentage, but instead removes 20 health per strength from the current health pool."	
+	-- "The strength loss on the target does not keep the current health percentage, but instead removes X amount of health per strength from the current health pool."	
 	local damageTable = {victim = self:GetParent(),
 		attacker = self:GetCaster(),
 		damage = self.hp_removal_per_str * self.strength_reduction,

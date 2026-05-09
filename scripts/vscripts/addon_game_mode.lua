@@ -591,18 +591,6 @@ function COverthrowGameMode:ExecuteOrderFilter( filterTable )
 			-- determine if we can scoop the neutral or not
 			-- we need either a free backpack slot or a free neutral item slot
 			local bAllowPickup = true
-			
-				local numBackpackItems = 0
-				for nItemSlot = 0,DOTA_ITEM_INVENTORY_SIZE - 1 do 
-					local hItem = hero:GetItemInSlot( nItemSlot )
-					if hItem and hItem:IsInBackpack() then
-						numBackpackItems = numBackpackItems + 1
-					end
-				end
-				--print( '^^^Backpack slots = ' .. numBackpackItems )
-				if numBackpackItems < 3 then
-					bAllowPickup = true
-			end		
 
 			if bAllowPickup then
 				--print("inventory has space")

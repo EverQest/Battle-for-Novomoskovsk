@@ -26,7 +26,7 @@ function modifier_terrorblade_metamorphosis_lua:OnCreated( kv )
 	self.bat = self:GetAbility():GetSpecialValueFor( "base_attack_time" )
 	self.range = self:GetAbility():GetSpecialValueFor( "bonus_range" )
 	self.damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
-	self.slow = self:GetAbility():GetSpecialValueFor( "speed_loss" )
+	self.speed_bonus = self:GetAbility():GetSpecialValueFor( "speed_bonus" )
 	local delay = self:GetAbility():GetSpecialValueFor( "transformation_time" )
 
 	self.projectile = 900
@@ -98,7 +98,7 @@ function modifier_terrorblade_metamorphosis_lua:GetModifierBaseAttackTimeConstan
 end
 
 function modifier_terrorblade_metamorphosis_lua:GetModifierMoveSpeedBonus_Constant()
-	return self.slow
+	return self.speed_bonus
 end
 
 function modifier_terrorblade_metamorphosis_lua:GetModifierProjectileSpeedBonus()

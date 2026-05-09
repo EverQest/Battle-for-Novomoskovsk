@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 terrorblade_metamorphosis_lua = class({})
 LinkLuaModifier( "modifier_terrorblade_metamorphosis_lua", "modifiers/modifier_terrorblade_metamorphosis_lua", LUA_MODIFIER_MOTION_NONE )
@@ -23,10 +24,19 @@ function terrorblade_metamorphosis_lua:OnSpellStart()
 	local duration = self:GetSpecialValueFor( "duration" )
 
 	-- add modifier
-	caster:AddNewModifier(
-		caster, -- player source
-		self, -- ability source
-		"modifier_terrorblade_metamorphosis_lua_aura", -- modifier name
-		{ duration = duration } -- kv
-	)
+	if IsTalentLearned(caster, "special_bonus_unique_senya_permanent_sexy") then
+		caster:AddNewModifier(
+			caster, -- player source
+			self, -- ability source
+			"modifier_terrorblade_metamorphosis_lua_aura", -- modifier name
+			{} -- kv
+		)
+	else
+		caster:AddNewModifier(
+			caster, -- player source
+			self, -- ability source
+			"modifier_terrorblade_metamorphosis_lua_aura", -- modifier name
+			{ duration = duration } -- kv
+		)
+	end
 end

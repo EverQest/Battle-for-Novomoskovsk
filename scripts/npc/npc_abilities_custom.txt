@@ -835,4 +835,23 @@
 			}
 		}
 	}
+	"special_bonus_unique_senya_jump_cast_range"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"AbilityCastRange"			"500" // kv that will be changed
+				"ability"					"mina_explosion_jump" // ability name
+			}
+		}
+	}
 }

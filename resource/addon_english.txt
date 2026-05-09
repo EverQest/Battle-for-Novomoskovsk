@@ -75,26 +75,45 @@
 		//Сеня
 		"npc_dota_hero_techies"       		   "Сеня"
 
-		"Dota_Tooltip_ability_mina_explosion_jump"				 						 "Подвернуть ногу"
-		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 					 "Сеня прыгает и калечит ногу и наносит очень много урона, но тут нужно иметь филлигранную точность чтобы попасть в противника"
-		"Dota_Tooltip_ability_mina_explosion_jump_radius"				 				 "EXPLOSION RADIUS:"
+		"Dota_Tooltip_ability_imba_undying_decay"										"Зжерти"
+		"Dota_Tooltip_ability_imba_undying_decay_radius"								"RADIUS:"
+		"Dota_Tooltip_ability_imba_undying_decay_Description"							"Сеня хавает по области атрибуты противника и набирает массу, достигая масштабов планеты"
+		"Dota_Tooltip_ability_imba_undying_decay_str_steal"								"STR STEAL:"
+		"Dota_Tooltip_ability_imba_undying_decay_str_steal_scepter"						"SCEPTER STR STEAL:"
+		"Dota_Tooltip_ability_imba_undying_decay_decay_duration"						"DURATION:"
+		"Dota_Tooltip_ability_imba_undying_decay_hp_removal_per_str"					"DAMAGE PER STR:"
+		"Dota_Tooltip_ability_imba_undying_decay_hp_gain_per_str"						"HEAL PER STR:"
+		"Dota_Tooltip_modifier_imba_undying_decay_buff_counter"							"Схавано сили"
+		"Dota_Tooltip_modifier_imba_undying_decay_debuff_counter"						"Відкушено сили"
+
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 			"Арсюша после SЭkS4"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"				"Пухленький, дал разкумара и теперь готов превратиться в истинную форму которая даёт ему мотивацию жить дальше"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_duration"				 	"DURATION:"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_bonus_damage"				"BONUS DAMAGE:"
+		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_speed_bonus"				"SPEED BONUS:"
+		"Dota_Tooltip_modifier_terrorblade_metamorphosis_lua_aura"						"Арсюша после SЭkS4"
 		
-		"Dota_Tooltip_ability_spiked_carapace_reworked"									 "Отражение"
-		"Dota_Tooltip_ability_spiked_carapace_reworked_Description"		 				 "Сеня отражает любое оскорбление в его сторону, заставляя врагов задуматься о поведении"
-		"Dota_Tooltip_ability_spiked_carapace_reworked_chance_pct"						 "%PROC CHANCE:"
-		"Dota_Tooltip_ability_spiked_carapace_reworked_stun_duration"					 "STUN DURATION:"
+		"Dota_Tooltip_ability_spiked_carapace_reworked"									"Отражение"
+		"Dota_Tooltip_ability_spiked_carapace_reworked_Description"		 				"Сеня отражает любое оскорбление в его сторону, заставляя врагов задуматься о поведении\n Can move while stunned"
+		"Dota_Tooltip_ability_spiked_carapace_reworked_chance_pct"						"%PROC CHANCE:"
+		"Dota_Tooltip_ability_spiked_carapace_reworked_stun_duration"					"STUN DURATION:"
+		"Dota_Tooltip_ability_spiked_carapace_reworked_damage_reflect_pct"				"%DAMAGE REFLECT:"
 		
-		"Dota_Tooltip_ability_imba_undying_decay"										 "Схавать"
-		"Dota_Tooltip_ability_imba_undying_decay_AbilityDuration"						 "DURATION:"
-		"Dota_Tooltip_ability_imba_undying_decay_radius"								 "RADIUS:"
-		"Dota_Tooltip_ability_imba_undying_decay_Description"							 "Сеня хавает по области атрибуты противника и набирает массу, достигая масштабов планеты"
-		"Dota_Tooltip_ability_imba_undying_decay_str_steal"								 "STR STEAL:"
-		"Dota_Tooltip_ability_imba_undying_decay_str_steal_scepter"						 "SCEPTER STR STEAL:"
+		"Dota_Tooltip_ability_mina_explosion_jump"				 						"Подвернуть ногу"
+		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 					"Сеня прыгает и калечит ногу и наносит очень много урона, но тут нужно иметь филлигранную точность чтобы попасть в противника"
+		"Dota_Tooltip_ability_mina_explosion_jump_radius"				 				"EXPLOSION RADIUS:"
+
+		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 				"Приголомшений!"
+
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_senya_decay_str_steal"				"Зжерти str steal increase by 5"
+		"Dota_Tooltip_ability_special_bonus_unique_senya_decay_heal"					"Зжерти heal increase by 20 per str"
+		"Dota_Tooltip_ability_special_bonus_unique_senya_jump_cast_range"				"Подвернуть ногу cast range increased by 500"
+		"Dota_Tooltip_ability_special_bonus_unique_senya_carapace_damage"				"Increase Отражение reflect damage by 50%"
+		"Dota_Tooltip_ability_special_bonus_unique_senya_permanent_sexy"				"Арсюша после SЭkS4 is permanent"
+		"Dota_Tooltip_ability_special_bonus_unique_senya_jump_radius"					"Подвернуть ногу explosion radius scales with model size"
+		"Dota_Tooltip_ability_special_bonus_unique_senya_jump_radius_description"		"Dosn't show on AOE circle"
 		
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua"				 			 "Арсюша после SЭkS4"
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_Description"				 "Пухленький, дал разкумара и теперь готов превратиться в истинную форму которая даёт ему мотивацию жить дальше"
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_duration"				 	 "DURATION:"
-		"Dota_Tooltip_ability_terrorblade_metamorphosis_lua_bonus_damage"				 "BONUS DAMAGE:"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Чича
 		"npc_dota_hero_ogre_magi"      		   "Чича"

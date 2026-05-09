@@ -24,6 +24,7 @@ function modifier_spiked_carapace_reworked:GetReferences()
 
 	self.chance_pct = self.ability:GetSpecialValueFor( "chance_pct" )
 	self.stun_duration = self.ability:GetSpecialValueFor( "stun_duration" )
+	self.damage_reflect_pct = self.ability:GetSpecialValueFor( "damage_reflect_pct" ) / 100
 end
 
 --------------------------------------------------------------------------------
@@ -44,7 +45,7 @@ function modifier_spiked_carapace_reworked:OnTakeDamage( params )
 	local damageTable = {
 		victim = params.attacker,
 		attacker = self:GetCaster(),
-		damage = params.damage,
+		damage = params.damage * self.damage_reflect_pct,
 		damage_type = DAMAGE_TYPE_PURE,
 		ability = self.ability, --Optional.
 	}

@@ -1155,7 +1155,7 @@
 		"AbilityTextureName"			"senya_decay"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
@@ -1176,12 +1176,11 @@
 		"AbilityCastAnimation"			"ACT_DOTA_UNDYING_DECAY"
 		"AbilityCastGestureSlot"		"DEFAULT"
 		"AbilityCastRange"				"650"
-		"AbilityCastPoint"				"0.45"
+		"AbilityCastPoint"				"0.45 0.4 0.35 0.3"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"8.0 6.0 4.0 3.0"
-		"AbilityDuration"				"20.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -1192,10 +1191,21 @@
 		"AbilityValues"
 		{
 			"decay_damage"				"5"
-			"str_steal"					"3 4 5 6"
-			"radius"					"325 335 355 375"
+			"str_steal"
+			{
+				"value" 										"2 3 4 5"
+				"special_bonus_unique_senya_decay_str_steal" 	"5"
+			}
+			"radius"					"250 350 450 550"
 			"str_scale_up"				"3"
 			"brains_int_pct"			"30"
+			"decay_duration"			"15.0 20.0 25.0 30.0"
+			"hp_removal_per_str"		"25 25 30 30"
+			"hp_gain_per_str"			
+			{
+				"value" 										"25 25 30 30"
+				"special_bonus_unique_senya_decay_str_steal" 	"20"
+			}
 		}
 	}
 
@@ -1233,9 +1243,8 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50"
+		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"100 120 140 160"
-		"AbilityDuration"				"25 26 27 28"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -1244,13 +1253,17 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"duration"						"25.0 26.0 27.0 28.0"
+			"duration"						
+			{
+				"value" 										"15.0 20.0 25.0 30.0"
+				"special_bonus_unique_senya_permanent_sexy" 	"0"
+			}
 			"transformation_time"			"2.0"
 			"base_attack_time"				"1.5"
 			"bonus_range"					"0"
 			"tooltip_attack_range"			"0"
 			"bonus_damage"					"20 40 60 80"
-			"speed_loss"					"100"
+			"speed_bonus"					"25 50 75 100"
 			"metamorph_aura_tooltip"		"1200"
 			"fear_duration"					"3.75"
 			"scepter_cooldown_reduction"	"0.0"
@@ -1275,6 +1288,7 @@
 		"AbilityTextureName"			"senya_antimat"
 		"ScriptFile"					"spiked_carapace_reworked"
 		"AbilityCooldown"				"5"
+		"MaxLevel"						"8"
 
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
@@ -1289,9 +1303,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"stun_duration"				"0.5 1.0 1.5 2.0"
-			"chance_pct"				"15 20 25 30"
+			"stun_duration"				"0.25 0.5 1.0 1.5 2.0 2.5 3.0 3.5"
+			"chance_pct"				"15 20 25 30 35 40 45 50"
 			"cooldown"					"5.0"
+			"damage_reflect_pct"		
+			{
+				"value" 										"15 20 25 30 35 40 45 50"
+				"special_bonus_unique_senya_carapace_damage" 	"50"
+			}
 		}
 	}
 
@@ -1320,23 +1339,26 @@
 			"soundfile"						"soundevents/voscripts/game_sounds_vo_techies.vsndevts"			
 			"particle"						"particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_launch.vpcf"
 			"particle"						"particles/units/heroes/hero_techies/techies_blast_off_trail.vpcf"
-			"particle"						"particles/units/heroes/hero_techies/techies_blast_off.vpcf"
+			"particle"						"particles/senya_blast_off_custom.vpcf"
 		}
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"					"20"
+		"AbilityCastRange"					"25 50 75 100"
 		"AbilityCooldown"					"30 28 26 24"
 		"AbilityManaCost"					"100 150 175 200"
 		"AbilityDamage"						"1500 2000 2500 3000"
-		"AbilityCastRange"					"95"
 		"AbilityDuration"					"2 3 4 5"
 
 
 		"AbilityValues"
 		{
 			"damage"						"1500 2000 2500 3000"
-			"radius"						"95"
+			"radius"						
+			{
+				"value" 										"100 120 140 160"
+				"special_bonus_unique_senya_jump_radius" 		"0"
+			}
 			"silence"						"2 3 4 5"
 		}			
 	}
