@@ -48,19 +48,23 @@
 		//Дима
 		"npc_dota_hero_morphling"        "Снюсовый морфлинг"	
 
-		"Dota_Tooltip_ability_magnus_skewer_lua"                 				 "Барьба"
-		"Dota_Tooltip_ability_magnus_skewer_lua_AbilityCastRange"                "RANGE:"
-		"Dota_Tooltip_ability_magnus_skewer_lua_Description"     				 "Не зря он учил этот приём, теперь он его будт отрабатывать"
-		"Dota_Tooltip_ability_magnus_push_horn_toss"     						 "Прогиб"
-		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	 "Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
-		"Dota_Tooltip_ability_tiny_toss_lua"									 "ТОСС на левый третий"
-		"Dota_Tooltip_ability_tiny_toss_lua_duration"							 "DURATION:"
-		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 		 "Снюс KRAKEN SHELL☆☆☆☆☆"
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_damage_reduction"		 "damage reduction:"
-		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
-		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
+		"Dota_Tooltip_ability_magnus_skewer_lua"                 				"Барьба"
+		"Dota_Tooltip_ability_magnus_skewer_lua_AbilityCastRange"               "RANGE:"
+		"Dota_Tooltip_ability_magnus_skewer_lua_Description"     				"Не зря он учил этот приём, теперь он его будт отрабатывать"
+		"Dota_Tooltip_ability_magnus_push_horn_toss"     						"Прогиб"
+		"Dota_Tooltip_ability_magnus_push_horn_toss_radius"						"RADIUS:"
+		"Dota_Tooltip_ability_magnus_push_horn_toss_air_duration"				"STUN DURATION:"
+		"Dota_Tooltip_ability_magnus_push_horn_toss_Description"     		 	"Вспомнив запретный приём, Дима успешно использует его на ничего не подозревающих врагах"
+		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	"Поджопник ручками"
+		"Dota_Tooltip_ability_marci_dispose_lua_stun_duration"					"STUN DURATION:"
+		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					"(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 		"Снюс KRAKEN SHELL☆☆☆☆☆"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			"150 милиграмм никотина помогут справиться с любой болью"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_damage_reduction"		"DAMAGE REDUCTION:"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_damage_cleanse"		"DAMAGE CLEANSE THRESHOLD:"
+		"Dota_Tooltip_ability_tiny_toss_lua"									"ТОСС на левый третий"
+		"Dota_Tooltip_ability_tiny_toss_lua_duration"							"DURATION:"
+		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						"Один бросок и бедолага узнаёт где находиться Карик "
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_unique_dima_toss_duration"			    "Tossed enemys now fall faster"
@@ -70,6 +74,8 @@
 		"Dota_Tooltip_ability_special_bonus_dima_toss_charges"					 	"ТОСС x 2" 
 		"Dota_Tooltip_ability_special_bonus_dima_toss_charges_description"		  	"ТОСС на левый третий have 2 charges" 
 		"Dota_Tooltip_ability_special_bonus_dima_toss_charges_SummaryDescription" 	"ТОСС на левый третий have 2 charges"
+		"Dota_Tooltip_Ability_special_bonus_cdr_15" 								"Cooldown Reduction 15%"
+
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Сеня

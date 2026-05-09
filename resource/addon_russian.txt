@@ -53,7 +53,7 @@
 		"Dota_Tooltip_ability_tiny_toss_lua_Description" 						 "Один бросок и бедолага узнаёт где находиться Карик "
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua" 				 "Снюс KRAKEN SHELL☆☆☆☆☆"
 		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_Description" 			 "150 милиграмм никотина помогут справиться с любой болью"
-		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_damage_reduction"		 "damage reduction:"
+		"Dota_Tooltip_ability_tidehunter_kraken_shell_lua_damage_reduction"		 "DAMAGE REDUCTION:"
 		"Dota_Tooltip_ability_marci_dispose_lua" 		  				     	 "Поджопник ручками"
 		"Dota_Tooltip_ability_marci_dispose_lua_Description" 					 "(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻"
 		

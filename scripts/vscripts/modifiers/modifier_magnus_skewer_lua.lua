@@ -74,7 +74,7 @@ function modifier_magnus_skewer_lua:DeclareFunctions()
 end
 
 function modifier_magnus_skewer_lua:GetOverrideAnimation()
-	return ACT_DOTA_MAGNUS_SKEWER_START
+	return ACT_DOTA_FLAIL
 end
 
 --------------------------------------------------------------------------------

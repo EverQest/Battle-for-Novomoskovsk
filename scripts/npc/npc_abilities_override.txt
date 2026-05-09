@@ -876,7 +876,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "magnus_push_horn_toss"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"   
@@ -889,11 +889,16 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Dima.vsndevts"
+			"particle"  "particles/units/heroes/hero_magnataur/magnataur_horn_toss.vpcf"
+			"particle"  "particles/econ/events/darkmoon_2017/darkmoon_generic_aoe.vpcf"
+			"particle"  "particles/units/heroes/hero_magnataur/magnataur_skewer.vpcf"
+			"particle"  "particles/units/heroes/hero_magnataur/magnataur_skewer_debuff.vpcf"
+			"particle"  "particles/econ/events/darkmoon_2017/darkmoon_generic_aoe.vpcf"
 		}
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastPoint"              "1 0.8 0.5 0.2"
+        "AbilityCastPoint"              "0"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
         "AbilityCastRange"              "300"
         
@@ -914,8 +919,8 @@
         "AbilityValues"
         {
             "damage"				"200 400 600 800"
-            "radius"				"300"
-            "air_duration"			"0.2"
+            "radius"				"300 400 500 600"
+            "air_duration"			"0.2 0.4 0.6 0.8"
             "air_height"			"800"
             "slow_duration"			"1.25"
             "pull_offset"			"275"
@@ -1080,7 +1085,7 @@
 				"value"										"30 45 60 85"
 				"special_bonus_unique_dima_kraken_buff"		"100"
 			}			
-			"damage_cleanse"			"350 300 230 100"
+			"damage_cleanse"			"300 250 200 150"
 			"damage_reset_interval"		"2.0"
 		}
 	}
@@ -1122,7 +1127,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"20 15 10 8"
 		"AbilityManaCost"				"90"
-		"AbilityDuration"				"1.2 1.5 1.8 2.1"
+		"AbilityDuration"				"1.5 2.0 2.5 3.0"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -1138,7 +1143,7 @@
 			"pull_offset"				"75"
 			"throw_distance_behind"		"-350 -450 -550 -650"
 			"pull_angle"				"230"
-			"stun_duration"				"1.2 1.5 1.8 2.1"
+			"stun_duration"				"1.5 2.0 2.5 3.0"
 			"impact_damage"				"200 300 400 500"
 		}
 	}

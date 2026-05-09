@@ -69,7 +69,7 @@
 		// Talents 
 		"Ability15"				"special_bonus_all_stats_20"
 		"Ability16"				"special_bonus_exp_boost_25"
-		"Ability17"				"special_bonus_attack_speed_60" 
+		"Ability17"				"special_bonus_cdr_15" 
 		"Ability18"				"special_bonus_unique_dima_toss_duration" 
 		"Ability19"				"special_bonus_unique_dima_kraken_buff"
 		"Ability20"				"special_bonus_unique_dima_skiwer_range_x2" 

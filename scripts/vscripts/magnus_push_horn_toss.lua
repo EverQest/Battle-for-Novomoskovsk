@@ -17,6 +17,10 @@ function magnus_push_horn_toss:ProcsMagicStick()
 	return false
 end
 
+function magnus_push_horn_toss:GetAOERadius()
+	return self:GetSpecialValueFor("radius")
+end
+
 --------------------------------------------------------------------------------
 
 function magnus_push_horn_toss:OnAbilityPhaseStart()
@@ -32,7 +36,7 @@ function magnus_push_horn_toss:OnAbilityPhaseStart()
 			--printf('setting Skewer Range to ' .. self.skewer_range)
 		end
 
-		self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_absolute_no_cc", { duration = -1 } )
+		-- self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_absolute_no_cc", { duration = -1 } )
 
 		--self.pull_offset = self:GetSpecialValueFor( "pull_offset" )
 		--self.vTargetPos = self:GetCaster():GetAbsOrigin() + self:GetCaster():GetForwardVector() * self.pull_offset
@@ -60,7 +64,7 @@ end
 
 function magnus_push_horn_toss:OnSpellStart()
 	if IsServer() then
-		self:GetCaster():RemoveModifierByName( 'modifier_absolute_no_cc' )
+		-- self:GetCaster():RemoveModifierByName( 'modifier_absolute_no_cc' )
 		ParticleManager:DestroyParticle( self.nFXIndex, true )
 		EmitSoundOn( "CustomHornToss", self:GetCaster() )
 		self:GetCaster():StartGesture( ACT_DOTA_CAST_ABILITY_5 )
