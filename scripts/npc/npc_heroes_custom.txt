@@ -154,19 +154,20 @@
 	{
 		"override_hero"		   		"npc_dota_hero_lycan"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
-		"AttributeAgilityGain"		"3.8"
-		"AttackDamageMin"			"70"
-		"AttackDamageMax"			"80"
+		"AttributeAgilityGain"		"3.0"
+		"AttributeStrengthGain"		"1.8"
+		"AttackDamageMin"			"40"
+		"AttackDamageMax"			"50"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50" // roar cooldown - 20
-		"Ability13"				"special_bonus_movement_speed_50" // inf invis
-		"Ability14"				"special_bonus_lifesteal_20" // gadyka 800 ms (past limit)
-		"Ability15"				"special_bonus_cooldown_reduction_20" // kaki steal X2
-		"Ability16"				"special_bonus_attack_damage_100" // throwable zavtik
-		"Ability17"				"special_bonus_spell_amplify_25" // kaki steal is permanent (buff removed on death)
+		"Ability12"				"special_bonus_unique_kaki_roar_stun_duration" // roar stun duration + 1
+		"Ability13"				"special_bonus_unique_kaki_infinite_invisibility" // inf invis
+		"Ability14"				"special_bonus_unique_kaki_gadyka_800_ms" // gadyka + 250 ms (past limit)
+		"Ability15"				"special_bonus_unique_kaki_steal_x2" // kaki steal X2
+		"Ability16"				"special_bonus_unique_kaki_throwable_zavtik" // throwable zavtik
+		"Ability17"				"special_bonus_unique_kaki_steal_permanent" // kaki steal is permanent (buff removed on death)
 
 		"Ability1"					"wind_walk_datadriven"	
 		"Ability2"					"alchemist_unstable_concoction_lua"

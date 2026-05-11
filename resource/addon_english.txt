@@ -27,6 +27,12 @@
 		"npc_dota_creature_berserk_zombie"									"Клоуник"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		//Generic
+		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 				"Приголомшений!"
+		"Dota_Tooltip_modifier_generic_stunned_lua"				 						"Приголомшений!"
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	   //Васич
        "npc_dota_hero_wisp"        "Васич"
 
@@ -108,8 +114,6 @@
 		"Dota_Tooltip_ability_mina_explosion_jump"				 						"Подвернуть ногу"
 		"Dota_Tooltip_ability_mina_explosion_jump_Description"		 					"Сеня прыгает и калечит ногу и наносит очень много урона, но тут нужно иметь филлигранную точность чтобы попасть в противника"
 		"Dota_Tooltip_ability_mina_explosion_jump_radius"				 				"EXPLOSION RADIUS:"
-
-		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 				"Приголомшений!"
 
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_unique_senya_decay_str_steal"				"Зжерти str steal increase by 5"
@@ -225,22 +229,44 @@
 		"Dota_Tooltip_ability_wind_walk_datadriven_AbilityDuration"					"DURATION:"
 		"Dota_Tooltip_ability_wind_walk_datadriven_AbilityCastPoint"				"CAST POINT:"
 		"Dota_Tooltip_ability_wind_walk_datadriven_Description"						"Некитос просто напросто пропадает с реальности в поискал лобби"
+		"Dota_Tooltip_modifier_wind_walk_datadriven"								"Где я?"
+		
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua"					"Завтык"
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_max_stun"			"MAX STUN DURATION:"
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_min_stun"			"MIN STUN DURATION:"
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_radius"				"RADIUS:"
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_Description"		"Малой завтыкал, не мешайте"
+
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_throw_lua"					"Швирнути завтык"
+		"Dota_Tooltip_ability_alchemist_unstable_concoction_throw_lua_Description"		"А так можно було?"
+		
 		"Dota_Tooltip_ability_slark_essence_shift_lua"								"Потрогать за какашки"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_AbilityDuration"				"DURATION:"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_agi_gain"						"AGI GAIN:"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_Description"					"Некитос ворует у врагов какашки что делает его сильнее"
+		"Dota_Tooltip_modifier_slark_essence_shift_lua"								"Украл какашки"
+		"Dota_Tooltip_modifier_slark_essence_shift_lua_debuff"						"У вас вкрали какашки"
+
 		"Dota_Tooltip_ability_primal_roar"											"Вот это рыг!"
 		"Dota_Tooltip_ability_primal_roar_stun_duration"							"STUN DURATION:"
 		"Dota_Tooltip_ability_primal_roar_Description"								"Фокусируя все газы в организме от выдаёт лютую базу, с которой сложно поспорить. Лучшая отрыжка ever"
+		
 		"Dota_Tooltip_ability_lycan_shapeshift_datadriven"					 		"Форма Вяз-токса"
 		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_duration"					"DURATION:"
-		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_speed"					"BONUS SPEED:"
+		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_speed"					"MOVEMENT SPEED:"
 		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_crit_chance"				"%BONUS CRIT CHANCE:"
 		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_crit_damage"				"%CRIT DAMAGE:"
 		"Dota_Tooltip_ability_lycan_shapeshift_datadriven_Description"		 		"Все знают это формулу ввяз-токса, осторожно он токсичный..."
-		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua"					"Завтык"
-		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_max_stun"			"MAX STUN DURATION:"
-		"Dota_Tooltip_ability_alchemist_unstable_concoction_lua_Description"		"Малой завтыкал, не мешайте"
+		"Dota_Tooltip_modifier_shapeshift_datadriven"		 						"ГАДЮКА!"
+
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_roar_stun_duration"				"Roar stun duration increased by 1"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_infinite_invisibility"			"Где лобби now permanent"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_800_ms"					"Gadyka + 250 movement speed"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_x2"						"Kaki steal X2"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_throwable_zavtik"				"Throwable zavtik"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_permanent"				"Kaki steal is permanent (buff removed on death)"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Felix
 		"npc_dota_hero_clinkz" 				   "Felix"

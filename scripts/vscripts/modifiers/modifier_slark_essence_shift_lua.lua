@@ -1,3 +1,5 @@
+require("utility_functions")
+
 modifier_slark_essence_shift_lua = class({})
 --------------------------------------------------------------------------------
 -- Classifications
@@ -49,15 +51,25 @@ function modifier_slark_essence_shift_lua:GetModifierProcAttack_Feedback( params
 			return
 		end
 
-		-- Apply debuff to enemy
-		local debuff = params.target:AddNewModifier(
-			self:GetParent(),
-			self:GetAbility(),
-			"modifier_slark_essence_shift_lua_debuff",
-			{
-				stack_duration = self.duration,
-			}
-		)
+		if IsTalentLearned(self:GetCaster(),"special_bonus_unique_kaki_steal_permanent") then
+			-- Apply debuff to enemy
+			local debuff = params.target:AddNewModifier(
+				self:GetParent(),
+				self:GetAbility(),
+				"modifier_slark_essence_shift_lua_debuff",
+				{}
+			)
+		else
+			-- Apply debuff to enemy
+			local debuff = params.target:AddNewModifier(
+				self:GetParent(),
+				self:GetAbility(),
+				"modifier_slark_essence_shift_lua_debuff",
+				{
+					stack_duration = self.duration,
+				}
+			)
+		end
 
 		-- Apply buff to self
 		self:AddStack( duration )
@@ -75,14 +87,24 @@ end
 -- Helper
 function modifier_slark_essence_shift_lua:AddStack( duration )
 	-- Add counter
-	local mod = self:GetParent():AddNewModifier(
-		self:GetParent(),
-		self:GetAbility(),
-		"modifier_slark_essence_shift_lua_stack",
-		{
-			duration = self.duration,
-		}
-	)
+	local mod
+	if IsTalentLearned(self:GetCaster(),"special_bonus_unique_kaki_steal_permanent") then
+		mod = self:GetParent():AddNewModifier(
+			self:GetParent(),
+			self:GetAbility(),
+			"modifier_slark_essence_shift_lua_stack",
+			{}
+		)
+	else
+		mod = self:GetParent():AddNewModifier(
+			self:GetParent(),
+			self:GetAbility(),
+			"modifier_slark_essence_shift_lua_stack",
+			{
+				duration = self.duration,
+			}
+		)
+	end
 	mod.modifier = self
 
 	-- Add stack

@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 modifier_alchemist_unstable_concoction_lua = class({})
 
@@ -122,17 +123,18 @@ function modifier_alchemist_unstable_concoction_lua:OnIntervalThink()
 	end
 
 	-- switch ability layout
-	local ability = self:GetCaster():FindAbilityByName( "alchemist_unstable_concoction_throw_lua" )
-	self:GetCaster():SwapAbilities(
-		self:GetAbility():GetAbilityName(),
-		ability:GetAbilityName(),
-		true,
-		false
-	)
-
-	-- remove if stolen
-	if ability:IsStolen() then
-		self:GetCaster():RemoveAbilityByHandle( ability )
+	if IsTalentLearned(self:GetCaster(),"special_bonus_unique_kaki_throwable_zavtik") then
+		local ability = self:GetCaster():FindAbilityByName( "alchemist_unstable_concoction_throw_lua" )
+		self:GetCaster():SwapAbilities(
+			self:GetAbility():GetAbilityName(),
+			ability:GetAbilityName(),
+			true,
+			false
+		)
+		-- remove if stolen
+		if ability:IsStolen() then
+			self:GetCaster():RemoveAbilityByHandle( ability )
+		end
 	end
 
 	-- Play effects

@@ -1,5 +1,8 @@
+require("utility_functions")
+
 LinkLuaModifier( "modifier_alchemist_unstable_concoction_lua", "modifiers/modifier_alchemist_unstable_concoction_lua", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_silenced_lua", "modifiers/modifier_generic_silenced_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- MAIN
@@ -23,23 +26,25 @@ function alchemist_unstable_concoction_lua:OnSpellStart()
 		{ duration = duration } -- kv
 	)
 
-	-- check sister ability
-	local ability = caster:FindAbilityByName( "alchemist_unstable_concoction_throw_lua" )
-	if not ability then
-		ability = caster:AddAbility( "alchemist_unstable_concoction_throw_lua" )
-		ability:SetStolen( true )
+	if IsTalentLearned(caster,"special_bonus_unique_kaki_throwable_zavtik") then
+		-- check sister ability
+		local ability = caster:FindAbilityByName( "alchemist_unstable_concoction_throw_lua" )
+		if not ability then
+			ability = caster:AddAbility( "alchemist_unstable_concoction_throw_lua" )
+			ability:SetStolen( true )
+		end
+
+		-- check ability level
+		ability:SetLevel( self:GetLevel() )
+
+		-- switch ability layout
+		caster:SwapAbilities(
+			self:GetAbilityName(),
+			ability:GetAbilityName(),
+			false,
+			true
+		)
 	end
-
-	-- check ability level
-	ability:SetLevel( self:GetLevel() )
-
-	-- switch ability layout
-	caster:SwapAbilities(
-		self:GetAbilityName(),
-		ability:GetAbilityName(),
-		false,
-		true
-	)
 end
 
 --------------------------------------------------------------------------------
