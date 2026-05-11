@@ -1,3 +1,7 @@
+require("utility_functions")
+LinkLuaModifier( "modifier_generic_disarmed_lua", "modifiers/modifier_generic_disarmed_lua", LUA_MODIFIER_MOTION_NONE )
+
+
 queen_of_pain_scream_of_pain_lua = class({})
 
 --------------------------------------------------------------------------------
@@ -8,6 +12,8 @@ function queen_of_pain_scream_of_pain_lua:OnSpellStart()
 	local point = self:GetCaster():GetOrigin()
 
 	-- load data
+	self.disarm_duration = self:GetSpecialValueFor("disarm_duration")
+
 	local radius = self:GetSpecialValueFor("area_of_effect")
 	self.screamDamage = self:GetAbilityDamage()
 
@@ -62,6 +68,17 @@ function queen_of_pain_scream_of_pain_lua:OnProjectileHit( target, location )
 		ability = self, --Optional.
 	}
 	ApplyDamage(damageTable)
+
+	-- Apply Modifier
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_gul_scream_disarms") then
+		-- debuff
+		target:AddNewModifier(
+			self:GetCaster(), -- player source
+			self, -- ability source
+			"modifier_generic_disarmed_lua", -- modifier name
+			{ duration = self.disarm_duration } -- kv
+		)
+	end
 end
 --------------------------------------------------------------------------------
 -- Ability Considerations

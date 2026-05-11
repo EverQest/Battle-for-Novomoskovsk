@@ -874,4 +874,68 @@
 			}
 		}
 	}
+
+	"special_bonus_unique_gul_layers_no_manacost"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"AbilityManaCost"			"0" // kv that will be changed
+				"ability"					"lina_light_strike_array_lua" // ability name
+				"bonus_type"				"*"
+			}
+		}
+	}
+
+	"special_bonus_unique_gul_layers_no_cast_time"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"AbilityCooldown"			"0" // kv that will be changed
+				"ability"					"lina_light_strike_array_lua" // ability name
+				"bonus_type"				"*"
+			}
+		}
+	}
+
+	"special_bonus_unique_gul_montana_cd"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"AbilityCooldown"			"0.5" // kv that will be changed
+				"ability"					"sniper_assassinate_lua" // ability name
+				"bonus_type"				"*"
+			}
+		}
+	}
+
 }

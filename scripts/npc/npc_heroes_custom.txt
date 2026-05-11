@@ -13,12 +13,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // jump proc 2 times
+		"Ability13"				"special_bonus_movement_speed_50" // cast range + 400
+		"Ability14"				"special_bonus_lifesteal_20" // jump stuns more
+		"Ability15"				"special_bonus_cooldown_reduction_20" // jump heals by 20% max HP
+		"Ability16"				"special_bonus_attack_damage_100" // pure damage finger
+		"Ability17"				"special_bonus_spell_amplify_25" // pure damage laguna
 
 		"Ability1"             "snapfire_firesnap_cookie_lua"
 		"Ability2"		       "lion_finger_of_death_lua"
@@ -102,12 +102,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // improve base attack speed to 1.1
+		"Ability13"				"special_bonus_movement_speed_50" // attackrange + 300
+		"Ability14"				"special_bonus_lifesteal_20" // lightspeed provides 100 hp regen
+		"Ability15"				"special_bonus_cooldown_reduction_20" // pulses + 10
+		"Ability16"				"special_bonus_attack_damage_100" // Vzhuh no mana cost
+		"Ability17"				"special_bonus_spell_amplify_25" // crit is now garanteed but on CD?
 
 		"Ability1"		      		"storm_spirit_ball_lightning_lua"
 		"Ability2"		     		"lightspeed"
@@ -161,12 +161,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // roar cooldown - 20
+		"Ability13"				"special_bonus_movement_speed_50" // inf invis
+		"Ability14"				"special_bonus_lifesteal_20" // gadyka 800 ms (past limit)
+		"Ability15"				"special_bonus_cooldown_reduction_20" // kaki steal X2
+		"Ability16"				"special_bonus_attack_damage_100" // throwable zavtik
+		"Ability17"				"special_bonus_spell_amplify_25" // kaki steal is permanent (buff removed on death)
 
 		"Ability1"					"wind_walk_datadriven"	
 		"Ability2"					"alchemist_unstable_concoction_lua"
@@ -187,14 +187,14 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // arena duration increase
+		"Ability13"				"special_bonus_movement_speed_50" // illusions damage
+		"Ability14"				"special_bonus_lifesteal_20" // astral heals ally
+		"Ability15"				"special_bonus_cooldown_reduction_20" // illusions + 2
+		"Ability16"				"special_bonus_attack_damage_100" // astral deal X5 of your damage
+		"Ability17"				"special_bonus_spell_amplify_25" // illusions unkilable
 
-		"Ability1"             "mars_arena_of_blood_lua"
+		"Ability1"             "mars_arena_of_blood_lua" 
 		"Ability2"		       "doppelganger_datadriven"
 		"Ability3"             "outworld_devourer_astral_imprisonment_lua"
 	    	"Ability4"             "generic_hidden"	
@@ -243,12 +243,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // rot slow
+		"Ability13"				"special_bonus_movement_speed_50" // rot damage
+		"Ability14"				"special_bonus_lifesteal_20" // disperson increase %
+		"Ability15"				"special_bonus_cooldown_reduction_20" // 3% max HP regen
+		"Ability16"				"special_bonus_attack_damage_100" // dispersion range x2
+		"Ability17"				"special_bonus_spell_amplify_25" // 100% spell lifesteal
 
 		"Ability1"            		 "wisp_tether_datadriven"	
 		"Ability2"		     		 "pudge_rot_lua"
@@ -296,12 +296,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // don't stun yourself
+		"Ability13"				"special_bonus_movement_speed_50" // stun damage
+		"Ability14"				"special_bonus_lifesteal_20" // vacum radius
+		"Ability15"				"special_bonus_cooldown_reduction_20" // usa_rage duration
+		"Ability16"				"special_bonus_attack_damage_100" // chaos_bolt aoe
+		"Ability17"				"special_bonus_spell_amplify_25" // spell immune in blackhole
 
 		"Ability1"					"usa_rage"	
 		"Ability2"					"chaos_bolt"
@@ -322,12 +322,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // ball stuns more
+		"Ability13"				"special_bonus_movement_speed_50" // last rezort damage x 2
+		"Ability14"				"special_bonus_lifesteal_20" // duel duration +
+		"Ability15"				"special_bonus_cooldown_reduction_20" // silence + 4 sec
+		"Ability16"				"special_bonus_attack_damage_100" // silence mutes
+		"Ability17"				"special_bonus_spell_amplify_25" // duel gives all stats now 
 
 		"Ability1"					"ballhit"	
 		"Ability2"					"illuminate_datadriven"
@@ -377,12 +377,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // bear cd / 2 
+		"Ability13"				"special_bonus_movement_speed_50" // juxtapose chanse
+		"Ability14"				"special_bonus_lifesteal_20" // ravage stun +
+		"Ability15"				"special_bonus_cooldown_reduction_20" // +1500 bear base HP 
+		"Ability16"				"special_bonus_attack_damage_100" // ravage on full map
+		"Ability17"				"special_bonus_spell_amplify_25" // no damage on bear death
 		
 		"Ability1"					"beastmaster_wild_axes"
 		"Ability2"					"lone_druid_spirit_bear_datadriven"
@@ -405,12 +405,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_attack_speed_50" // poison tuch slows
+		"Ability13"				"special_bonus_movement_speed_50" // homyak no delay
+		"Ability14"				"special_bonus_lifesteal_20" // poison tuch duration
+		"Ability15"				"special_bonus_cooldown_reduction_20" // trap cd reduction
+		"Ability16"				"special_bonus_attack_damage_100" // trap can't be destroyed
+		"Ability17"				"special_bonus_spell_amplify_25" // traps do all effects
 		
 		"Ability1"					"earth_spirit_rolling_boulder_lua"
 		"Ability2"					"puck_phase_shift_lua"
@@ -431,17 +431,18 @@
 		"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"	
 		"AttributeAgilityGain"			"2.4"
 		"AttributeIntelligenceGain"		"0"
-		"StatusMana"        			"1300"
+		"AttributeBaseIntelligence"		"-10"
+		"StatusMana"        			"1000"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50"
-		"Ability13"				"special_bonus_movement_speed_50"
-		"Ability14"				"special_bonus_lifesteal_20"
-		"Ability15"				"special_bonus_cooldown_reduction_20"
-		"Ability16"				"special_bonus_attack_damage_100"
-		"Ability17"				"special_bonus_spell_amplify_25"
+		"Ability12"				"special_bonus_unique_gul_layers_no_manacost" // layers no manacost
+		"Ability13"				"special_bonus_unique_gul_scream_disarms" // scream disarms
+		"Ability14"				"special_bonus_unique_gul_nunchaks_bat" // 1.0 base attack time from nunchaks
+		"Ability15"				"special_bonus_unique_gul_layers_no_cast_time" // 65 layers no cast time
+		"Ability16"				"special_bonus_unique_gul_montana_cd" // montana cd / 2
+		"Ability17"				"special_bonus_unique_gul_nunchaks_attacks" // 10 attacks from nunchaks 
 		
 		"Ability1"					"snapfire_lil_shredder_lua"
 		"Ability2"					"lina_light_strike_array_lua"
@@ -469,13 +470,13 @@
 		// Talents 
 		"Ability17"				"special_bonus_all_stats_20"
 		"Ability18"				"special_bonus_exp_boost_25"
-		"Ability19"				"special_bonus_attack_speed_50"
-		"Ability20"				"special_bonus_movement_speed_50"
-		"Ability21"				"special_bonus_lifesteal_20"
-		"Ability22"				"special_bonus_cooldown_reduction_20"
-		"Ability23"				"special_bonus_attack_damage_100"
-		"Ability24"				"special_bonus_spell_amplify_25"
-		"Ability25"				"special_bonus_attributes"
+		"Ability19"				"special_bonus_attack_speed_50" // shalenstvo duration
+		"Ability20"				"special_bonus_movement_speed_50" // djouk 10% lifesteal
+		"Ability21"				"special_bonus_lifesteal_20" // shalenstvo status resist
+		"Ability22"				"special_bonus_cooldown_reduction_20" // djouk 100%
+		"Ability23"				"special_bonus_attack_damage_100" // can walk in 1st skill
+		"Ability24"				"special_bonus_spell_amplify_25" // smert scales with your maney
+		"Ability25"				"special_bonus_attributes" 
 		
 		"Ability1"					"dawnbreaker_starbreaker_lua"
 		"Ability2"					"ursa_enrage_lua"
