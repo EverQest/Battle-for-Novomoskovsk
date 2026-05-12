@@ -188,12 +188,12 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50" // arena duration increase
-		"Ability13"				"special_bonus_movement_speed_50" // illusions damage
-		"Ability14"				"special_bonus_lifesteal_20" // astral heals ally
-		"Ability15"				"special_bonus_cooldown_reduction_20" // illusions + 2
-		"Ability16"				"special_bonus_attack_damage_100" // astral deal X5 of your damage
-		"Ability17"				"special_bonus_spell_amplify_25" // illusions unkilable
+		"Ability12"				"special_bonus_unique_nekit_gaze_cd" // arena duration increase
+		"Ability13"				"special_bonus_unique_nekit_illusions_damage" // illusions damage
+		"Ability14"				"special_bonus_unique_nekit_astral_root" // astral heals ally
+		"Ability15"				"special_bonus_unique_nekit_illusions_plus_2" // illusions + 2
+		"Ability16"				"special_bonus_unique_nekit_astral_damage" // astral deal X5 of your damage
+		"Ability17"				"special_bonus_unique_nekit_illusions_unkillable" // illusions unkilable
 
 		"Ability1"             "mars_arena_of_blood_lua" 
 		"Ability2"		       "doppelganger_datadriven"

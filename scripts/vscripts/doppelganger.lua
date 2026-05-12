@@ -1,3 +1,4 @@
+require("utility_functions")
 --[[Author: YOLOSPAGHETTI
 	Date: February 16, 2016
 	Draws all unit models, places them in random positions in the aoe, and creates the doppelganger illusions]]
@@ -6,6 +7,11 @@ function DoppelgangerEnd( event )
 	local target = event.target
 	local ability = event.ability	
 	local radius = ability:GetLevelSpecialValueFor( "target_radius", ability:GetLevel() - 1 )
+	local owner = caster:GetOwner() or caster
+	local bonus_ilusions = 0
+	if IsTalentLearned(caster, "special_bonus_unique_nekit_illusions_plus_2") then
+		bonus_ilusions = 2
+	end
 	
 	-- Draws the unit's model
 	target:RemoveNoDraw()	
@@ -19,23 +25,19 @@ function DoppelgangerEnd( event )
 		local duration = ability:GetLevelSpecialValueFor( "illusion_duration", ability:GetLevel() - 1 )
 
 		-- Creates both doppelgangers
-		for j=0,1 do
+		for j=0,1 + bonus_ilusions do
 			local rand_distance = math.random(0,radius)
 			local origin = caster:GetAbsOrigin() + RandomVector(rand_distance)
 			local outgoingDamage
 			local incomingDamage
 
 			-- Sets the outgoing and incoming damage values for the doppelgangers
-			if j==0 then
-				outgoingDamage = ability:GetLevelSpecialValueFor( "first_illusion_outgoing_damage", ability:GetLevel() - 1 )
-				incomingDamage = ability:GetLevelSpecialValueFor( "first_illusion_incoming_damage", ability:GetLevel() - 1 )
-			else
-				outgoingDamage = ability:GetLevelSpecialValueFor( "second_illusion_outgoing_damage", ability:GetLevel() - 1 )
-				incomingDamage = ability:GetLevelSpecialValueFor( "second_illusion_incoming_damage", ability:GetLevel() - 1 )
-			end
+			outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage", ability:GetLevel() - 1 )
+			incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage", ability:GetLevel() - 1 )
+
 	
 			-- handle_UnitOwner needs to be nil, else it will crash the game.
-			local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
+			local illusion = CreateUnitByName(unit_name, origin, true, caster, owner, caster:GetTeamNumber())
 			illusion:SetPlayerID(caster:GetPlayerID())
 			illusion:SetControllableByPlayer(player, true)
 	

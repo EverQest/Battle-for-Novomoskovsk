@@ -210,17 +210,37 @@
 		"Dota_Tooltip_ability_mars_arena_of_blood_lua"					 					"Обезьяны"
 		"Dota_Tooltip_ability_mars_arena_of_blood_lua_duration"					 			"DURATION:"
 		"Dota_Tooltip_ability_mars_arena_of_blood_lua_Description"		 					"Некит говорит что все кто с ним общается и окружает его обезьяны, тем самым призывает всех своих друзей на поле боя"
+		
 		"Dota_Tooltip_ability_doppelganger_datadriven"										"Личности Некита"
+		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_count_tooltip"				"TOTAL ILLUSIONS:"
 		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_duration"					"ILLUSION DURATION:"
-		"Dota_Tooltip_ability_doppelganger_datadriven_Description"							"Призывает две свои личности: Скинхэд и Девятихвостый"
+		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_outgoing_damage"				"%ILLUSION BONUS DAMAGE:"
+		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_incoming_damage"				"%ILLUSION INCOMING DAMAGE IGNORE:"
+		"Dota_Tooltip_ability_doppelganger_datadriven_Description"							"Призывает две (4) свои личности: Скинхэд и Девятихвостый"
+		
 		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua"					"The Company"
 		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua_prison_duration"	"DURATION:"
 		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua_Description"		"Некит помещает выбранного чела на тренеровку в company, где его используют как грушу и пиздят. По окончании тренировки ему дают по ебалу и выгоняют из company."
+		"Dota_Tooltip_modifier_outworld_devourer_astral_imprisonment_lua"					"На тренеровке в company"
+		"Dota_Tooltip_modifier_outworld_devourer_astral_imprisonment_lua_description"		"Скоро получит по ебалу"
+		
 		"Dota_Tooltip_ability_medusa_stone_gaze_lua"										"Какашка"
 		"Dota_Tooltip_ability_medusa_stone_gaze_lua_AbilityDuration"						"DURATION:"
 		"Dota_Tooltip_ability_medusa_stone_gaze_lua_stone_duration"							"STONE DURATION:"
 		"Dota_Tooltip_ability_medusa_stone_gaze_lua_bonus_physical_damage"					"%PHYSICAL DAMAGE AMPLIFICATION:"
 		"Dota_Tooltip_ability_medusa_stone_gaze_lua_Description"				 			"Некит говорит какашка тем самым заставляя ближайших врагов смеется некоторое время "
+		"Dota_Tooltip_modifier_medusa_stone_gaze_lua"				 						"Некіт каже КАКАШКА!"
+		"DOTA_Tooltip_modifier_medusa_stone_gaze_lua_debuff"				 				"Хіхі, какашка"
+		"DOTA_Tooltip_modifier_medusa_stone_gaze_lua_petrified"				 				"ВХАХАХВАХВА КАКАШКА!"
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_gaze_cd"			  				"Какашка cooldown reduced by 30 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_illusions_damage"					"Личности Некита deals 50% more damage"
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_astral_root"						"The Company roots enemies for 3 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_illusions_plus_2"					"Личности Некита +2 total illusions"
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_astral_damage"						"The Company additionaly deals 500% of your attack damage"
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_illusions_unkillable"				"Личности Некита Illusions are unkillable"
+		
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Некитос
 		"npc_dota_hero_lycan"         		   "КАКАШКИ"

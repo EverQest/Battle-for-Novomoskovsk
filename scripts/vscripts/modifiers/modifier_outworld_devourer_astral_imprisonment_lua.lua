@@ -1,3 +1,6 @@
+require("utility_functions")
+
+LinkLuaModifier( "modifier_generic_rooted_lua", "modifiers/modifier_generic_rooted_lua", LUA_MODIFIER_MOTION_NONE )
 --------------------------------------------------------------------------------
 modifier_outworld_devourer_astral_imprisonment_lua = class({})
 
@@ -29,8 +32,13 @@ function modifier_outworld_devourer_astral_imprisonment_lua:OnCreated( kv )
 	-- references
 	local damage = self:GetAbility():GetSpecialValueFor( "damage" )
 	self.radius = self:GetAbility():GetSpecialValueFor( "radius" )
+	self.root_duration =  self:GetAbility():GetSpecialValueFor( "root_duration" )
 
 	if not IsServer() then return end
+
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_nekit_astral_damage") then
+		damage = damage + (self:GetCaster():GetAverageTrueAttackDamage(caster) * 5)
+	end
 	-- precache damage
 	self.damageTable = {
 		-- victim = target,
@@ -87,6 +95,16 @@ function modifier_outworld_devourer_astral_imprisonment_lua:OnDestroy()
 			self.damageTable.damage,
 			nil
 		)
+
+		if IsTalentLearned(self:GetCaster(), "special_bonus_unique_nekit_astral_root") then
+			-- add modifier
+			enemy:AddNewModifier(
+			self:GetCaster(), -- player source
+			self, -- ability source
+			"modifier_generic_rooted_lua", -- modifier name
+			{ duration = self.root_duration } -- kv
+			)
+		end
 	end
 
 	-- play effects

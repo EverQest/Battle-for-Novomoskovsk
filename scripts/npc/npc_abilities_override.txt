@@ -2162,7 +2162,7 @@
 			"radius"					"1200 1400 1600"
 			"duration"					"5.0 7.5 10.0"
 			"slow"						"0"
-			"stone_duration"			"5.5"
+			"stone_duration"			"3 4 5"
 			"face_duration"				"2.0"
 			"vision_cone"				"0.08715"		// 85 degree cone
 			"bonus_physical_damage"		"120"
@@ -2202,8 +2202,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"300 350 400 450"
 		"AbilityCastPoint"				"0.25"
-		"AbilityDuration"				"4.0"
-		"AbilityDamage"					"140 180 200 250"
+		"AbilityDuration"				"1.5 2.5 3.5 4.5"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -2212,7 +2211,7 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"140 180 200 250"
+		"AbilityDamage"					"150 200 250 300"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2220,12 +2219,13 @@
 		{
 
 			"prison_duration"					"1.5 2.5 3.5 4.5"
-			"damage"							"140 180 200 250"
+			"damage"							"150 200 250 300"
 			"radius"							"400"
 			"cast_range_tooltip"				"225 300 375 450"
 			"max_charges_scepter"				"2"
 			"charge_restore_time_scepter"		"12"
 			"scepter_range_bonus"				"300"			
+			"root_duration"						"3"
 		}
 	}
 
@@ -2253,7 +2253,7 @@
 	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0.1"
 	"AoERadius"						"325"
-	"AbilityCooldown"				"25 20 15 12"
+	"AbilityCooldown"				"30 25 20 15"
 	"AbilityManaCost"				"100 80 60 50"
 		
 	// Special
@@ -2264,10 +2264,21 @@
 		"illusion_gather_radius"			"900"
 		"delay"								"1.0"
 		"illusion_duration"					"6.0 8.0 10.0 12.0"
-		"first_illusion_outgoing_damage"	"10.0"
-		"first_illusion_incoming_damage"	"-60.0"
-		"second_illusion_outgoing_damage"	"10.0"
-		"second_illusion_incoming_damage"	"-60.0"
+		"illusion_outgoing_damage"			
+		{
+			"value"													"50.0"
+			"special_bonus_unique_nekit_illusions_damage"			"50.0"
+		}
+		"illusion_incoming_damage"			
+		{
+			"value"													"-50.0"
+			"special_bonus_unique_nekit_illusions_unkillable"		"-50.0"
+		}
+		"illusion_count_tooltip"									
+		{
+			"value"														"2"
+			"special_bonus_unique_nekit_illusions_plus_2"				"2"
+		}
 	}
 	
 	"OnSpellStart"
@@ -2370,14 +2381,14 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"400"
+		"AbilityCastRange"				"400 500 600 700"
 		"AbilityCastPoint"				"0.1"
 		"AbilityDuration"				"6.4"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"40 35 30 25"
-		"AbilityManaCost"				"50 40 30 20"
+		"AbilityManaCost"				"150 175 200 225"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -2386,7 +2397,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"duration"					"3 4 5 6"
+			"duration"					"6"
 			"radius"					"450"
 			"width"						"50"
 			"spear_damage"				"150 200 250"
