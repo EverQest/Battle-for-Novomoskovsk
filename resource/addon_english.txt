@@ -214,8 +214,8 @@
 		"Dota_Tooltip_ability_doppelganger_datadriven"										"Личности Некита"
 		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_count_tooltip"				"TOTAL ILLUSIONS:"
 		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_duration"					"ILLUSION DURATION:"
-		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_outgoing_damage"				"%ILLUSION BONUS DAMAGE:"
-		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_incoming_damage"				"%ILLUSION INCOMING DAMAGE IGNORE:"
+		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_outgoing_damage"				"%ILLUSION DAMAGE:"
+		"Dota_Tooltip_ability_doppelganger_datadriven_illusion_incoming_damage_tooltip"		"%ILLUSION DAMAGE TAKEN:"
 		"Dota_Tooltip_ability_doppelganger_datadriven_Description"							"Призывает две (4) свои личности: Скинхэд и Девятихвостый"
 		
 		"Dota_Tooltip_ability_outworld_devourer_astral_imprisonment_lua"					"The Company"
@@ -235,7 +235,7 @@
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_unique_nekit_gaze_cd"			  				"Какашка cooldown reduced by 30 seconds"
-		"Dota_Tooltip_ability_special_bonus_unique_nekit_illusions_damage"					"Личности Некита deals 50% more damage"
+		"Dota_Tooltip_ability_special_bonus_unique_nekit_illusions_damage"					"Личности Некита deals 100% of your damage"
 		"Dota_Tooltip_ability_special_bonus_unique_nekit_astral_root"						"The Company roots enemies for 3 seconds"
 		"Dota_Tooltip_ability_special_bonus_unique_nekit_illusions_plus_2"					"Личности Некита +2 total illusions"
 		"Dota_Tooltip_ability_special_bonus_unique_nekit_astral_damage"						"The Company additionaly deals 500% of your attack damage"
