@@ -30,7 +30,7 @@
 		//Generic
 		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 				"Приголомшений!"
 		"Dota_Tooltip_modifier_generic_stunned_lua"				 						"Приголомшений!"
-
+		"Dota_Tooltip_modifier_generic_spell_immune_lua"				 				"Spell Immune"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	   //Васич
@@ -352,18 +352,35 @@
 		"Dota_Tooltip_ability_usa_rage"												"На всех парах в Канаду"
 		"Dota_Tooltip_ability_usa_rage_speed"										"MOVEMENT SPEED:"
 		"Dota_Tooltip_ability_usa_rage_AbilityDuration"								"DURATION:"
+		"Dota_Tooltip_ability_usa_rage_stun"										"STUN DURATION:"
+		"Dota_Tooltip_ability_usa_rage_Description"									"Занзак так стремиться уехать в Канаду что его не остановить, большая скорость но может потерять рассудок и оглушиться и оглушить других"
+		"Dota_Tooltip_modifier_Train_Thomas"										"На всех парах в Канаду!"
+		
 		"Dota_Tooltip_ability_chaos_bolt"											"Дать пять!"
 		"Dota_Tooltip_ability_chaos_bolt_stun_min"									"STUN MIN DURATION:"
 		"Dota_Tooltip_ability_chaos_bolt_stun_max"									"STUN MAX DURATION:"
 		"Dota_Tooltip_ability_chaos_bolt_damage_min"								"DAMAGE MIN:"
 		"Dota_Tooltip_ability_chaos_bolt_damage_max"								"DAMAGE MAX:"
 		"Dota_Tooltip_ability_chaos_bolt_Description"								"Здарова братва! оглушает выбранного братана"
-		"Dota_Tooltip_ability_usa_rage_Description"									"Занзак так стремиться уехать в Канаду что его не остановить, большая скорость но может потерять рассудок и оглушиться и оглушить других"
+		
 		"Dota_Tooltip_ability_vacuum_datadriven"									"Кучнее пацанва!"
 		"Dota_Tooltip_ability_vacuum_datadriven_radius"								"RADIUS:"
 		"Dota_Tooltip_ability_vacuum_datadriven_Description"				 		"Занзак собирает всех в одну группу людей, притягивая всех в центр"
+		
 		"Dota_Tooltip_ability_enigma_black_hole_lua"					 			"Самая сильная кнопка в ДНР"
+		"Dota_Tooltip_ability_enigma_black_hole_lua_AbilityChannelTime"				"CHANNEL TIME:"
 		"Dota_Tooltip_ability_enigma_black_hole_lua_Description"		 			"Зарядив красную кнопку прилётов он яросно кастует конец вселенной"
+		"Dota_Tooltip_modifier_enigma_black_hole_lua_debuff"					 	"В ДНР!"
+
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_usa_damage"					"На всех парах в Канаду deals 500 pure damage"	
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_vacuum_radius"						"Кучнее пацанва radius increased by 200"
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_usa_self_stun"				"На всех парах в Канаду doesn't stun yourself"		
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_chaos_bolt_aoe"				"Дать пять now AOE with 400 radius"		
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_chaos_bolt_aoe_description"	"AOE has 400 radius"		
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_black_hole_spell_immunity"	"Самая сильная кнопка в ДНР give spell immunity while channeling"					
+		"Dota_Tooltip_ability_special_bonus_unique_zanzak_usa_rage_speed"				"На всех парах в Канаду + 300 movement speed"		
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Ростислав Легенда
 		"npc_dota_hero_gyrocopter"      	   "Ростислав Легенда"

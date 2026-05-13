@@ -1,13 +1,15 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 enigma_black_hole_lua = class({})
 LinkLuaModifier( "modifier_enigma_black_hole_lua_thinker", "modifiers/modifier_enigma_black_hole_lua_thinker", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_enigma_black_hole_lua_debuff", "modifiers/modifier_enigma_black_hole_lua_debuff", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_generic_spell_immune_lua", "modifiers/modifier_generic_spell_immune_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
 
 --------------------------------------------------------------------------------
 -- Custom KV
 -- AOE Radius
 function enigma_black_hole_lua:GetAOERadius()
-	return self:GetSpecialValueFor( "far_radius" )
+	return self:GetSpecialValueFor( "radius" )
 end
 
 --------------------------------------------------------------------------------
@@ -31,6 +33,16 @@ function enigma_black_hole_lua:OnSpellStart()
 		false
 	)
 	self.thinker = self.thinker:FindModifierByName("modifier_enigma_black_hole_lua_thinker")
+
+	if IsTalentLearned(caster, "special_bonus_unique_zanzak_black_hole_spell_immunity") then
+		-- add modifier
+		caster:AddNewModifier(
+			self:GetCaster(), -- player source
+			self, -- ability source
+			"modifier_generic_spell_immune_lua", -- modifier name
+			{ duration = duration } -- kv
+			)
+	end
 end
 
 --------------------------------------------------------------------------------
@@ -39,4 +51,8 @@ function enigma_black_hole_lua:OnChannelFinish( bInterrupted )
 	if not IsServer() then return end
 
 	UTIL_Remove( self.thinker:GetParent() )
+
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_zanzak_black_hole_spell_immunity") then
+		self:GetCaster():RemoveModifierByName("modifier_generic_spell_immune_lua")
+	end
 end

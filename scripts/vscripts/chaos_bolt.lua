@@ -1,3 +1,5 @@
+require("utility_functions")
+
 chaos_bolt = class({})
 
 LinkLuaModifier( "modifier_generic_stunned_dispellable", "modifiers/modifier_generic_stunned_dispellable", LUA_MODIFIER_MOTION_NONE )
@@ -11,22 +13,51 @@ function chaos_bolt:OnSpellStart()
 	local projectile_name = "particles/chaos_knight_chaos_bolt.vpcf"
 	local projectile_speed = self:GetSpecialValueFor("projectile_speed")
 
-	local info = {
-		Target = target,
-		Source = caster,
-		Ability = self,	
+	--AOE or single
+	if IsTalentLearned(caster, "special_bonus_unique_zanzak_chaos_bolt_aoe") then
+		local radius = self:GetSpecialValueFor("radius")
+		local enemies = FindUnitsInRadius(
+			caster:GetTeamNumber(),	-- int, your team number
+			target:GetOrigin(),	-- point, center point
+			nil,	-- handle, cacheUnit. (not known)
+			radius,	-- float, radius. or use FIND_UNITS_EVERYWHERE
+			DOTA_UNIT_TARGET_TEAM_ENEMY,	-- int, team filter
+			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,	-- int, type filter
+			DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES,	-- int, flag filter
+			0,	-- int, order filter
+			false	-- bool, can grow cache
+		)
+
+		for _,enemy in pairs(enemies) do
+			local info = {
+				Target = enemy,
+				Source = caster,
+				Ability = self,	
+				
+				EffectName = projectile_name,
+				iMoveSpeed = projectile_speed,
+				bDodgeable = true -- Optional
+			}
+			ProjectileManager:CreateTrackingProjectile(info)
+		end
+	else
 		
-		EffectName = projectile_name,
-		iMoveSpeed = projectile_speed,
-		bDodgeable = true -- Optional
-	}
-
+		local info = {
+			Target = target,
+			Source = caster,
+			Ability = self,	
+			
+			EffectName = projectile_name,
+			iMoveSpeed = projectile_speed,
+			bDodgeable = true -- Optional
+		}
+		ProjectileManager:CreateTrackingProjectile(info)
+	end
+	
 	-- effects
-    local sound = math.random( 1, 3 )
-    local sound_cast = "CustomDarova" .. sound
-    EmitSoundOn( sound_cast, caster )
-
-	ProjectileManager:CreateTrackingProjectile(info)
+	local sound = math.random( 1, 3 )
+	local sound_cast = "CustomDarova" .. sound
+	EmitSoundOn( sound_cast, caster )
 end
 
 function chaos_bolt:OnProjectileHit_ExtraData( target, location, extradata )
@@ -65,4 +96,13 @@ function chaos_bolt:OnProjectileHit_ExtraData( target, location, extradata )
 	-- effects
 	local sound_cast = "CustomStunPrivet"
 	EmitSoundOn( sound_cast, target )
+end
+
+-- AOE ring display
+function chaos_bolt:GetAOERadius()
+	local radius = 0
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_zanzak_chaos_bolt_aoe") then
+		radius = self:GetSpecialValueFor("radius")
+	end
+	return radius
 end

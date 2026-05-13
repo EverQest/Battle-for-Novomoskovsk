@@ -15,14 +15,14 @@ end
 -- Initializations
 function modifier_enigma_black_hole_lua_thinker:OnCreated( kv )
 	-- references
-	self.radius = self:GetAbility():GetSpecialValueFor( "far_radius" )
+	self.radius = self:GetAbility():GetSpecialValueFor( "radius" )
 	self.interval = 1
 	self.ticks = math.floor(self:GetDuration()/self.interval+0.5) -- round
 	self.tick = 0
 
 	if IsServer() then
 		-- precache damage
-		local damage = self:GetAbility():GetSpecialValueFor( "near_damage" )
+		local damage = self:GetAbility():GetSpecialValueFor( "damage" )
 		self.damageTable = {
 			-- victim = target,
 			attacker = self:GetCaster(),

@@ -3050,7 +3050,7 @@
 		"ScriptFile"					"enigma_black_hole_lua"
 		"AbilityTextureName"			"dnr"
 		"FightRecapLevel"				"2"
-		"MaxLevel"						"3"
+		"MaxLevel"						"5"
 		"HasScepterUpgrade"			"1"
 		"precache"
 		{
@@ -3070,30 +3070,27 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"275"
 		"AbilityCastPoint"				"0.1"
-		"AbilityChannelTime"			"6.0 7.0 8.0"
+		"AbilityChannelTime"			"6.66"
 		
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"180.0 150.0 100.0"
-		"AbilityManaCost"				"275 325 375"
+		"AbilityCooldown"				"180.0 150.0 130.0 110.0 90.0"
+		"AbilityManaCost"				"250 500 750 1000 1250"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"300 500 600"
+		"AbilityDamage"					"200 350 500 650 800"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"far_damage"			"200 350 480"
-			"far_radius"			"500"
-			"pull_radius"			"500"
+			"radius"				"400 450 500 550 600"
 			"pull_speed"			"50"
-			"near_radius"			"400"
-			"near_damage"			"300 500 600"
+			"damage"				"200 350 500 650 800"
 			"tick_rate"				"0.1"
-			"duration"				"6.0 7.0 8.0"
+			"duration"				"6.66"
 			"vision_radius"			"800"
 			"pull_rotate_speed"		"0.25"
 			"animation_rate"		"0.2"
@@ -3109,7 +3106,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"chaos_bolt"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
@@ -3144,10 +3141,11 @@
 		"AbilityValues"
 		{
 			"projectile_speed"		"500"
-			"stun_min"				"2.0 2.25 2.5 3.0"
-			"stun_max"				"2.0 3.25 3.5 4.0"
+			"stun_min"				"0.5 1.0 1.5 2.0"
+			"stun_max"				"3.0 4.0 5.0 6.0"
 			"damage_min"			"75 100 125 150"
-			"damage_max"			"200 225 250 275"
+			"damage_max"			"200 300 400 500"
+			"radius"				"400"
 		}
 	}
 
@@ -3195,10 +3193,14 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
 	{
-		"radius"				"280 350 430 550"
+		"radius"
+		{
+			"value"												"250 350 450 550"
+			"special_bonus_unique_zanzak_vacuum_radius"			"200"
+		}
 		"duration"				"0.8 1.2 1.4 1.6"
 		"damage"				"120 140 160 200"
-		"radius_tree"			"280 350 430 550"
+		"radius_tree"			"250 350 450 550"
 	}
 
 	"OnSpellStart"
@@ -3302,16 +3304,17 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"usa"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"AbilityCooldown"				"30 25 20 "
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityCooldown"				"30 25 20 15"
 		"AbilityDuration"				"5.0"
 		"AbilityManaCost"				"200"
 		"AbilityType"					"ABILITY_TYPE_BASIC"
-		"AoERadius"						"%radius"
+		"AoERadius"						"400 500 600 700"
+		"AbilityCastRange"				"400 500 600 700"
 		
 		"precache"
 		{
@@ -3321,11 +3324,24 @@
 		"AbilityValues"
 		{
 			"duration"			"5.0"
-			"radius"			"0"
-			"stun"				"2.0"
-			"speed"				"700"
-			"radius_boom"		"700"
-			"range"				"-300"
+			"stun"				"2.28"
+			"self_stun"
+			{
+				"value"												"2.28"
+				"special_bonus_unique_zanzak_usa_self_stun"			"-2.28"
+			}
+			"damage"
+			{
+				"value"												"0"
+				"special_bonus_unique_zanzak_usa_damage"			"500"
+			}
+			"speed"				
+			{
+				"value"												"550 600 650 700"
+				"special_bonus_unique_zanzak_usa_rage_speed"		"300"
+			}
+			"radius_boom"		"400 500 600 700"
+			"range"				"0"
 		}
 		
 		"OnSpellStart"
@@ -3388,7 +3404,7 @@
 					}
 					"Stun"
 					{
-						"Duration"   "2"
+						"Duration"   "%self_stun"
 						"Target" 	 "CASTER"
 					}
 					"RunScript"

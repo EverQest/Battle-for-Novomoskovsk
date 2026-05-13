@@ -297,19 +297,19 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50" // don't stun yourself
-		"Ability13"				"special_bonus_movement_speed_50" // stun damage
-		"Ability14"				"special_bonus_lifesteal_20" // vacum radius
-		"Ability15"				"special_bonus_cooldown_reduction_20" // usa_rage duration
-		"Ability16"				"special_bonus_attack_damage_100" // chaos_bolt aoe
-		"Ability17"				"special_bonus_spell_amplify_25" // spell immune in blackhole
+		"Ability12"				"special_bonus_unique_zanzak_usa_damage" // stun damage
+		"Ability13"				"special_bonus_unique_zanzak_vacuum_radius" // vacum radius
+		"Ability14"				"special_bonus_unique_zanzak_usa_self_stun" // don't stun yourself
+		"Ability15"				"special_bonus_unique_zanzak_chaos_bolt_aoe" // chaos_bolt aoe
+		"Ability16"				"special_bonus_unique_zanzak_black_hole_spell_immunity" // spell immune in blackhole
+		"Ability17"				"special_bonus_unique_zanzak_usa_rage_speed" // usa_rage duration
 
-		"Ability1"					"usa_rage"	
-		"Ability2"					"chaos_bolt"
-		"Ability3"					"vacuum_datadriven"
-	    	"Ability4"					"generic_hidden"
-	    	"Ability5"					"generic_hidden"
-	    "Ability6"					"enigma_black_hole_lua"
+		"Ability1"				"usa_rage"	
+		"Ability2"				"chaos_bolt"
+		"Ability3"				"vacuum_datadriven"
+	    	"Ability4"				"generic_hidden"
+	    	"Ability5"				"generic_hidden"
+	    "Ability6"				"enigma_black_hole_lua"
 	}
 	//=================================================================================================================
 	// HERO: Gyrocopter (Rostik)

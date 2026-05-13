@@ -18,14 +18,14 @@
 	"npc_dota_hero_arc_warden"			"1" //unique talents done
 	"npc_dota_hero_clinkz"				"1" //unique talents done
 	"npc_dota_hero_elder_titan"			"1" //unique talents done
-	"npc_dota_hero_enigma"				"1"
+	"npc_dota_hero_enigma"				"1" //unique talents done
 	"npc_dota_hero_lone_druid"			"1"
 	"npc_dota_hero_lycan"				"1" //unique talents done
 	"npc_dota_hero_morphling"			"1" //unique talents done
 	"npc_dota_hero_nevermore"			"1" //unique talents done
 	"npc_dota_hero_obsidian_destroyer"	"1" //unique talents done
 	"npc_dota_hero_ogre_magi"			"1"
-	"npc_dota_hero_phantom_lancer"		"1"
+	"npc_dota_hero_phantom_lancer"		"1" //unique talents done
 	"npc_dota_hero_storm_spirit"		"1"
 	"npc_dota_hero_techies"				"1" //unique talents done
 	"npc_dota_hero_tinker"				"1" //unique talents done
