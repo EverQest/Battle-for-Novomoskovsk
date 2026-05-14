@@ -1,3 +1,5 @@
+require("utility_functions")
+
 LinkLuaModifier("modifier_imba_templar_assassin_trap_slow", "hero_templar_assassin", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_imba_templar_assassin_trap_limbs", "hero_templar_assassin", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_imba_templar_assassin_trap_eyes", "hero_templar_assassin", LUA_MODIFIER_MOTION_NONE)
@@ -163,7 +165,7 @@ function modifier_imba_templar_assassin_trap_limbs:OnCreated(params)
 		self.inhibit_limbs_turn_rate_slow		= -50
 	end
 	
-	self.attack_speed_slow	= math.max(self:GetParent():GetAttackSpeed() * self.inhibit_limbs_attack_slow_pct, self.inhibit_limbs_attack_slow) * (-1)
+	self.attack_speed_slow	= math.max(self:GetParent():GetAttackSpeed(false) * self.inhibit_limbs_attack_slow_pct, self.inhibit_limbs_attack_slow) * (-1)
 	self.interval			= 0.1
 	
 	self:StartIntervalThink(self.interval)
@@ -171,7 +173,7 @@ end
 
 function modifier_imba_templar_assassin_trap_limbs:OnIntervalThink()
 	self.attack_speed_slow = 0
-	self.attack_speed_slow	= math.max(self:GetParent():GetAttackSpeed() * self.inhibit_limbs_attack_slow_pct, self.inhibit_limbs_attack_slow) * (-1)
+	self.attack_speed_slow	= math.max(self:GetParent():GetAttackSpeed(false) * self.inhibit_limbs_attack_slow_pct, self.inhibit_limbs_attack_slow) * (-1)
 end
 
 function modifier_imba_templar_assassin_trap_limbs:DeclareFunctions()
@@ -585,11 +587,13 @@ function modifier_imba_templar_assassin_psionic_trap:CheckState()
 	if self:GetElapsedTime() >= self.trap_fade_time then
 		return {
 			[MODIFIER_STATE_INVISIBLE]			= true,
-			[MODIFIER_STATE_NO_UNIT_COLLISION]	= true
+			[MODIFIER_STATE_NO_UNIT_COLLISION]	= true,
+			[MODIFIER_STATE_ATTACK_IMMUNE]		= IsTalentLearned(self:GetCaster(), "special_bonus_unique_oleg_trap_cant_be_destroyed")
 		}
 	else
 		return {
-			[MODIFIER_STATE_NO_UNIT_COLLISION]	= true
+			[MODIFIER_STATE_NO_UNIT_COLLISION]	= true,
+			[MODIFIER_STATE_ATTACK_IMMUNE]		= IsTalentLearned(self:GetCaster(), "special_bonus_unique_oleg_trap_cant_be_destroyed")
 		}
 	end
 end

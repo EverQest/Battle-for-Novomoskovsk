@@ -460,19 +460,31 @@
 		"npc_dota_hero_undying"				   "Чивокуня"
 		
 		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua"									"Хомяк на спидах"
+		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_delay"							"DELAY:"
 		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_slow_duration"					"ENEMY SLOW DURATION:"
 		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_Description"						"Превращаеться в хомяка и летит в одну сторону, попадая в противника наносит урон и останавливаеться"
+		"Dota_Tooltip_modifier_earth_spirit_rolling_boulder_lua"								"ХОМЯК!"
+		
 		"Dota_Tooltip_ability_puck_phase_shift_lua"												"Ладно я на улицу"
 		"Dota_Tooltip_ability_puck_phase_shift_lua_duration"									"DURATION:"
 		"Dota_Tooltip_ability_puck_phase_shift_lua_Description"									"Пропадает из реальности погулять, но благо это только на время"
+		"Dota_Tooltip_modifier_puck_phase_shift_lua"											"На прогулянці"
+		"Dota_Tooltip_modifier_puck_phase_shift_lua_description"								"Скоро повернется, чеeeеесно"
+		
 		"Dota_Tooltip_ability_venomancer_poison_sting_lua"										"Краска от балончика"
 		"Dota_Tooltip_ability_venomancer_poison_sting_lua_duration"								"DURATION:"
 		"Dota_Tooltip_ability_venomancer_poison_sting_lua_movement_speed"						"%SLOW:"
 		"Dota_Tooltip_ability_venomancer_poison_sting_lua_Description"							"Накладывает эффект гниения на противников которых он коснулся"
+		"Dota_Tooltip_modifier_venomancer_poison_sting_lua_debuff"								"Гніла фарба"
+		"Dota_Tooltip_modifier_venomancer_poison_sting_lua_debuff_description"					"Пече..."
+		
 		"Dota_Tooltip_ability_imba_templar_assassin_trap_teleport"								"Телепортация"
 		"Dota_Tooltip_ability_imba_templar_assassin_trap_teleport_Description"					"Телепортирует на определённый ТЕГ на карте в районе видимости"
 		"Dota_Tooltip_ability_imba_templar_assassin_trap"										"Подорвать ТЕГ"
 		"Dota_Tooltip_ability_imba_templar_assassin_trap_Description"							"Подрывает ближайший ТЕГ и наносит сильный переодический урон, при переключении этого умения - все теги начинают отбрасывать от себя"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_slow"									"Сповільнення від ТЕГу"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_psionic_trap_counter"						"Кількість ТЕГів"
+		
 		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap"								"Тегнуть место"
 		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap_trap_fade_time"				"TRAP FADE TIME:"
 		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap_movement_speed_min"			"%MIN SLOW:"
@@ -480,6 +492,22 @@
 		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap_inhibit_limbs_attack_slow"		"ATTACK SLOW:"
 		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap_inhibit_limbs_attack_slow_pct" "%ATTACK SLOW:"
 		"Dota_Tooltip_ability_imba_templar_assassin_psionic_trap_Description"					"Наносит ТЕГ на место который может находится неопределённое количество времени, после задержки в 2 секунды пропадает в невидимость. Имеет 3 вида тега которые можно переключать, Фиолетовый тег - Сильно замедняет, Чёрный тег - Убирает видимость у врага, Красный - Оглушает каждую миллисекунду."
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_limbs" 								"ТЕГнутий!"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_limbs_description" 					"Цей тег зменшує твою швидкість атаки!"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_eyes" 								"ТЕГнутий!"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_eyes_description" 					"Цей тег зменшує твою видимість!"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_nerves" 								"ТЕГнутий!"
+		"DOTA_Tooltip_modifier_imba_templar_assassin_trap_nerves_description" 					"Цей тег постійно оглушає!"
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_slows"						"Краска от балончика slows increased by 10%"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_homyak_no_delay"						"Хомяк на спидах delay reduced by 0.3 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_duration"					"Краска от балончика duration increased by 5 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_trap_cd_reduction"						"Reduce ТЕГ cooldown by 4 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_stacks"					"Краска от балончика now stacks"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_stacks_description"		"Damage adds up with each hit!"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_trap_cant_be_destroyed"					"ТЕГ can't be destroyed!"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//TimurTheTitan
 		"npc_dota_hero_elder_titan"        	   "TimurTheTitan"

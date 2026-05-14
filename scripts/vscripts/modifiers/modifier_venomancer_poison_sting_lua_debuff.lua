@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 modifier_venomancer_poison_sting_lua_debuff = class({})
 
@@ -29,7 +30,16 @@ function modifier_venomancer_poison_sting_lua_debuff:OnCreated( kv )
 	local damage = self:GetAbility():GetSpecialValueFor( "damage" )
 	self.slow = self:GetAbility():GetSpecialValueFor( "movement_speed" )
 
+	if self.curent_damage == nil then
+		self.curent_damage = 0
+	end
+
 	if not IsServer() then return end
+
+	if IsTalentLearned(self.caster, "special_bonus_unique_oleg_poison_touch_stacks") then
+		damage = self.curent_damage + damage
+		self.curent_damage = damage
+	end
 
 	-- precache damage
 	self.damageTable = {
@@ -51,9 +61,11 @@ function modifier_venomancer_poison_sting_lua_debuff:OnRefresh( kv )
 end
 
 function modifier_venomancer_poison_sting_lua_debuff:OnRemoved()
+	self.curent_damage = 0
 end
 
 function modifier_venomancer_poison_sting_lua_debuff:OnDestroy()
+	self.curent_damage = 0
 end
 
 --------------------------------------------------------------------------------

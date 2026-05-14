@@ -958,4 +958,24 @@
 		}
 	}
 
+	"special_bonus_unique_oleg_trap_cd_reduction"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"AbilityCooldown"			"-4" // kv that will be changed
+				"ability"					"imba_templar_assassin_psionic_trap" // ability name
+			}
+		}
+	}
+
 }
