@@ -1585,7 +1585,7 @@
 		"ScriptFile"					"ogre_magi_multicast_lua"
 		"AbilityTextureName"			"chicha_multicast"
 		"FightRecapLevel"				"2"
-		"MaxLevel"						"4"
+		"MaxLevel"						"3"
 		"precache"
 		{
 			"soundfile"	"soundevents/Chicha.vsndevts"
@@ -1610,13 +1610,13 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"multicast_2_times"				"0.6 0.7 0.8 0.9"
-			"multicast_3_times"				"0.0 0.2 0.4 0.6"
-			"multicast_4_times"				"0.0 0.0 0.2 0.4"
+			"multicast_2_times"				"0.6 0.7 0.8"
+			"multicast_3_times"				"0.0 0.2 0.4"
+			"multicast_4_times"				"0.0 0.0 0.2"
 			"bloodlust_aoe"					"575.0"
-			"multicast_2_times_tooltip"		"60.0 70.0 80.0 90.0"
-			"multicast_3_times_tooltip"		"0.0 20.0 40.0 60.0"
-			"multicast_4_times_tooltip"		"0.0 0.0 20.0 40.0"
+			"multicast_2_times_tooltip"		"60.0 70.0 80.0"
+			"multicast_3_times_tooltip"		"0.0 20.0 40.0"
+			"multicast_4_times_tooltip"		"0.0 0.0 20.0"
 		}
 	}
 
@@ -1631,8 +1631,7 @@
 		"ScriptFile"					"lina_laguna_blade_lua"
 		"AbilityTextureName"			"chicha_laguna"
 		"FightRecapLevel"				"2"
-		"MaxLevel"						"5"
-		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"3"
 
 		"precache"
 		{
@@ -1652,23 +1651,23 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"900"
+		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.45"
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 20 15 13 10"
-		"AbilityManaCost"				"280 420 480 500 520"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"0"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"300 400 600 800 1000"
+		"AbilityDamage"					"300 600 900"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage"					"300 400 600 800 1000"
-			"cast_range_scepter"		"900"
+			"damage"					"300 600 900"
+			"cast_range_scepter"		"800"
 			"damage_delay"				"0.30"
 		}
 	}
@@ -1684,7 +1683,7 @@
 		"ScriptFile"					"lion_finger_of_death_lua"
 		"AbilityTextureName"			"chicha_finger"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"5"
+		"MaxLevel"						"3"
 		"HasScepterUpgrade"				"1"
 
 		"precache"
@@ -1704,28 +1703,25 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"900"
+		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.3"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 20 15 13 10"
-		"AbilityManaCost"				"280 420 480 500 520"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"0"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"300 400 600 800 1000"
+		"AbilityDamage"					"300 600 900"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage"					"300 400 600 800 1000"
-			"damage_scepter"			"725 875 1025 1600 1800"
-			"mana_cost_scepter"			"200 420 625 700 800"
+			"damage"					"300 600 900"
 			"damage_delay"				"0.30"
-			"cooldown_scepter"			"20.0 15.0 10.0"
-			"splash_radius_scepter"		"325.0"
+			"splash_radius"				"325.0"
 		}
 	}
 
@@ -1740,7 +1736,7 @@
 		"ScriptFile"					"snapfire_firesnap_cookie_lua"
 		"AbilityTextureName"			"chicha_bounce"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"5"
+		"MaxLevel"						"1"
 		"precache"
 		{
 			"soundfile"	"soundevents/Chicha.vsndevts"
@@ -1761,18 +1757,18 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1000"
+		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.2"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20 18 14 10 7"
-		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"0"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"			"100 150 200 250 300"
-		"AbilityDuration"		"2.2 2.4 2.6 2.8 3.0"
+		"AbilityDamage"			"300"
+		"AbilityDuration"		"3.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1780,15 +1776,50 @@
 		{
 			"projectile_speed"				"1000"
 			"pre_hop_duration"				"0.0"
-			"jump_duration"					"0.484" //"0.431 0.484 0.538 0.592"
-			"jump_height"					"200 300 450 500 550"
-			"jump_horizontal_distance"		"300 450 600 650 650"
+			"jump_duration"					"0.5" //"0.431 0.484 0.538 0.592"
+			"jump_height"					"550"
+			"jump_horizontal_distance"		"650"
 			"pre_land_anim_time"			"0.14"
 			"landing_gesture_duration"		"0.6"
 			"impact_radius"					"300"
-			"impact_damage"					"100 150 200 250 300"
-			"impact_stun_duration"			"2.2 2.4 2.6 2.8 3.0"
+			"impact_damage"					"300"
+			"impact_stun_duration"			"3.0"
 			"self_cast_delay"				"0.4"
+			"jump_heal_pct"					"15"
+		}
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Reset Cooldown (Chicha)
+	//=================================================================================================================
+	"chicha_reset_cooldown_lua"
+	{
+		// Ability Technical Aspect
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"chicha_reset_cooldown_lua"
+		"AbilityTextureName"			"placeholder"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"11"
+		"precache"
+		{
+			"soundfile"	"soundevents/Chicha.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"cooldown_reset_pct"				
+			{
+				"value" 										"10 15 20 25 30 35 40 45 50 55 60"
+				"special_bonus_unique_chicha_cd_reset_pct" 		"15"
+			}
 		}
 	}
 

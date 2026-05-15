@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 modifier_lina_laguna_blade_lua = class({})
 
@@ -21,7 +22,7 @@ function modifier_lina_laguna_blade_lua:OnCreated( kv )
 	if not IsServer() then return end
 	-- references
 	self.damage = self:GetAbility():GetSpecialValueFor( "damage" )
-	if self:GetCaster():HasScepter() then
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_chicha_laguna_pure") then
 		self.type = DAMAGE_TYPE_PURE
 	else
 		self.type = DAMAGE_TYPE_MAGICAL
@@ -39,7 +40,7 @@ function modifier_lina_laguna_blade_lua:OnDestroy()
 
 	-- cancel if magic immune or invulnerable
 	if self:GetParent():IsInvulnerable() then return end
-	if self:GetParent():IsMagicImmune() and (not self:GetCaster():HasScepter()) then return end	
+	if self:GetParent():IsMagicImmune() and (not IsTalentLearned(self:GetCaster(), "special_bonus_unique_chicha_laguna_pure")) then return end	
 
 	-- cancel if linken
 	if self:GetParent():TriggerSpellAbsorb( self:GetAbility() ) then return end

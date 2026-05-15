@@ -1,3 +1,6 @@
+require("utility_functions")
+--------------------------------------------------------------------------------
+
 lion_finger_of_death_lua = class({})
 LinkLuaModifier( "modifier_lion_finger_of_death_lua", "modifiers/modifier_lion_finger_of_death_lua", LUA_MODIFIER_MOTION_NONE )
 
@@ -5,27 +8,11 @@ LinkLuaModifier( "modifier_lion_finger_of_death_lua", "modifiers/modifier_lion_f
 -- Custom KV
 -- AOE Radius
 function lion_finger_of_death_lua:GetAOERadius()
-	if self:GetCaster():HasScepter() then
-		return self:GetSpecialValueFor( "splash_radius_scepter" )
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_chicha_finger_aoe") then
+		return self:GetSpecialValueFor( "splash_radius" )
 	end
 
 	return 0
-end
-
-function lion_finger_of_death_lua:GetCooldown( level )
-	if self:GetCaster():HasScepter() then
-		return self:GetSpecialValueFor( "cooldown_scepter" )
-	end
-
-	return self.BaseClass.GetCooldown( self, level )
-end
-
-function lion_finger_of_death_lua:GetManaCost( level )
-	if self:GetCaster():HasScepter() then
-		return self:GetSpecialValueFor( "mana_cost_scepter" )
-	end
-
-	return self.BaseClass.GetManaCost( self, level )
 end
 
 --------------------------------------------------------------------------------
@@ -47,11 +34,11 @@ function lion_finger_of_death_lua:OnSpellStart()
 
 	-- load data
 	local delay = self:GetSpecialValueFor("damage_delay")
-	local search = self:GetSpecialValueFor("splash_radius_scepter")
+	local search = self:GetSpecialValueFor("splash_radius")
 
 	-- find targets
 	local targets = {}
-	if caster:HasScepter() then
+	if IsTalentLearned(caster, "special_bonus_unique_chicha_finger_aoe") then
 		targets = FindUnitsInRadius(
 			caster:GetTeamNumber(),	-- int, your team number
 			target:GetOrigin(),	-- point, center point

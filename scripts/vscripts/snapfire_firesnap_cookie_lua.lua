@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 snapfire_firesnap_cookie_lua = class({})
 LinkLuaModifier( "modifier_generic_knockback_lua", "modifiers/modifier_generic_knockback_lua", LUA_MODIFIER_MOTION_BOTH )
@@ -98,6 +99,11 @@ function snapfire_firesnap_cookie_lua:OnProjectileHit( target, location )
 
 	-- play effects2
 	local effect_cast = self:PlayEffects2( target )
+	
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_chicha_jump_heal") then
+		local heal = target:GetMaxHealth() * self:GetSpecialValueFor( "jump_heal_pct" ) / 100
+		target:Heal( heal, self )
+	end
 
 	-- knockback
 	local knockback = target:AddNewModifier(

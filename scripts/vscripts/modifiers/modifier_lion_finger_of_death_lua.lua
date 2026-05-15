@@ -18,11 +18,7 @@ end
 -- Initializations
 function modifier_lion_finger_of_death_lua:OnCreated( kv )
 	-- references
-	if self:GetCaster():HasScepter() then
-		self.damage = self:GetAbility():GetSpecialValueFor( "damage_scepter" ) -- special value
-	else
-		self.damage = self:GetAbility():GetSpecialValueFor( "damage" ) -- special value
-	end
+	self.damage = self:GetAbility():GetSpecialValueFor( "damage" ) -- special value
 end
 
 function modifier_lion_finger_of_death_lua:OnDestroy( kv )

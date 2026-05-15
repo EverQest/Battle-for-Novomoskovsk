@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 lina_laguna_blade_lua = class({})
 LinkLuaModifier( "modifier_lina_laguna_blade_lua", "modifiers/modifier_lina_laguna_blade_lua", LUA_MODIFIER_MOTION_NONE )
@@ -5,7 +6,7 @@ LinkLuaModifier( "modifier_lina_laguna_blade_lua", "modifiers/modifier_lina_lagu
 --------------------------------------------------------------------------------
 -- Ability Cast Filter
 function lina_laguna_blade_lua:CastFilterResultTarget( hTarget )
-	if hTarget:IsMagicImmune() and (not self:GetCaster():HasScepter()) then
+	if hTarget:IsMagicImmune() and (not IsTalentLearned(self:GetCaster(), "special_bonus_unique_chicha_laguna_pure")) then
 		return UF_FAIL_MAGIC_IMMUNE_ENEMY
 	end
 

@@ -28,9 +28,11 @@
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Generic
-		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 				"Приголомшений!"
-		"Dota_Tooltip_modifier_generic_stunned_lua"				 						"Приголомшений!"
-		"Dota_Tooltip_modifier_generic_spell_immune_lua"				 				"Spell Immune"
+		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 		"Приголомшений!"
+		"Dota_Tooltip_modifier_generic_stunned_lua"				 				"Приголомшений!"
+		"Dota_Tooltip_modifier_generic_spell_immune_lua"				 		"Spell Immune"
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_cast_range_400"						"Cast range + 400"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	   //Васич
@@ -133,16 +135,31 @@
 		"Dota_Tooltip_ability_snapfire_firesnap_cookie_lua_jump_horizontal_distance"	"JUMP DISTANCE:"
 		"Dota_Tooltip_ability_snapfire_firesnap_cookie_lua_Description"	 				"Чича делает нырок за закладкой и просит своих союзников тоже исполнить этот финт"
 		"Dota_Tooltip_ability_snapfire_firesnap_cookie_lua_impact_radius"				"IMPACT RADIUS:"
-		"Dota_Tooltip_ability_lion_finger_of_death_lua"				 				 	"Игал"
+		
+		"Dota_Tooltip_ability_lion_finger_of_death_lua"				 				 	"Ігал"
 		"Dota_Tooltip_ability_lion_finger_of_death_lua_Description"		 			 	"Ответ на любую отрыжку в сторону Чичи, лучше вам не знать что это..."
-		"Dota_Tooltip_ability_lina_laguna_blade_lua"								 	"Ачич"
+		
+		"Dota_Tooltip_ability_lina_laguna_blade_lua"								 	"Ачіч"
 		"Dota_Tooltip_ability_lina_laguna_blade_lua_Description"					 	"Только на одних ардуинах он смог сделать такую сильную лазерную указку, от которой точно будет больно"
+		
+		"Dota_Tooltip_ability_chicha_reset_cooldown_lua"								"Чічанутість"
+		"Dota_Tooltip_ability_chicha_reset_cooldown_lua_cooldown_reset_pct"				"%COOLDOWN RESET CHANCE:"
+		"Dota_Tooltip_ability_chicha_reset_cooldown_lua_Description"					"Чіча завжди хоче якось виділитись з натовпу і тому він придумав цю херню, яка дозволяє йому скинути кулдаун будь-якої своєї здібності, але вона не завжди працює..."
+		
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua"								 	"Ульта бумбокс"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_multicast_2_times_tooltip"		"%X2 CHANCE:"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_multicast_3_times_tooltip"		"%X3 CHANCE:"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_multicast_4_times_tooltip"		"%X4 CHANCE:"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_Description"					 	"Бит бокс бум бум бокс бит бит бит бокс бум бикс бим бом бокс"
 		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_chicha_cd_reset_items"				"Чічанутість work on items"
+		"Dota_Tooltip_ability_special_bonus_unique_chicha_cd_reset_pct"					"Чічанутість chance increase by 15 %"
+		"Dota_Tooltip_ability_special_bonus_unique_chicha_jump_heal"					"Нырнуть по закладку heals by 15% of target max HP"
+		"Dota_Tooltip_ability_special_bonus_unique_chicha_laguna_pure"					"Ачіч deals PURE damage"
+		"Dota_Tooltip_ability_special_bonus_unique_chicha_finger_aoe"					"Ігал has 325 AOE"
+		"Dota_Tooltip_ability_special_bonus_unique_chicha_finger_aoe_description"		"Works just like Lion finger scepter upgrade"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//ReeZox
 		"npc_dota_hero_nevermore"              "ReeZox"

@@ -7,24 +7,26 @@
 	{
 		"override_hero"		  			"npc_dota_hero_ogre_magi"	
 		"AttributePrimary"				"DOTA_ATTRIBUTE_INTELLECT"
-		"AttributeIntelligenceGain"		"3.9"
-		"StatusMana"        			"1300"
+		"AttributeIntelligenceGain"		"-25"
+		"AttributeBaseIntelligence"		"-25"
+		"StatusMana"            		"250"
+		"StatusManaRegen"       		"100"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50" // jump proc 2 times
-		"Ability13"				"special_bonus_movement_speed_50" // cast range + 400
-		"Ability14"				"special_bonus_lifesteal_20" // jump stuns more
-		"Ability15"				"special_bonus_cooldown_reduction_20" // jump heals by 20% max HP
-		"Ability16"				"special_bonus_attack_damage_100" // pure damage finger
-		"Ability17"				"special_bonus_spell_amplify_25" // pure damage laguna
+		"Ability12"				"special_bonus_unique_chicha_cd_reset_items" // cooldown reset work on items
+		"Ability13"				"special_bonus_cast_range_400" // cast range + 400
+		"Ability14"				"special_bonus_unique_chicha_cd_reset_pct" // cooldown reset on cast +15 %
+		"Ability15"				"special_bonus_unique_chicha_jump_heal" // jump heals by 20% max HP
+		"Ability16"				"special_bonus_unique_chicha_finger_aoe"
+		"Ability17"				"special_bonus_unique_chicha_laguna_pure" 
 
 		"Ability1"             "snapfire_firesnap_cookie_lua"
 		"Ability2"		       "lion_finger_of_death_lua"
 		"Ability3"             "lina_laguna_blade_lua"
 	    	"Ability4"             "generic_hidden"	
-	    	"Ability5"             "generic_hidden"	
+	    "Ability5"             "chicha_reset_cooldown_lua"	
 	    "Ability6"             "ogre_magi_multicast_lua"	
 		"Ability7"             	   "generic_hidden"	
 	}
