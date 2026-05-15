@@ -12,7 +12,7 @@
 			"start_time"			"0:00"
 			"trinket_options"		"4"
 			"enhancement_options"	"4"
-			"craft_cost"			"6"
+			"craft_cost"			"10"
 			"xp_bonus"				"0"
 
 			"items"
@@ -184,7 +184,7 @@
 		"4"
 		{
 			"start_time"			"9:00"
-			"trinket_options"		"5"
+			"trinket_options"		"2"
 			"enhancement_options"	"5"
 			"craft_cost"			"10"
 			"xp_bonus"				"0"
@@ -192,14 +192,6 @@
 			"items"
 			{
 				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"
-				"item_enchanters_bauble"			"1"		
 			}
 
 			"enhancements"
@@ -243,7 +235,7 @@
 		{
 			"start_time"			"12:00"
 			"trinket_options"		"5"
-			"enhancement_options"	"5"
+			"enhancement_options"	"8"
 			"craft_cost"			"10"
 			"recraft_cost"			"10"
 			"xp_bonus"				"0"
@@ -259,7 +251,8 @@
 				"item_dezun_bloodrite"				"1"
 				"item_divine_regalia"				"1"
 				"item_harmonizer"					"1"
-				"item_heavy_blade"					"1"				
+				"item_heavy_blade"					"1"			
+				"item_enchanters_bauble"			"1"	
 			}
 
 			"enhancements"
@@ -270,27 +263,16 @@
 					"item_enhancement_evolved"		"1"
 					"item_enhancement_fleetfooted"	"1"
 					"item_enhancement_vampiric"		"1"
-				}
-
-				"strength"
-				{
 					"item_enhancement_hulking"		"1"
-				}
-
-				"agility"
-				{
 					"item_enhancement_audacious"	"1"
-				}
-
-				"intelligence"
-				{
 					"item_enhancement_feverish"		"1"
-				}
-
-				"universal"
-				{
 					"item_enhancement_manic"		"1"
 				}
+				"strength"		{}
+				"agility" 		{}
+				"intelligence" 	{}
+				"universal" 	{}
+
 			}
 		}
 	}
