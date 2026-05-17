@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 modifier_naga_siren_song_of_the_siren_lua = class({})
 
@@ -25,7 +26,7 @@ function modifier_naga_siren_song_of_the_siren_lua:OnCreated( kv )
 	local caster = self:GetCaster()
 
 	-- create scepter modifier
-	if caster:HasScepter() then
+	if IsTalentLearned(caster, "special_bonus_unique_vasich_dark_metal_heal") then
 		self.scepter = caster:AddNewModifier(
 			caster, -- player source
 			self:GetAbility(), -- ability source

@@ -318,30 +318,32 @@
 	//=================================================================================================================
 	//===============================================//HEROES//========================================================
 	//=================================================================================================================
-	// Spectre: Dispersion (Vyashich)
+	// Spectre: Dispersion (Vasich)
 	//=================================================================================================================
-	"spectre_dispersion_datadriven"
+	"spectre_dispersion_lua"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"					"ability_datadriven"
+	"BaseClass"					"ability_lua"
 	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"		"vyasich_aura"
-	"AbilityCastRange"			"200 250 300 350"
-
-	// Damage
-	//-------------------------------------------------------------------------------------------------------------
-	//"AbilityDamage"					"8 12 16 20"
-
+	"ScriptFile"				"spectre_dispersion_lua"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
 	{
-		"min_radius"			"200 250 300 350"
-		"max_radius"			"200 250 300 350"
-		"damage_reflection_pct"		"8 12 16 20"
+		"radius"			
+		{
+			"value"												"200 250 300 350"
+			"special_bonus_unique_vasich_dispersion_range"		"200"
+		}
+		"damage_reflection_pct"		
+		{
+			"value"													"8 12 16 20"
+			"special_bonus_unique_vasich_dispersion_increase"		"20"
+		}
 	}
 
 	"precache"
@@ -417,7 +419,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"soundfile"					"soundevents/Vyashich.vsndevts"
+			"soundfile"					"soundevents/Vasich.vsndevts"
 			"particle"					"particles/units/heroes/hero_wisp/wisp_tether.vpcf"
 			"particle"					"particles/units/heroes/hero_wisp/wisp_tether_hit.vpcf"
 			"particle"					"particles/units/heroes/hero_wisp/wisp_tether_slow.vpcf"
@@ -757,7 +759,7 @@
 		
 		"precache"
 		{
-			"soundfile"	"soundevents/Vyashich.vsndevts"
+			"soundfile"	"soundevents/Vasich.vsndevts"
 			"particle"	"particles/units/heroes/hero_pudge/pudge_rot.vpcf"
 			"particle"	"particles/units/heroes/hero_pudge/pudge_rot_recipient.vpcf"
 		}
@@ -769,7 +771,6 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"60 100 120 140"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -777,13 +778,21 @@
 		{
 			"rot_radius"			"450 460 470 480"
 			"rot_tick"				"0.2"
-			"rot_slow"				"-10 -13 -16 -20"
-			"rot_damage"			"60 100 120 140"
+			"rot_slow"
+			{
+				"value"									"-10 -14 -18 -22"
+				"special_bonus_unique_vasich_rot_slow"	"-8"
+			}
+			"rot_damage"			
+			{
+				"value"											"60 100 140 180"
+				"special_bonus_unique_vasich_rot_damage"		"80"
+			}
 		}
 	}
 	
 	//=================================================================================================================
-	// Naga Siren: Song of the Siren (Vyashich)
+	// Naga Siren: Song of the Siren (Vasich)
 	//=================================================================================================================
 	"naga_siren_song_of_the_siren_lua"
 	{
@@ -796,7 +805,7 @@
 
 		"precache"
 		{
-			"soundfile"	"soundevents/Vyashich.vsndevts"
+			"soundfile"	"soundevents/Vasich.vsndevts"
 			"particle"	"particles/status_fx/status_effect_siren_song.vpcf"
 			"particle"	"particles/units/heroes/hero_siren/naga_siren_siren_song_cast.vpcf"
 			"particle"	"particles/units/heroes/hero_siren/naga_siren_song_aura.vpcf"
@@ -830,14 +839,13 @@
 			"radius"						"1000 1200 1400"
 			"duration"						"7.0"
 			"animation_rate"				"0.55"
-			"regen_rate"					"100.0 120.0 130.0 150.0"
-			"regen_rate_self"				"100.0 120.0 130.0 150.0"
-			"regen_rate_tooltip_scepter"	"10"
+			"regen_rate"					"15"
+			"regen_rate_self"				"15"
 		}
 	}
 
 	//=================================================================================================================
-	// Naga Siren: Song of the Siren End (Vyashich)
+	// Naga Siren: Song of the Siren End (Vasich)
 	//=================================================================================================================
 	"naga_siren_song_of_the_siren_end_lua"
 	{
@@ -1798,7 +1806,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"chicha_reset_cooldown_lua"
-		"AbilityTextureName"			"placeholder"
+		"AbilityTextureName"			"chicha_reset_cd"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"11"
 		"precache"
@@ -6247,5 +6255,54 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Terrorblade: Terror Wave ( scepter ability )
+	//=================================================================================================================
+	"imba_terrorblade_terror_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"terrorblade_terrorwave_lua"
+		"AbilityTextureName"			"vasich_wave"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"MaxLevel"						"4"
+		"FightRecapLevel"				"1"
+
+		precache
+		{
+			"soundfile"					"soundevents/Vasich.vsndevts"
+			"particle"					"particles/units/heroes/hero_terrorblade/terrorblade_scepter_custom.vpcf"
+		}
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastRange"				"1600"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 35 30 25"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 100 125 150"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"fear_duration"		"2.0 3.0 4.0 5.0"
+			"radius"			"1600"
+			"speed"				"1000"
+			"spawn_delay"		"0"
+		}
+	}
+
 
 }

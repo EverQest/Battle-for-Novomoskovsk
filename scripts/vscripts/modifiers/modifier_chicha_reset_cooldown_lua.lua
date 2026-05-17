@@ -69,7 +69,7 @@ function modifier_chicha_reset_cooldown_lua:OnAbilityFullyCast(params)
             -- Visual/Sound Feedback (Important for "Feedback" feel)
             local pfx = ParticleManager:CreateParticle("particles/items2_fx/refresher.vpcf", PATTACH_ABSORIGIN_FOLLOW, params.unit)
             ParticleManager:ReleaseParticleIndex(pfx)
-            params.unit:EmitSound("CustomChicha")
+            params.unit:EmitSound("BarkFart")
         end
     end
 end

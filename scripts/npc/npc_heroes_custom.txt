@@ -232,30 +232,32 @@
 		"Ability6"		       "mina_explosion_jump"
 	}
 	//=================================================================================================================
-	// HERO: Io (Vyashich)
+	// HERO: Io (Vasich)
 	//=================================================================================================================
-	"npc_dota_hero_vyashich"
+	"npc_dota_hero_vasich"
 	{
-		"override_hero"		   		"npc_dota_hero_wisp"	
-		"AttributePrimary"	   		"DOTA_ATTRIBUTE_ALL"
-		"MagicalResistance"			"10"
-		"MovementTurnRate"			"50"
-		"StatusHealthRegen"			"12.0"
-		"AttributeStrengthGain"		"3.2"
+		"override_hero"		   			"npc_dota_hero_wisp"	
+		"AttributePrimary"	   			"DOTA_ATTRIBUTE_ALL"
+		"AttributeStrengthGain"			"5.0"
+		"AttributeAgilityGain"			"5.0"
+		"AttributeIntelligenceGain"		"5.0"
+		"AttributeBaseAgility"			"25"
+		"AttributeBaseStrength"			"25"
+		"AttributeBaseIntelligence"		"25"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50" // rot slow
-		"Ability13"				"special_bonus_movement_speed_50" // rot damage
-		"Ability14"				"special_bonus_lifesteal_20" // disperson increase %
-		"Ability15"				"special_bonus_cooldown_reduction_20" // 3% max HP regen
-		"Ability16"				"special_bonus_attack_damage_100" // dispersion range x2
-		"Ability17"				"special_bonus_spell_amplify_25" // 100% spell lifesteal
+		"Ability12"				"special_bonus_unique_vasich_rot_slow" // rot slow
+		"Ability13"				"special_bonus_unique_vasich_rot_damage" // rot damage
+		"Ability14"				"special_bonus_unique_vasich_dispersion_increase" // disperson increase %10
+		"Ability15"				"special_bonus_unique_vasich_dark_metal_heal" 
+		"Ability16"				"special_bonus_unique_vasich_dispersion_range" // dispersion range + 150
+		"Ability17"				"special_bonus_generic_hregen_300" // 100% spell lifesteal
 
-		"Ability1"            		 "wisp_tether_datadriven"	
+		"Ability1"            		 "imba_terrorblade_terror_wave"	
 		"Ability2"		     		 "pudge_rot_lua"
-		"Ability3"            		 "spectre_dispersion_datadriven"
+		"Ability3"            		 "spectre_dispersion_lua"
 	    	"Ability4"           		 "generic_hidden"	
 	    	"Ability5"           		 "generic_hidden"	
 	    "Ability6"            		 "naga_siren_song_of_the_siren_lua"	

@@ -19,21 +19,20 @@ function modifier_spectre_dispersion_lua:OnTakeDamage (event)
 		local post_damage = event.damage
 		local original_damage = event.original_damage
 		local ability = self:GetAbility()
-		local damage_reflect_pct = ( ability:GetLevelSpecialValueFor( "damage_reflection_pct", ability:GetLevel()-1 ) ) * 0.01
+		local damage_reflect_pct = ability:GetSpecialValueFor( "damage_reflection_pct") * 0.01
 
 		--Ignore damage
 		if caster:IsAlive() then
 			caster:SetHealth(caster:GetHealth() + (post_damage * damage_reflect_pct) )
 		end
 
-		local max_radius = ability:GetSpecialValueFor("max_radius")
-		local min_radius = ability:GetSpecialValueFor("min_radius")
+		local radius = ability:GetSpecialValueFor("radius")
 
-		units = FindUnitsInRadius(
+		local units = FindUnitsInRadius(
 						caster:GetTeamNumber(),
                         caster:GetAbsOrigin(),
                         nil,
-                        max_radius,
+                        radius,
                         DOTA_UNIT_TARGET_TEAM_ENEMY,
                         DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
                         DOTA_UNIT_TARGET_FLAG_NONE,
@@ -48,24 +47,8 @@ function modifier_spectre_dispersion_lua:OnTakeDamage (event)
 				local vCaster = caster:GetAbsOrigin()
 				local vUnit = unit:GetAbsOrigin()
 
-				local reflect_damage = 0.0
-				local particle_name = ""
-
-				local distance = (vUnit - vCaster):Length2D()
-				
-				--Within 300 radius		
-				if distance <= min_radius then
-					reflect_damage = original_damage * damage_reflect_pct
-					particle_name = "particles/units/heroes/hero_spectre/spectre_dispersion.vpcf"
-				--Between 301 and 475 radius
-				elseif distance <= (min_radius+175) then
-					reflect_damage = original_damage * ( damage_reflect_pct * ( (distance-300) * 0.142857 ) * 0.01 )
-					particle_name = "particles/units/heroes/hero_spectre/spectre_dispersion_fallback_mid.vpcf"
-				--Same formula as previous statement but different particle
-				else
-					reflect_damage = original_damage * ( damage_reflect_pct * ( (distance-300) * 0.142857 ) * 0.01 )
-					particle_name = "particles/units/heroes/hero_spectre/spectre_dispersion_b_fallback_low.vpcf"
-				end
+				local reflect_damage = original_damage * damage_reflect_pct
+				local particle_name = "particles/units/heroes/hero_spectre/spectre_dispersion.vpcf"
 
 				--Create particle
 				local particle = ParticleManager:CreateParticle( particle_name, PATTACH_POINT_FOLLOW, caster )

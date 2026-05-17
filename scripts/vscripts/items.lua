@@ -62,7 +62,7 @@ function COverthrowGameMode:SpecialItemAdd( event )
 	local spawnedItem = "item_madstone_bundle"
 
 	-- add the item to the inventory and broadcast
-	GiveBundlesStaggeredToPlayer(player_id, 10)
+	GiveBundlesStaggeredToPlayer(player_id, 11)
 	EmitGlobalSound("Overthrow.Item.Claimed")
 	local overthrow_item_drop =
 	{

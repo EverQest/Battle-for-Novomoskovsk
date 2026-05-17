@@ -33,25 +33,50 @@
 		"Dota_Tooltip_modifier_generic_spell_immune_lua"				 		"Spell Immune"
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_cast_range_400"						"Cast range + 400"
+		"Dota_Tooltip_ability_special_bonus_generic_hregen_300"					"Increase health regeneration by 300!"	
+
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	   //Васич
        "npc_dota_hero_wisp"        "Васич"
 
-       "Dota_Tooltip_ability_wisp_tether_datadriven"                  				"Душнила"
-       "Dota_Tooltip_ability_wisp_tether_datadriven_movespeed"						"%BONUS MOVESPEED:"
-       "Dota_Tooltip_ability_wisp_tether_datadriven_tether_heal_amp"				"%HEAL AMP:"
-       "Dota_Tooltip_ability_wisp_tether_datadriven_Description"      				"Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
-       "Dota_Tooltip_ability_pudge_rot_lua"                  						"Сила вони"
-       "Dota_Tooltip_ability_pudge_rot_lua_rot_slow"								"%SLOW:"
-       "Dota_Tooltip_ability_pudge_rot_lua_Description"      						"Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
-       "Dota_Tooltip_ability_spectre_dispersion_datadriven"                 		"Одно присутствие"
-       "Dota_Tooltip_ability_spectre_dispersion_datadriven_damage_reflection_pct"	"%DAMAGE REFLECTION:"
-       "Dota_Tooltip_ability_spectre_dispersion_datadriven_Description"     		"Васичу настолько похуй на оскорбления что он их тупо отражает во врагов от чего те получают урон"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua"                		"Дарк метал"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_radius"				"RADIUS:"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_duration"				"DURATION:"
-       "Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_Description"    		"Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
+       		//"Dota_Tooltip_ability_wisp_tether_datadriven"                  			"Душнила"
+       		//"Dota_Tooltip_ability_wisp_tether_datadriven_movespeed"					"%BONUS MOVESPEED:"
+       		//"Dota_Tooltip_ability_wisp_tether_datadriven_tether_heal_amp"				"%HEAL AMP:"
+       		//"Dota_Tooltip_ability_wisp_tether_datadriven_Description"      			"Васич вспоминает всё то что хотел рассказать и прикрипляеться к союзнику начиная душить, оба героя получают прибавку в скорости и регенирации"
+       
+		"Dota_Tooltip_ability_imba_terrorblade_terror_wave"								"Страховисько"
+		"Dota_Tooltip_modifier_terrorblade_fear"										"АААА ПЕДОФІЛ!!!"
+		"Dota_Tooltip_modifier_terrorblade_fear_description"							""
+    	"Dota_Tooltip_ability_imba_terrorblade_terror_wave_fear_duration"            	"FEAR DURATION:"
+    	"Dota_Tooltip_ability_imba_terrorblade_terror_wave_description"              	"Васіч така страхойобіна що коли він пропонує кудись піти, то всі одразу тікають від цього педофілича нахуй!"
+
+		"Dota_Tooltip_ability_pudge_rot_lua"                  							"Сила вони"
+    	"Dota_Tooltip_ability_pudge_rot_lua_rot_slow"									"%SLOW:"
+    	"Dota_Tooltip_ability_pudge_rot_lua_rot_damage"									"DAMAGE:"
+    	"DOTA_Tooltip_modifier_pudge_rot_lua"											"Смердить як від Васіча!"
+    	"Dota_Tooltip_ability_pudge_rot_lua_Description"      							"Васич напрягает свои внутрение органы и начинает люто вонять, создавае огромное облако противного запаха"
+    	
+		"Dota_Tooltip_ability_spectre_dispersion_lua"                 					"Одно присутствие"
+    	"Dota_Tooltip_ability_spectre_dispersion_lua_damage_reflection_pct"				"%DAMAGE REFLECTION:"
+    	"Dota_Tooltip_ability_spectre_dispersion_lua_radius"							"RADIUS:"
+    	"Dota_Tooltip_ability_spectre_dispersion_lua_Description"     					"Васичу настолько похуй на оскорбления что он их тупо отражает во врагов от чего те получают урон"
+    	
+		"Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua"                			"Дарк метал"
+    	"Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_radius"					"RADIUS:"
+    	"Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_duration"				"DURATION:"
+    	"Dota_Tooltip_ability_naga_siren_song_of_the_siren_lua_Description"    			"Васич начинает хвастаться своим голосом, что все впадают в ужас и в шоке стоят на месте"
+		"DOTA_Tooltip_modifier_naga_siren_song_of_the_siren_lua_scepter"                "Дарк метал лікує вас"
+		"DOTA_Tooltip_modifier_naga_siren_song_of_the_siren_lua_debuff"                	"МІЗКИ ВИТІКЛИ ЧЕРЕЗ ВУХА!"
+		"DOTA_Tooltip_modifier_naga_siren_song_of_the_siren_lua"                		"ВАСІЧ ОРЕ ЯК КОНЧь"
+
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_vasich_rot_slow"						"Сила вони slow increased by 8%"
+		"Dota_Tooltip_ability_special_bonus_unique_vasich_rot_damage"					"Сила вони damage increased by 80"
+		"Dota_Tooltip_ability_special_bonus_unique_vasich_dispersion_increase"			"Одно присутствие damage reflection increased by 20%"		
+		"Dota_Tooltip_ability_special_bonus_unique_vasich_dark_metal_heal"				"Дарк метал heals allies by 15% of their max health"	
+		"Dota_Tooltip_ability_special_bonus_unique_vasich_dispersion_range"				"Одно присутствие radius increased by 200"	
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Дима
 		"npc_dota_hero_morphling"        "Снюсовый морфлинг"	
@@ -145,12 +170,16 @@
 		"Dota_Tooltip_ability_chicha_reset_cooldown_lua"								"Чічанутість"
 		"Dota_Tooltip_ability_chicha_reset_cooldown_lua_cooldown_reset_pct"				"%COOLDOWN RESET CHANCE:"
 		"Dota_Tooltip_ability_chicha_reset_cooldown_lua_Description"					"Чіча завжди хоче якось виділитись з натовпу і тому він придумав цю херню, яка дозволяє йому скинути кулдаун будь-якої своєї здібності, але вона не завжди працює..."
+		"DOTA_Tooltip_modifier_chicha_reset_cooldown_lua"								"Чічанутість"
+		"DOTA_Tooltip_modifier_chicha_reset_cooldown_lua_Description"					"Може нехуйно так чічануть"
 		
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua"								 	"Ульта бумбокс"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_multicast_2_times_tooltip"		"%X2 CHANCE:"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_multicast_3_times_tooltip"		"%X3 CHANCE:"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_multicast_4_times_tooltip"		"%X4 CHANCE:"
 		"Dota_Tooltip_ability_ogre_magi_multicast_lua_Description"					 	"Бит бокс бум бум бокс бит бит бит бокс бум бикс бим бом бокс"
+		"DOTA_Tooltip_modifier_ogre_magi_multicast_lua"								 	"Бумбоксікс"
+		"DOTA_Tooltip_modifier_ogre_magi_multicast_lua_Description"					 	"Бит бокс бум бум бокс бит бит бит бокс бум бикс бим бом бокс"
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_unique_chicha_cd_reset_items"				"Чічанутість work on items"

@@ -24,7 +24,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_pudge_rot_lua:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_ENEMY
+	return DOTA_UNIT_TARGET_TEAM_ENEMY + DOTA_UNIT_TARGET_TEAM_FRIENDLY
 end
 
 --------------------------------------------------------------------------------
