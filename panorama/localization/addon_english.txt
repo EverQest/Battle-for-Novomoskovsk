@@ -1,68 +1,67 @@
 "addon"
 {
-	"PointsToWin"									"Ещё {d:points_to_win}"
-	"PointsToWin_CloseToVictory"					"Ещё {d:points_to_win}"
-	"PointsToWin_VeryCloseToVictory"				"Ещё {d:points_to_win}!"
-	"PointsToWin_Victory"							"Тут нет победы!"
+	"PointsToWin"									"Ще {d:points_to_win}"
+	"PointsToWin_CloseToVictory"					"Ще {d:points_to_win}"
+	"PointsToWin_VeryCloseToVictory"				"Ще {d:points_to_win}!"
+	"PointsToWin_Victory"							"Тут немає перемоги!"
 
 	"InstructionsTitle"								"Battle For Novomoskovsk"
-	"InstructionsObjective"							"ЦЕЛЬ"
-	"InstructionsObjectiveText"						"Уничтожайте врагов! Наберите необходимое число убийств первыми или совершите наибольшее число убийств к концу раунда, и победа будет за вами."
+	"InstructionsObjective"							"МЕТА"
+	"InstructionsObjectiveText"						"Знищуйте ворогів! Наберіть необхідну кількість вбивств першими або зробіть найбільшу кількість вбивств до кінця раунду, і перемога буде за вами."
 	"InstructionsHowToPlay"							"ПРАВИЛА"
-	"InstructionsLines"								"— Трон Мидаса даёт дополнительные золото и опыт.<br>
-													— Хватайте гигантские монеты в центре карты, чтобы получить ещё больше золота.<br>
-													— Следите за картой: на ней показано, где появятся сундуки с предметами.<br>
-													— Чем меньше убийств у вашей команды, тем лучше предметы, которые вы получите из сундуков.<br>
-													— Убивайте всех, кто не в вашей команде."
+	"InstructionsLines"								"— Трон Мідаса дає додаткове золото та досвід.<br>
+													— Хапайте велетенські монети в центрі карти, щоб отримати ще більше золота.<br>
+													— Слідкуйте за картою: на ній показано, де з'являться скрині з предметами.<br>
+													— Чим менше вбивств у вашої команди, тим кращі предмети ви отримаєте зі скринь.<br>
+													— Вбивайте всіх, хто не у вашій команді."
 
-	"Scoreboard_Goal"								"Цель"
+	"Scoreboard_Goal"								"Мета"
 
 	"Chest"											"Нова пошта"
 	"ItemWillSpawn"									"Замовлення прийняте"
-	"ItemHasSpawned"								"Замовлення в дорозi"
+	"ItemHasSpawned"								"Замовлення в дорозі"
 
 	"RecentScore"									"+{d:score}"
 
-	"Unassigned"      								"Неопределившиеся"
-	"Spectator"       								"Зыретели"
-	"Neutrals"        								"Нейтральная команда"
-	"NoTeam"          								"Нет команды"
+	"Unassigned"      								"Ті, що не визначились"
+	"Spectator"       								"Зирителі"
+	"Neutrals"        								"Нейтральна команда"
+	"NoTeam"          								"Немає команди"
 
-	"DOTA_GoodGuys"   								"Кривые Бассы"
-	"DOTA_BadGuys"    								"Типы с Левого"
-	"DOTA_Custom1"    								"Серъёзка"
-	"DOTA_Custom2"    								"Любители покушать"
-	"DOTA_Custom3"    								"Трогатели какашек"
-	"DOTA_Custom4"    								"Терпилы"
-	"DOTA_Custom5"    								"Чичанутые"
+	"DOTA_GoodGuys"   								"Криві Баси"
+	"DOTA_BadGuys"    								"Типи з Лівого"
+	"DOTA_Custom1"    								"Серйозка"
+	"DOTA_Custom2"    								"Любителі попоїсти"
+	"DOTA_Custom3"    								"Трогачі какашок"
+	"DOTA_Custom4"    								"Терпили"
+	"DOTA_Custom5"    								"Чічануті"
 	"DOTA_Custom6"    								"Бумбокс"
-	"DOTA_Custom7"    								"Адская дрочильня"
-	"DOTA_Custom8"    								"Пацаны с Верхника"
+	"DOTA_Custom7"    								"Пекельна дрочильня"
+	"DOTA_Custom8"    								"Пацани з Верхніка"
 	
 	"OverthrowHeroPickup"							"{s:hero_id}"
-	"OverthrowTextPickup"							"Отримав у замовленнi"
+	"OverthrowTextPickup"							"Отримав у замовленні"
 	"OverthrowItemPickup"							"{s:item_id}!"
 
-	"Remaining"										"ОСТАЛОСЬ"
+	"Remaining"										"ЗАЛИШИЛОСЬ"
 
-	"Overtime"										"ДОБАВОЧНОЕ ВРЕМЯ!"
-	"OvertimeInstructions"							"УБИВАЙТЕ, ЧТОБЫ ПОБЕДИТЬ"
+	"Overtime"										"ДОДАТКОВИЙ ЧАС!"
+	"OvertimeInstructions"							"ВБИВАЙТЕ, ЩОБ ПЕРЕМОГТИ"
 
 	"KillMessageHero"								"{s:hero_id}"
-	"KillMessageText"								"Потрогал"
+	"KillMessageText"								"Потрогав"
 	"KillMessageBounty"								"Какашки"
 	
 	"addonname"										"Battle For Novomoskovsk"
-	"overthrow_game_info_header_objective"			"Цель:"
-	"overthrow_brief_description"					"Уничтожайте врагов! Первый, кто наберёт достаточно убийств, победит!"
+	"overthrow_game_info_header_objective"			"Мета:"
+	"overthrow_brief_description"					"Знищуйте ворогів! Перший, хто набере достатньо вбивств, переможе!"
 	"overthrow_game_info_header_how_to_play"		"Правила:"
-	"overthrow_game_info_throne"					"<span class='midas_throne'>Трон Мидаса</span> даёт дополнительные <span class='gold'>золото</span> и <span class='xp'>опыт</span>"
-	"overthrow_game_info_coins"						"Хватайте меня за какашки, чтобы получить ещё больше <span class='gold'>золота</span>."
-	"overthrow_game_info_items"						"Следите за <span class='treasure'>картой</span>: на ней показано, где появятся сундуки с <span class='items'>нейтральными предметами</span>."
-	"overthrow_game_info_tips_header"				"Советы:"
-	"overthrow_game_info_tip01"						"Текущий лидер не лидер, и вы ничего не получите."
-	"overthrow_game_info_tip03"						"Возможно, чтобы убить сильного врага, вам придётся действовать сообща с другими противниками."
-	"overthrow_game_info_tip04"						"Чем меньше убийств совершила ваша команда, тем сильнее нейтральные предметы, которые вы получаете из сундуков."
+	"overthrow_game_info_throne"					"<span class='midas_throne'>Трон Мідаса</span> дає додаткове <span class='gold'>золото</span> та <span class='xp'>досвід</span>"
+	"overthrow_game_info_coins"						"Хапайте мене за какашки, щоб отримати ще більше <span class='gold'>золота</span>."
+	"overthrow_game_info_items"						"Слідкуйте за <span class='treasure'>картою</span>: на ній показано, де з'являться скрині з <span class='items'>нейтральними предметами</span>."
+	"overthrow_game_info_tips_header"				"Поради:"
+	"overthrow_game_info_tip01"						"Поточний лідер — не лідер, і ви нічого не отримаєте."
+	"overthrow_game_info_tip03"						"Можливо, щоб убити сильного ворога, вам доведеться діяти спільно з іншими супротивниками."
+	"overthrow_game_info_tip04"						"Чим менше вбивств зробила ваша команда, тим сильніші нейтральні предмети ви отримуєте зі скринь."
 
 }
-
