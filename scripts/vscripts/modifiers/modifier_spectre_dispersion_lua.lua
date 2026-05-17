@@ -12,6 +12,8 @@ function modifier_spectre_dispersion_lua:DeclareFunctions()
 end
 
 function modifier_spectre_dispersion_lua:OnTakeDamage (event)
+	-- cancel if break
+	if self:GetCaster():PassivesDisabled() then return end
 
 	if event.unit == self:GetParent() then
 
@@ -56,17 +58,14 @@ function modifier_spectre_dispersion_lua:OnTakeDamage (event)
 				ParticleManager:SetParticleControl(particle, 1, vUnit)
 				ParticleManager:SetParticleControl(particle, 2, vCaster)
 
-				local old_hp = unit:GetHealth()
-				local new_hp = old_hp - reflect_damage
-
-				if unit:IsAlive() then
-					if new_hp < 1.000000 then
-						unit:Kill(ability, caster)
-					else
-						unit:SetHealth(new_hp)
-					end
-				end
-
+				ApplyDamage({
+					victim 			= unit,
+					damage 			= reflect_damage,
+					damage_type		= DAMAGE_TYPE_PURE,
+					damage_flags 	= DOTA_DAMAGE_FLAG_NONE,
+					attacker 		= self:GetCaster(),
+					ability 		= self:GetAbility()
+				})
 			end
 
 		end

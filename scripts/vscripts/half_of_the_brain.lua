@@ -41,3 +41,13 @@ function half_of_the_brain:OnToggle()
 	self:CheckIfOn()
 end
 --------------------------------------------------------------------------------
+function half_of_the_brain:GetAbilityTextureName()
+	if self:GetLevel() < 1 then
+		return "tit_brain"
+	end
+	if self:GetToggleState() then
+		return "tit_brain_red"
+	else
+		return "tit_brain_blue"
+	end
+end

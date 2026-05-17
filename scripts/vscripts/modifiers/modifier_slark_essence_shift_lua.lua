@@ -15,6 +15,10 @@ function modifier_slark_essence_shift_lua:IsPurgable()
 	return false
 end
 
+function modifier_slark_essence_shift_lua:RemoveOnDeath()
+	return not IsTalentLearned(self:GetCaster(), "special_bonus_unique_kaki_steal_death")
+end	
+
 --------------------------------------------------------------------------------
 -- Initializations
 function modifier_slark_essence_shift_lua:OnCreated( kv )
@@ -39,6 +43,7 @@ function modifier_slark_essence_shift_lua:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_PROCATTACK_FEEDBACK,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
+		MODIFIER_PROPERTY_TOOLTIP,
 	}
 
 	return funcs
@@ -51,28 +56,18 @@ function modifier_slark_essence_shift_lua:GetModifierProcAttack_Feedback( params
 			return
 		end
 
-		if IsTalentLearned(self:GetCaster(),"special_bonus_unique_kaki_steal_permanent") then
-			-- Apply debuff to enemy
-			local debuff = params.target:AddNewModifier(
-				self:GetParent(),
-				self:GetAbility(),
-				"modifier_slark_essence_shift_lua_debuff",
-				{}
-			)
-		else
-			-- Apply debuff to enemy
-			local debuff = params.target:AddNewModifier(
-				self:GetParent(),
-				self:GetAbility(),
-				"modifier_slark_essence_shift_lua_debuff",
-				{
-					stack_duration = self.duration,
-				}
-			)
-		end
+		-- Apply debuff to enemy
+		local debuff = params.target:AddNewModifier(
+			self:GetParent(),
+			self:GetAbility(),
+			"modifier_slark_essence_shift_lua_debuff",
+			{
+				stack_duration = self.duration,
+			}
+		)
 
 		-- Apply buff to self
-		self:AddStack( duration )
+		self:AddStack()
 
 		-- Play effects
 		self:PlayEffects( params.target )
@@ -85,30 +80,25 @@ end
 
 --------------------------------------------------------------------------------
 -- Helper
-function modifier_slark_essence_shift_lua:AddStack( duration )
+function modifier_slark_essence_shift_lua:AddStack()
 	-- Add counter
 	local mod
-	if IsTalentLearned(self:GetCaster(),"special_bonus_unique_kaki_steal_permanent") then
-		mod = self:GetParent():AddNewModifier(
-			self:GetParent(),
-			self:GetAbility(),
-			"modifier_slark_essence_shift_lua_stack",
-			{}
-		)
-	else
-		mod = self:GetParent():AddNewModifier(
-			self:GetParent(),
-			self:GetAbility(),
-			"modifier_slark_essence_shift_lua_stack",
-			{
-				duration = self.duration,
-			}
-		)
-	end
+	
+	mod = self:GetParent():AddNewModifier(
+		self:GetParent(),
+		self:GetAbility(),
+		"modifier_slark_essence_shift_lua_stack",
+		{}
+	)
+
 	mod.modifier = self
 
 	-- Add stack
 	self:IncrementStackCount()
+end
+
+function modifier_slark_essence_shift_lua:OnTooltip()
+	return self:GetModifierBonusStats_Agility()
 end
 
 function modifier_slark_essence_shift_lua:RemoveStack()

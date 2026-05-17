@@ -39,14 +39,6 @@ function modifier_doom_doom_lua:OnCreated( kv )
 
 	if not IsServer() then return end
 	-- precache and apply damage
-	self.damageTable = {
-		victim = self:GetParent(),
-		attacker = self:GetCaster(),
-		damage = damage,
-		damage_type = self:GetAbility():GetAbilityDamageType(),
-		ability = self:GetAbility(), --Optional.
-	}
-	ApplyDamage( self.damageTable )
 
 	-- Start interval
 	self:StartIntervalThink( self.interval )

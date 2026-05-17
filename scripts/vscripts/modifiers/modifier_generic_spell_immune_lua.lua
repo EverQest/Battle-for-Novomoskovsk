@@ -3,7 +3,7 @@ modifier_generic_spell_immune_lua = class({})
 --------------------------------------------------------------------------------
 -- Classifications
 function modifier_generic_spell_immune_lua:IsDebuff()
-	return true
+	return false
 end
 
 function modifier_generic_spell_immune_lua:IsStunDebuff()

@@ -71,5 +71,12 @@ end
 function modifier_half_of_the_brain_mana:OnTooltip()
 	return self:GetAbility():GetSpecialValueFor( "bonus_int_per_dagon" )
 end
-
 --------------------------------------------------------------------------------
+
+function modifier_half_of_the_brain_mana:GetEffectName()
+	return "particles/creatures/aghanim/tit_brain_blue.vpcf"
+end
+
+function modifier_half_of_the_brain_mana:GetEffectAttachType()
+	return PATTACH_ABSORIGIN_FOLLOW
+end

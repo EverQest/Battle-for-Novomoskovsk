@@ -157,26 +157,28 @@
 		"override_hero"		   		"npc_dota_hero_lycan"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"	
 		"AttributeAgilityGain"		"3.0"
-		"AttributeStrengthGain"		"1.8"
-		"AttackDamageMin"			"40"
-		"AttackDamageMax"			"50"
+		"AttributeStrengthGain"		"2.2"
+		"AttackDamageMin"			"30"
+		"AttackDamageMax"			"40"
+
+		"AttackRate"				"1.3"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_unique_kaki_roar_stun_duration" // roar stun duration + 1
-		"Ability13"				"special_bonus_unique_kaki_infinite_invisibility" // inf invis
-		"Ability14"				"special_bonus_unique_kaki_gadyka_800_ms" // gadyka + 250 ms (past limit)
-		"Ability15"				"special_bonus_unique_kaki_steal_x2" // kaki steal X2
-		"Ability16"				"special_bonus_unique_kaki_throwable_zavtik" // throwable zavtik
-		"Ability17"				"special_bonus_unique_kaki_steal_permanent" // kaki steal is permanent (buff removed on death)
+		"Ability12"				"special_bonus_unique_kaki_roar_stun_duration" 
+		"Ability13"				"special_bonus_unique_kaki_throwable_zavtik" 
+		"Ability14"				"special_bonus_unique_kaki_gadyka_ms" // gadyka + 150 ms (past limit)
+		"Ability15"				"special_bonus_unique_kaki_steal_3" // kaki steal + 3 agi gain
+		"Ability16"				"special_bonus_unique_kaki_steal_death" // kaki steal is not removed on death
+		"Ability17"				"special_bonus_unique_kaki_gadyka_lifesteal" // gadyka provides 100% lifesteal
 
 		"Ability1"					"wind_walk_datadriven"	
 		"Ability2"					"alchemist_unstable_concoction_lua"
 		"Ability3"					"slark_essence_shift_lua"
 	 	   "Ability4"					"generic_hidden"
-	    "Ability5"					"primal_roar"
-	    "Ability6"					"lycan_shapeshift_datadriven"
+	    "Ability5"					"lycan_shapeshift_datadriven"
+	    "Ability6"					"primal_roar"
 	}
 	//=================================================================================================================
 	// HERO: Phantom Lancer (Nekit)
@@ -244,6 +246,10 @@
 		"AttributeBaseAgility"			"25"
 		"AttributeBaseStrength"			"25"
 		"AttributeBaseIntelligence"		"25"
+		"Model"							"models/heroes/life_stealer/life_stealer.vmdl"
+		"ProjectileModel"    			"particles/units/heroes/hero_primal_beast/primal_beast_rock_throw_custom.vpcf"
+		"DisableWearables"          	"1"
+		"ProjectileSpeed"				"600"
 
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"

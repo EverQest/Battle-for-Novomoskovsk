@@ -294,6 +294,7 @@
 		"Dota_Tooltip_ability_wind_walk_datadriven"									"Где лобби?"
 		"Dota_Tooltip_ability_wind_walk_datadriven_AbilityDuration"					"DURATION:"
 		"Dota_Tooltip_ability_wind_walk_datadriven_AbilityCastPoint"				"CAST POINT:"
+		"Dota_Tooltip_ability_wind_walk_datadriven_bonus_damage"					"BONUS DAMAGE:"
 		"Dota_Tooltip_ability_wind_walk_datadriven_Description"						"Некитос просто напросто пропадает с реальности в поискал лобби"
 		"Dota_Tooltip_modifier_wind_walk_datadriven"								"Где я?"
 		
@@ -307,10 +308,11 @@
 		"Dota_Tooltip_ability_alchemist_unstable_concoction_throw_lua_Description"		"А так можно було?"
 		
 		"Dota_Tooltip_ability_slark_essence_shift_lua"								"Потрогать за какашки"
-		"Dota_Tooltip_ability_slark_essence_shift_lua_AbilityDuration"				"DURATION:"
+		"Dota_Tooltip_ability_slark_essence_shift_lua_AbilityDuration"				"DEBUFF DURATION:"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_agi_gain"						"AGI GAIN:"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_Description"					"Некитос ворует у врагов какашки что делает его сильнее"
 		"Dota_Tooltip_modifier_slark_essence_shift_lua"								"Украл какашки"
+		"Dota_Tooltip_modifier_slark_essence_shift_lua_description"					"Наваровав спритності: %dMODIFIER_PROPERTY_TOOLTIP%"
 		"Dota_Tooltip_modifier_slark_essence_shift_lua_debuff"						"У вас вкрали какашки"
 
 		"Dota_Tooltip_ability_primal_roar"											"Вот это рыг!"
@@ -326,12 +328,13 @@
 		"Dota_Tooltip_modifier_shapeshift_datadriven"		 						"ГАДЮКА!"
 
 		//Talents
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_roar_stun_duration"				"Roar stun duration increased by 1"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_infinite_invisibility"			"Где лобби now permanent"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_800_ms"					"Gadyka + 250 movement speed"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_x2"						"Kaki steal X2"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_throwable_zavtik"				"Throwable zavtik"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_permanent"				"Kaki steal is permanent (buff removed on death)"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_roar_stun_duration"				"Вот это рыг stun duration increased by 1"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_throwable_zavtik"				"Завтык can be thrown!"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_ms"						"Форма Вяз-токса + 150 movement speed"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_3"						"Потрогать за какашки + 3 AGI gain"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_death"					"Потрогать за какашки is permanent"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_death_description"		"Buff persists through death"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_lifesteal"				"Форма Вяз-токса provides 100% lifesteal"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Felix

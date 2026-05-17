@@ -82,12 +82,12 @@ end
 --------------------------------------------------------------------------------
 --Efects
 
--- function modifier_half_of_the_brain_health:GetEffectName()
--- 	return "particles/units/heroes/hero_nevermore/nevermore_shadowraze_debuff.vpcf"
--- end
+function modifier_half_of_the_brain_health:GetEffectName()
+	return "particles/creatures/aghanim/tit_brain_red.vpcf"
+end
 
--- function modifier_half_of_the_brain_health:GetEffectAttachType()
--- 	return PATTACH_ABSORIGIN_FOLLOW
--- end
+function modifier_half_of_the_brain_health:GetEffectAttachType()
+	return PATTACH_ABSORIGIN_FOLLOW
+end
 
 --------------------------------------------------------------------------------

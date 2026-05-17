@@ -1194,7 +1194,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8.0 6.0 4.0 3.0"
+		"AbilityCooldown"				"10 9 8 7"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -1808,7 +1808,7 @@
 		"ScriptFile"					"chicha_reset_cooldown_lua"
 		"AbilityTextureName"			"chicha_reset_cd"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"11"
+		"MaxLevel"						"10"
 		"precache"
 		{
 			"soundfile"	"soundevents/Chicha.vsndevts"
@@ -1825,7 +1825,7 @@
 		{
 			"cooldown_reset_pct"				
 			{
-				"value" 										"10 15 20 25 30 35 40 45 50 55 60"
+				"value" 										"15 20 25 30 35 40 45 50 55 60"
 				"special_bonus_unique_chicha_cd_reset_pct" 		"15"
 			}
 		}
@@ -2467,6 +2467,8 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 	"AbilityTextureName"			"kaki_invis"
+	"MaxLevel"						"1"
+
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -2479,25 +2481,21 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"30.0 28.0 26.0 24.0"
-	"AbilityCastPoint"				"1 0.8 0.5 0.2"
-	"AbilityDuration"				"20.0 25.0 30.0 35.0"
+	"AbilityCooldown"				"20"
+	"AbilityCastPoint"				"0.5"
+	"AbilityDuration"				"600"
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"50"
+	"AbilityManaCost"				"100"
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
 	{
-		"duration"					
-		{
-			"value"													"20.0 25.0 30.0 35.0"
-			"special_bonus_unique_kaki_infinite_invisibility"		"9965.0"
-		}
+		"duration"					"600"
 		"fade_time"					"0"
-		"bonus_damage"				"0"
+		"bonus_damage"				"100"
 	}
 	
 
@@ -2633,7 +2631,7 @@
 		"ScriptFile"					"slark_essence_shift_lua"
 		"AbilityTextureName"			"kaki_potrogat"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"8"
+		"MaxLevel"						"10"
 
 		"precache"
 		{
@@ -2649,7 +2647,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDuration"					"10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+		"AbilityDuration"					"15.0 20.0 25.0 30.0 35.0 40.0 45.0 50.0 55.0 60.0"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
@@ -2663,17 +2661,17 @@
 		{
 			"agi_gain"				
 			{
-				"value"												"3"
-				"special_bonus_unique_kaki_steal_x2"				"3"
+				"value"												"1 1 1 2 2 2 2 3 3 3"
+				"special_bonus_unique_kaki_steal_3"				"3"
 			}
 			"stat_loss"				
 			{
 				"value"												"1"
-				"special_bonus_unique_kaki_steal_x2"				"1"
+				"special_bonus_unique_kaki_steal_3"				"1"
 			}
 			"duration"				
 			{
-				"value"												"10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+				"value"												"15.0 20.0 25.0 30.0 35.0 40.0 45.0 50.0 55.0 60.0"
 				"special_bonus_unique_kaki_steal_permanent"			"0"
 			}
 		}
@@ -2697,6 +2695,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"FightRecapLevel"				"2"
 	"AbilityTextureName"			"kaki_otrijka"
+	"MaxLevel"						"4"
 
 	"precache"
 	{
@@ -2715,11 +2714,11 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150 175 200"		
+	"AbilityManaCost"				"150 175 200 250"		
 	
 	// Cast Range
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"300 400 500"
+	"AbilityCastRange"				"300 400 500 500"
 
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------
@@ -2732,7 +2731,7 @@
 	{
 		"stun_duration"				
 		{
-			"value"												"2.0 2.5 3.0"
+			"value"												"2.0 2.5 3.0 3.5"
 			"special_bonus_unique_kaki_roar_stun_duration"		"1"
 		}
 		"damage"					"0"
@@ -2781,14 +2780,15 @@
 		"speed"						
 		{
 			"value"												"450 500 550"
-			"special_bonus_unique_kaki_gadyka_800_ms"			"250"
+			"special_bonus_unique_kaki_gadyka_ms"			"150"
 		}
 		
 		"bonus_night_vision"		"1000"
-		"crit_chance"				"30 32 35"
+		"crit_chance"				"30 35 40"
 		"crit_damage"				"170"
-		"transformation_time"		"1.5"
+		"transformation_time"		"1.0"
 		"aura_interval"				"0.1"
+		"lifesteal"					"100"
 	}
 
 	"OnSpellStart"
@@ -3025,7 +3025,7 @@
 			"brew_time"					"5.0"
 			"brew_explosion"			"5.5"
 			"min_stun"					"0.5"
-			"max_stun"					"6.0"
+			"max_stun"					"4.0"
 			"min_damage"				"100"
 			"max_damage"				"1000"
 			"radius"					"350"
@@ -6222,6 +6222,8 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/Tit.vsndevts"
+			"particle"	"particles/creatures/aghanim/tit_brain_red.vpcf"
+			"particle"	"particles/creatures/aghanim/tit_brain_blue.vpcf"
 		}
 		
 		// Casting
