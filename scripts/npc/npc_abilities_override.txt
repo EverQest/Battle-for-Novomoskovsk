@@ -351,6 +351,7 @@
 		"particle"	"particles/units/heroes/hero_spectre/spectre_dispersion.vpcf"
 		"particle"	"particles/units/heroes/hero_spectre/spectre_dispersion_fallback_mid.vpcf"
 		"particle"	"particles/units/heroes/hero_spectre/spectre_dispersion_b_fallback_low.vpcf"
+		"particle"	"particles/creatures/aghanim/vasich_existance.vpcf"
 	}
 
 	"OnCreated"

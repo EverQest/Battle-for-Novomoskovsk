@@ -85,3 +85,41 @@ end
 function modifier_spectre_dispersion_lua:IsPurgable()
 	return false
 end
+
+function modifier_spectre_dispersion_lua:OnCreated(kv)
+    if not IsServer() then return end
+
+    -- 1. Grab the radius from the ability KV
+    local ability = self:GetAbility()
+    self.radius = ability:GetSpecialValueFor("radius")
+
+    -- 2. Create the particle
+    local particle_name = "particles/creatures/aghanim/vasich_existance.vpcf"
+    self.fx = ParticleManager:CreateParticle(particle_name, PATTACH_ABSORIGIN_FOLLOW, self:GetParent())
+
+    -- 3. Set Control Point 1 to control the radius
+    -- Vector(radius, 1, 1) passes the float value to the particle system
+    ParticleManager:SetParticleControl(self.fx, 1, Vector(self.radius * 1.3, 1, 1))
+end
+
+function modifier_spectre_dispersion_lua:OnRefresh(kv)
+    if not IsServer() then return end
+
+    -- Update radius if the ability levels up or changes
+    local ability = self:GetAbility()
+    self.radius = ability:GetSpecialValueFor("radius")
+
+    if self.fx then
+        ParticleManager:SetParticleControl(self.fx, 1, Vector(self.radius * 1.3, 1, 1))
+    end
+end
+
+function modifier_spectre_dispersion_lua:OnDestroy()
+    if not IsServer() then return end
+
+    -- Clean up the particle when the modifier ends
+    if self.fx then
+        ParticleManager:DestroyParticle(self.fx, false)
+        ParticleManager:ReleaseParticleIndex(self.fx)
+    end
+end
