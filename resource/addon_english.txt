@@ -660,23 +660,39 @@
 		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua_Description"				"Очень опасный удар Евгена, начинает местить все что находиться впереди, крутит своими руками в большом радиусе вокруг себя"
 		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua_total_attacks"			"TOTAL ATTACKS:"
 		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua_swipe_damage"				"SWIPE BONUS DAMAGE:"
+		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua_swipe_damage"				"SWIPE BONUS DAMAGE:"
+		"Dota_Tooltip_ability_dawnbreaker_starbreaker_lua_movement_speed"			"MOVEMENT SPEED:"
+		"DOTA_Tooltip_modifier_dawnbreaker_starbreaker_lua"							"Хуяче як МЛИН"
 		
 		"Dota_Tooltip_ability_ursa_enrage_lua"										"ШШШаленство"
 		"Dota_Tooltip_ability_ursa_enrage_lua_Description"							"Вы знаете что такое безумие? Евген впадает в ярость получая имуннитет к любому типу урона на время и увеличивает себя в размерах"
 		"Dota_Tooltip_ability_ursa_enrage_lua_damage_reduction"						"%DAMAGE REDUCTION:"
 		"Dota_Tooltip_ability_ursa_enrage_lua_duration"								"DURATION:"
+		"DOTA_Tooltip_modifier_ursa_enrage_lua"										"ШШШАЛЕНИЙ!"
 		
 		"Dota_Tooltip_ability_antimage_mana_void_lua"								"Смэрть баригам!"
-		"Dota_Tooltip_ability_antimage_mana_void_lua_Description"					"Наносит урон равный количеству золота у противника, максимальная прибавка 50% от золота. Взрывает на части всех барыг!"
-		"Dota_Tooltip_ability_antimage_mana_void_lua_mana_void_damage_per_grn"		"TARGET CURENT GOLD DAMAGE:"
+		"Dota_Tooltip_ability_antimage_mana_void_lua_Description"					"Завдає шкоди, пропорційно кількості золота у противника, також можна АКТИВУВАТИ (ПКМ) щоб використати ВЛАСНЕ золото для збільшення шкоди але ціною цих же грошей!. Підриває на частини всіх бариг!"
+		"Dota_Tooltip_ability_antimage_mana_void_lua_mana_void_damage_per_grn"		"DAMAGE PER GOLD:"
 		"Dota_Tooltip_ability_antimage_mana_void_lua_mana_void_ministun"			"MINISTUN:"
 		"Dota_Tooltip_ability_antimage_mana_void_lua_default_damage"				"BASE DAMAGE:"
+		"Dota_Tooltip_ability_antimage_mana_void_lua_self_cost_pct"					"%SELF $ COST PERCENTAGE:"
 		
 		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua"							"Джоук"
 		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua_Description"				"Евген любит говорить джоук, от чего его противники получают микро-стан. Осторожно, он очень любит шутить"
 		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua_chance"					"%CHANCE:"
 		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua_bonus_damage"			"BONUS DAMAGE:"
 		"Dota_Tooltip_ability_slardar_bash_of_the_deep_lua_duration"				"STUN DURATION:"
+		"DOTA_Tooltip_modifier_generic_bashed_lua"									"ХАХА ДЖОУК!"
+
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_shalenstvo_status_resist"				"ШШШаленство provides 50% status resistance"
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_smert_steal"							"Смэрть баригам steals 20% of target's current gold"
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_shalenstvo_duration"					"ШШШаленство duration increased by 2 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_djouk_40"								"Джоук chance increased by 40%"
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_can_walk_in_1st_skill"					"Evgen now moves freely while casting Удар МЕЛЬНИЦА"
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_smert_cost_reduction"					"Смэрть баригам money cost reduced by 30%"
+		"Dota_Tooltip_ability_special_bonus_unique_evgen_smert_cost_reduction_description"		"Cost reduced to 20% of your current gold, but damage is unchanged"
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		//

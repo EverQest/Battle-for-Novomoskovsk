@@ -1,3 +1,5 @@
+require("utility_functions")
+
 antimage_mana_void_lua = class({})
 LinkLuaModifier( "modifier_generic_stunned_lua", "modifiers/modifier_generic_stunned_lua", LUA_MODIFIER_MOTION_NONE )
 
@@ -53,17 +55,39 @@ function antimage_mana_void_lua:OnSpellStart()
 	local target_gold = target:GetGold()
 	-- print("target gold is: ")
 	-- print(target_gold)
-	local grn_damage_pct = target_gold * grn_damage_pct
+	local damage = target_gold * grn_damage_pct
+
+	if self:GetAutoCastState() then
+		local caster_money_damage = caster:GetGold() / 2 * grn_damage_pct
+		local money_cost = caster:GetGold() * self:GetSpecialValueFor("self_cost_pct") / 100
+
+		damage = damage + caster_money_damage
+		caster:SpendGold( money_cost, DOTA_ModifyGold_AbilityCost )
+	end
+
+	if IsTalentLearned(caster, "special_bonus_unique_evgen_smert_steal") then
+		local steal_gold = target_gold * 0.2
+		caster:SpendGold( -steal_gold, DOTA_ModifyGold_AbilityCost )
+		target:SpendGold( steal_gold, DOTA_ModifyGold_AbilityCost )
+		
+		-- overhead info
+		SendOverheadEventMessage(
+			nil,
+			OVERHEAD_ALERT_GOLD,
+			caster,
+			steal_gold,
+			caster
+		)
+	end
 
 	-- Apply Damage	 
 	local damageTable = {
 		victim = target,
 		attacker = caster,
-		damage = grn_damage_pct,
+		damage = damage,
 		damage_type = DAMAGE_TYPE_MAGICAL,
 		ability = self, --Optional.
 	}
-	-- ApplyDamage(damageTable)
 
 	-- Find Units in Radius
 	local enemies = FindUnitsInRadius(

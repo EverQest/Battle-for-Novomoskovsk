@@ -478,17 +478,18 @@
 		"AttackDamageMin"				"30"
 		"AttackDamageMax"				"35"
 		"MovementSpeed"					"325"
+		"AttackRate"					"1.4"
 
 
 		// Talents 
 		"Ability17"				"special_bonus_all_stats_20"
 		"Ability18"				"special_bonus_exp_boost_25"
-		"Ability19"				"special_bonus_attack_speed_50" // shalenstvo duration
-		"Ability20"				"special_bonus_movement_speed_50" // djouk 10% lifesteal
-		"Ability21"				"special_bonus_lifesteal_20" // shalenstvo status resist
-		"Ability22"				"special_bonus_cooldown_reduction_20" // djouk 100%
-		"Ability23"				"special_bonus_attack_damage_100" // can walk in 1st skill
-		"Ability24"				"special_bonus_spell_amplify_25" // smert scales with your maney
+		"Ability19"				"special_bonus_unique_evgen_shalenstvo_status_resist" // shalenstvo status resist
+		"Ability20"				"special_bonus_unique_evgen_smert_steal" // smert steals 10% of target gold
+		"Ability21"				"special_bonus_unique_evgen_shalenstvo_duration" // shalenstvo duration
+		"Ability22"				"special_bonus_unique_evgen_djouk_40" // djouk 100%
+		"Ability23"				"special_bonus_unique_evgen_can_walk_in_1st_skill" // can walk in 1st skill
+		"Ability24"				"special_bonus_unique_evgen_smert_cost_reduction" // smert cost reduction to 20%
 		"Ability25"				"special_bonus_attributes" 
 		
 		"Ability1"					"dawnbreaker_starbreaker_lua"

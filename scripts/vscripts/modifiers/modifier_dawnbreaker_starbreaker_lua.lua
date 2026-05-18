@@ -1,3 +1,4 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 modifier_dawnbreaker_starbreaker_lua = class({})
 
@@ -46,7 +47,9 @@ function modifier_dawnbreaker_starbreaker_lua:OnCreated( kv )
 	local interval = self:GetDuration()/(self.attacks-1)
 
 	-- apply forward motion
-	self:ApplyHorizontalMotionController()
+	if not IsTalentLearned( self:GetCaster(), "special_bonus_unique_evgen_can_walk_in_1st_skill" ) then
+		self:ApplyHorizontalMotionController()
+	end
 
 	-- Start interval
 	self:StartIntervalThink( interval )
@@ -76,6 +79,7 @@ function modifier_dawnbreaker_starbreaker_lua:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_PROPERTY_SUPPRESS_CLEAVE,
+		MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE,
 	}
 
 	return funcs
@@ -96,7 +100,7 @@ end
 function modifier_dawnbreaker_starbreaker_lua:CheckState()
 	local state = {
 		[MODIFIER_STATE_DISARMED] = true,
-		[MODIFIER_STATE_COMMAND_RESTRICTED] = true,
+		[MODIFIER_STATE_COMMAND_RESTRICTED] = not IsTalentLearned( self:GetCaster(), "special_bonus_unique_evgen_can_walk_in_1st_skill" ),
 	}
 
 	return state
@@ -236,6 +240,7 @@ end
 --------------------------------------------------------------------------------
 -- Motion Effects
 function modifier_dawnbreaker_starbreaker_lua:UpdateHorizontalMotion( me, dt )
+	if IsTalentLearned( self:GetCaster(), "special_bonus_unique_evgen_can_walk_in_1st_skill" ) then return end
 	-- get forward pos
 	local pos = me:GetOrigin() + self.forward * self.speed * dt
 
@@ -250,6 +255,10 @@ function modifier_dawnbreaker_starbreaker_lua:UpdateHorizontalMotion( me, dt )
 end
 
 function modifier_dawnbreaker_starbreaker_lua:OnHorizontalMotionInterrupted()
+end
+
+function modifier_dawnbreaker_starbreaker_lua:GetModifierMoveSpeed_Absolute()
+	return self.speed
 end
 
 --------------------------------------------------------------------------------

@@ -5910,7 +5910,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
@@ -5927,9 +5927,13 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"chance"				"40 50 60"
-			"bonus_damage"			"20 40 60"
-			"duration"				"0.1"
+			"chance"				
+			{
+				"value"										"40 50 60"
+				"special_bonus_unique_evgen_djouk_40"		"40"
+			}
+			"bonus_damage"			"15 30 50"
+			"duration"				"0.1 0.15 0.2"
 			"duration_creep"		"2.0"
 		}
 	}
@@ -5975,7 +5979,16 @@
 		"AbilityValues"
 		{
 			"damage_reduction"			"80"
-			"duration"					"1.5 2.0 3.0 4.5"
+			"duration"
+			{
+				"value"														"1.5 2.0 3.0 4.5"
+				"special_bonus_unique_evgen_shalenstvo_duration"			"2"
+			}
+			"status_resistance"
+			{
+				"value"														"0"
+				"special_bonus_unique_evgen_shalenstvo_status_resist"		"50"
+			}
 			"cooldown_scepter"			"20.0"
 		}
 	}
@@ -5999,7 +6012,7 @@
 		// Ability General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
@@ -6009,13 +6022,13 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"450 500 550 600 650"
 		"AbilityCastPoint"				"0.3"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"55 50 45 40 35"
-		"AbilityManaCost"				"100 140 220 280 300"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"100 150 200 250 300"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -6024,10 +6037,15 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"mana_void_damage_per_grn"		"0.35 0.40 0.55 0.60 0.65"
+			"mana_void_damage_per_grn"		"0.40 0.45 0.50 0.55 0.60"
 			"mana_void_ministun"			"0.3"
-			"mana_void_aoe_radius"			"600"
-			"default_damage"				"400"
+			"mana_void_aoe_radius"			"400 425 450 475 500"
+			"default_damage"				"250 300 350 400 450"
+			"self_cost_pct"					
+			{
+				"value"												"50"	
+				"special_bonus_unique_evgen_smert_cost_reduction"	"-30"
+			}
 		}
 	}
 	//=================================================================================================================

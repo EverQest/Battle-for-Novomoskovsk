@@ -37,13 +37,13 @@ end
 function modifier_slardar_bash_of_the_deep_lua:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_PROCATTACK_FEEDBACK,
-		MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_PHYSICAL,
+		MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_PURE,
 	}
 
 	return funcs
 end
 
-function modifier_slardar_bash_of_the_deep_lua:GetModifierProcAttack_BonusDamage_Physical( params )
+function modifier_slardar_bash_of_the_deep_lua:GetModifierProcAttack_BonusDamage_Pure( params )
 	if IsServer() then
 		-- fail if target is invalid
 		if params.target:IsBuilding() or params.target:IsOther() then
@@ -79,6 +79,15 @@ function modifier_slardar_bash_of_the_deep_lua:GetModifierProcAttack_Feedback( p
 
 			-- Effects
 			EmitSoundOn( "Joke", params.target )
+
+			-- overhead damage info
+			SendOverheadEventMessage(
+				nil,
+				OVERHEAD_ALERT_BONUS_PURE_DAMAGE,
+				params.target,
+				self.damage,
+				self:GetCaster()
+			)
 		end
 	end
 end
