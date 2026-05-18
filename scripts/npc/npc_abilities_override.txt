@@ -3093,10 +3093,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"enigma_black_hole_lua"
-		"AbilityTextureName"			"dnr"
+		"AbilityTextureName"			"zanzak_dnr_lvl_1"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"5"
-		"HasScepterUpgrade"			"1"
+		"HasScepterUpgrade"				"1"
 		"precache"
 		{
 			"soundfile"	"soundevents/Zanzak.vsndevts"
@@ -3150,7 +3150,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
-		"ScriptFile"					"chaos_bolt"
+		"ScriptFile"					"zanzak_zdarova"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -3202,6 +3202,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
+	"AbilityTextureName"			"zanzak_kychnee"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3209,7 +3210,6 @@
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			"kychnee"
 	"AOERadius"						"%radius"
 
 	// Precache
@@ -3348,7 +3348,7 @@
 	"usa_rage"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"usa"
+		"AbilityTextureName"			"zanzak_boost"
 		"MaxLevel" 						"4"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
