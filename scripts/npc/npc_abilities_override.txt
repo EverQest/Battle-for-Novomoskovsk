@@ -315,19 +315,19 @@
 
 
 
-	//=================================================================================================================
-	//===============================================//HEROES//========================================================
-	//=================================================================================================================
-	// Spectre: Dispersion (Vasich)
-	//=================================================================================================================
-	"spectre_dispersion_lua"
+//=================================================================================================================
+//===============================================//HEROES//========================================================
+//=================================================================================================================
+// Spectre: Dispersion (Vasich)
+//=================================================================================================================
+"spectre_dispersion_lua"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"					"ability_lua"
 	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityTextureName"		"vyasich_aura"
+	"AbilityTextureName"		"vasich_aura"
 	"ScriptFile"				"spectre_dispersion_lua"
 
 	// Special
@@ -365,7 +365,7 @@
 }
 
     //=================================================================================================================
-    // Wisp: Tether (Vyasich)
+    // Wisp: Tether (vasich)
     //=================================================================================================================
 	"wisp_tether_datadriven"
 	{	
@@ -376,7 +376,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityTextureName"			"vyasich_tether"
+		"AbilityTextureName"			"vasich_tether"
 		"CastFilterRejectCaster" 		"1"
 
 		// Casting
@@ -744,7 +744,7 @@
 	}
 
   	//=================================================================================================================
-	// Ability: Pudge Rot (Vyasich)
+	// Ability: Pudge Rot (vasich)
 	//=================================================================================================================
 	"pudge_rot_lua"
 	{
@@ -755,7 +755,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"vyasich_rot"
+		"AbilityTextureName"			"vasich_rot"
 		"ScriptFile"					"pudge_rot_lua"
 		
 		"precache"
@@ -800,7 +800,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"naga_siren_song_of_the_siren_lua"
-		"AbilityTextureName"			"vyasich_song"
+		"AbilityTextureName"			"vasich_song"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
 
@@ -853,7 +853,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"naga_siren_song_of_the_siren_lua"
-		"AbilityTextureName"			"vyasich_song_end"
+		"AbilityTextureName"			"vasich_song_end"
 		"MaxLevel"						"1"
 		
 		// Ability General
