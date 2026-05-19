@@ -333,19 +333,19 @@
 		// Talents 
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
-		"Ability12"				"special_bonus_attack_speed_50" // ball stuns more
-		"Ability13"				"special_bonus_movement_speed_50" // last rezort damage x 2
-		"Ability14"				"special_bonus_lifesteal_20" // duel duration +
-		"Ability15"				"special_bonus_cooldown_reduction_20" // silence + 4 sec
-		"Ability16"				"special_bonus_attack_damage_100" // silence mutes
-		"Ability17"				"special_bonus_spell_amplify_25" // duel gives all stats now 
+		"Ability12"				"special_bonus_unique_rostik_ball_stun" // ball stuns more
+		"Ability13"				"special_bonus_unique_rostik_last_resort_damage" // last rezort damage x 2
+		"Ability14"				"special_bonus_unique_rostik_silence_disarm" // silence mutes
+		"Ability15"				"special_bonus_unique_rostik_duel_refresh_on_kill" // duel refresh on kill
+		"Ability16"				"special_bonus_unique_rostik_duel_damage_reduction" // duel damage reduction + 50%
+		"Ability17"				"special_bonus_unique_rostik_duel_all_stats" // duel gives all stats now 
 
 		"Ability1"					"ballhit"	
 		"Ability2"					"illuminate_datadriven"
 		"Ability3"					"silencer_global_silence_lua"
 	    	"Ability4"					"generic_hidden"
 	    	"Ability5"					"generic_hidden"
-	    "Ability6"					"duelofdeath"
+	    "Ability6"					"duel_of_death_lua"
 	    "Ability7"					"illuminate_end_datadriven"
 	}
 	//=================================================================================================================

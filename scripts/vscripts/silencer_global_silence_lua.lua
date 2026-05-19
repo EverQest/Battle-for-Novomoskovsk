@@ -1,6 +1,8 @@
+require("utility_functions")
 --------------------------------------------------------------------------------
 silencer_global_silence_lua = class({})
 LinkLuaModifier( "modifier_generic_silenced_lua", "modifiers/modifier_generic_silenced_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_generic_disarmed_lua", "modifiers/modifier_generic_disarmed_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start
@@ -32,6 +34,16 @@ function silencer_global_silence_lua:OnSpellStart()
 			"modifier_generic_silenced_lua", -- modifier name
 			{ duration = duration } -- kv
 		)
+
+		-- disarm
+		if IsTalentLearned(caster, "special_bonus_unique_rostik_silence_disarm") then
+			enemy:AddNewModifier(
+				caster, -- player source
+				self, -- ability source
+				"modifier_generic_disarmed_lua", -- modifier name
+				{ duration = duration } -- kv
+			)
+		end
 
 		-- play effects
 		if enemy:IsHero() then

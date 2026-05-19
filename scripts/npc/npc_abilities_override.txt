@@ -3096,7 +3096,6 @@
 		"AbilityTextureName"			"zanzak_dnr_lvl_1"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"5"
-		"HasScepterUpgrade"				"1"
 		"precache"
 		{
 			"soundfile"	"soundevents/Zanzak.vsndevts"
@@ -4118,12 +4117,16 @@
     	"BaseClass"                 "ability_datadriven"
         "AbilityTextureName"        "rostik_ball"
         "MaxLevel"                  "4"
-		"AbilityCooldown"			"12"
+		"AbilityCooldown"			"15 14 13 12"
 		"AbilityManaCost"			"150"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityCastRange"			"1200"
-		"AbilityDamage"				"80 160 240 320"
+		"AbilityDamage"				"100 175 250 350"
 
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 
         "precache"
 		{
@@ -4196,7 +4199,7 @@
 				"IsDeBuff"	"1"
 				"States"
 				{
-					"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_DISABLED"
 				}
 			}
 		}
@@ -4204,9 +4207,17 @@
 		
 		"AbilityValues"
 		{
-			"bash_duration"			"0.8 1 1.8 2.3"
-			"damage"				"80 160 240 320"
-			"duration"				"1.5 2.5 3.5 4.5"
+			"bash_duration"			
+			{
+				"value" 									"1 1.5 2 2.5"
+				"special_bonus_unique_rostik_ball_stun"		"1.5"
+			}
+			"damage"				"100 175 250 350"
+			"duration"				
+			{
+				"value" 									"1 1.5 2 2.5"
+				"special_bonus_unique_rostik_ball_stun"		"1.5"
+			}
 		}
     }
 
@@ -4392,6 +4403,48 @@
 			}
 		}
 	}
+	//=================================================================================================================
+	// LC: Duel_reworked (Rostik)
+	//=================================================================================================================
+	"duel_of_death_lua"
+	{
+		"BaseClass"                    	"ability_lua"
+		"ScriptFile"					"duel_of_death_lua" 
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilityTextureName"			"rostik_rage"
+		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"soundfile"				"soundevents/Rostik.vsndevts"
+			"particle"				"particles/econ/items/legion/legion_weapon_voth_domosh/legion_duel_start_ring_arcana.vpcf"
+			"particle"				"particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
+			"particle"				"particles/econ/items/ursa/ursa_ti10/ursa_ti10_enrage_head.vpcf"
+		}
+
+		"AbilityCastRange"				"500"
+		"AbilityCooldown"               "45"
+		"AbilityManaCost"               "100 200 300 400"
+		"AbilityCastPoint"				"0.3"
+		"AbilityDuration"				"5 6 7 8"
+
+		"AbilityValues"
+		{
+			"duration"					"5 6 7 8"
+			"atribute_gain"				"7 8 9 10"
+			"damage_reduction"			
+			{
+				"value" 												"20 30 40 50"
+				"special_bonus_unique_rostik_duel_damage_reduction"		"50"
+			}
+		}
+	}
 
 	//=================================================================================================================
 	// KOTL: Illuminate (Rostik)
@@ -4421,36 +4474,43 @@
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1800"
-	"AbilityCastPoint"				"0.3"
+	"AbilityCastRange"				"1000 1200 1400 1600"
+	"AbilityCastPoint"				"0.1"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"20.0 18.0 16.0 14.0"
-	"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
+	"AbilityChannelTime"			"3.0"
 	"AbilityCastRange"				"1800"
-	//"AbilityDamage"				"140 180 220 260"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150 160 170 180"
+	"AbilityManaCost"				"100 125 175 250"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
 	{
-		"damage_per_second"				"140.0 180.0 220.0 260.0"
+		"damage_per_second"				
+		{
+			"value" 											"200 250 300 350"
+			"special_bonus_unique_rostik_last_resort_damage"	"150"
+		}
 		"radius"						"350"
-		"range"							"1550"
+		"range"							"1000 1200 1400 1600"
 		"speed"							"1050.0"
-		"max_channel_time"				"2.0 3.0 4.0 5.0"
+		"max_channel_time"				"3.0"
 		"vision_radius"					"800"
 		"vision_duration"				"3.34"
 		"channel_vision_radius"			"350"
 		"channel_vision_interval"		"0.5"
 		"channel_vision_duration"		"10.34"
 		"channel_vision_step"			"150"
-		"max_damage_tooltip"			"280 540 880 1300"
+		"max_damage_tooltip"			
+		{
+			"value" 											"600 750 900 1050"
+			"special_bonus_unique_rostik_last_resort_damage"	"450"
+		}
 	}
 
 	"OnSpellStart"
@@ -4610,6 +4670,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"	
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
