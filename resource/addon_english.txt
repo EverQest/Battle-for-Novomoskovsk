@@ -30,10 +30,16 @@
 		//Generic
 		"Dota_Tooltip_modifier_generic_stunned_dispellable"				 		"Приголомшений!"
 		"Dota_Tooltip_modifier_generic_stunned_lua"				 				"Приголомшений!"
+		"DOTA_Tooltip_modifier_generic_disarmed_lua"				 			"Disarmed"
+		"DOTA_Tooltip_modifier_generic_disarmed_lua_description"				"Can't attack"
+		"DOTA_Tooltip_modifier_generic_silenced_lua"				 			"Silenced"
+		"DOTA_Tooltip_modifier_generic_silenced_lua_description"				"Can't cast spells"
 		"Dota_Tooltip_modifier_generic_spell_immune_lua"				 		"Spell Immune"
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_cast_range_400"						"Cast range + 400"
 		"Dota_Tooltip_ability_special_bonus_generic_hregen_300"					"Increase health regeneration by 300!"	
+		"Dota_Tooltip_ability_special_bonus_attack_range_220"					"Increase attack range by 220"
+		"Dota_Tooltip_ability_special_bonus_evasion_100"						"Increase evasion chance by 100%!"
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -382,18 +388,34 @@
 		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_AbilityCastPoint"							"СAST POINT:"
 		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_ball_lightning_move_speed"				"SPEED:"
 		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_Description"				 				"Полетаем?"
+		"DOTA_Tooltip_modifier_storm_spirit_ball_lightning_lua"											"Вжуууух"
+		
 		"Dota_Tooltip_ability_lightspeed"																"Чикс"
 		"Dota_Tooltip_ability_lightspeed_duration"														"DURATION:"
 		"Dota_Tooltip_ability_lightspeed_bonus_attack_speed"											"BONUS ATTACK SPEED:"
-		"Dota_Tooltip_ability_lightspeed_bonus_movement_speed"											"BONUS MOVEMENT SPEED:"
 		"Dota_Tooltip_ability_lightspeed_Description"													"Чикс который даёт скорость атаки, скорость передвижения, и востанавливает силы"
+		"DOTA_Tooltip_modifier_illidan_pepper"															"Чіксанутий"
+		
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua"										"Хуякс"
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_crit_chance"							"%CRIT CHANCE:"
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_crit_bonus"							"%CRIT DAMAGE:"
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_Description"							"Хуякс говорит сам за себя, если хуякс то конкретный"
+		
 		"Dota_Tooltip_ability_sand_king_epicenter_lua"					 								"Навалить басса в 7 утра"
+		"Dota_Tooltip_ability_sand_king_epicenter_lua_epicenter_slow"					 				"%SLOW:"
 		"Dota_Tooltip_ability_sand_king_epicenter_lua_epicenter_pulses"									"BASSS PULSES:"
 		"Dota_Tooltip_ability_sand_king_epicenter_lua_Description"		 								"Как же он любит послушать музыку, тут ничего не сказать о_0"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua"					 								"Жоска навалює бассу!"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua_description"					 					"Як же я люблю слухати музику!"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua_slow"					 						"В ахуї від бассу!"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua_slow_description"					 			"Ноги не слухаються, а вуха взагалі відпали..."
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_temich_bass_slow"									"Навалить басса movement reduction increased by 20%"
+		"Dota_Tooltip_ability_special_bonus_unique_temich_bass_pulses_10"								"Навалить басса +10 pulses"
+		"Dota_Tooltip_ability_special_bonus_unique_temich_vzuh_no_mana_cost"							"Вжухич has no mana cost"
+		"Dota_Tooltip_ability_special_bonus_unique_temich_crit_chance"									"Хуякс increase crit chance by 5%!!!"
+		
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"
@@ -435,23 +457,44 @@
 		"npc_dota_hero_gyrocopter"      	   "Ростислав Легенда"
 		
 		"Dota_Tooltip_ability_ballhit"												"Удар Ронольдо"
-		"Dota_Tooltip_ability_ballhit_duration"										"DISARM DURATION:"
 		"Dota_Tooltip_ability_ballhit_bash_duration"								"STUN DURATION:"
 		"Dota_Tooltip_ability_ballhit_Description"									"Легендарный пинок Ростислава, перед которым сложно устоять. Опрокидывает врага и накладывает бесселие"
+		"DOTA_Tooltip_modifier_bukin_HatTrickLeatherBall_debuff"					"Опрокинутий самим Ронольдо!"
+		
 		"Dota_Tooltip_ability_illuminate_datadriven"								"Сыграть Paparoch"
 		"Dota_Tooltip_ability_illuminate_datadriven_max_damage_tooltip"				"MAX DAMAGE:"
-		"Dota_Tooltip_ability_illuminate_datadriven_max_channel_time"				"MAX CHANNEL TIME:"
+		"Dota_Tooltip_ability_illuminate_datadriven_max_channel_time"				"CHANNEL TIME:"
 		"Dota_Tooltip_ability_illuminate_datadriven_Description"					"Заряжая гитарную волну Ростислав сметает всё на своём пути, стоит зарядить до конца..."
+		
 		"Dota_Tooltip_ability_silencer_global_silence_lua"							"Ребята давайте дружить"
 		"Dota_Tooltip_ability_silencer_global_silence_lua_tooltip_duration"			"SILENCE DURATION:"
 		"Dota_Tooltip_ability_silencer_global_silence_lua_Description"				"Заставляет всех на карте не драться и жить мирно, даёт сайленс на всех"
-		"Dota_Tooltip_ability_duelofdeath"					 						"Серьезка"
-		"Dota_Tooltip_ability_duelofdeath_duration"									"DURATION:"
-		"Dota_Tooltip_ability_duelofdeath_atribute"									"BONUS AGILITY PER WIN:"
-		"Dota_Tooltip_ability_duelofdeath_agility"									"BONUS AGILITY IN DUEL:"
-		"Dota_Tooltip_ability_duelofdeath_armor"									"BONUS ARMOR IN DUEL:"
-		"Dota_Tooltip_ability_duelofdeath_Description"		 						"Ты на кого напал другалёк? Ростислав вызывает на дуель хейтера и получает аттрибуты при дуели, если Ростислав убивает за время действия схватки он получает основной аттрибут"
-		"DOTA_Tooltip_modifier_deathfight_atribute"		 							"bonus agility from duels"
+		
+			//"Dota_Tooltip_ability_duelofdeath"					 						"Серьезка"
+			//"Dota_Tooltip_ability_duelofdeath_duration"									"DURATION:"
+			//"Dota_Tooltip_ability_duelofdeath_atribute"									"BONUS AGILITY PER WIN:"
+			//"Dota_Tooltip_ability_duelofdeath_agility"									"BONUS AGILITY IN DUEL:"
+			//"Dota_Tooltip_ability_duelofdeath_armor"										"BONUS ARMOR IN DUEL:"
+			//"Dota_Tooltip_ability_duelofdeath_Description"		 						"Ты на кого напал другалёк? Ростислав вызывает на дуель хейтера и получает аттрибуты при дуели, если Ростислав убивает за время действия схватки он получает основной аттрибут"
+			//"DOTA_Tooltip_modifier_deathfight_atribute"		 							"bonus agility from duels"
+		
+		"Dota_Tooltip_ability_duel_of_death_lua"					 					"Серьезка"
+		"Dota_Tooltip_ability_duel_of_death_lua_duration"								"DURATION:"
+		"Dota_Tooltip_ability_duel_of_death_lua_atribute_gain"							"BONUS AGILITY PER WIN:"
+		"Dota_Tooltip_ability_duel_of_death_lua_damage_reduction"						"%DAMAGE REDUCTION IN DUEL:"
+		"Dota_Tooltip_ability_duel_of_death_lua_Description"		 					"Ты на кого напал другалёк? Ростислав вызывает на дуель хейтера и получает аттрибуты при дуели, если Ростислав убивает за время действия схватки он получает основной аттрибут"
+		"DOTA_Tooltip_modifier_duel_of_death_lua"		 								"Перемог в двобоях:"
+		"DOTA_Tooltip_modifier_duel_of_death_lua_description"		 					"Atributes Gained: Agility: %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% Strength: %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% Intellect: %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%"
+		"DOTA_Tooltip_modifier_duel_of_death_lua_fight"		 							"ЛЕГЕНДАРНИЙ ДВОБІЙ!"
+		"DOTA_Tooltip_modifier_duel_of_death_lua_fight_description"		 				"Damage taken reduced by %dMODIFIER_PROPERTY_TOOLTIP%%%"
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_rostik_ball_stun"					"Удар Ронольдо stun duration increased by 1.5 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_rostik_last_resort_damage"			"Сыграть Paparoch max damage increased by 450"
+		"Dota_Tooltip_ability_special_bonus_unique_rostik_silence_disarm"				"Ребята давайте дружить now also disarms enemies for the duration"
+		"Dota_Tooltip_ability_special_bonus_unique_rostik_duel_refresh_on_kill"			"Серьезка refreshes on win"
+		"Dota_Tooltip_ability_special_bonus_unique_rostik_duel_damage_reduction"		"Серьезка damage reduction in duel increased by 50%"
+		"Dota_Tooltip_ability_special_bonus_unique_rostik_duel_all_stats"				"Серьезка gives all attributes for duel wins"
 		
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Валик

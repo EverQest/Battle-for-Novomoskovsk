@@ -7,7 +7,9 @@ LinkLuaModifier( "modifier_sand_king_epicenter_lua_slow", "modifiers/modifier_sa
 function sand_king_epicenter_lua:OnSpellStart()
 	-- Effects
 	local sound_cast = "СustomIntro"
-	EmitSoundOn( sound_cast, self:GetCaster() )
+	EmitGlobalSound( sound_cast )
+	self:GetCaster():StartGestureWithPlaybackRate(ACT_DOTA_CAST_ABILITY_1, 0.2)
+	ParticleManager:CreateParticle( "particles/econ/items/elder_titan/elder_titan_ti7/elder_titan_echo_stomp_ti7_magical.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 end
 
 --------------------------------------------------------------------------------
@@ -16,7 +18,7 @@ function sand_king_epicenter_lua:OnChannelFinish( bInterrupted )
 	-- cancel if fail
 	if bInterrupted then 
 		local sound_cast = "СustomIntro"
-		StopSoundOn( sound_cast, self:GetCaster() )
+		StopGlobalSound( sound_cast )
 		return
 	end
 
@@ -36,6 +38,6 @@ function sand_king_epicenter_lua:OnChannelFinish( bInterrupted )
 -- Create Sound
 local sound_mt = math.random( 1, 2 )
 local sound_cast = "CustomBass" .. sound_mt
-EmitSoundOn( sound_cast, self:GetCaster() )
+EmitGlobalSound( sound_cast )
 
 end

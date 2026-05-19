@@ -315,19 +315,19 @@
 
 
 
-	//=================================================================================================================
-	//===============================================//HEROES//========================================================
-	//=================================================================================================================
-	// Spectre: Dispersion (Vasich)
-	//=================================================================================================================
-	"spectre_dispersion_lua"
+//=================================================================================================================
+//===============================================//HEROES//========================================================
+//=================================================================================================================
+// Spectre: Dispersion (Vasich)
+//=================================================================================================================
+"spectre_dispersion_lua"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"					"ability_lua"
 	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityTextureName"		"vyasich_aura"
+	"AbilityTextureName"		"vasich_aura"
 	"ScriptFile"				"spectre_dispersion_lua"
 
 	// Special
@@ -365,7 +365,7 @@
 }
 
     //=================================================================================================================
-    // Wisp: Tether (Vyasich)
+    // Wisp: Tether (vasich)
     //=================================================================================================================
 	"wisp_tether_datadriven"
 	{	
@@ -376,7 +376,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityTextureName"			"vyasich_tether"
+		"AbilityTextureName"			"vasich_tether"
 		"CastFilterRejectCaster" 		"1"
 
 		// Casting
@@ -744,7 +744,7 @@
 	}
 
   	//=================================================================================================================
-	// Ability: Pudge Rot (Vyasich)
+	// Ability: Pudge Rot (vasich)
 	//=================================================================================================================
 	"pudge_rot_lua"
 	{
@@ -755,7 +755,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"vyasich_rot"
+		"AbilityTextureName"			"vasich_rot"
 		"ScriptFile"					"pudge_rot_lua"
 		
 		"precache"
@@ -800,7 +800,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"naga_siren_song_of_the_siren_lua"
-		"AbilityTextureName"			"vyasich_song"
+		"AbilityTextureName"			"vasich_song"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
 
@@ -853,7 +853,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"naga_siren_song_of_the_siren_lua"
-		"AbilityTextureName"			"vyasich_song_end"
+		"AbilityTextureName"			"vasich_song_end"
 		"MaxLevel"						"1"
 		
 		// Ability General
@@ -3096,7 +3096,6 @@
 		"AbilityTextureName"			"zanzak_dnr_lvl_1"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"5"
-		"HasScepterUpgrade"				"1"
 		"precache"
 		{
 			"soundfile"	"soundevents/Zanzak.vsndevts"
@@ -3125,7 +3124,7 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"200 350 500 650 800"
+		"AbilityDamage"					"200 350 500 650 5000"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -3133,7 +3132,7 @@
 		{
 			"radius"				"400 450 500 550 600"
 			"pull_speed"			"50"
-			"damage"				"200 350 500 650 800"
+			"damage"				"200 350 500 650 5000"
 			"tick_rate"				"0.1"
 			"duration"				"6.66"
 			"vision_radius"			"800"
@@ -3903,7 +3902,7 @@
 		"ScriptFile"					"phantom_assassin_coup_de_grace_lua"
 		"AbilityTextureName"			"temich_crit"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"4"
+		"MaxLevel"						"5"
 		"precache"
 		{
 			"soundfile"	"soundevents/Temich.vsndevts"
@@ -3924,15 +3923,19 @@
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCritChance"					"1 2 3 4"
-		"AbilityCritBonus"					"1000 1500 2000 3000"
+		"AbilityCritChance"					"1 2 3 4 5"
+		"AbilityCritBonus"					"1000 1500 2000 3000 3500"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"crit_chance"				"1.0 2.0 3.0 4.0"
-			"crit_bonus"				"1000 1500 2000 3000"
+			"crit_chance"				
+			{
+				"value" 										"1.0 2.0 3.0 4.0 5.0"
+				"special_bonus_unique_temich_crit_chance"		"5.0"
+			}
+			"crit_bonus"				"1000 1500 2000 3000 3500"
 		}
 	}
 
@@ -3945,8 +3948,8 @@
 		"AbilityTextureName"        "temich_attspeed"
 		"MaxLevel"                  "4"
 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"           "24 22 20 18"
-		"AbilityManaCost"           "300 200 100"
+		"AbilityCooldown"           "10"
+		"AbilityManaCost"           "100"
 		"AbilityDuration"           "5 7 10 13"
 
 		precache
@@ -3995,10 +3998,10 @@
 		
 		"AbilityValues"
 		{
-		    "bonus_movement_speed"			"20 25 30 35"
-		    "duration"						"5.0 7.0 10.0 13.0"
-		    "bonus_attack_speed"			"35 45 55 65"
-		    "regen"							"50 60 70 80"
+		    "bonus_movement_speed"			"0"
+		    "duration"						"5.0"
+		    "bonus_attack_speed"			"50 100 150 200"
+		    "regen"							"0"
 		}
 	}
 
@@ -4012,13 +4015,12 @@
 		"ScriptFile"					"storm_spirit_ball_lightning_lua"
 		"AbilityTextureName"			"temich_lightning"
 		"FightRecapLevel"				"1"
-		"MaxLevel"						"3"
+		"MaxLevel"						"4"
 
 		precache
 		{
 			"soundfile"	"soundevents/Temich.vsndevts"
 			"particle"	"particles/econ/items/storm_spirit/storm_spirit_orchid_hat_retro/stormspirit_orchid_retro_ball_lightning.vpcf"
-
 		}
 		
 		// Ability General
@@ -4030,11 +4032,11 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.3 0.2 0.1"
+		"AbilityCastPoint"				"0.3 0.2 0.1 0.05"
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100"
+		"AbilityManaCost"				"50"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
@@ -4046,10 +4048,14 @@
 		{
 			"ball_lightning_initial_mana_percentage"		"0"
 			"ball_lightning_initial_mana_base"				"50"
-			"ball_lightning_move_speed"						"1500 2500 3500"
+			"ball_lightning_move_speed"						"1500 2000 2750 3750"
 			"ball_lightning_aoe"							"0"
 			"ball_lightning_travel_cost_base"				"0"
-			"ball_lightning_travel_cost_percent"			"1.5 1.25 1.0"
+			"ball_lightning_travel_cost_percent"			
+			{
+				"value" 											"1.5 1.25 1.0 0.75"
+				"special_bonus_unique_temich_vzuh_no_mana_cost"		"0" // logic in lua
+			}
 			"ball_lightning_vision_radius"					"800"
 			"blocker_duration"								"5.0"
 			"scepter_remnant_interval"						"300"
@@ -4072,6 +4078,7 @@
 			"soundfile"	"soundevents/Temich.vsndevts"
 			"particle"	"particles/sandking_epicenter.vpcf"
 			"particle"	"particles/sandking_epicenter_ring.vpcf"
+			"particle"	"particles/econ/items/elder_titan/elder_titan_ti7/elder_titan_echo_stomp_ti7_magical.vpcf"
 		}
 		
 		// Ability General
@@ -4090,21 +4097,29 @@
 
 		// Ability Resource
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"40 30 20"
+		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"150 225 300"
 
 		// Damage
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"200 350 500"
+		"AbilityDamage"					"200 300 400"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
 			"epicenter_radius"						"275 325 375 425 475 525 575 650 675 700 725 750 775 800"
-			"epicenter_pulses"						"10 15 20"
-			"epicenter_damage"						"200 350 500"
-			"epicenter_slow"						"-50 -80 -120"
+			"epicenter_pulses"
+			{
+				"value" 											"10 15 20"
+				"special_bonus_unique_temich_bass_pulses_10"		"10"
+			}
+			"epicenter_damage"					"200 300 400"
+			"epicenter_slow"						
+			{
+				"value" 									"-20 -30 -40"
+				"special_bonus_unique_temich_bass_slow"		"-20"
+			}
 			"epicenter_slow_as"						"-30"
 			"epicenter_slow_duration_tooltip"		"3"
 		}
@@ -4118,12 +4133,16 @@
     	"BaseClass"                 "ability_datadriven"
         "AbilityTextureName"        "rostik_ball"
         "MaxLevel"                  "4"
-		"AbilityCooldown"			"12"
+		"AbilityCooldown"			"15 14 13 12"
 		"AbilityManaCost"			"150"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityCastRange"			"1200"
-		"AbilityDamage"				"80 160 240 320"
+		"AbilityDamage"				"100 175 250 350"
 
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 
         "precache"
 		{
@@ -4196,7 +4215,7 @@
 				"IsDeBuff"	"1"
 				"States"
 				{
-					"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_DISABLED"
 				}
 			}
 		}
@@ -4204,9 +4223,17 @@
 		
 		"AbilityValues"
 		{
-			"bash_duration"			"0.8 1 1.8 2.3"
-			"damage"				"80 160 240 320"
-			"duration"				"1.5 2.5 3.5 4.5"
+			"bash_duration"			
+			{
+				"value" 									"1 1.5 2 2.5"
+				"special_bonus_unique_rostik_ball_stun"		"1.5"
+			}
+			"damage"				"100 175 250 350"
+			"duration"				
+			{
+				"value" 									"1 1.5 2 2.5"
+				"special_bonus_unique_rostik_ball_stun"		"1.5"
+			}
 		}
     }
 
@@ -4392,6 +4419,48 @@
 			}
 		}
 	}
+	//=================================================================================================================
+	// LC: Duel_reworked (Rostik)
+	//=================================================================================================================
+	"duel_of_death_lua"
+	{
+		"BaseClass"                    	"ability_lua"
+		"ScriptFile"					"duel_of_death_lua" 
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilityTextureName"			"rostik_rage"
+		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"soundfile"				"soundevents/Rostik.vsndevts"
+			"particle"				"particles/econ/items/legion/legion_weapon_voth_domosh/legion_duel_start_ring_arcana.vpcf"
+			"particle"				"particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
+			"particle"				"particles/econ/items/ursa/ursa_ti10/ursa_ti10_enrage_head.vpcf"
+		}
+
+		"AbilityCastRange"				"500"
+		"AbilityCooldown"               "45"
+		"AbilityManaCost"               "100 200 300 400"
+		"AbilityCastPoint"				"0.3"
+		"AbilityDuration"				"5 6 7 8"
+
+		"AbilityValues"
+		{
+			"duration"					"5 6 7 8"
+			"atribute_gain"				"7 8 9 10"
+			"damage_reduction"			
+			{
+				"value" 												"20 30 40 50"
+				"special_bonus_unique_rostik_duel_damage_reduction"		"50"
+			}
+		}
+	}
 
 	//=================================================================================================================
 	// KOTL: Illuminate (Rostik)
@@ -4421,36 +4490,43 @@
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1800"
-	"AbilityCastPoint"				"0.3"
+	"AbilityCastRange"				"1000 1200 1400 1600"
+	"AbilityCastPoint"				"0.1"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"20.0 18.0 16.0 14.0"
-	"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
+	"AbilityChannelTime"			"3.0"
 	"AbilityCastRange"				"1800"
-	//"AbilityDamage"				"140 180 220 260"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150 160 170 180"
+	"AbilityManaCost"				"100 125 175 250"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
 	{
-		"damage_per_second"				"140.0 180.0 220.0 260.0"
+		"damage_per_second"				
+		{
+			"value" 											"200 250 300 350"
+			"special_bonus_unique_rostik_last_resort_damage"	"150"
+		}
 		"radius"						"350"
-		"range"							"1550"
+		"range"							"1000 1200 1400 1600"
 		"speed"							"1050.0"
-		"max_channel_time"				"2.0 3.0 4.0 5.0"
+		"max_channel_time"				"3.0"
 		"vision_radius"					"800"
 		"vision_duration"				"3.34"
 		"channel_vision_radius"			"350"
 		"channel_vision_interval"		"0.5"
 		"channel_vision_duration"		"10.34"
 		"channel_vision_step"			"150"
-		"max_damage_tooltip"			"280 540 880 1300"
+		"max_damage_tooltip"			
+		{
+			"value" 											"600 750 900 1050"
+			"special_bonus_unique_rostik_last_resort_damage"	"450"
+		}
 	}
 
 	"OnSpellStart"
@@ -4610,6 +4686,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"	
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
