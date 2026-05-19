@@ -38,6 +38,8 @@
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_cast_range_400"						"Cast range + 400"
 		"Dota_Tooltip_ability_special_bonus_generic_hregen_300"					"Increase health regeneration by 300!"	
+		"Dota_Tooltip_ability_special_bonus_attack_range_220"					"Increase attack range by 220"
+		"Dota_Tooltip_ability_special_bonus_evasion_100"						"Increase evasion chance by 100%!"
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -386,18 +388,34 @@
 		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_AbilityCastPoint"							"СAST POINT:"
 		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_ball_lightning_move_speed"				"SPEED:"
 		"Dota_Tooltip_ability_storm_spirit_ball_lightning_lua_Description"				 				"Полетаем?"
+		"DOTA_Tooltip_modifier_storm_spirit_ball_lightning_lua"											"Вжуууух"
+		
 		"Dota_Tooltip_ability_lightspeed"																"Чикс"
 		"Dota_Tooltip_ability_lightspeed_duration"														"DURATION:"
 		"Dota_Tooltip_ability_lightspeed_bonus_attack_speed"											"BONUS ATTACK SPEED:"
-		"Dota_Tooltip_ability_lightspeed_bonus_movement_speed"											"BONUS MOVEMENT SPEED:"
 		"Dota_Tooltip_ability_lightspeed_Description"													"Чикс который даёт скорость атаки, скорость передвижения, и востанавливает силы"
+		"DOTA_Tooltip_modifier_illidan_pepper"															"Чіксанутий"
+		
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua"										"Хуякс"
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_crit_chance"							"%CRIT CHANCE:"
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_crit_bonus"							"%CRIT DAMAGE:"
 		"Dota_Tooltip_ability_phantom_assassin_coup_de_grace_lua_Description"							"Хуякс говорит сам за себя, если хуякс то конкретный"
+		
 		"Dota_Tooltip_ability_sand_king_epicenter_lua"					 								"Навалить басса в 7 утра"
+		"Dota_Tooltip_ability_sand_king_epicenter_lua_epicenter_slow"					 				"%SLOW:"
 		"Dota_Tooltip_ability_sand_king_epicenter_lua_epicenter_pulses"									"BASSS PULSES:"
 		"Dota_Tooltip_ability_sand_king_epicenter_lua_Description"		 								"Как же он любит послушать музыку, тут ничего не сказать о_0"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua"					 								"Жоска навалює бассу!"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua_description"					 					"Як же я люблю слухати музику!"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua_slow"					 						"В ахуї від бассу!"
+		"DOTA_Tooltip_modifier_sand_king_epicenter_lua_slow_description"					 			"Ноги не слухаються, а вуха взагалі відпали..."
+		
+		//Talents
+		"Dota_Tooltip_ability_special_bonus_unique_temich_bass_slow"									"Навалить басса movement reduction increased by 20%"
+		"Dota_Tooltip_ability_special_bonus_unique_temich_bass_pulses_10"								"Навалить басса +10 pulses"
+		"Dota_Tooltip_ability_special_bonus_unique_temich_vzuh_no_mana_cost"							"Вжухич has no mana cost"
+		"Dota_Tooltip_ability_special_bonus_unique_temich_crit_chance"									"Хуякс increase crit chance by 5%!!!"
+		
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Занзак
 		"npc_dota_hero_enigma"      		   "Занзак"

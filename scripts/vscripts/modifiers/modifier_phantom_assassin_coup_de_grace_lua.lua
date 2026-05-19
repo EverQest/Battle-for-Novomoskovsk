@@ -3,8 +3,7 @@ modifier_phantom_assassin_coup_de_grace_lua = class({})
 --------------------------------------------------------------------------------
 -- Classifications
 function modifier_phantom_assassin_coup_de_grace_lua:IsHidden()
-	-- actual true
-	return false
+	return true
 end
 
 function modifier_phantom_assassin_coup_de_grace_lua:IsPurgable()

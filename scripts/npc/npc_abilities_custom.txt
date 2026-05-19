@@ -1017,4 +1017,72 @@
 			}
 		}
 	}
+
+	"special_bonus_attack_range_220"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attackrange"				"220" // kv that will be changed
+				"ability"					"generic" // ability name
+			}
+		}
+	}
+
+	"special_bonus_evasion_100"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"evasion"					"100" // kv that will be changed
+				"ability"					"generic" // ability name
+			}
+		}
+	}
+
+	"special_bonus_unique_temich_vzuh_no_mana_cost"
+	{
+		"BaseClass"          			    "special_bonus_undefined"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"						"ABILITY_TYPE_ATTRIBUTES"
+		"IsTalent"							"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"									"FIELD_INTEGER"
+				"ball_lightning_travel_cost_percent"		"0" // kv that will be changed
+				"ability"									"storm_spirit_ball_lightning_lua" // ability name
+				"bonus_type"								"*"
+			}
+			"02"
+			{
+				"var_type"									"FIELD_INTEGER"
+				"ball_lightning_initial_mana_base"			"0" // kv that will be changed
+				"ability"									"storm_spirit_ball_lightning_lua" // ability name
+				"bonus_type"								"*"
+			}
+		}
+	}
 }
