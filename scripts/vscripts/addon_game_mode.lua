@@ -325,6 +325,7 @@ function COverthrowGameMode:SetUpFountains()
 	LinkLuaModifier( "modifier_fountain_aura_effect_lua", "modifiers/modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_gold_rush_zone_indicator", "modifiers/modifier_gold_rush_zone_indicator", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_super_sonic", "modifiers/modifier_super_sonic", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_huge_deal", "modifiers/modifier_huge_deal", LUA_MODIFIER_MOTION_NONE )
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do
@@ -567,28 +568,43 @@ function spawnunits(campname)
 end
 
 --------------------------------------------------------------------------------
--- Gold Rush: ModifyGoldFilter
--- Doubles all positive gold gains for heroes standing inside the center zone
--- while the Gold Rush event is active.  Called for every ModifyGold() call.
+-- Shared ModifyGoldFilter
+-- Handles gold modifications for all active random events.
+-- Called by the engine for every ModifyGold() call in the game.
+--
+-- Reason codes used below (EDOTA_ModifyGold_Reason enum):
+--   1 = Death            2 = Buyback
+--   3 = PurchaseConsumable  4 = PurchaseItem
+--   8 = GameTick (passive income)
 --------------------------------------------------------------------------------
 function COverthrowGameMode:ModifyGoldFilter( filterTable )
-	-- Only act during Gold Rush.
-	if not _G.GOLD_RUSH_ACTIVE then return true end
-
-	-- Negative gold (item purchases, buyback, death) is never doubled.
-	local amount = filterTable["gold"]
-	if amount <= 0 then return true end
-
+	local amount   = filterTable["gold"]
+	local reason   = filterTable["reason"]
 	local playerID = filterTable["player_id_const"]
-	if playerID == -1 then return true end
 
-	local hero = PlayerResource:GetSelectedHeroEntity( playerID )
-	if hero == nil or not IsValidEntity( hero ) then return true end
+	-- ── Gold Rush: ×2 gold for heroes inside the center zone ─────────────────
+	if _G.GOLD_RUSH_ACTIVE and amount > 0 and playerID ~= -1 then
+		local hero = PlayerResource:GetSelectedHeroEntity( playerID )
+		if hero ~= nil and IsValidEntity( hero ) then
+			local dist = ( hero:GetAbsOrigin() - _G.GOLD_RUSH_CENTER ):Length2D()
+			if dist <= _G.GOLD_RUSH_RADIUS then
+				filterTable["gold"] = amount * 2
+			end
+		end
+	end
 
-	-- Check distance from zone centre.
-	local dist = ( hero:GetAbsOrigin() - _G.GOLD_RUSH_CENTER ):Length2D()
-	if dist <= _G.GOLD_RUSH_RADIUS then
-		filterTable["gold"] = amount * 2
+	-- ── Huge Deal: 50% discount on shop purchases ─────────────────────────────
+	-- Reason 3 = PurchaseConsumable, 4 = PurchaseItem (documented shop reasons).
+	-- Reason 0 = Unspecified — included as a fallback because some Dota 2 engine
+	-- builds route shop purchases through reason 0 instead of 3/4.
+	-- This is safe here because every manual ModifyGold call in this game uses a
+	-- POSITIVE amount, so no negative reason-0 changes exist outside shop buys.
+	-- Explicitly excluded: 2 (Buyback), 5 (AbilityCost used by Antimage Mana Void).
+	if _G.HUGE_DEAL_ACTIVE and amount < 0
+			and ( reason == 0 or reason == 3 or reason == 4 ) then
+		-- Halve the cost; math.floor on the absolute value rounds in the
+		-- player's favour for odd-priced items (e.g. 125g → 62g).
+		filterTable["gold"] = -math.floor( math.abs( amount ) / 2 )
 	end
 
 	return true

@@ -17,6 +17,7 @@
 require("events/base_event")
 require("events/event_gold_rush")   -- Event 1: Gold Rush
 require("events/event_super_sonic") -- Event 2: Super Sonic
+require("events/event_huge_deal")   -- Event 3: Huge Deal
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Timing constants – easy to tweak
@@ -129,6 +130,7 @@ function RandomEventManager:GetActiveEvent() return self._activeEvent end
 RandomEventManager:_Init()
 RandomEventManager:RegisterEvent(EventGoldRush)
 RandomEventManager:RegisterEvent(EventSuperSonic)
+RandomEventManager:RegisterEvent(EventHugeDeal)
 
 -- Add future events here:
 -- require("events/event_my_event")
