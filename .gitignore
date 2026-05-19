@@ -1,6 +1,7 @@
 # IDEs
 .vs
 .vscode
+.claude
 
 # Cache crap that Valve autogenerates
 *.bin
