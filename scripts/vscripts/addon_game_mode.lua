@@ -285,6 +285,8 @@ function COverthrowGameMode:InitGameMode()
 	Convars:RegisterCommand( "overthrow_force_gold_drop", function(...) self:ForceSpawnGold() end, "Force gold drop.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_set_timer", function(...) return SetTimer( ... ) end, "Set the timer.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_force_end_game", function(...) return self:EndGame( DOTA_TEAM_GOODGUYS ) end, "Force the game to end.", FCVAR_CHEAT )
+	Convars:RegisterCommand( "event_force_trigger", function(...) RandomEventManager:_TriggerRandomEvent() end, "Force a random event to trigger immediately.", FCVAR_CHEAT )
+	Convars:RegisterCommand( "event_force_end", function(...) RandomEventManager:_EndCurrentEvent() end, "Force the current random event to end.", FCVAR_CHEAT )
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
 
 	COverthrowGameMode:SetUpFountains()
