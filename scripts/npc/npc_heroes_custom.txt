@@ -55,6 +55,7 @@
 	   		"Ability4"             "generic_hidden"	
 			"Ability5"             "generic_hidden"	
 	    "Ability6"             "tinker_rearm_lua"	
+	    	"Ability7"             "generic_hidden"	
 	}
 	//=================================================================================================================
 	// HERO: Morphling (DIMA)
@@ -238,6 +239,7 @@
 	    	"Ability4"             "generic_hidden"	
 	    	"Ability5"             "generic_hidden"	
 		"Ability6"		       "mina_explosion_jump"
+			"Ability7"             "generic_hidden"	
 	}
 	//=================================================================================================================
 	// HERO: Io (Vasich)
@@ -273,7 +275,8 @@
 	    	"Ability4"           		 "generic_hidden"	
 	    	"Ability5"           		 "generic_hidden"	
 	    "Ability6"            		 "naga_siren_song_of_the_siren_lua"	
-
+	    	"Ability7"             "generic_hidden"	
+	    	"Ability8"             "generic_hidden"	
 	}
 	//=================================================================================================================
 	// HERO: Nevermore (Yarik)
@@ -300,6 +303,7 @@
 	    "Ability4"             "shadow_fiend_shadowraze_d_lua"	
 	    "Ability5"             "shadow_fiend_shadowraze_e_lua"	
 	    "Ability6"             "shadow_fiend_shadowraze_f_lua"	
+	    	"Ability7"             "generic_hidden"	
 	}
 	//=================================================================================================================
 	// HERO: Enigma (Zanzak)
