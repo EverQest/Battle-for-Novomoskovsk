@@ -19,6 +19,7 @@ require("events/event_gold_rush")   -- Event 1: Gold Rush
 require("events/event_super_sonic") -- Event 2: Super Sonic
 require("events/event_huge_deal")   -- Event 3: Huge Deal
 require("events/event_true_sight")  -- Event 4: True Sight
+require("events/event_wtf_chaos")   -- Event 5: WTF Chaos
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Timing constants – easy to tweak
@@ -133,6 +134,7 @@ RandomEventManager:RegisterEvent(EventGoldRush)
 RandomEventManager:RegisterEvent(EventSuperSonic)
 RandomEventManager:RegisterEvent(EventHugeDeal)
 RandomEventManager:RegisterEvent(EventTrueSight)
+RandomEventManager:RegisterEvent(EventWTFChaos)
 
 -- Add future events here:
 -- require("events/event_my_event")
