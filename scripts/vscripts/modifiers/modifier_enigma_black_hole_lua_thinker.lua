@@ -43,10 +43,9 @@ function modifier_enigma_black_hole_lua_thinker:OnRefresh( kv )
 end
 
 function modifier_enigma_black_hole_lua_thinker:OnRemoved()
-	local sound_cast = "Hero_Enigma.Black_Hole"
 	local sound_stop = "Hero_Enigma.Black_Hole.Stop"
 	EmitSoundOn( sound_stop, self:GetParent() )
-	StopSoundOn( sound_cast, self:GetParent() )
+	StopSoundOn( self.sound_cast, self:GetParent() )
 	
 	if IsServer() then
 		-- ensure last tick damage happens
@@ -122,8 +121,11 @@ end
 function modifier_enigma_black_hole_lua_thinker:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/gyro_call_down_explosion_impact_a.vpcf"
-	local sound = math.random( 1, 2 )
-	local sound_cast = "CustomDnr" .. sound
+	self.sound_cast = "CustomDnr2" 
+
+	if self:GetAbility():GetLevel() == 5 then
+		self.sound_cast = "CustomDnr1" 
+	end
 
 	-- Create Particle
 	-- local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN, self:GetCaster() )
@@ -141,5 +143,5 @@ function modifier_enigma_black_hole_lua_thinker:PlayEffects()
 	)
 
 	-- Create Sound
-	EmitSoundOn( sound_cast, self:GetParent() )
+	EmitSoundOn( self.sound_cast, self:GetParent() )
 end
