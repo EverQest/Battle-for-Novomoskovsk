@@ -9,8 +9,9 @@
 
     Implementation note:
         SetFogOfWarDisabled is a game-mode-entity flag — no per-hero modifiers
-        or fog-of-war writers are needed. Think() is a no-op because the flag
-        persists until flipped back in OnEnd().
+        or fog-of-war writers are needed. OnEnd() restores it to false (the
+        normal state); no getter is used since IsFogOfWarDisabled() is not a
+        confirmed API in this engine build. Think() is a no-op.
 ]]
 
 require("events/base_event")
@@ -35,13 +36,11 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight:OnStart()
-    -- Snapshot pre-event state so OnEnd restores exactly what was there before.
-    self._fogWasDisabled = GameRules:GetGameModeEntity():IsFogOfWarDisabled()
     GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     print("[TrueSight] Active – fog of war disabled.")
 end
 
 function EventTrueSight:OnEnd()
-    GameRules:GetGameModeEntity():SetFogOfWarDisabled(self._fogWasDisabled or false)
+    GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
     print("[TrueSight] Ended – fog of war restored.")
 end
