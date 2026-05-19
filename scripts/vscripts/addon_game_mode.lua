@@ -21,6 +21,7 @@ require('timers')
 require( "events" )
 require( "items" )
 require( "utility_functions" )
+require( "random_event_manager" )
 
 ---------------------------------------------------------------------------
 -- Precache
@@ -257,6 +258,7 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetDefaultStickyItem( "item_boots" )
 	GameRules:GetGameModeEntity():SetBountyRunePickupFilter( Dynamic_Wrap( COverthrowGameMode, "BountyRunePickupFilter" ), self )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( COverthrowGameMode, "ExecuteOrderFilter" ), self )
+	GameRules:GetGameModeEntity():SetModifyGoldFilter( Dynamic_Wrap( COverthrowGameMode, "ModifyGoldFilter" ), self )
 
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled( true )
 	GameRules:GetGameModeEntity():SetUseTurboCouriers( true )
@@ -319,6 +321,8 @@ function COverthrowGameMode:SetUpFountains()
 
 	LinkLuaModifier( "modifier_fountain_aura_lua", "modifiers/modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_fountain_aura_effect_lua", "modifiers/modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_gold_rush_zone_indicator", "modifiers/modifier_gold_rush_zone_indicator", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_super_sonic", "modifiers/modifier_super_sonic", LUA_MODIFIER_MOTION_NONE )
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do
@@ -558,6 +562,34 @@ function spawnunits(campname)
         --print ("Spawning Camps")
         creature:SetInitialGoalEntity( waypointlocation )
     end
+end
+
+--------------------------------------------------------------------------------
+-- Gold Rush: ModifyGoldFilter
+-- Doubles all positive gold gains for heroes standing inside the center zone
+-- while the Gold Rush event is active.  Called for every ModifyGold() call.
+--------------------------------------------------------------------------------
+function COverthrowGameMode:ModifyGoldFilter( filterTable )
+	-- Only act during Gold Rush.
+	if not _G.GOLD_RUSH_ACTIVE then return true end
+
+	-- Negative gold (item purchases, buyback, death) is never doubled.
+	local amount = filterTable["gold"]
+	if amount <= 0 then return true end
+
+	local playerID = filterTable["player_id_const"]
+	if playerID == -1 then return true end
+
+	local hero = PlayerResource:GetSelectedHeroEntity( playerID )
+	if hero == nil or not IsValidEntity( hero ) then return true end
+
+	-- Check distance from zone centre.
+	local dist = ( hero:GetAbsOrigin() - _G.GOLD_RUSH_CENTER ):Length2D()
+	if dist <= _G.GOLD_RUSH_RADIUS then
+		filterTable["gold"] = amount * 2
+	end
+
+	return true
 end
 
 --------------------------------------------------------------------------------

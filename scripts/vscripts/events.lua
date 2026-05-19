@@ -56,6 +56,9 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		DoEntFire( "center_experience_ring_particles", "Start", "0", 0, self, self  )
 
 		GameRules:GetGameModeEntity():SetAnnouncerDisabled( true ) -- Disable the normal announcer at game start
+
+		-- Start the random event loop (first event fires after RANDOM_EVENT_INTERVAL seconds).
+		RandomEventManager:Start()
 	end
 end
 
@@ -196,6 +199,24 @@ function COverthrowGameMode:OnEntityKilled( event )
 				CustomGameEventManager:Send_ServerToAllClients( "kill_alert", kill_alert )
 			else
 				hero:AddExperience( 50, 0, false, false )
+			end
+
+			-- Gold Rush Mechanic 3: if the victim died inside the center zone the
+			-- killer receives an extra grant equal to the victim's kill bounty
+			-- (net effect: ×2 bounty for in-zone kills regardless of killer position).
+			-- Uses the three GOLD_RUSH_* globals set by EventGoldRush:OnStart().
+			if _G.GOLD_RUSH_ACTIVE and _G.GOLD_RUSH_CENTER then
+				local victimPos = killedUnit:GetAbsOrigin()
+				local dist = ( victimPos - _G.GOLD_RUSH_CENTER ):Length2D()
+				if dist <= _G.GOLD_RUSH_RADIUS then
+					local bounty = killedUnit:GetGoldBounty()
+					if bounty and bounty > 0 then
+						local killerID = hero:GetPlayerID()
+						PlayerResource:ModifyGold( killerID, bounty, true, 0 )
+						SendOverheadEventMessage( hero, OVERHEAD_ALERT_GOLD, hero, bounty, nil )
+						print( "[GoldRush] Kill bonus: +" .. bounty .. " gold to player " .. killerID )
+					end
+				end
 			end
 		end
 		--Granting XP to all heroes who assisted
