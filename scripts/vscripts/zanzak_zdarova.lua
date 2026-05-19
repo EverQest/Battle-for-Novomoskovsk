@@ -1,10 +1,10 @@
 require("utility_functions")
 
-chaos_bolt = class({})
+zanzak_zdarova = class({})
 
 LinkLuaModifier( "modifier_generic_stunned_dispellable", "modifiers/modifier_generic_stunned_dispellable", LUA_MODIFIER_MOTION_NONE )
 
-function chaos_bolt:OnSpellStart()
+function zanzak_zdarova:OnSpellStart()
 	-- unit identifier
 	local caster = self:GetCaster()
 	local target = self:GetCursorTarget()
@@ -14,7 +14,7 @@ function chaos_bolt:OnSpellStart()
 	local projectile_speed = self:GetSpecialValueFor("projectile_speed")
 
 	--AOE or single
-	if IsTalentLearned(caster, "special_bonus_unique_zanzak_chaos_bolt_aoe") then
+	if IsTalentLearned(caster, "special_bonus_unique_zanzak_zdarova_aoe") then
 		local radius = self:GetSpecialValueFor("radius")
 		local enemies = FindUnitsInRadius(
 			caster:GetTeamNumber(),	-- int, your team number
@@ -60,7 +60,7 @@ function chaos_bolt:OnSpellStart()
 	EmitSoundOn( sound_cast, caster )
 end
 
-function chaos_bolt:OnProjectileHit_ExtraData( target, location, extradata )
+function zanzak_zdarova:OnProjectileHit_ExtraData( target, location, extradata )
 	-- cancel if gone
 	if (not target) or target:IsInvulnerable() or target:IsOutOfGame() or target:TriggerSpellAbsorb( self ) then
 		return
@@ -99,9 +99,9 @@ function chaos_bolt:OnProjectileHit_ExtraData( target, location, extradata )
 end
 
 -- AOE ring display
-function chaos_bolt:GetAOERadius()
+function zanzak_zdarova:GetAOERadius()
 	local radius = 0
-	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_zanzak_chaos_bolt_aoe") then
+	if IsTalentLearned(self:GetCaster(), "special_bonus_unique_zanzak_zdarova_aoe") then
 		radius = self:GetSpecialValueFor("radius")
 	end
 	return radius
