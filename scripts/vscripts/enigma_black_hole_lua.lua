@@ -56,3 +56,13 @@ function enigma_black_hole_lua:OnChannelFinish( bInterrupted )
 		self:GetCaster():RemoveModifierByName("modifier_generic_spell_immune_lua")
 	end
 end
+
+function enigma_black_hole_lua:GetAbilityTextureName()
+	if self:GetLevel() == 5 then
+		return "zanzak_dnr_lvl_6"
+	elseif self:GetLevel() > 2 then
+		return "zanzak_dnr_lvl_3"
+	else
+		return "zanzak_dnr_lvl_1"
+	end
+end
