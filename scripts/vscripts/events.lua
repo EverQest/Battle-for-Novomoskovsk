@@ -260,7 +260,7 @@ end
 function COverthrowGameMode:OnItemPickUp( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	local owner = EntIndexToHScript( event.HeroEntityIndex )
-	r = 300
+	r = _G.GOLD_RUSH_ACTIVE and 600 or 300
 	--r = RandomInt(200, 400)
 	if event.itemname == "item_bag_of_gold" then
 		--print("Bag of gold picked up")
