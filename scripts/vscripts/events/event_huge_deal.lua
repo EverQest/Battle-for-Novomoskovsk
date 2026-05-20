@@ -4,17 +4,10 @@
     "Huge Deal" random event.
 
     Mechanics (60-second window):
-        1. Every item in the shop costs 50% of its normal price.
-           Applies to BOTH alive and dead heroes — dead heroes can still open
-           the shop and buy; the discount fires via ModifyGoldFilter regardless
-           of hero alive state.
-        2. Items bought during the event can be sold for the same price you paid.
-           This is NOT a special mechanic — Dota 2 sells items at 50% of base
-           cost by default, which equals the discounted purchase price exactly.
-
-    The discount itself lives in COverthrowGameMode:ModifyGoldFilter
-    (addon_game_mode.lua), gated by the global flag HUGE_DEAL_ACTIVE.
-    This event only needs to set that flag and manage the cosmetic buff.
+        Each hero receives a flat attack damage bonus equal to 30% of their
+        current gold at the moment the modifier is applied (event start, or
+        on respawn during the event).  The bonus is snapshotted — spending
+        gold afterwards does not reduce it.
 ]]
 
 require("events/base_event")
@@ -34,47 +27,40 @@ function EventHugeDeal:GetName()
 end
 
 function EventHugeDeal:GetDescription()
-    return "All items cost 50% less!"
+    return "Heroes gain attack damage equal to 30% of their current gold!"
 end
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHugeDeal:OnStart()
-    -- Activate the gold filter gate first, so any purchase that happens in
-    -- the same frame as OnStart is already discounted.
-    _G.HUGE_DEAL_ACTIVE = true
-
     self:_ApplyToAll()
-    print("[HugeDeal] Active – shop discount enabled.")
+    print("[HugeDeal] Active – attack damage bonus applied.")
 end
 
 function EventHugeDeal:OnEnd()
-    _G.HUGE_DEAL_ACTIVE = false
-
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
         if IsValidEntity(hero) then
             hero:RemoveModifierByName(self.MODIFIER_NAME)
         end
     end
-    print("[HugeDeal] Ended – discount removed.")
+    print("[HugeDeal] Ended – damage bonus removed.")
 end
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Think – runs every second while the event is active
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHugeDeal:Think()
-    -- Re-apply the buff icon to heroes who respawned during the event.
-    -- The gold discount already covers them via the global flag; this is
-    -- purely cosmetic (buff icon in the HUD).
+    -- Apply the buff to heroes who respawned during the event.
+    -- Their bonus is snapshotted from their gold at respawn time.
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
         if IsValidEntity(hero)
                 and hero:IsAlive()
                 and hero:IsRealHero()
                 and not hero:HasModifier(self.MODIFIER_NAME) then
-            hero:AddNewModifier(hero, nil, self.MODIFIER_NAME, {})
+            self:_ApplyToHero(hero)
         end
     end
 end
@@ -86,7 +72,15 @@ function EventHugeDeal:_ApplyToAll()
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
         if IsValidEntity(hero) and hero:IsRealHero() and hero:IsAlive() then
-            hero:AddNewModifier(hero, nil, self.MODIFIER_NAME, {})
+            self:_ApplyToHero(hero)
         end
     end
+end
+
+function EventHugeDeal:_ApplyToHero(hero)
+    local playerID    = hero:GetPlayerID()
+    local gold        = PlayerResource:GetGold(playerID)
+    local bonusDamage = math.floor(gold * 0.3)
+    hero:AddNewModifier(hero, nil, self.MODIFIER_NAME, { bonus_damage = bonusDamage })
+    print("[HugeDeal] " .. hero:GetName() .. " gets +" .. bonusDamage .. " attack damage (" .. gold .. " gold)")
 end

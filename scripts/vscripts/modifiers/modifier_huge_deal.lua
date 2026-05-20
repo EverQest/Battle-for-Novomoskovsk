@@ -1,22 +1,15 @@
 --[[
     modifier_huge_deal
     ~~~~~~~~~~~~~~~~~~~
-    Buff applied to heroes while the "Huge Deal" random event is active.
-    Its only gameplay purpose is to signal to the player that the 50% shop
-    discount is in effect.  The actual discount is enforced server-side in
-    COverthrowGameMode:ModifyGoldFilter (addon_game_mode.lua).
-
-    Sell price note:
-        Dota 2 sells items at 50% of their base cost by default.
-        During Huge Deal, players buy items at 50% of base cost.
-        Therefore sell_price == purchase_price automatically — no extra
-        code is needed to implement the "sell at what you paid" mechanic.
+    Buff applied to heroes during the "Huge Deal" random event.
+    Grants flat attack damage equal to 30% of the hero's gold at the moment
+    the modifier was applied (snapshotted).
 ]]
 
 modifier_huge_deal = class({})
 
 function modifier_huge_deal:IsHidden()
-    return false        -- Show the buff icon in the player HUD
+    return false
 end
 
 function modifier_huge_deal:IsDebuff()
@@ -24,11 +17,25 @@ function modifier_huge_deal:IsDebuff()
 end
 
 function modifier_huge_deal:IsPurgable()
-    return false        -- Cannot be dispelled
+    return false
 end
 
--- Soft persistent glow to distinguish this buff visually from other events.
--- particles/addons_gameplay/player_deferred_light.vpcf is already precached.
+function modifier_huge_deal:OnCreated(kv)
+    self.bonus_damage = kv.bonus_damage or 0
+end
+
+function modifier_huge_deal:OnRefresh(kv)
+    self.bonus_damage = kv.bonus_damage or 0
+end
+
+function modifier_huge_deal:DeclareFunctions()
+    return { MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE }
+end
+
+function modifier_huge_deal:GetModifierPreAttack_BonusDamage()
+    return self.bonus_damage
+end
+
 function modifier_huge_deal:GetEffectName()
     return "particles/addons_gameplay/player_deferred_light.vpcf"
 end
