@@ -31,7 +31,7 @@ function modifier_tinker_march_of_the_machines_lua_thinker:OnCreated( kv )
 		local machines_per_sec = self:GetAbility():GetSpecialValueFor( "machines_per_sec" ) -- special value
 		local collision_radius = self:GetAbility():GetSpecialValueFor( "collision_radius" ) -- special value
 		local splash_radius = self:GetAbility():GetSpecialValueFor( "splash_radius" ) -- special value
-		local splash_damage = self:GetAbility():GetAbilityDamage()
+		local kobold_damage = self:GetAbility():GetSpecialValueFor( "kobold_damage" ) -- special value
 
 		-- generate Data
 		local projectile_name = "particles/tinker_rollermaw.vpcf"
@@ -41,22 +41,8 @@ function modifier_tinker_march_of_the_machines_lua_thinker:OnCreated( kv )
 		local direction = (center-self:GetCaster():GetOrigin())
 		direction = Vector( direction.x, direction.y, 0 ):Normalized()
 		self:GetParent():SetForwardVector( direction )
-		
 		self.spawn_vector = self:GetParent():GetRightVector()
-
 		self.center_start = center - direction*self.radius
-
-		-- Talents
-		local is_Talent_20_L = self:GetCaster():FindAbilityByName("special_bonus_danya_cobolds_army"):GetLevel() -- 150
-		local is_Talent_25_R = self:GetCaster():FindAbilityByName("special_bonus_danya_cobolds_dmg"):GetLevel()
-
-		if is_Talent_20_L > 0 then
-			interval = interval / 2
-		end
-
-		if is_Talent_25_R > 0 then
-			splash_damage = splash_damage + splash_damage
-		end
 
 		-- Precache projectile info
 		self.projectile_info = {
@@ -78,7 +64,7 @@ function modifier_tinker_march_of_the_machines_lua_thinker:OnCreated( kv )
 
 			ExtraData = {
 				radius = splash_radius,
-				damage = splash_damage,
+				damage = kobold_damage,
 			}
 		}
 

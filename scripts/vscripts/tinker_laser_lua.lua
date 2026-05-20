@@ -1,3 +1,5 @@
+require("utility_functions")
+
 tinker_laser_lua = class({})
 LinkLuaModifier( "modifier_tinker_laser_lua", "modifiers/modifier_tinker_laser_lua", LUA_MODIFIER_MOTION_NONE )
 
@@ -29,10 +31,7 @@ function tinker_laser_lua:OnSpellStart()
 	local damage = self:GetSpecialValueFor("laser_damage")
 	local dmg_type = DAMAGE_TYPE_MAGICAL
 
-	-- Talents
-	local is_Talent_20_R = caster:FindAbilityByName("special_bonus_danya_laser_pure"):GetLevel()
-
-	if is_Talent_20_R > 0 then
+	if IsTalentLearned(caster, "special_bonus_unique_danya_laser_pure") then
 		dmg_type = DAMAGE_TYPE_PURE
 	end
 

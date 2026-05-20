@@ -998,7 +998,7 @@
 		}
 	}
 
-	"special_bonus_generic_hregen_300"
+	"special_bonus_generic_hregen_100"
 	{
 		"BaseClass"          			    "special_bonus_undefined"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1012,7 +1012,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"hregen"					"300" // kv that will be changed
+				"hregen"					"100" // kv that will be changed
 				"ability"					"generic" // ability name
 			}
 		}

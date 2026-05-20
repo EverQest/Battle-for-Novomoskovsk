@@ -122,12 +122,12 @@
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Душі кобальдів"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня кличе душі забутих кобальдів, вони злі, голодні та холодні"
 
-		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 "+ 150 ддо шкоди від Лазер-ка"
-		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "Аркани можно оновлювати"
-		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "Лазер-ок наносить ЧИСТУ шкоду"
-		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "Кличе ватагу кобальдів"
-		"Dota_Tooltip_ability_special_bonus_danya_cobolds_dmg"					 "Шкода від кобальдів x2"
-		"Dota_Tooltip_ability_special_bonus_danya_ult_manacost"					 "Переосмислення коштує на 75% менше мани"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 	 "Лазер-ок наносить на 200 більше шкоди"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_acrane_boots"					 "Переосмислення працює на Аркани"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_pure"					 "Лазер-ок наносить ЧИСТУ шкоду"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_cobolds_army"					 "Душі кобальдів призивають вдвічі більше кобальдів"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_cobolds_dmg"					 "Шкода від кобальдів + 100"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_ult_manacost"					 "Переосмислення коштує на 75% менше мани"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Некит
 		"npc_dota_hero_phantom_lancer"         "Некіт"

@@ -122,12 +122,12 @@
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua"					 "Души кобольдов"
 		"Dota_Tooltip_ability_tinker_march_of_the_machines_lua_Description"		 "Даня призывает души забытых и убитых кобольдов, они очень злые и хотят мести"
 
-		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 "+ 150 к урону от Лазер-ка"
-		"Dota_Tooltip_ability_special_bonus_danya_acrane_boots"					 "Арканы можно рефрешить"
-		"Dota_Tooltip_ability_special_bonus_danya_laser_pure"					 "Лазер ок наност ЧИСТЫЙ урон"
-		"Dota_Tooltip_ability_special_bonus_danya_cobolds_army"					 "Призывает АРМИЮ кобольдов"
-		"Dota_Tooltip_ability_special_bonus_danya_cobolds_dmg"					 "Урон от кобольдов x2"
-		"Dota_Tooltip_ability_special_bonus_danya_ult_manacost"					 "Переосмысление стоит на 75% меньше маны"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_dmg"					 	 "Лазер ок наносит на 200 больше урона"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_acrane_boots"					 "Переосмысление работает на Арканы"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_laser_pure"					 "Лазер ок наносит ЧИСТЫЙ урон"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_cobolds_army"					 "Призывает в два раза больше кобольдов"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_cobolds_dmg"					 "Урон от кобольдов + 100"
+		"Dota_Tooltip_ability_special_bonus_unique_danya_ult_manacost"					 "Переосмысление стоит на 75% меньше маны"
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Некит
 		"npc_dota_hero_phantom_lancer"         "Некит"
