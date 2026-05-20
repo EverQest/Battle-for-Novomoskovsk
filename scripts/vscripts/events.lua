@@ -7,7 +7,10 @@ function COverthrowGameMode:OnGameRulesStateChange()
 	local nNewState = GameRules:State_Get()
 	--print( "OnGameRulesStateChange: " .. nNewState )
 
-	if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
+	if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+    	self:GatherAndRegisterValidTeams()
+		
+	elseif nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
 		self:AssignTeams()
 
 	elseif nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
