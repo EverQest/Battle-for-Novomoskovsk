@@ -82,6 +82,11 @@ end
 
 -- Pick a random event from the pool and activate it.
 function RandomEventManager:_TriggerRandomEvent()
+    if self._isActive then
+        print("[EventManager] Event already active – trigger ignored.")
+        return
+    end
+
     if #self._registeredEvents == 0 then
         print("[EventManager] No events registered – skipping.")
         return
