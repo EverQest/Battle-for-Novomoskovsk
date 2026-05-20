@@ -595,16 +595,25 @@ function COverthrowGameMode:ModifyGoldFilter( filterTable )
 
 	-- ── Huge Deal: 50% discount on shop purchases ─────────────────────────────
 	-- Reason 3 = PurchaseConsumable, 4 = PurchaseItem (documented shop reasons).
-	-- Reason 0 = Unspecified — included as a fallback because some Dota 2 engine
-	-- builds route shop purchases through reason 0 instead of 3/4.
-	-- This is safe here because every manual ModifyGold call in this game uses a
-	-- POSITIVE amount, so no negative reason-0 changes exist outside shop buys.
+	-- Reason 0 = Unspecified — fallback for builds that route purchases through it.
+	-- Some Dota 2 builds pass the cost as a positive amount (engine implies direction
+	-- from the reason code); others pass it as a negative gold change. Both are handled.
 	-- Explicitly excluded: 2 (Buyback), 5 (AbilityCost used by Antimage Mana Void).
-	if _G.HUGE_DEAL_ACTIVE and amount < 0
-			and ( reason == 0 or reason == 3 or reason == 4 ) then
-		-- Halve the cost; math.floor on the absolute value rounds in the
-		-- player's favour for odd-priced items (e.g. 125g → 62g).
-		filterTable["gold"] = -math.floor( math.abs( amount ) / 2 )
+	-- Uncomment the line below to diagnose if the filter fires and with what values:
+	-- if _G.HUGE_DEAL_ACTIVE then print("[HugeDeal] filter: amount=" .. amount .. " reason=" .. reason .. " player=" .. playerID) end
+	if _G.HUGE_DEAL_ACTIVE and playerID ~= -1 then
+		if reason == 3 or reason == 4 then
+			-- Explicit purchase reasons: apply discount regardless of amount sign.
+			if amount < 0 then
+				filterTable["gold"] = -math.floor( math.abs( amount ) / 2 )
+			elseif amount > 0 then
+				filterTable["gold"] = math.floor( amount / 2 )
+			end
+		elseif reason == 0 and amount < 0 then
+			-- Reason-0 fallback: negative amount is the only purchase-sourced negative
+			-- here because all scripted gold grants in this game use positive amounts.
+			filterTable["gold"] = -math.floor( math.abs( amount ) / 2 )
+		end
 	end
 
 	return true
