@@ -25,7 +25,7 @@ require("events/event_wtf_chaos")   -- Event 5: WTF Chaos
 -- Timing constants – easy to tweak
 -- ──────────────────────────────────────────────────────────────────────────────
 RANDOM_EVENT_INTERVAL = 180   -- seconds between event waves
-RANDOM_EVENT_DURATION = 60    -- seconds every event lasts
+RANDOM_EVENT_DURATION = 30    -- seconds every event lasts
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Manager singleton
