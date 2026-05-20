@@ -20,6 +20,7 @@ require("events/event_super_sonic") -- Event 2: Super Sonic
 require("events/event_huge_deal")   -- Event 3: Huge Deal
 require("events/event_true_sight")  -- Event 4: True Sight
 require("events/event_wtf_chaos")   -- Event 5: WTF Chaos
+require("events/event_horror")      -- Event 6: Horror
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Timing constants – easy to tweak
@@ -148,6 +149,7 @@ RandomEventManager:RegisterEvent(EventSuperSonic)
 RandomEventManager:RegisterEvent(EventHugeDeal)
 RandomEventManager:RegisterEvent(EventTrueSight)
 RandomEventManager:RegisterEvent(EventWTFChaos)
+RandomEventManager:RegisterEvent(EventHorror)
 
 -- Add future events here:
 -- require("events/event_my_event")
