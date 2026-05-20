@@ -21,11 +21,19 @@ function modifier_huge_deal:IsPurgable()
 end
 
 function modifier_huge_deal:OnCreated(kv)
-    self.bonus_damage = kv.bonus_damage or 0
+    self.bonus_damage = 0
+    if IsServer() then
+        self:StartIntervalThink(5.0)
+    end
 end
 
 function modifier_huge_deal:OnRefresh(kv)
-    self.bonus_damage = kv.bonus_damage or 0
+end
+
+function modifier_huge_deal:OnIntervalThink()
+    local playerID    = self:GetParent():GetPlayerID()
+    local gold        = PlayerResource:GetGold(playerID)
+    self.bonus_damage = math.floor(gold * 0.3)
 end
 
 function modifier_huge_deal:DeclareFunctions()

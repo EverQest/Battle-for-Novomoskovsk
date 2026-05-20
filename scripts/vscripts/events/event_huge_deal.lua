@@ -78,9 +78,5 @@ function EventHugeDeal:_ApplyToAll()
 end
 
 function EventHugeDeal:_ApplyToHero(hero)
-    local playerID    = hero:GetPlayerID()
-    local gold        = PlayerResource:GetGold(playerID)
-    local bonusDamage = math.floor(gold * 0.3)
-    hero:AddNewModifier(hero, nil, self.MODIFIER_NAME, { bonus_damage = bonusDamage })
-    print("[HugeDeal] " .. hero:GetName() .. " gets +" .. bonusDamage .. " attack damage (" .. gold .. " gold)")
+    hero:AddNewModifier(hero, nil, self.MODIFIER_NAME, {})
 end
