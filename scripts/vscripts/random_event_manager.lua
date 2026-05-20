@@ -141,6 +141,68 @@ function RandomEventManager:IsEventActive() return self._isActive end
 function RandomEventManager:GetActiveEvent() return self._activeEvent end
 
 -- ──────────────────────────────────────────────────────────────────────────────
+-- Debug console command: event_force_trigger <name>
+-- Name matching is case-insensitive; spaces and underscores are interchangeable.
+-- Example: event_force_trigger horror
+--          event_force_trigger huge_deal
+-- ──────────────────────────────────────────────────────────────────────────────
+function RandomEventManager:ForceEvent(name)
+    -- Normalise: lowercase + underscores → spaces
+    local function norm(s) return s:lower():gsub("_", " ") end
+
+    local target = nil
+    for _, eventClass in ipairs(self._registeredEvents) do
+        local tmp = eventClass.New()
+        if norm(tmp:GetName()) == norm(name) then
+            target = eventClass
+            break
+        end
+    end
+
+    if not target then
+        print("[EventManager] Unknown event: '" .. name .. "'")
+        local names = {}
+        for _, eventClass in ipairs(self._registeredEvents) do
+            table.insert(names, eventClass.New():GetName())
+        end
+        print("[EventManager] Available events: " .. table.concat(names, ", "))
+        return
+    end
+
+    -- End any running event cleanly first.
+    if self._isActive then
+        Timers:RemoveTimer("rem_end_timer")
+        self:_EndCurrentEvent()
+    end
+
+    -- Start the forced event.
+    self._activeEvent = target.New()
+    self._isActive    = true
+
+    print("[EventManager] Force-triggering: " .. self._activeEvent:GetName())
+
+    CustomGameEventManager:Send_ServerToAllClients("random_event_started", {
+        event_name        = self._activeEvent:GetName(),
+        event_description = self._activeEvent:GetDescription(),
+        duration          = RANDOM_EVENT_DURATION,
+    })
+
+    self._activeEvent:OnStart()
+
+    Timers:CreateTimer("rem_end_timer", {
+        endTime  = RANDOM_EVENT_DURATION,
+        callback = function()
+            local ok, err = pcall(function() self:_EndCurrentEvent() end)
+            if not ok then
+                print("[EventManager] ERROR ending event: " .. tostring(err))
+                self._activeEvent = nil
+                self._isActive    = false
+            end
+        end,
+    })
+end
+
+-- ──────────────────────────────────────────────────────────────────────────────
 -- Bootstrap: initialise the singleton and register events.
 -- ──────────────────────────────────────────────────────────────────────────────
 RandomEventManager:_Init()
@@ -154,3 +216,13 @@ RandomEventManager:RegisterEvent(EventHorror)
 -- Add future events here:
 -- require("events/event_my_event")
 -- RandomEventManager:RegisterEvent(EventMyEvent)
+
+-- Console command for manual testing (cheat-flagged, host only).
+Convars:RegisterCommand("event_force_trigger", function(_, name)
+    if not name or name == "" then
+        print("Usage: event_force_trigger <event_name>")
+        print("Example: event_force_trigger horror")
+        return
+    end
+    RandomEventManager:ForceEvent(name)
+end, "Force-trigger a random event by name (debug)", FCVAR_CHEAT)
