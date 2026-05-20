@@ -59,9 +59,12 @@ function RandomEventManager:Start()
         endTime  = RANDOM_EVENT_INTERVAL,
         callback = function()
             if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-                self:_TriggerRandomEvent()
+                local ok, err = pcall(function() self:_TriggerRandomEvent() end)
+                if not ok then
+                    print("[EventManager] ERROR triggering event: " .. tostring(err))
+                end
             end
-            return RANDOM_EVENT_INTERVAL
+            return RANDOM_EVENT_INTERVAL  -- always repeat, even after errors
         end,
     })
 
@@ -105,7 +108,12 @@ function RandomEventManager:_TriggerRandomEvent()
     Timers:CreateTimer("rem_end_timer", {
         endTime  = RANDOM_EVENT_DURATION,
         callback = function()
-            self:_EndCurrentEvent()
+            local ok, err = pcall(function() self:_EndCurrentEvent() end)
+            if not ok then
+                print("[EventManager] ERROR ending event: " .. tostring(err))
+                self._activeEvent = nil
+                self._isActive    = false
+            end
         end,
     })
 end
