@@ -582,13 +582,13 @@ function COverthrowGameMode:ModifyGoldFilter( filterTable )
 	local reason   = filterTable["reason"]
 	local playerID = filterTable["player_id_const"]
 
-	-- ── Gold Rush: ×2 gold for heroes inside the center zone ─────────────────
+	-- ── Gold Rush: ×3 gold for heroes inside the center zone ─────────────────
 	if _G.GOLD_RUSH_ACTIVE and amount > 0 and playerID ~= -1 then
 		local hero = PlayerResource:GetSelectedHeroEntity( playerID )
 		if hero ~= nil and IsValidEntity( hero ) then
 			local dist = ( hero:GetAbsOrigin() - _G.GOLD_RUSH_CENTER ):Length2D()
 			if dist <= _G.GOLD_RUSH_RADIUS then
-				filterTable["gold"] = amount * 2
+				filterTable["gold"] = amount * 3
 			end
 		end
 	end

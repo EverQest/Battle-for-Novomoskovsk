@@ -62,17 +62,19 @@ function EventGoldRush:OnStart()
     _G.GOLD_RUSH_CENTER = self._centerOrigin
     _G.GOLD_RUSH_RADIUS = self.CENTER_ZONE_RADIUS
 
-    -- Zone ring particle.  Swap the path for a ring-specific particle if desired.
-    -- particles/items2_fx/veil_of_discord.vpcf creates a visible area effect.
+    -- Zone ring particle.
     self._zoneParticle = ParticleManager:CreateParticle(
         "particles/items2_fx/veil_of_discord.vpcf",
         PATTACH_WORLDORIGIN,
         nil
     )
-    ParticleManager:SetParticleControl(self._zoneParticle, 0, self._centerOrigin)
-    -- CP1 encodes radius for many ring-type particles.
-    ParticleManager:SetParticleControl(self._zoneParticle, 1,
-        Vector(self.CENTER_ZONE_RADIUS, 0, 0))
+    -- CreateParticle returns -1 on failure (e.g. path not found); guard before use.
+    if self._zoneParticle ~= -1 then
+        ParticleManager:SetParticleControl(self._zoneParticle, 0, self._centerOrigin)
+        -- CP1 encodes radius for many ring-type particles.
+        ParticleManager:SetParticleControl(self._zoneParticle, 1,
+            Vector(self.CENTER_ZONE_RADIUS, 0, 0))
+    end
 
     print("[GoldRush] Active – centre=" .. tostring(self._centerOrigin)
           .. "  radius=" .. self.CENTER_ZONE_RADIUS)
@@ -83,7 +85,7 @@ function EventGoldRush:OnEnd()
     _G.GOLD_RUSH_CENTER = nil
     _G.GOLD_RUSH_RADIUS = nil
 
-    if self._zoneParticle then
+    if self._zoneParticle and self._zoneParticle ~= -1 then
         ParticleManager:DestroyParticle(self._zoneParticle, false)
         ParticleManager:ReleaseParticleIndex(self._zoneParticle)
         self._zoneParticle = nil
@@ -106,7 +108,7 @@ end
 function EventGoldRush:Think()
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
-        if IsValidEntity(hero) and hero:IsAlive() then
+        if IsValidEntity(hero) and hero:IsRealHero() and hero:IsAlive() then
             local inZone = self:_IsInZone(hero:GetAbsOrigin())
 
             if inZone then

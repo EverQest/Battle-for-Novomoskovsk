@@ -5,6 +5,8 @@
     zone.  The buff icon signals to the player that gold gains are doubled.
     Applied and refreshed every second by EventGoldRush:Think().
     Duration is intentionally short (2 s) so it falls off quickly on exit.
+    Gold multiplier is ×3 (handled by ModifyGoldFilter in addon_game_mode.lua).
+    Kills inside the zone grant ×2 the normal bounty (handled by OnEntityKilled).
 ]]
 
 modifier_gold_rush_zone_indicator = class({})
