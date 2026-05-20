@@ -226,11 +226,12 @@ function COverthrowGameMode:InitGameMode()
 	-- Show the ending scoreboard immediately
 	GameRules:SetCustomGameEndDelay( 0 )
 	GameRules:SetCustomVictoryMessageDuration( 10 )
-	GameRules:SetCustomGameSetupTimeout( 0.0 )
+	GameRules:SetCustomGameSetupTimeout( 30.0 )
 	GameRules:SetPreGameTime( 10.0 )
 	GameRules:SetStrategyTime( 10.0 )
 	if self.m_bFastPlay then
 		GameRules:SetStrategyTime( 1.0 )
+		GameRules:SetCustomGameSetupTimeout( 0.0 )
 	end
 	GameRules:SetHeroSelectPenaltyTime( 0.0 )
 	GameRules:SetShowcaseTime( 0.0 )
