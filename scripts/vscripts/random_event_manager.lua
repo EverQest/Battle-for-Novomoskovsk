@@ -226,3 +226,13 @@ Convars:RegisterCommand("event_force_trigger", function(_, name)
     end
     RandomEventManager:ForceEvent(name)
 end, "Force-trigger a random event by name (debug)", FCVAR_CHEAT)
+
+-- Chat command: any player types "-allvision" to trigger the True Sight event.
+GameEvents.ListenForEvent("player_chat", function(event)
+    local msg = event.text:lower():match("^%s*(.-)%s*$")  -- trim whitespace
+    if msg == "-allvision" then
+        local playerID = event.playerid
+        print("[EventManager] -allvision triggered by player " .. playerID)
+        RandomEventManager:ForceEvent("true sight")
+    end
+end)
