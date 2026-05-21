@@ -331,6 +331,7 @@ function COverthrowGameMode:SetUpFountains()
 	LinkLuaModifier( "modifier_gold_rush_zone_indicator", "modifiers/modifier_gold_rush_zone_indicator", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_super_sonic", "modifiers/modifier_super_sonic", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_huge_deal", "modifiers/modifier_huge_deal", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_king_slayer", "modifiers/modifier_king_slayer", LUA_MODIFIER_MOTION_NONE )
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do
