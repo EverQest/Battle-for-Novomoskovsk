@@ -19,6 +19,7 @@
 *.vpdi_c
 *.vxml_c
 *.vjs_c
+*.vpdi_c
 
 # Gen folders
 maps
