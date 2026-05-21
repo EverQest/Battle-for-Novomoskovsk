@@ -64,7 +64,7 @@ function EventGoldRush:OnStart()
 
     -- Zone ring particle.
     self._zoneParticle = ParticleManager:CreateParticle(
-        "particles/items2_fx/veil_of_discord.vpcf",
+        "particles/econ/courier/courier_beetlejaw_gold/courier_beetlejaw_gold_ambient_twinkle.vpcf",
         PATTACH_WORLDORIGIN,
         nil
     )
