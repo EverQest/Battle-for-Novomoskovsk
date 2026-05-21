@@ -17,6 +17,8 @@
 *.vcss_c
 *.vtex_c
 *.vpdi_c
+*.vxml_c
+*.vjs_c
 
 # Gen folders
 maps
