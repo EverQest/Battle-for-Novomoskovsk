@@ -22,6 +22,7 @@ require("events/event_true_sight")  -- Event 4: True Sight
 require("events/event_wtf_chaos")   -- Event 5: WTF Chaos
 require("events/event_horror")      -- Event 6: Horror
 require("events/event_king_slayer") -- Event 7: King Slayer
+require("events/event_dog_days")   -- Event 8: Dog Days
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Timing constants – easy to tweak
@@ -214,6 +215,7 @@ RandomEventManager:RegisterEvent(EventTrueSight)
 RandomEventManager:RegisterEvent(EventWTFChaos)
 RandomEventManager:RegisterEvent(EventHorror)
 RandomEventManager:RegisterEvent(EventKingSlayer)
+RandomEventManager:RegisterEvent(EventDogDays)
 
 -- Add future events here:
 -- require("events/event_my_event")
