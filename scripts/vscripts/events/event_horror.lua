@@ -36,6 +36,9 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHorror:OnStart()
+    EmitGlobalSound("EventStart")
+    local n = math.random(1, 3)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("EventHorror" .. n) end)
     self._savedVision = {}
     self._savedWards  = {}
     self:_ApplyToAll()

@@ -34,6 +34,9 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHugeDeal:OnStart()
+    EmitGlobalSound("EventStart")
+    local n = math.random(1, 3)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("EventHugeDeal" .. n) end)
     self:_ApplyToAll()
     print("[HugeDeal] Active – attack damage bonus applied.")
 end

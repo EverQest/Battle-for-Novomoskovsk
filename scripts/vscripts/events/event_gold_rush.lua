@@ -47,6 +47,10 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventGoldRush:OnStart()
+    EmitGlobalSound("EventStart")
+    local n = math.random(1, 3)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("EventGoldRush" .. n) end)
+
     -- Locate the map centre.  The entity "center_experience_ring_particles"
     -- is placed at the geometric centre of every Novomoskovsk map.
     local centreEnt = Entities:FindByName(nil, "center_experience_ring_particles")

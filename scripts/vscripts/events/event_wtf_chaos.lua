@@ -46,6 +46,9 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventWTFChaos:OnStart()
+    EmitGlobalSound("EventStart")
+    local n = math.random(1, 3)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("EventWtfChaos" .. n) end)
     _G.WTF_CHAOS_ACTIVE = true
 
     Timers:CreateTimer("wtf_chaos_fast_think", {

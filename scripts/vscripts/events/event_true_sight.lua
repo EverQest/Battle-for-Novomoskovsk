@@ -31,6 +31,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight:OnStart()
+    EmitGlobalSound("EventStart")
     GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     print("[TrueSight] Active – fog of war disabled.")
 end

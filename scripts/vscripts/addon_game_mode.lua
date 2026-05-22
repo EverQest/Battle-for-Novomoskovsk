@@ -64,6 +64,9 @@ function Precache( context )
 
 	-- Cache overthrow-specific sounds
 		PrecacheResource( "soundfile", "soundevents/game_sounds_overthrow.vsndevts", context )
+
+	-- Cache random event announcement sounds
+		PrecacheResource( "soundfile", "soundevents/game_sounds_events.vsndevts", context )
 end
 
 function Activate()
