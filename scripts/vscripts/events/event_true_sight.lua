@@ -4,15 +4,21 @@
     "True Sight" random event.
 
     Mechanics (30-second window):
-        Fog of war is disabled for the entire duration, giving every player
-        full vision of the whole map — identical to the "-allvision" cheat.
-        Restored on event end.
+        Full vision of the whole map for every team.
+
+    Implementation note:
+        SetFogOfWarDisabled(true) was replaced with per-team AddFOWViewer calls.
+        SetFogOfWarDisabled triggers the ward "true-sight detection" blue glow
+        which does not clean up reliably on disable; AddFOWViewer has no such
+        side-effect and cleans up instantly via RemoveFOWViewer.
 ]]
 
 require("events/base_event")
 
 _G.EventTrueSight         = setmetatable({}, { __index = BaseRandomEvent })
 _G.EventTrueSight.__index = _G.EventTrueSight
+
+local MAP_VISION_RADIUS = 30000   -- large enough to cover any Novomoskovsk map
 
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight.New()
@@ -32,11 +38,23 @@ end
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight:OnStart()
     EmitGlobalSound("EventStart")
-    GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
-    print("[TrueSight] Active – fog of war disabled.")
+    self._fowHandles = {}
+    -- Grant a massive vision circle to every team. Using the map origin as the
+    -- anchor with a radius large enough to cover the entire map.
+    local center = Vector(0, 0, 0)
+    for team = DOTA_TEAM_GOODGUYS, DOTA_TEAM_CUSTOM_8 do
+        local handle = AddFOWViewer(team, center, MAP_VISION_RADIUS, RANDOM_EVENT_DURATION + 60, false)
+        if handle then
+            self._fowHandles[team] = handle
+        end
+    end
+    print("[TrueSight] Active – full map vision via FOW viewers.")
 end
 
 function EventTrueSight:OnEnd()
-    GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
-    print("[TrueSight] Ended – fog of war restored.")
+    for team, handle in pairs(self._fowHandles) do
+        RemoveFOWViewer(team, handle)
+    end
+    self._fowHandles = {}
+    print("[TrueSight] Ended – vision restored.")
 end

@@ -57,6 +57,16 @@ end
 function RandomEventManager:Start()
     print("[EventManager] Started. First event fires in " .. RANDOM_EVENT_INTERVAL .. "s.")
 
+    -- Chat command: any player types "-allvision" to trigger the True Sight event.
+    ListenToGameEvent("player_chat", function(event)
+        local msg = event.text:lower():match("^%s*(.-)%s*$")  -- trim whitespace
+        if msg == "-allvision" then
+            local playerID = event.playerid
+            print("[EventManager] -allvision triggered by player " .. playerID)
+            RandomEventManager:ForceEvent("true sight")
+        end
+    end, nil)
+
     -- Repeating timer: fires every RANDOM_EVENT_INTERVAL seconds.
     Timers:CreateTimer("rem_interval_timer", {
         endTime  = RANDOM_EVENT_INTERVAL,
@@ -231,12 +241,3 @@ Convars:RegisterCommand("event_force_trigger", function(_, name)
     RandomEventManager:ForceEvent(name)
 end, "Force-trigger a random event by name (debug)", FCVAR_CHEAT)
 
--- Chat command: any player types "-allvision" to trigger the True Sight event.
-GameEvents.ListenForEvent("player_chat", function(event)
-    local msg = event.text:lower():match("^%s*(.-)%s*$")  -- trim whitespace
-    if msg == "-allvision" then
-        local playerID = event.playerid
-        print("[EventManager] -allvision triggered by player " .. playerID)
-        RandomEventManager:ForceEvent("true sight")
-    end
-end)
