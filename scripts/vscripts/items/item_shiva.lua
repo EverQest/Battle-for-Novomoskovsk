@@ -7,6 +7,12 @@ LinkLuaModifier("modifier_item_imba_shivas_blast_true_sight", "items/item_shiva.
 LinkLuaModifier("modifier_item_imba_shiva_frost_goddess_breath", "items/item_shiva", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_item_imba_shiva_truesight_null", "items/item_shiva", LUA_MODIFIER_MOTION_NONE)
 
+function item_imba_shivas_guard:Precache( context )
+	PrecacheResource( "particle", "particles/econ/events/fall_2022/shivas/shivas_guard_fall2022_active.vpcf", context )
+	PrecacheResource( "particle", "particles/items2_fx/shivas_guard_impact.vpcf", context )
+	PrecacheResource( "particle", "particles/items2_fx/true_sight_debuff.vpcf", context )
+end
+
 function item_imba_shivas_guard:GetIntrinsicModifierName()
 	return "modifier_imba_shiva_handler"
 end
@@ -29,7 +35,7 @@ function item_imba_shivas_guard:OnSpellStart()
 	-- Play cast sound
 	self:GetCaster():EmitSound("ItemMagmaBlame")
 
-	local blast_pfx = ParticleManager:CreateParticle("particles/shivas_guard_active.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+	local blast_pfx = ParticleManager:CreateParticle("particles/econ/events/fall_2022/shivas/shivas_guard_fall2022_active.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
 	ParticleManager:SetParticleControl(blast_pfx, 0, self:GetCaster():GetAbsOrigin())
 	ParticleManager:SetParticleControl(blast_pfx, 1, Vector(blast_radius, blast_duration * 1.33, blast_speed))
 	ParticleManager:ReleaseParticleIndex(blast_pfx)
@@ -64,7 +70,7 @@ function item_imba_shivas_guard:OnSpellStart()
 
 			-- If not, blast it
 			if not enemy_has_been_hit then
-				local hit_pfx = ParticleManager:CreateParticle("particles/items2_fx/shivas_guard_impact.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+				local hit_pfx = ParticleManager:CreateParticle("particles/items2_fx/shivas_guard_impact.vpcf", PATTACH_ABSORIGIN_FOLLOW, enemy)
 				ParticleManager:SetParticleControl(hit_pfx, 0, enemy:GetAbsOrigin())
 				ParticleManager:SetParticleControl(hit_pfx, 1, enemy:GetAbsOrigin())
 				ParticleManager:ReleaseParticleIndex(hit_pfx)
