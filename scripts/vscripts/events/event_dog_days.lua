@@ -9,7 +9,7 @@
         after a 1.7-second warning, deals 30% of the victim's CURRENT
         HP as pure damage to every hero inside the 200-unit impact radius.
 
-        Waves fire every 1 seconds (5 strikes per wave), starting
+        Each wave fires 5 strikes per living hero, starting
         immediately when the event activates.
 ]]
 
@@ -73,7 +73,7 @@ end
 -- Helpers
 -- ──────────────────────────────────────────────────────────────────────────────
 
--- Fire STRIKES_PER_WAVE sunstrikes at random heroes with scatter.
+-- Fire STRIKES_PER_WAVE sunstrikes at every living hero with scatter.
 function EventDogDays:_LaunchWave()
     local alive = {}
     for _, hero in pairs(HeroList:GetAllHeroes()) do
@@ -83,13 +83,14 @@ function EventDogDays:_LaunchWave()
     end
     if #alive == 0 then return end
 
-    for _ = 1, STRIKES_PER_WAVE do
-        local target = alive[RandomInt(1, #alive)]
-        local base   = target:GetAbsOrigin()
-        local angle  = RandomFloat(0, 2 * math.pi)
-        local dist   = RandomFloat(0, SCATTER_RADIUS)
-        local pos    = base + Vector(math.cos(angle) * dist, math.sin(angle) * dist, 0)
-        self:_FireStrike(pos)
+    for _, target in ipairs(alive) do
+        local base = target:GetAbsOrigin()
+        for _ = 1, STRIKES_PER_WAVE do
+            local angle = RandomFloat(0, 2 * math.pi)
+            local dist  = RandomFloat(0, SCATTER_RADIUS)
+            local pos   = base + Vector(math.cos(angle) * dist, math.sin(angle) * dist, 0)
+            self:_FireStrike(pos)
+        end
     end
 end
 

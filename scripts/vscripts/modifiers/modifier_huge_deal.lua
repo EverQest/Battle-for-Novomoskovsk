@@ -21,19 +21,39 @@ function modifier_huge_deal:IsPurgable()
 end
 
 function modifier_huge_deal:OnCreated(kv)
-    self.bonus_damage = 0
     if IsServer() then
-        self:StartIntervalThink(5.0)
+        self:_Recalculate()
+        self:StartIntervalThink(1.0)
+    else
+        self._emberFx = ParticleManager:CreateParticle(
+            "particles/econ/items/ember_spirit/ember_spirit_vanishing_flame/ember_spirit_vanishing_flame_ambient.vpcf",
+            PATTACH_ABSORIGIN_FOLLOW,
+            self:GetParent()
+        )
     end
+end
+
+function modifier_huge_deal:OnIntervalThink()
+    self:_Recalculate()
+end
+
+function modifier_huge_deal:_Recalculate()
+    local playerID = self:GetParent():GetPlayerID()
+    local gold     = PlayerResource:GetGold(playerID)
+    self:SetStackCount(math.floor(gold * 0.3))
 end
 
 function modifier_huge_deal:OnRefresh(kv)
 end
 
-function modifier_huge_deal:OnIntervalThink()
-    local playerID    = self:GetParent():GetPlayerID()
-    local gold        = PlayerResource:GetGold(playerID)
-    self.bonus_damage = math.floor(gold * 0.3)
+function modifier_huge_deal:OnDestroy()
+    if not IsServer() then
+        if self._emberFx and self._emberFx ~= -1 then
+            ParticleManager:DestroyParticle(self._emberFx, false)
+            ParticleManager:ReleaseParticleIndex(self._emberFx)
+            self._emberFx = nil
+        end
+    end
 end
 
 function modifier_huge_deal:DeclareFunctions()
@@ -41,7 +61,7 @@ function modifier_huge_deal:DeclareFunctions()
 end
 
 function modifier_huge_deal:GetModifierPreAttack_BonusDamage()
-    return self.bonus_damage
+    return self:GetStackCount()
 end
 
 function modifier_huge_deal:GetEffectName()

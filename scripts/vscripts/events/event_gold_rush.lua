@@ -66,18 +66,16 @@ function EventGoldRush:OnStart()
     _G.GOLD_RUSH_CENTER = self._centerOrigin
     _G.GOLD_RUSH_RADIUS = self.CENTER_ZONE_RADIUS
 
-    -- Zone ring particle.
+    -- Zone ring particle. CP0 = center, CP1 = absolute position at radius distance.
     self._zoneParticle = ParticleManager:CreateParticle(
-        "particles/econ/courier/courier_beetlejaw_gold/courier_beetlejaw_gold_ambient_twinkle.vpcf",
+        "particles/econ/events/ti9/shovel/shovel_baby_roshan_persist_sparkle.vpcf",
         PATTACH_WORLDORIGIN,
         nil
     )
-    -- CreateParticle returns -1 on failure (e.g. path not found); guard before use.
     if self._zoneParticle ~= -1 then
         ParticleManager:SetParticleControl(self._zoneParticle, 0, self._centerOrigin)
-        -- CP1 encodes radius for many ring-type particles.
         ParticleManager:SetParticleControl(self._zoneParticle, 1,
-            Vector(self.CENTER_ZONE_RADIUS, 0, 0))
+            self._centerOrigin + Vector(self.CENTER_ZONE_RADIUS, 0, 0))
     end
 
     print("[GoldRush] Active – centre=" .. tostring(self._centerOrigin)

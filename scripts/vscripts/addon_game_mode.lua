@@ -41,7 +41,7 @@ function Precache( context )
        	PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
        	PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
        	PrecacheResource( "particle", "particles/last_hit/last_hit.vpcf", context )
-       	PrecacheResource( "particle", "particles/units/heroes/hero_zuus/zeus_taunt_coin.vpcf", context )
+       	PrecacheResource( "particle", "particles/items5_fx/philosopher_stone_destruction_coins.vpcf", context )
        	PrecacheResource( "particle", "particles/addons_gameplay/player_deferred_light.vpcf", context )
        	PrecacheResource( "particle", "particles/items_fx/black_king_bar_avatar.vpcf", context )
        	PrecacheResource( "particle", "particles/treasure_courier_death.vpcf", context )
@@ -49,6 +49,7 @@ function Precache( context )
        	PrecacheResource( "particle", "particles/econ/items/lone_druid/lone_druid_cauldron/lone_druid_bear_entangle_dust_cauldron.vpcf", context )
        	PrecacheResource( "particle", "particles/newplayer_fx/npx_landslide_debris.vpcf", context )
        	PrecacheResource( "particle", "particles/custom_phase_boots_fall_2021_streaks.vpcf", context )
+       	PrecacheResource( "particle", "particles/econ/events/ti9/shovel/shovel_baby_roshan_persist_sparkle.vpcf", context )
        	
 	--Cache particles for traps
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_dragon_knight", context )
@@ -58,6 +59,11 @@ function Precache( context )
 
 	--Cache particles for skils
 		PrecacheResource( "particle_folder", "particles/generic_gameplay/", context )
+
+	-- Cache Dog Days event particles (sun strike warning + impact)
+		PrecacheResource( "particle_folder", "particles/units/heroes/hero_invoker", context )
+		PrecacheResource( "particle", "particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf", context )
+
 
 	--Cache sounds for traps
 		PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )

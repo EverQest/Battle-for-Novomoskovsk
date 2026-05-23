@@ -15,7 +15,7 @@
 
         If the kill leader changes mid-event the crown transfers to the new leader.
         On a tie the player who was already king retains the crown; if no one was
-        king yet the tied player with the lowest player-ID is crowned.
+        king yet a random player among the tied leaders is crowned.
         If everyone has 0 kills no king is crowned.
 ]]
 
@@ -111,8 +111,8 @@ function EventKingSlayer:_GetTopKillPlayer()
         end
     end
 
-    -- Otherwise crown the first (lowest player-ID) at the top
-    return topPlayers[1], topKills
+    -- Otherwise crown a random tied player
+    return topPlayers[RandomInt(1, #topPlayers)], topKills
 end
 
 function EventKingSlayer:_UpdateKing()
