@@ -324,6 +324,7 @@
 		"Dota_Tooltip_ability_slark_essence_shift_lua"								"Потрогать за какашки"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_AbilityDuration"				"DEBUFF DURATION:"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_agi_gain"						"AGI GAIN:"
+		"Dota_Tooltip_ability_slark_essence_shift_lua_keep_after_death_pct"			"%KEEP AFTER DEATH:"
 		"Dota_Tooltip_ability_slark_essence_shift_lua_Description"					"Некитос ворует у врагов какашки что делает его сильнее"
 		"Dota_Tooltip_modifier_slark_essence_shift_lua"								"Украл какашки"
 		"Dota_Tooltip_modifier_slark_essence_shift_lua_description"					"Наваровав спритності: %dMODIFIER_PROPERTY_TOOLTIP%"
@@ -344,10 +345,9 @@
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_unique_kaki_roar_stun_duration"				"Вот это рыг stun duration increased by 1"
 		"Dota_Tooltip_ability_special_bonus_unique_kaki_throwable_zavtik"				"Завтык can be thrown!"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_ms"						"Форма Вяз-токса + 150 movement speed"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_3"						"Потрогать за какашки + 3 AGI gain"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_death"					"Потрогать за какашки is permanent"
-		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_death_description"		"Buff persists through death"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_ms"						"Форма Вяз-токса +150 movement speed"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_3"						"Потрогать за какашки +3 AGI gain"
+		"Dota_Tooltip_ability_special_bonus_unique_kaki_steal_death_pct"				"Потрогать за какашки +40% keep after death"
 		"Dota_Tooltip_ability_special_bonus_unique_kaki_gadyka_lifesteal"				"Форма Вяз-токса provides 100% lifesteal"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -560,10 +560,11 @@
 		"npc_dota_hero_undying"				   "Чивокуня"
 		
 		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua"									"Хомяк на спидах"
-		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_delay"							"DELAY:"
 		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_slow_duration"					"ENEMY SLOW DURATION:"
 		"Dota_Tooltip_ability_earth_spirit_rolling_boulder_lua_Description"						"Превращаеться в хомяка и летит в одну сторону, попадая в противника наносит урон и останавливаеться"
 		"Dota_Tooltip_modifier_earth_spirit_rolling_boulder_lua"								"ХОМЯК!"
+		"Dota_Tooltip_modifier_earth_spirit_rolling_boulder_lua_slow"							"Переїханний хом'яком"
+		"Dota_Tooltip_modifier_earth_spirit_rolling_boulder_lua_slow_description"				"Сповільненний"
 		
 		"Dota_Tooltip_ability_puck_phase_shift_lua"												"Ладно я на улицу"
 		"Dota_Tooltip_ability_puck_phase_shift_lua_duration"									"DURATION:"
@@ -601,7 +602,7 @@
 		
 		//Talents
 		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_slows"						"Краска от балончика slows increased by 10%"
-		"Dota_Tooltip_ability_special_bonus_unique_oleg_homyak_no_delay"						"Хомяк на спидах delay reduced by 0.3 seconds"
+		"Dota_Tooltip_ability_special_bonus_unique_oleg_homyak_stun"							"Хомяк на спидах aplies stun for 1 second"
 		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_duration"					"Краска от балончика duration increased by 5 seconds"
 		"Dota_Tooltip_ability_special_bonus_unique_oleg_trap_cd_reduction"						"Reduce ТЕГ cooldown by 4 seconds"
 		"Dota_Tooltip_ability_special_bonus_unique_oleg_poison_touch_stacks"					"Краска от балончика now stacks"

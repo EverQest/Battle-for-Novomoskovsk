@@ -16,7 +16,7 @@ function modifier_slark_essence_shift_lua:IsPurgable()
 end
 
 function modifier_slark_essence_shift_lua:RemoveOnDeath()
-	return not IsTalentLearned(self:GetCaster(), "special_bonus_unique_kaki_steal_death")
+	return false
 end	
 
 --------------------------------------------------------------------------------
@@ -37,6 +37,15 @@ function modifier_slark_essence_shift_lua:OnDestroy( kv )
 
 end
 
+function modifier_slark_essence_shift_lua:OnDeath(keys)
+    if keys.unit ~= self:GetParent() then return end
+
+	local keep_after_death_pct = self:GetAbility():GetSpecialValueFor("keep_after_death_pct")
+	local stacks_to_keep = math.ceil(self:GetStackCount() * keep_after_death_pct * 0.01)
+
+	self:SetStackCount(stacks_to_keep)
+end
+
 --------------------------------------------------------------------------------
 -- Modifier Effects
 function modifier_slark_essence_shift_lua:DeclareFunctions()
@@ -44,6 +53,7 @@ function modifier_slark_essence_shift_lua:DeclareFunctions()
 		MODIFIER_PROPERTY_PROCATTACK_FEEDBACK,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_TOOLTIP,
+		MODIFIER_EVENT_ON_DEATH,
 	}
 
 	return funcs
@@ -67,7 +77,7 @@ function modifier_slark_essence_shift_lua:GetModifierProcAttack_Feedback( params
 		)
 
 		-- Apply buff to self
-		self:AddStack()
+		self:IncrementStackCount()
 
 		-- Play effects
 		self:PlayEffects( params.target )
@@ -78,24 +88,6 @@ function modifier_slark_essence_shift_lua:GetModifierBonusStats_Agility()
 	return self:GetStackCount() * self.agi_gain
 end
 
---------------------------------------------------------------------------------
--- Helper
-function modifier_slark_essence_shift_lua:AddStack()
-	-- Add counter
-	local mod
-	
-	mod = self:GetParent():AddNewModifier(
-		self:GetParent(),
-		self:GetAbility(),
-		"modifier_slark_essence_shift_lua_stack",
-		{}
-	)
-
-	mod.modifier = self
-
-	-- Add stack
-	self:IncrementStackCount()
-end
 
 function modifier_slark_essence_shift_lua:OnTooltip()
 	return self:GetModifierBonusStats_Agility()

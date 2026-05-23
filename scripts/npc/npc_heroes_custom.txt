@@ -177,7 +177,7 @@
 		"Ability13"				"special_bonus_unique_kaki_throwable_zavtik" 
 		"Ability14"				"special_bonus_unique_kaki_gadyka_ms" // gadyka + 150 ms (past limit)
 		"Ability15"				"special_bonus_unique_kaki_steal_3" // kaki steal + 3 agi gain
-		"Ability16"				"special_bonus_unique_kaki_steal_death" // kaki steal is not removed on death
+		"Ability16"				"special_bonus_unique_kaki_steal_death_pct" // kaki steal is not removed on death
 		"Ability17"				"special_bonus_unique_kaki_gadyka_lifesteal" // gadyka provides 100% lifesteal
 
 		"Ability1"					"wind_walk_datadriven"	
@@ -429,7 +429,7 @@
 		"Ability10"				"special_bonus_all_stats_20"
 		"Ability11"				"special_bonus_exp_boost_25"
 		"Ability12"				"special_bonus_unique_oleg_poison_touch_slows" // poison tuch slows
-		"Ability13"				"special_bonus_unique_oleg_homyak_no_delay" // homyak no delay
+		"Ability13"				"special_bonus_unique_oleg_homyak_stun" // homyak no delay
 		"Ability14"				"special_bonus_unique_oleg_poison_touch_duration" // poison tuch duration
 		"Ability15"				"special_bonus_unique_oleg_trap_cd_reduction" // trap cd reduction
 		"Ability16"				"special_bonus_unique_oleg_poison_touch_stacks" // poison tuch stacks

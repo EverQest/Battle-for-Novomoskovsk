@@ -51,13 +51,6 @@ function modifier_earth_spirit_rolling_boulder_lua:OnRemoved( kv )
 		else
 			ParticleManager:SetParticleControl( self.effect_cast, 3, self:GetParent():GetOrigin() )
 		end
-
-		local sound_loop = "Hero_EarthSpirit.RollingBoulder.Loop"
-		StopSoundOn( sound_loop, self:GetParent() )
-
-		local sound_end = "Hero_EarthSpirit.RollingBoulder.Destroy"
-		EmitSoundOn( sound_end, self:GetParent() )
-
 	end
 end
 
@@ -145,7 +138,6 @@ end
 function modifier_earth_spirit_rolling_boulder_lua:PlayEffects()
 	-- Get Resources
 	local particle_cast = "particles/espirit_ti6_rollingboulder.vpcf"
-	local sound_loop = "Hero_EarthSpirit.RollingBoulder.Loop"
 
 	-- Create Particle
 	self.effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
@@ -160,6 +152,4 @@ function modifier_earth_spirit_rolling_boulder_lua:PlayEffects()
 		false
 	)
 
-	-- Create Sound
-	EmitSoundOn( sound_loop, self:GetParent() )
 end

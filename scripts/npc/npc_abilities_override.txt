@@ -2668,17 +2668,18 @@
 			"agi_gain"				
 			{
 				"value"												"1 1 1 2 2 2 2 3 3 3"
-				"special_bonus_unique_kaki_steal_3"				"3"
+				"special_bonus_unique_kaki_steal_3"					"3"
 			}
 			"stat_loss"				
 			{
 				"value"												"1"
-				"special_bonus_unique_kaki_steal_3"				"1"
+				"special_bonus_unique_kaki_steal_3"					"1"
 			}
-			"duration"				
+			"duration"												"15.0 20.0 25.0 30.0 35.0 40.0 45.0 50.0 55.0 60.0"
+			"keep_after_death_pct"				
 			{
 				"value"												"15.0 20.0 25.0 30.0 35.0 40.0 45.0 50.0 55.0 60.0"
-				"special_bonus_unique_kaki_steal_permanent"			"0"
+				"special_bonus_unique_kaki_steal_death_pct"			"40"
 			}
 		}
 	}
@@ -2770,7 +2771,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60.0"
+	"AbilityCooldown"				"60.0 50.0 40.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -2792,7 +2793,7 @@
 		"bonus_night_vision"		"1000"
 		"crit_chance"				"30 35 40"
 		"crit_damage"				"170"
-		"transformation_time"		"1.0"
+		"transformation_time"		"1.0 0.75 0.5"
 		"aura_interval"				"0.1"
 		"lifesteal"					"100"
 	}
@@ -5313,11 +5314,7 @@
 			"rock_speed"			"1700"
 			"distance"				"1000.0 1300.0 1400.0 1500.0"
 			"rock_distance"			"1600.0"
-			"delay"					
-			{
-				"value"											"0.6 0.5 0.4 0.3"
-				"special_bonus_unique_oleg_homyak_no_delay"		"-0.3"
-			}
+			"delay"					"0.3"
 			"damage"				"100 150 250 400"
 			"move_slow"				"120 130 140 150"
 			"slow_duration"			"0.8 1.2 1.6 2.0"

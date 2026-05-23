@@ -1,6 +1,9 @@
+require("utility_functions")
+
 earth_spirit_rolling_boulder_lua = class({})
 LinkLuaModifier( "modifier_earth_spirit_rolling_boulder_lua", "modifiers/modifier_earth_spirit_rolling_boulder_lua", LUA_MODIFIER_MOTION_HORIZONTAL )
 LinkLuaModifier( "modifier_earth_spirit_rolling_boulder_lua_slow", "modifiers/modifier_earth_spirit_rolling_boulder_lua_slow", LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_generic_stunned_dispellable", "modifiers/modifier_generic_stunned_dispellable", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 -- Ability Start
@@ -89,24 +92,21 @@ function earth_spirit_rolling_boulder_lua:OnProjectileHitHandle( target, locatio
 		-- move to behind target
 		self:GetCaster():SetOrigin( target:GetOrigin() + self.direction*80 )
 
-		-- apply slow if upgraded
-		if self.upgrade then
-			self.upgrade = nil
-
-			-- check if have magnetize debuff
-			local modifier = target:FindModifierByNameAndCaster( "modifier_earth_spirit_magnetize_lua", self:GetCaster() )
-			if modifier then
-				-- apply to all magnetize units
-				modifier:ApplyDebuff( self, "modifier_earth_spirit_rolling_boulder_lua_slow", slow_duration )
-			else
-				-- apply modifier
-				target:AddNewModifier(
-					self:GetCaster(), -- player source
-					self, -- ability source
-					"modifier_earth_spirit_rolling_boulder_lua_slow", -- modifier name
-					{ duration = slow_duration } -- kv
-				)
-			end
+		-- apply slow 
+		target:AddNewModifier(
+			self:GetCaster(), -- player source
+			self, -- ability source
+			"modifier_earth_spirit_rolling_boulder_lua_slow", -- modifier name
+			{ duration = slow_duration } -- kv
+		)
+		-- apply stun
+		if IsTalentLearned(self:GetCaster(), "special_bonus_unique_oleg_homyak_stun") then
+			target:AddNewModifier(
+				self:GetCaster(), -- player source
+				self, -- ability source
+				"modifier_generic_stunned_dispellable", -- modifier name
+				{ duration = 1 } -- kv
+			)
 		end
 
 		return true
