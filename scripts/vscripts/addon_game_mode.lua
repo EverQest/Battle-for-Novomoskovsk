@@ -48,6 +48,7 @@ function Precache( context )
        	PrecacheResource( "particle", "particles/econ/wards/f2p/f2p_ward/f2p_ward_true_sight_ambient.vpcf", context )
        	PrecacheResource( "particle", "particles/econ/items/lone_druid/lone_druid_cauldron/lone_druid_bear_entangle_dust_cauldron.vpcf", context )
        	PrecacheResource( "particle", "particles/newplayer_fx/npx_landslide_debris.vpcf", context )
+       	PrecacheResource( "particle", "particles/custom_phase_boots_fall_2021_streaks.vpcf", context )
        	
 	--Cache particles for traps
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_dragon_knight", context )
@@ -288,12 +289,6 @@ function COverthrowGameMode:InitGameMode()
 	Convars:RegisterCommand( "overthrow_force_gold_drop", function(...) self:ForceSpawnGold() end, "Force gold drop.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_set_timer", function(...) return SetTimer( ... ) end, "Set the timer.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_force_end_game", function(...) return self:EndGame( DOTA_TEAM_GOODGUYS ) end, "Force the game to end.", FCVAR_CHEAT )
-	Convars:RegisterCommand( "event_force_trigger", function(...)
-		if RandomEventManager:IsEventActive() then
-			RandomEventManager:_EndCurrentEvent()
-		end
-		RandomEventManager:_TriggerRandomEvent()
-	end, "Force a random event to trigger immediately, stopping any active event first.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "event_force_end", function(...) RandomEventManager:_EndCurrentEvent() end, "Force the current random event to end.", FCVAR_CHEAT )
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
 
@@ -335,6 +330,8 @@ function COverthrowGameMode:SetUpFountains()
 	LinkLuaModifier( "modifier_super_sonic", "modifiers/modifier_super_sonic", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_huge_deal", "modifiers/modifier_huge_deal", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_king_slayer", "modifiers/modifier_king_slayer", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_horror", "modifiers/modifier_horror", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_horror_veil", "modifiers/modifier_horror_veil", LUA_MODIFIER_MOTION_NONE )
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do

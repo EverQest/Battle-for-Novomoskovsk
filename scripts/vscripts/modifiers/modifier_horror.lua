@@ -1,37 +1,25 @@
---[[
-    modifier_horror
-    ~~~~~~~~~~~~~~~~
-    Applied to heroes during the "Horror" event.
-    Uses MODIFIER_PROPERTY_FIXED_DAY_VISION / FIXED_NIGHT_VISION to clamp
-    vision to 100. No need to save/restore original values — removing the
-    modifier automatically returns the hero to their base vision.
-]]
-
 modifier_horror = class({})
 
-function modifier_horror:IsHidden()
-    return false
+function modifier_horror:IsHidden() return false end
+function modifier_horror:IsDebuff() return true end
+function modifier_horror:IsPurgable() return false end
+
+function modifier_horror:OnCreated(kv)
+    if IsServer() then
+        local parent = self:GetParent()
+        self._origDay   = parent:GetDayTimeVisionRange()
+        self._origNight = parent:GetNightTimeVisionRange()
+        parent:SetDayTimeVisionRange(100)
+        parent:SetNightTimeVisionRange(100)
+    end
 end
 
-function modifier_horror:IsDebuff()
-    return true
-end
-
-function modifier_horror:IsPurgable()
-    return false
-end
-
-function modifier_horror:DeclareFunctions()
-    return {
-        MODIFIER_PROPERTY_FIXED_DAY_VISION,
-        MODIFIER_PROPERTY_FIXED_NIGHT_VISION,
-    }
-end
-
-function modifier_horror:GetModifierFixedDayVision()
-    return 100
-end
-
-function modifier_horror:GetModifierFixedNightVision()
-    return 100
+function modifier_horror:OnDestroy()
+    if IsServer() then
+        local parent = self:GetParent()
+        if IsValidEntity(parent) then
+            parent:SetDayTimeVisionRange(self._origDay or 1800)
+            parent:SetNightTimeVisionRange(self._origNight or 800)
+        end
+    end
 end

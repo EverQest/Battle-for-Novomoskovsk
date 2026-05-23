@@ -59,12 +59,12 @@ end
 
 --------------------------------------------------------------------------------
 -- Visual – persistent particle effect on the hero while the buff is active.
--- particles/items_fx/black_king_bar_avatar.vpcf is already precached in
+-- particles/custom_phase_boots_fall_2021_streaks.vpcf is already precached in
 -- addon_game_mode.lua, so no extra Precache() call is required.
 -- Swap the path here if you prefer a different effect.
 --------------------------------------------------------------------------------
 function modifier_super_sonic:GetEffectName()
-    return "particles/items_fx/black_king_bar_avatar.vpcf"
+    return "particles/custom_phase_boots_fall_2021_streaks.vpcf"
 end
 
 function modifier_super_sonic:GetEffectAttachType()
