@@ -9,7 +9,7 @@
         after a 1.7-second warning, deals 30% of the victim's CURRENT
         HP as pure damage to every hero inside the 200-unit impact radius.
 
-        Waves fire every 3 seconds (3 strikes per wave), starting
+        Waves fire every 1 seconds (5 strikes per wave), starting
         immediately when the event activates.
 ]]
 
@@ -20,13 +20,13 @@ _G.EventDogDays.__index = _G.EventDogDays
 
 local SUNSTRIKE_RADIUS = 200   -- impact AoE (matches real sunstrike)
 local SUNSTRIKE_DELAY  = 1.7   -- seconds of warning before impact
-local STRIKE_INTERVAL  = 3     -- seconds between waves (Think fires every 1 s)
-local STRIKES_PER_WAVE = 3     -- strikes launched per wave
+local STRIKE_INTERVAL  = 2     -- seconds between waves (Think fires every 1 s)
+local STRIKES_PER_WAVE = 5     -- strikes launched per wave
 local DAMAGE_FRACTION  = 0.30  -- 30 % of current HP, pure damage
-local SCATTER_RADIUS   = 300   -- random offset around target hero
+local SCATTER_RADIUS   = 500   -- random offset around target hero
 
 local PARTICLE_WARNING = "particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf"
-local PARTICLE_STRIKE  = "particles/econ/items/invoker/invoker_apex/invoker_sun_strike_immortal1.vpcf"
+local PARTICLE_STRIKE  = "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventDogDays.New()
@@ -95,7 +95,7 @@ end
 
 -- Show warning, then after SUNSTRIKE_DELAY deal damage and play impact FX.
 function EventDogDays:_FireStrike(pos)
-    -- Warning circle visible to all players.
+    -- Warning circle and charge sound visible/audible to all players.
     -- CreateParticle returns -1 if the path is not found; guard before use.
     local warn = ParticleManager:CreateParticle(PARTICLE_WARNING, PATTACH_WORLDORIGIN, nil)
     if warn ~= -1 then
@@ -103,6 +103,7 @@ function EventDogDays:_FireStrike(pos)
         ParticleManager:SetParticleControl(warn, 1, pos)
         ParticleManager:ReleaseParticleIndex(warn)
     end
+    EmitGlobalSound("sounds/weapons/hero/invoker/sunstrike_charge_apex.vsnd")
 
     local self_ref = self
     Timers:CreateTimer(UniqueString("dog_days_"), {
@@ -110,13 +111,14 @@ function EventDogDays:_FireStrike(pos)
         callback = function()
             if not self_ref._active then return end
 
-            -- Impact particle
+            -- Impact particle and explosion sound
             local strike = ParticleManager:CreateParticle(PARTICLE_STRIKE, PATTACH_WORLDORIGIN, nil)
             if strike ~= -1 then
                 ParticleManager:SetParticleControl(strike, 0, pos)
                 ParticleManager:SetParticleControl(strike, 1, pos)
                 ParticleManager:ReleaseParticleIndex(strike)
             end
+            EmitGlobalSound("sounds/weapons/hero/invoker/sunstrike_ignite_apex.vsnd")
 
             -- Damage every real hero inside the radius
             for _, hero in pairs(HeroList:GetAllHeroes()) do
