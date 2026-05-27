@@ -46,6 +46,8 @@ end
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventDogDays:OnStart()
     EmitGlobalSound("Start")
+    local n = math.random(1, 3)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("DogDays" .. n) end)
     self._active = true
     self._tick   = 0
     self:_LaunchWave()

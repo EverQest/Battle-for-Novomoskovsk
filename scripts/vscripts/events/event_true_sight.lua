@@ -38,6 +38,8 @@ end
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight:OnStart()
     EmitGlobalSound("Start")
+    local n = math.random(1, 3)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("TrueSight" .. n) end)
     self._fowHandles = {}
     -- Grant a massive vision circle to every team. Using the map origin as the
     -- anchor with a radius large enough to cover the entire map.
