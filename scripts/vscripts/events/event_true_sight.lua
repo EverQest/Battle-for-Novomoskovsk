@@ -37,7 +37,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight:OnStart()
-    EmitGlobalSound("EventStart")
+    EmitGlobalSound("Start")
     self._fowHandles = {}
     -- Grant a massive vision circle to every team. Using the map origin as the
     -- anchor with a radius large enough to cover the entire map.

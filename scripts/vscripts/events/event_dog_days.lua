@@ -45,7 +45,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventDogDays:OnStart()
-    EmitGlobalSound("EventStart")
+    EmitGlobalSound("Start")
     self._active = true
     self._tick   = 0
     self:_LaunchWave()

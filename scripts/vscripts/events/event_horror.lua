@@ -32,9 +32,9 @@ function EventHorror:GetDescription() return "Darkness falls! You can only see 1
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHorror:OnStart()
-    EmitGlobalSound("EventStart")
+    EmitGlobalSound("Start")
     local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("EventHorror" .. n) end)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("Horror" .. n) end)
     self._savedVision = {}
     self._veilTargets = {}
     self:_ApplyToAll()

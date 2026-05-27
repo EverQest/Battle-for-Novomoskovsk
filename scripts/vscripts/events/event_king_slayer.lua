@@ -43,9 +43,9 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventKingSlayer:OnStart()
-    EmitGlobalSound("EventStart")
+    EmitGlobalSound("Start")
     local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("EventKingSlayer" .. n) end)
+    Timers:CreateTimer(1.0, function() EmitGlobalSound("KingSlayer" .. n) end)
     self._currentKingID = -1
     self:_UpdateKing()
     print("[KingSlayer] Active – hunting the top killer.")
