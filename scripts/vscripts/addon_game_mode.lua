@@ -21,6 +21,7 @@ require('timers')
 require( "events" )
 require( "items" )
 require( "utility_functions" )
+require( "items/item_travel_boots" )
 
 ---------------------------------------------------------------------------
 -- Precache
@@ -447,6 +448,20 @@ end
 function COverthrowGameMode:OnThink()
 	for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
 		self:UpdatePlayerColor( nPlayerID )
+		local hero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
+		if hero and hero:IsAlive() then
+			local boots = nil
+			for slot = 0, 8 do
+				local item = hero:GetItemInSlot( slot )
+				if item and item:GetAbilityName() == "item_travel_boots" then
+					boots = item
+					break
+				end
+			end
+			if boots and not hero:HasModifier( "modifier_travel_boots_anti_root" ) then
+				hero:AddNewModifier( hero, boots, "modifier_travel_boots_anti_root", {} )
+			end
+		end
 	end
 	
 	self:UpdateScoreboard()
