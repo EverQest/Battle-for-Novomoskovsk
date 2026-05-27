@@ -114,6 +114,7 @@
 		"item"		"item_urn_of_shadows"
 		"item"		"item_tranquil_boots"
 		"item"		"item_medallion_of_courage"
+		"item"		"item_recipe_boots_of_fly"
 		"item"		"item_arcane_boots"
 		"item"		"item_ancient_janggo"
 		"item"		"item_mekansm"		

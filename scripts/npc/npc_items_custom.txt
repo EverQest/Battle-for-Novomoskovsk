@@ -1199,6 +1199,49 @@
 		}
 	}
 	
+	//=================================================================================================================
+	// Recipe: Чоботи Вергілія
+	//=================================================================================================================
+	"item_recipe_boots_of_fly"
+	{
+		"BaseClass"					"item_datadriven"
+		"AbilityTextureName"		"recipe"
+		"Model"						"models/props_gameplay/recipe.mdl"
+		"ItemCost"					"4500"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_boots_of_fly"
+		"ItemRequirements"
+		{
+			"01"					"item_phase_boots;item_power_treads"
+		}
+	}
+
+	"item_boots_of_fly"
+	{
+		"BaseClass"					"item_lua"
+		"ScriptFile"				"items/item_boots_of_fly.lua"
+		"AbilityTextureName"		"boots_of_vergil"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"ItemCost"					"5000"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCooldown"			"30.0"
+		"AbilityManaCost"			"75"
+		"ItemDroppable"				"1"
+		"ItemQuality"				"epic"
+		"ItemAliases"				"boots fly;flying boots;чоботи вергілія"
+
+		"AbilityValues"
+		{
+			"ms"			"95"
+			"dmg"			"18"
+			"aspd"			"20"
+			"stats"			"10"
+			"active_ms"		"500"
+			"duration"		"6"
+		}
+	}
+
 	"item_diffusal_blade_2"
 	{
 		"BaseClass"						"item_datadriven"
