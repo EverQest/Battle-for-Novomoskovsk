@@ -74,6 +74,8 @@ function Precache( context )
 
 	-- Cache random event announcement sounds
 		PrecacheResource( "soundfile", "soundevents/game_sounds_events.vsndevts", context )
+	-- Cache custom event sounds
+		PrecacheResource( "soundfile", "soundevents/events.vsndevts", context )
 end
 
 function Activate()
