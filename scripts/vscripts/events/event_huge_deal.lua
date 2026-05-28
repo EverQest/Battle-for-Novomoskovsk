@@ -34,14 +34,13 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHugeDeal:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("HugeDeal" .. n) end)
+    self:_PlayAnnounce("HugeDeal")
     self:_ApplyToAll()
     print("[HugeDeal] Active – attack damage bonus applied.")
 end
 
 function EventHugeDeal:OnEnd()
+    EmitGlobalSound("Start")
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
         if IsValidEntity(hero) then

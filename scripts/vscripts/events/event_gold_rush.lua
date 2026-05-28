@@ -47,9 +47,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventGoldRush:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("GoldRush" .. n) end)
+    self:_PlayAnnounce("GoldRush")
 
     -- Locate the map centre.  The entity "center_experience_ring_particles"
     -- is placed at the geometric centre of every Novomoskovsk map.
@@ -83,6 +81,7 @@ function EventGoldRush:OnStart()
 end
 
 function EventGoldRush:OnEnd()
+    EmitGlobalSound("Start")
     _G.GOLD_RUSH_ACTIVE = false
     _G.GOLD_RUSH_CENTER = nil
     _G.GOLD_RUSH_RADIUS = nil

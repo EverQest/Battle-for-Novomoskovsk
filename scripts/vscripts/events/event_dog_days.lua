@@ -45,9 +45,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventDogDays:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("DogDays" .. n) end)
+    self:_PlayAnnounce("DogDays")
     self._active = true
     self._tick   = 0
     self:_LaunchWave()
@@ -55,6 +53,7 @@ function EventDogDays:OnStart()
 end
 
 function EventDogDays:OnEnd()
+    EmitGlobalSound("Start")
     self._active = false
     -- In-flight strike timers check _active before dealing damage, so no
     -- further cleanup is needed – they simply become no-ops.

@@ -43,15 +43,14 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventKingSlayer:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("KingSlayer" .. n) end)
+    self:_PlayAnnounce("KingSlayer")
     self._currentKingID = -1
     self:_UpdateKing()
     print("[KingSlayer] Active – hunting the top killer.")
 end
 
 function EventKingSlayer:OnEnd()
+    EmitGlobalSound("Start")
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
         if IsValidEntity(hero) then

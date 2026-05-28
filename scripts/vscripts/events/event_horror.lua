@@ -32,9 +32,7 @@ function EventHorror:GetDescription() return "Darkness falls! You can only see 1
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventHorror:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("Horror" .. n) end)
+    self:_PlayAnnounce("Horror")
     self._savedVision = {}
     self._veilTargets = {}
     self:_ApplyToAll()
@@ -44,6 +42,7 @@ function EventHorror:OnStart()
 end
 
 function EventHorror:OnEnd()
+    EmitGlobalSound("Start")
     for _, hero in pairs(HeroList:GetAllHeroes()) do
         if IsValidEntity(hero) then
             hero:RemoveModifierByName(self.MODIFIER_NAME)

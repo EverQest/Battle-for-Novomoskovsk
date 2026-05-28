@@ -39,14 +39,13 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventSuperSonic:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("SuperSonic" .. n) end)
+    self:_PlayAnnounce("SuperSonic")
     self:_ApplyToAll()
     print("[SuperSonic] Active – all heroes buffed.")
 end
 
 function EventSuperSonic:OnEnd()
+    EmitGlobalSound("Start")
     local allHeroes = HeroList:GetAllHeroes()
     for _, hero in pairs(allHeroes) do
         if IsValidEntity(hero) then

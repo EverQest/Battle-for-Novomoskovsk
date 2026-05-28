@@ -37,9 +37,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventTrueSight:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("TrueSight" .. n) end)
+    self:_PlayAnnounce("TrueSight")
     self._fowHandles = {}
     -- Grant a massive vision circle to every team. Using the map origin as the
     -- anchor with a radius large enough to cover the entire map.
@@ -54,6 +52,7 @@ function EventTrueSight:OnStart()
 end
 
 function EventTrueSight:OnEnd()
+    EmitGlobalSound("Start")
     for team, handle in pairs(self._fowHandles) do
         RemoveFOWViewer(team, handle)
     end

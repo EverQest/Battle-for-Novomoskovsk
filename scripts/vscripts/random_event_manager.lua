@@ -141,6 +141,7 @@ function RandomEventManager:_EndCurrentEvent()
 
     print("[EventManager] Ending: " .. self._activeEvent:GetName())
 
+    self._activeEvent:StopAnnounceSounds()
     self._activeEvent:OnEnd()
     self._activeEvent = nil
     self._isActive    = false

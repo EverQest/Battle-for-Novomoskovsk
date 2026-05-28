@@ -40,3 +40,33 @@ end
 -- Called every second while the event is active. Optional logic goes here.
 function BaseRandomEvent:Think()
 end
+
+-- ── Shared announce-sound helpers ─────────────────────────────────────────────
+-- Each event calls self:_PlayAnnounce("BaseName") in OnStart() instead of
+-- writing EmitGlobalSound + Timers inline. All events share the same named
+-- timer "rem_announce_stinger" so a ForceEvent call cancels the previous
+-- stinger before it fires.
+
+function BaseRandomEvent:_PlayAnnounce(baseName)
+    self._announceSoundName = baseName
+    self._soundVariant      = math.random(1, 3)
+    EmitGlobalSound("Start")
+    Timers:CreateTimer("rem_announce_stinger", {
+        endTime  = 1.0,
+        callback = function()
+            if self._announceSoundName then
+                EmitGlobalSound(self._announceSoundName .. self._soundVariant)
+            end
+        end,
+    })
+end
+
+function BaseRandomEvent:StopAnnounceSounds()
+    Timers:RemoveTimer("rem_announce_stinger")
+    StopGlobalSound("Start")
+    if self._announceSoundName and self._soundVariant then
+        StopGlobalSound(self._announceSoundName .. self._soundVariant)
+    end
+    self._announceSoundName = nil
+    self._soundVariant      = nil
+end

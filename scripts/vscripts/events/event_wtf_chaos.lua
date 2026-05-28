@@ -46,9 +46,7 @@ end
 -- Lifecycle
 -- ──────────────────────────────────────────────────────────────────────────────
 function EventWTFChaos:OnStart()
-    EmitGlobalSound("Start")
-    local n = math.random(1, 3)
-    Timers:CreateTimer(1.0, function() EmitGlobalSound("WtfChaos" .. n) end)
+    self:_PlayAnnounce("WtfChaos")
     _G.WTF_CHAOS_ACTIVE = true
 
     Timers:CreateTimer("wtf_chaos_fast_think", {
@@ -64,6 +62,7 @@ function EventWTFChaos:OnStart()
 end
 
 function EventWTFChaos:OnEnd()
+    EmitGlobalSound("Start")
     _G.WTF_CHAOS_ACTIVE = false
     -- Fast timer self-terminates on its next tick when it sees the flag is false.
     print("[WTFChaos] Ended – cooldowns restored.")
