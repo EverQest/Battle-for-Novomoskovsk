@@ -64,6 +64,12 @@ function Precache( context )
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_invoker", context )
 		PrecacheResource( "particle", "particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf", context )
 
+	-- Cache Gold Rush event particles (throne ring)
+		PrecacheResource( "particle", "particles/bh_taunt_goldpiles_coindust_coins.vpcf", context )
+
+	-- Cache World Peace event particles (sphere zone)
+		PrecacheResource( "particle", "particles/faceless_void_chronosphere.vpcf", context )
+
 
 	--Cache sounds for traps
 		PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
@@ -271,6 +277,7 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetBountyRunePickupFilter( Dynamic_Wrap( COverthrowGameMode, "BountyRunePickupFilter" ), self )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( COverthrowGameMode, "ExecuteOrderFilter" ), self )
 	GameRules:GetGameModeEntity():SetModifyGoldFilter( Dynamic_Wrap( COverthrowGameMode, "ModifyGoldFilter" ), self )
+	GameRules:GetGameModeEntity():SetDamageFilter( Dynamic_Wrap( COverthrowGameMode, "DamageFilter" ), self )
 
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled( true )
 	GameRules:GetGameModeEntity():SetUseTurboCouriers( true )
@@ -340,6 +347,7 @@ function COverthrowGameMode:SetUpFountains()
 	LinkLuaModifier( "modifier_king_slayer", "modifiers/modifier_king_slayer", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_horror", "modifiers/modifier_horror", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_horror_veil", "modifiers/modifier_horror_veil", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_world_peace", "modifiers/modifier_world_peace", LUA_MODIFIER_MOTION_NONE )
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do
@@ -605,6 +613,35 @@ function COverthrowGameMode:ModifyGoldFilter( filterTable )
 				filterTable["gold"] = amount * 3
 			end
 		end
+	end
+
+	return true
+end
+
+--------------------------------------------------------------------------------
+-- World Peace: block all hero-vs-hero damage when both are inside the zone
+--------------------------------------------------------------------------------
+function COverthrowGameMode:DamageFilter( filterTable )
+	if not _G.WORLD_PEACE_ACTIVE then return true end
+
+	local attacker = EntIndexToHScript( filterTable["entindex_attacker_const"] )
+	local victim   = EntIndexToHScript( filterTable["entindex_victim_const"] )
+
+	if attacker == nil or victim == nil           then return true end
+	if not attacker:IsRealHero()                  then return true end
+	if not victim:IsRealHero()                    then return true end
+	if attacker == victim                         then return true end
+
+	local center = _G.WORLD_PEACE_CENTER
+	local radius = _G.WORLD_PEACE_RADIUS
+
+	local attackerInZone = ( attacker:GetAbsOrigin() - center ):Length2D() <= radius
+	local victimInZone   = ( victim:GetAbsOrigin()   - center ):Length2D() <= radius
+
+	-- Block damage if EITHER party is inside the zone:
+	-- heroes inside cannot attack out, and heroes outside cannot attack in.
+	if attackerInZone or victimInZone then
+		filterTable["damage"] = 0
 	end
 
 	return true

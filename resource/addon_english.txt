@@ -870,6 +870,9 @@
 
 		"DOTA_Tooltip_modifier_horror"										"Horror"
 		"DOTA_Tooltip_modifier_horror_Description"							"Darkness surrounds you. Vision is limited to 100 units."
+
+		"DOTA_Tooltip_modifier_world_peace"									"World Peace"
+		"DOTA_Tooltip_modifier_world_peace_Description"						"You are inside the safe zone. No damage can be dealt or received here."
 	}
 
 }

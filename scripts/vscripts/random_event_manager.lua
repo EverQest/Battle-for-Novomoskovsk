@@ -23,6 +23,7 @@ require("events/event_wtf_chaos")   -- Event 5: WTF Chaos
 require("events/event_horror")      -- Event 6: Horror
 require("events/event_king_slayer") -- Event 7: King Slayer
 require("events/event_dog_days")   -- Event 8: Dog Days
+require("events/event_world_peace") -- Event 9: World Peace
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Timing constants – easy to tweak
@@ -78,6 +79,16 @@ function RandomEventManager:Start()
                 end
             end
             return RANDOM_EVENT_INTERVAL  -- always repeat, even after errors
+        end,
+    })
+
+    -- Notify HUD of the initial cooldown so the sky-blue bar starts counting immediately.
+    Timers:CreateTimer({
+        endTime  = 2.0,
+        callback = function()
+            CustomGameEventManager:Send_ServerToAllClients("random_event_ended", {
+                next_event_duration = RANDOM_EVENT_INTERVAL,
+            })
         end,
     })
 
@@ -146,7 +157,9 @@ function RandomEventManager:_EndCurrentEvent()
     self._activeEvent = nil
     self._isActive    = false
 
-    CustomGameEventManager:Send_ServerToAllClients("random_event_ended", {})
+    CustomGameEventManager:Send_ServerToAllClients("random_event_ended", {
+        next_event_duration = RANDOM_EVENT_INTERVAL - RANDOM_EVENT_DURATION,
+    })
 end
 
 -- Public helpers used by event logic (e.g. gold filter, kill handler).
@@ -227,6 +240,7 @@ RandomEventManager:RegisterEvent(EventWTFChaos)
 RandomEventManager:RegisterEvent(EventHorror)
 RandomEventManager:RegisterEvent(EventKingSlayer)
 RandomEventManager:RegisterEvent(EventDogDays)
+RandomEventManager:RegisterEvent(EventWorldPeace)
 
 -- Add future events here:
 -- require("events/event_my_event")
