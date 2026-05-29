@@ -156,11 +156,11 @@ function EventKingSlayer:_UpdateKing()
             kingHero:AddNewModifier(kingHero, nil, self.MODIFIER_NAME, {})
         end
 
-        -- Grant every active team a small vision patch at the king's position.
-        -- Duration 1.1s refreshed each second = king is always visible to all teams.
+        -- Grant every active team vision at the king's position.
+        -- Duration 2.0s refreshed each second – the extra headroom absorbs any timer jitter.
         local pos = kingHero:GetAbsOrigin()
         for team = DOTA_TEAM_FIRST, DOTA_TEAM_COUNT - 1 do
-            AddFOWViewer(team, pos, 300, 1.1, false)
+            AddFOWViewer(team, pos, 500, 2.0, false)
         end
     end
 end

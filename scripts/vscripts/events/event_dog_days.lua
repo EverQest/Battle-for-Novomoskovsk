@@ -105,7 +105,7 @@ function EventDogDays:_FireStrike(pos)
         ParticleManager:SetParticleControl(warn, 1, pos)
         ParticleManager:ReleaseParticleIndex(warn)
     end
-    EmitGlobalSound("sounds/weapons/hero/invoker/sunstrike_charge_apex.vsnd")
+    EmitGlobalSound("SunStrike")
 
     local self_ref = self
     Timers:CreateTimer(UniqueString("dog_days_"), {

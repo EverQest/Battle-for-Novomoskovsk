@@ -40,7 +40,7 @@ function EventGoldRush:GetName()
 end
 
 function EventGoldRush:GetDescription()
-    return "Double gold in the Center Zone!"
+    return "Double gold for kills and dropped coins in the center zone!"
 end
 
 -- ──────────────────────────────────────────────────────────────────────────────
@@ -76,6 +76,20 @@ function EventGoldRush:OnStart()
             self._centerOrigin + Vector(self.CENTER_ZONE_RADIUS, 0, 0))
     end
 
+    -- Throne particle attached to the overboss unit at the centre.
+    local overboss = Entities:FindByName(nil, "@overboss")
+    local attachMode = overboss and PATTACH_ABSORIGIN_FOLLOW or PATTACH_WORLDORIGIN
+    self._throneParticle = ParticleManager:CreateParticle(
+        "particles/bh_taunt_goldpiles_coindust_coins.vpcf",
+        attachMode,
+        overboss
+    )
+    if self._throneParticle ~= -1 then
+        ParticleManager:SetParticleControl(self._throneParticle, 0, self._centerOrigin)
+        ParticleManager:SetParticleControl(self._throneParticle, 1,
+            self._centerOrigin + Vector(self.CENTER_ZONE_RADIUS, 0, 0))
+    end
+
     print("[GoldRush] Active – centre=" .. tostring(self._centerOrigin)
           .. "  radius=" .. self.CENTER_ZONE_RADIUS)
 end
@@ -90,6 +104,12 @@ function EventGoldRush:OnEnd()
         ParticleManager:DestroyParticle(self._zoneParticle, false)
         ParticleManager:ReleaseParticleIndex(self._zoneParticle)
         self._zoneParticle = nil
+    end
+
+    if self._throneParticle and self._throneParticle ~= -1 then
+        ParticleManager:DestroyParticle(self._throneParticle, false)
+        ParticleManager:ReleaseParticleIndex(self._throneParticle)
+        self._throneParticle = nil
     end
 
     -- Remove the zone buff from every hero immediately.
