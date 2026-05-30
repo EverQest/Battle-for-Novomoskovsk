@@ -24,6 +24,7 @@ require("events/event_horror")      -- Event 6: Horror
 require("events/event_king_slayer") -- Event 7: King Slayer
 require("events/event_dog_days")   -- Event 8: Dog Days
 require("events/event_world_peace") -- Event 9: World Peace
+require("events/event_open_case")   -- Event 10: Open Case
 
 -- ──────────────────────────────────────────────────────────────────────────────
 -- Timing constants – easy to tweak
@@ -241,6 +242,7 @@ RandomEventManager:RegisterEvent(EventHorror)
 RandomEventManager:RegisterEvent(EventKingSlayer)
 RandomEventManager:RegisterEvent(EventDogDays)
 RandomEventManager:RegisterEvent(EventWorldPeace)
+RandomEventManager:RegisterEvent(EventOpenCase)
 
 -- Add future events here:
 -- require("events/event_my_event")
