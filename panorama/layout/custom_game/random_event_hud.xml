@@ -1,0 +1,31 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/random_event_hud.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/random_event_hud.js" />
+	</scripts>
+
+	<!--
+		RandomEventHUDRoot fills the whole screen but passes all clicks through.
+		RandomEventContainer is hidden by default; JS toggles "event-visible" on it.
+	-->
+	<Panel id="RandomEventHUDRoot" hittest="false">
+		<Panel id="RandomEventContainer" class="event-container event-hidden">
+
+			<!-- Small description line above the main title -->
+			<Label id="EventDescription" class="event-description" text="" />
+
+			<!-- Large event name -->
+			<Label id="EventName" class="event-name" text="" />
+
+			<!-- Countdown timer below the name -->
+			<Panel class="event-timer-row">
+				<Label class="event-timer-label" text="Ends in " />
+				<Label id="EventTimer" class="event-timer-value" text="60" />
+				<Label class="event-timer-label" text="s" />
+			</Panel>
+
+		</Panel>
+	</Panel>
+</root>

@@ -1,0 +1,16 @@
+<root>
+	<!-- ── Permanent HUD overlays ────────────────────────────────────────────── -->
+	<CustomUIElement type="Hud"           layoutfile="file://{resources}/layout/custom_game/overthrow_game_info.xml" />
+	<CustomUIElement type="Hud"           layoutfile="file://{resources}/layout/custom_game/overthrow_scoreboard_left.xml" />
+	<CustomUIElement type="Hud"           layoutfile="file://{resources}/layout/custom_game/overthrow_item_notification.xml" />
+
+	<!-- Random Event announcement + countdown (added for the event system) -->
+	<CustomUIElement type="Hud"           layoutfile="file://{resources}/layout/custom_game/random_event_hud.xml" />
+
+	<!-- CS:GO-style case opening overlay -->
+	<CustomUIElement type="Hud"           layoutfile="file://{resources}/layout/custom_game/case_opening.xml" />
+
+	<!-- ── Screen-specific overlays ─────────────────────────────────────────── -->
+	<CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/multiteam_hero_select_overlay.xml" />
+	<CustomUIElement type="LoadingScreen" layoutfile="file://{resources}/layout/custom_game/custom_loading_screen.xml" />
+</root>

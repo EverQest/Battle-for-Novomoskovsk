@@ -1,0 +1,46 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/case_opening.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/case_opening.js" />
+    </scripts>
+
+    <!-- Root wrapper – mirrors random_event_hud.xml structure for reliable 100% dimensions -->
+    <Panel class="case-hud-root" hittest="false">
+
+        <!-- Full-screen overlay – starts transparent (opacity:0), JS fades it in -->
+        <Panel id="CaseOpeningOverlay" class="case-overlay" hittest="false">
+
+            <!-- All visible UI is centred in this block -->
+            <Panel class="case-content" hittest="false">
+
+                <!-- Gold "CASE OPENING" header -->
+                <Label id="CaseTitle" class="case-title" text="CASE OPENING" />
+
+                <!-- Reel window; JS moves the strip via transform -->
+                <Panel class="case-reel-wrapper" hittest="false">
+
+                    <!-- The item strip; children built dynamically by JS -->
+                    <Panel id="CaseReelStrip" class="case-reel-strip" hittest="false" />
+
+                    <!-- Fades sit on top of strip (later in doc order = higher z) -->
+                    <Panel class="case-reel-fade-left"  hittest="false" />
+                    <Panel class="case-reel-fade-right" hittest="false" />
+
+                    <!-- Gold centre-line selector -->
+                    <Panel class="case-center-marker" hittest="false" />
+
+                </Panel>
+
+            </Panel>
+
+            <!-- Mask panels rendered AFTER content (higher z-order) so they cover
+                 items that overflow the reel wrapper.  JS sets their widths at
+                 show-time based on actual screen width.  Same colour as overlay bg. -->
+            <Panel id="CaseMaskLeft"  class="case-side-mask case-side-mask-left"  hittest="false" />
+            <Panel id="CaseMaskRight" class="case-side-mask case-side-mask-right" hittest="false" />
+
+        </Panel>
+    </Panel>
+</root>

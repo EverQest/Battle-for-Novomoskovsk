@@ -1,0 +1,125 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   case_opening.css  –  CS:GO-style case opening overlay
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Root wrapper – same pattern as random_event_hud ────────────────────────── */
+.case-hud-root {
+    width: 100%;
+    height: 100%;
+    overflow: noclip;
+}
+
+/* ── Full-screen overlay – always in layout, shown/hidden via opacity ────────── */
+.case-overlay {
+    width: 100%;
+    height: 100%;
+    flow-children: none;
+    opacity: 0.0;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.case-overlay.case-visible {
+    opacity: 1.0;
+}
+
+/* ── Central content block ──────────────────────────────────────────────────── */
+.case-content {
+    horizontal-align: center;
+    vertical-align: top;
+    margin-top: 12%;
+    flow-children: down;
+}
+
+/* ── Title ──────────────────────────────────────────────────────────────────── */
+.case-title {
+    font-size: 34px;
+    font-weight: bold;
+    color: #e4c47e;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 14px 4.0 #e4c47e88,
+                 0px 2px 6px 2.0 #000000;
+    margin-bottom: 22px;
+    horizontal-align: center;
+}
+
+/* ── Reel wrapper ────────────────────────────────────────────────────────────── */
+.case-reel-wrapper {
+    width: 640px;
+    height: 112px;
+    horizontal-align: center;
+    overflow: noclip;
+    background-color: #0a0e16ee;
+    border: 2px solid #e4c47e66;
+    box-shadow: 0px 0px 20px 2.0 #e4c47e44;
+    flow-children: none;
+}
+
+/* ── Cycling cell container – cells positioned individually via JS transform ─── */
+.case-reel-strip {
+    width: 640px;
+    height: 100%;
+    vertical-align: center;
+    flow-children: none;
+}
+
+/* ── Individual item cell ───────────────────────────────────────────────────── */
+.case-item-cell {
+    width: 96px;
+    height: 96px;
+    margin: 8px;
+    border: 2px solid #64647888;
+    background-color: #141c28f0;
+    flow-children: none;
+}
+
+.case-item-cell.rarity-common    { border-color: #b4b4b4bb; background-color: #1e1e23f0; }
+.case-item-cell.rarity-rare      { border-color: #4b69ffcc; background-color: #0f143cf0; box-shadow: 0px 0px 8px 1.5 #4b69ff55; }
+.case-item-cell.rarity-epic      { border-color: #d32ce6cc; background-color: #1e0828f0; box-shadow: 0px 0px 10px 1.5 #d32ce666; }
+.case-item-cell.rarity-legendary { border-color: #ebaa00ee; background-color: #281c05f0; box-shadow: 0px 0px 12px 2.0 #ebaa0077; }
+
+/* ── Item image inside a cell ───────────────────────────────────────────────── */
+.case-item-image {
+    width: 80px;
+    height: 60px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+/* ── Center selector line ───────────────────────────────────────────────────── */
+.case-center-marker {
+    width: 3px;
+    height: 100%;
+    horizontal-align: center;
+    vertical-align: center;
+    background-color: #e4c47e;
+    box-shadow: 0px 0px 10px 3.0 #e4c47e;
+}
+
+/* ── Edge fades sit on top of the strip ─────────────────────────────────────── */
+.case-reel-fade-left {
+    width: 100px;
+    height: 100%;
+    horizontal-align: left;
+    vertical-align: center;
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( #0a0e16ee ), to( #0a0e1600 ) );
+}
+
+.case-reel-fade-right {
+    width: 100px;
+    height: 100%;
+    horizontal-align: right;
+    vertical-align: center;
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( #0a0e1600 ), to( #0a0e16ee ) );
+}
+
+/* ── Side masks – cover reel overflow; transparent since overlay has no bg ───── */
+/* Width is set dynamically by JS based on actual screen width.                   */
+.case-side-mask {
+    height: 100%;
+}
+
+.case-side-mask-left  { horizontal-align: left;  }
+.case-side-mask-right { horizontal-align: right; }

@@ -1,6 +1,7 @@
 # IDEs
 .vs
 .vscode
+.claude
 
 # Cache crap that Valve autogenerates
 *.bin
@@ -14,6 +15,11 @@
 *.vagrp_c
 *.vmesh_c
 *.vcss_c
+*.vtex_c
+*.vpdi_c
+*.vxml_c
+*.vjs_c
+*.vpdi_c
 
 # Gen folders
 maps
