@@ -1272,7 +1272,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"item_lua"
 		"ScriptFile"				"items/item_ozempick.lua"
-		"AbilityTextureName"		"rapier_custom"
+		"AbilityTextureName"		"ozempick_custom"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
 		"precache"
