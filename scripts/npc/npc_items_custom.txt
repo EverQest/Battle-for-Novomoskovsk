@@ -292,10 +292,9 @@
 
 		"precache"
 		{
-			"particle"					"particles/shivas_guard_active.vpcf"
+			"particle"					"particles/econ/events/fall_2022/shivas/shivas_guard_fall2022_active.vpcf"
 			"particle"					"particles/items2_fx/shivas_guard_impact.vpcf"
 			"particle"					"particles/items2_fx/true_sight_debuff.vpcf"
-			"particle"					"particles/econ/events/fall_2022/shivas/shivas_guard_fall2022_active.vpcf"
 		}
 
 		// Stats
