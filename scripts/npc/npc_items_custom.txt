@@ -949,7 +949,7 @@
 		"ItemResult"					"item_imba_lotus_orb"
 		"ItemRequirements"
 		{
-			"01"						"item_lotus_orb;item_cornucopia;item_cornucopia;"
+			"01"						"item_lotus_orb;item_pers;"
 		}
 	}
 

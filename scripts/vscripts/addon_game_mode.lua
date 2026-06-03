@@ -22,6 +22,7 @@ require( "events" )
 require( "items" )
 require( "utility_functions" )
 require( "items/item_travel_boots" )
+require( "random_event_manager" )
 
 ---------------------------------------------------------------------------
 -- Precache
@@ -41,13 +42,15 @@ function Precache( context )
        	PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
        	PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
        	PrecacheResource( "particle", "particles/last_hit/last_hit.vpcf", context )
-       	PrecacheResource( "particle", "particles/units/heroes/hero_zuus/zeus_taunt_coin.vpcf", context )
+       	PrecacheResource( "particle", "particles/items5_fx/philosopher_stone_destruction_coins.vpcf", context )
        	PrecacheResource( "particle", "particles/addons_gameplay/player_deferred_light.vpcf", context )
        	PrecacheResource( "particle", "particles/items_fx/black_king_bar_avatar.vpcf", context )
        	PrecacheResource( "particle", "particles/treasure_courier_death.vpcf", context )
        	PrecacheResource( "particle", "particles/econ/wards/f2p/f2p_ward/f2p_ward_true_sight_ambient.vpcf", context )
        	PrecacheResource( "particle", "particles/econ/items/lone_druid/lone_druid_cauldron/lone_druid_bear_entangle_dust_cauldron.vpcf", context )
        	PrecacheResource( "particle", "particles/newplayer_fx/npx_landslide_debris.vpcf", context )
+       	PrecacheResource( "particle", "particles/custom_phase_boots_fall_2021_streaks.vpcf", context )
+       	PrecacheResource( "particle", "particles/econ/events/ti9/shovel/shovel_baby_roshan_persist_sparkle.vpcf", context )
        	
 	--Cache particles for traps
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_dragon_knight", context )
@@ -58,12 +61,28 @@ function Precache( context )
 	--Cache particles for skils
 		PrecacheResource( "particle_folder", "particles/generic_gameplay/", context )
 
+	-- Cache Dog Days event particles (sun strike warning + impact)
+		PrecacheResource( "particle_folder", "particles/units/heroes/hero_invoker", context )
+		PrecacheResource( "particle", "particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf", context )
+
+	-- Cache Gold Rush event particles (throne ring)
+		PrecacheResource( "particle", "particles/bh_taunt_goldpiles_coindust_coins.vpcf", context )
+
+	-- Cache World Peace event particles (sphere zone)
+		PrecacheResource( "particle", "particles/faceless_void_chronosphere.vpcf", context )
+
+
 	--Cache sounds for traps
 		PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
 		PrecacheResource( "soundfile", "soundevents/soundevents_conquest.vsndevts", context )
 
 	-- Cache overthrow-specific sounds
 		PrecacheResource( "soundfile", "soundevents/game_sounds_overthrow.vsndevts", context )
+
+	-- Cache random event announcement sounds
+		PrecacheResource( "soundfile", "soundevents/game_sounds_events.vsndevts", context )
+	-- Cache custom event sounds
+		PrecacheResource( "soundfile", "soundevents/events.vsndevts", context )
 end
 
 function Activate()
@@ -259,6 +278,8 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetDefaultStickyItem( "item_boots" )
 	GameRules:GetGameModeEntity():SetBountyRunePickupFilter( Dynamic_Wrap( COverthrowGameMode, "BountyRunePickupFilter" ), self )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( COverthrowGameMode, "ExecuteOrderFilter" ), self )
+	GameRules:GetGameModeEntity():SetModifyGoldFilter( Dynamic_Wrap( COverthrowGameMode, "ModifyGoldFilter" ), self )
+	GameRules:GetGameModeEntity():SetDamageFilter( Dynamic_Wrap( COverthrowGameMode, "DamageFilter" ), self )
 
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled( true )
 	GameRules:GetGameModeEntity():SetUseTurboCouriers( true )
@@ -285,6 +306,7 @@ function COverthrowGameMode:InitGameMode()
 	Convars:RegisterCommand( "overthrow_force_gold_drop", function(...) self:ForceSpawnGold() end, "Force gold drop.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_set_timer", function(...) return SetTimer( ... ) end, "Set the timer.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_force_end_game", function(...) return self:EndGame( DOTA_TEAM_GOODGUYS ) end, "Force the game to end.", FCVAR_CHEAT )
+	Convars:RegisterCommand( "event_force_end", function(...) RandomEventManager:_EndCurrentEvent() end, "Force the current random event to end.", FCVAR_CHEAT )
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
 
 	COverthrowGameMode:SetUpFountains()
@@ -321,6 +343,13 @@ function COverthrowGameMode:SetUpFountains()
 
 	LinkLuaModifier( "modifier_fountain_aura_lua", "modifiers/modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_fountain_aura_effect_lua", "modifiers/modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_gold_rush_zone_indicator", "modifiers/modifier_gold_rush_zone_indicator", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_super_sonic", "modifiers/modifier_super_sonic", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_huge_deal", "modifiers/modifier_huge_deal", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_king_slayer", "modifiers/modifier_king_slayer", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_horror", "modifiers/modifier_horror", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_horror_veil", "modifiers/modifier_horror_veil", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_world_peace", "modifiers/modifier_world_peace", LUA_MODIFIER_MOTION_NONE )
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do
@@ -574,6 +603,64 @@ function spawnunits(campname)
         --print ("Spawning Camps")
         creature:SetInitialGoalEntity( waypointlocation )
     end
+end
+
+--------------------------------------------------------------------------------
+-- Shared ModifyGoldFilter
+-- Handles gold modifications for all active random events.
+-- Called by the engine for every ModifyGold() call in the game.
+--
+-- Reason codes used below (EDOTA_ModifyGold_Reason enum):
+--   1 = Death            2 = Buyback
+--   3 = PurchaseConsumable  4 = PurchaseItem
+--   8 = GameTick (passive income)
+--------------------------------------------------------------------------------
+function COverthrowGameMode:ModifyGoldFilter( filterTable )
+	local amount   = filterTable["gold"]
+	local reason   = filterTable["reason"]
+	local playerID = filterTable["player_id_const"]
+
+	-- ── Gold Rush: ×3 gold for heroes inside the center zone ─────────────────
+	if _G.GOLD_RUSH_ACTIVE and amount > 0 and playerID ~= -1 then
+		local hero = PlayerResource:GetSelectedHeroEntity( playerID )
+		if hero ~= nil and IsValidEntity( hero ) then
+			local dist = ( hero:GetAbsOrigin() - _G.GOLD_RUSH_CENTER ):Length2D()
+			if dist <= _G.GOLD_RUSH_RADIUS then
+				filterTable["gold"] = amount * 3
+			end
+		end
+	end
+
+	return true
+end
+
+--------------------------------------------------------------------------------
+-- World Peace: block all hero-vs-hero damage when both are inside the zone
+--------------------------------------------------------------------------------
+function COverthrowGameMode:DamageFilter( filterTable )
+	if not _G.WORLD_PEACE_ACTIVE then return true end
+
+	local attacker = EntIndexToHScript( filterTable["entindex_attacker_const"] )
+	local victim   = EntIndexToHScript( filterTable["entindex_victim_const"] )
+
+	if attacker == nil or victim == nil           then return true end
+	if not attacker:IsRealHero()                  then return true end
+	if not victim:IsRealHero()                    then return true end
+	if attacker == victim                         then return true end
+
+	local center = _G.WORLD_PEACE_CENTER
+	local radius = _G.WORLD_PEACE_RADIUS
+
+	local attackerInZone = ( attacker:GetAbsOrigin() - center ):Length2D() <= radius
+	local victimInZone   = ( victim:GetAbsOrigin()   - center ):Length2D() <= radius
+
+	-- Block damage if EITHER party is inside the zone:
+	-- heroes inside cannot attack out, and heroes outside cannot attack in.
+	if attackerInZone or victimInZone then
+		filterTable["damage"] = 0
+	end
+
+	return true
 end
 
 --------------------------------------------------------------------------------
