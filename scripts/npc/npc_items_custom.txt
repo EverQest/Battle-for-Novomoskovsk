@@ -1243,6 +1243,74 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Recipe: Оземпік
+	//=================================================================================================================
+	"item_recipe_ozempick"
+	{
+		"BaseClass"					"item_datadriven"
+		"AbilityTextureName"		"recipe"
+		"Model"						"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"					"0"
+		"ItemShopTags"				""
+
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_ozempick"
+		"ItemRequirements"
+		{
+			"01"					"item_echo_sabre;item_rapier"
+		}
+	}
+
+	//=================================================================================================================
+	// Оземпік
+	//=================================================================================================================
+	"item_ozempick"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"					"item_lua"
+		"ScriptFile"				"items/item_ozempick.lua"
+		"AbilityTextureName"		"rapier_custom"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+
+		"precache"
+		{
+			"soundfile"				"soundevents/item.vsndevts"
+			"soundfile"				"soundevents/events.vsndevts"
+			"particle"				"particles/brewmaster_liquid_courage_tornado_liquid_refract.vpcf"
+		}
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"			"30.0"
+		"AbilityManaCost"			"100"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"8700"
+		"ItemShopTags"				"damage;unique"
+		"ItemQuality"				"artifact"
+		"ItemAliases"				"ozempick;оземпік"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDroppable"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"330"
+			"slow_ms"				"-100"
+			"slow_as"				"-100"
+			"slow_duration"			"1.2"
+			"active_duration"		"5"
+			"hp_pct_damage"			"10"
+			"echo_attacks"			"4"
+			"echo_cooldown"			"10"
+		}
+	}
+
 	"item_diffusal_blade_2"
 	{
 		"BaseClass"						"item_datadriven"

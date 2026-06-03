@@ -890,6 +890,23 @@
 
 		"DOTA_Tooltip_modifier_world_peace"									"World Peace"
 		"DOTA_Tooltip_modifier_world_peace_Description"						"You are inside the safe zone. No damage can be dealt or received here."
+		//
+		"DOTA_Tooltip_Ability_item_ozempick"								"Оземпік"
+		"DOTA_Tooltip_Ability_item_ozempick_lore"						"Forged from the shattered echo of a fallen king's blade and the cursed rapier of a mad warlord. Those who wield it leave behind a trail of silenced rulers."
+		"DOTA_Tooltip_ability_item_ozempick_Description"					"<h1>Active: King's Wrath</h1> For 5 seconds, each of your attacks deals bonus physical damage equal to 10% of the target's current health.\n<h1>Passive: Royal Maim</h1> Each attack triggers 4 additional instant strikes (5 total), slowing the target's movement speed by 100 and attack speed by 100 for 1.2 seconds."
+		"DOTA_Tooltip_Ability_item_ozempick_bonus_damage"				"+$damage"
+		//
+		"DOTA_Tooltip_modifier_ozempick_slow"							"Royal Maim"
+		"DOTA_Tooltip_modifier_ozempick_slow_Description"				"Movement and attack speed slowed by Оземпік."
+		//
+		"DOTA_Tooltip_modifier_ozempick_active"							"King's Wrath"
+		"DOTA_Tooltip_modifier_ozempick_active_Description"				"Each attack deals 10% of target's current HP as bonus physical damage."
+		//
+		"DOTA_Tooltip_modifier_ozempick_echo_speed"						"Royal Echo"
+		"DOTA_Tooltip_modifier_ozempick_echo_speed_Description"			"Attack speed greatly increased."
+		//
+		"DOTA_Tooltip_modifier_ozempick_echo_cd"							"Royal Echo Cooldown"
+		"DOTA_Tooltip_modifier_ozempick_echo_cd_Description"				"The echo burst is recharging."
 	}
 
 }
