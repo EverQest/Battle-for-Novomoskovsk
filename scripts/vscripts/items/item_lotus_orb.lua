@@ -84,6 +84,14 @@ modifier_item_imba_lotus_orb_active = modifier_item_imba_lotus_orb_active or cla
 function modifier_item_imba_lotus_orb_active:IsPurgable() return false end
 function modifier_item_imba_lotus_orb_active:IsPurgeException() return false end
 
+function modifier_item_imba_lotus_orb_active:GetEffectName()
+	return "particles/lotus_orb_shield.vpcf"
+end
+
+function modifier_item_imba_lotus_orb_active:GetEffectAttachType()
+	return PATTACH_ABSORIGIN_FOLLOW
+end
+
 function modifier_item_imba_lotus_orb_active:DeclareFunctions() return {
 	MODIFIER_PROPERTY_ABSORB_SPELL,
 	MODIFIER_PROPERTY_REFLECT_SPELL,
@@ -92,13 +100,8 @@ function modifier_item_imba_lotus_orb_active:DeclareFunctions() return {
 function modifier_item_imba_lotus_orb_active:OnCreated(params)
 	if not IsServer() then return end
 
-	local shield_pfx = "particles/lotus_orb_shield.vpcf"
 	self.reflect_pfx = "particles/items3_fx/lotus_orb_reflect.vpcf"
-	local cast_sound = "Item.LotusOrb.Target"
-	local reflect_sound = "Lotus_reflect"
 
-	if params.shield_pfx then shield_pfx = params.shield_pfx end
-	if params.cast_sound then cast_sound = params.cast_sound end
 	if params.reflect_pfx then self.reflect_pfx = params.reflect_pfx end
 	if params.absorb then self.absorb = params.absorb end
 	if params.dispel then self.dispel = params.dispel end
@@ -107,13 +110,7 @@ function modifier_item_imba_lotus_orb_active:OnCreated(params)
 		self:GetParent():Purge(false, true, false, false, false)
 	end
 
-	self.pfx = ParticleManager:CreateParticle(shield_pfx, PATTACH_POINT_FOLLOW, self:GetParent())
-	ParticleManager:SetParticleControlEnt(self.pfx, 0, self:GetParent(), PATTACH_POINT_FOLLOW, "attach_hitloc", self:GetParent():GetAbsOrigin(), true)
-
-	-- Random numbers
---	ParticleManager:SetParticleControl(self.particle, 1, Vector(150, 150, 150))
-
-	self:GetCaster():EmitSound(cast_sound)
+	self:GetCaster():EmitSound("Item.LotusOrb.Target")
 end
 
 function modifier_item_imba_lotus_orb_active:GetAbsorbSpell(params)
@@ -249,9 +246,4 @@ function modifier_item_imba_lotus_orb_active:OnRemoved()
 	if not IsServer() then return end
 
 	self:GetCaster():EmitSound("Item.LotusOrb.Destroy")
-
-	if self.pfx then
-		ParticleManager:DestroyParticle(self.pfx, false)
-		ParticleManager:ReleaseParticleIndex(self.pfx)
-	end
 end
