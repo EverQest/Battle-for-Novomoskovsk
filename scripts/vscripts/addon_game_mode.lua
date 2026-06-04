@@ -21,6 +21,7 @@ require('timers')
 require( "events" )
 require( "items" )
 require( "utility_functions" )
+require( "items/item_travel_boots" )
 require( "random_event_manager" )
 
 ---------------------------------------------------------------------------
@@ -66,6 +67,37 @@ function Precache( context )
 
 	-- Cache Gold Rush event particles (throne ring)
 		PrecacheResource( "particle", "particles/bh_taunt_goldpiles_coindust_coins.vpcf", context )
+
+	-- Cache Lotus Orb item particles
+		PrecacheResource( "particle", "particles/lotus_orb_shield.vpcf", context )
+		PrecacheResource( "particle", "particles/items3_fx/lotus_orb_reflect.vpcf", context )
+
+	-- Cache Assault Cuirass item particles
+		PrecacheResource( "particle", "particles/aura_assault.vpcf", context )
+
+	-- Cache Bloodstone item particles
+		PrecacheResource( "particle", "particles/bloodstone_heal.vpcf", context )
+
+	-- Cache Blade Mail item particles
+		PrecacheResource( "particle", "particles/blademail.vpcf", context )
+
+	-- Cache Ozempick item particles
+		PrecacheResource( "particle", "particles/brewmaster_liquid_courage_tornado_liquid_refract.vpcf", context )
+
+	-- Cache Desolator item particles
+		PrecacheResource( "particle", "particles/item/desolator_active_c.vpcf", context )
+		PrecacheResource( "particle", "particles/item/desolator2_active.vpcf", context )
+		PrecacheResource( "particle", "particles/tower_bad_face_end_sparks.vpcf", context )
+
+	-- Cache Meteor Hammer item particles
+		PrecacheResource( "particle", "particles/meteor_hammer_aoe_custom.vpcf", context )
+
+	-- Cache Shiva's Guard item particles (item-level :Precache() is unreliable in custom games)
+		PrecacheResource( "particle", "particles/econ/events/fall_2022/shivas/shivas_guard_fall2022_active.vpcf", context )
+		PrecacheResource( "particle", "particles/items2_fx/shivas_guard_impact.vpcf", context )
+		PrecacheResource( "particle", "particles/items2_fx/true_sight_debuff.vpcf", context )
+		PrecacheResource( "particle", "particles/shivas_guard_active.vpcf", context )
+		PrecacheResource( "particle", "particles/shivas_guard_flash_custom.vpcf", context )
 
 	-- Cache World Peace event particles (sphere zone)
 		PrecacheResource( "particle", "particles/faceless_void_chronosphere.vpcf", context )
@@ -476,6 +508,20 @@ end
 function COverthrowGameMode:OnThink()
 	for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
 		self:UpdatePlayerColor( nPlayerID )
+		local hero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
+		if hero and hero:IsAlive() then
+			local boots = nil
+			for slot = 0, 8 do
+				local item = hero:GetItemInSlot( slot )
+				if item and item:GetAbilityName() == "item_travel_boots" then
+					boots = item
+					break
+				end
+			end
+			if boots and not hero:HasModifier( "modifier_travel_boots_anti_root" ) then
+				hero:AddNewModifier( hero, boots, "modifier_travel_boots_anti_root", {} )
+			end
+		end
 	end
 	
 	self:UpdateScoreboard()

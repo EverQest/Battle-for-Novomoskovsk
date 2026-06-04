@@ -760,6 +760,8 @@
 		"DOTA_Tooltip_Ability_item_dust"								"Пыльца фей"
 		//
 		"DOTA_Tooltip_Ability_item_travel_boots"						"Пингвины"
+		"DOTA_Tooltip_Ability_item_travel_boots_Description"			"Знімає ліміт швидкості пересування та герой не може бути спинений (рут)."
+		"DOTA_Tooltip_Ability_item_travel_boots_armor"					"+$armor"
 		//
 		"DOTA_Tooltip_Ability_item_arcane_boots"						"Бумбокс"
 		//
@@ -783,8 +785,6 @@
 		//
 		"DOTA_Tooltip_Ability_item_manacles_of_power"						"Chain lasso"
 		"DOTA_Tooltip_Ability_item_manacles_of_power_Description"			"<h1>Active: Chain therapy</h1> Захватывает цель на 5 секунд, при этом цель можно везти за собой. Также владелец получает 30 Силы"
-		//
-		"DOTA_Tooltip_Ability_item_hermes_sandals"							"Чоботи Вергілія"
 		//
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2"						"Книга Геометрии"
 		"DOTA_Tooltip_Ability_item_diffusal_blade_2_damage"  				"+$damage"
@@ -865,6 +865,14 @@
 		"DOTA_Tooltip_Ability_item_imba_shivas_guard_lore"					"Адский артефакт для приготовлении курочек при температуре 40 градусов по Цельсию"
 		"DOTA_Tooltip_Ability_item_imba_shivas_guard_bonus_int"				"+$int"
 		"DOTA_Tooltip_Ability_item_imba_shivas_guard_bonus_armor"			"+$armor"
+		//
+		"DOTA_Tooltip_Ability_item_boots_of_fly"							"Чоботи Вергілія"
+		"DOTA_Tooltip_Ability_item_boots_of_fly_lore"						"Взуття легендарного мага Вергілія, що дозволяє йому ходити по хмарах і бігати швидше вітру"
+		"DOTA_Tooltip_ability_item_boots_of_fly_Description"				"<h1>Active: Польот</h1> Знімає всі негативні ефекти з героя та протягом 6 секунд надає +500% до швидкості пересування і здатність ходити по будь-якому рельєфу."
+		"DOTA_Tooltip_Ability_item_boots_of_fly_ms"							"+$move_speed"
+		"DOTA_Tooltip_Ability_item_boots_of_fly_dmg"						"+$damage"
+		"DOTA_Tooltip_Ability_item_boots_of_fly_aspd"						"+$attack"
+		"DOTA_Tooltip_Ability_item_boots_of_fly_stats"						"+$all"
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// Random Events – modifier tooltips
@@ -882,6 +890,23 @@
 
 		"DOTA_Tooltip_modifier_world_peace"									"World Peace"
 		"DOTA_Tooltip_modifier_world_peace_Description"						"You are inside the safe zone. No damage can be dealt or received here."
+		//
+		"DOTA_Tooltip_Ability_item_ozempick"								"Spear of Ozempic"
+		"DOTA_Tooltip_Ability_item_ozempick_lore"							"Forged from the shattered echo of a fallen Ozempic king's blade and the cursed rapier of a mad warlord. Those who wield it leave behind a trail of silenced rulers."
+		"DOTA_Tooltip_ability_item_ozempick_Description"					"<h1>Active: Ozempic's Wrath</h1> For 5 seconds, each of your attacks deals bonus physical damage equal to 10% of the target's current health.\n<h1>Passive: Royal Maim</h1> Each attack triggers 4 additional instant strikes (5 total), slowing the target's movement speed by 100 and attack speed by 100 for 1.2 seconds."
+		"DOTA_Tooltip_Ability_item_ozempick_bonus_damage"					"+$damage"
+		//
+		"DOTA_Tooltip_modifier_ozempick_slow"								"Royal Maim"
+		"DOTA_Tooltip_modifier_ozempick_slow_Description"					"Movement and attack speed slowed by Spear of Ozempic."
+		//
+		"DOTA_Tooltip_modifier_ozempick_active"								"Ozempic Wrath"
+		"DOTA_Tooltip_modifier_ozempick_active_Description"					"Each attack deals 10% of target's current HP as bonus physical damage."
+		//
+		"DOTA_Tooltip_modifier_ozempick_echo_speed"							"Ozempic Echo"
+		"DOTA_Tooltip_modifier_ozempick_echo_speed_Description"				"Attack speed greatly increased."
+		//
+		"DOTA_Tooltip_modifier_ozempick_echo_cd"							"Ozempic Echo Cooldown"
+		"DOTA_Tooltip_modifier_ozempick_echo_cd_Description"				"The echo burst is recharging."
 	}
 
 }

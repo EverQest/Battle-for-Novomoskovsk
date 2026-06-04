@@ -270,6 +270,10 @@ function COverthrowGameMode:OnItemPickUp( event )
 		PlayerResource:ModifyGold( owner:GetPlayerID(), r, true, 0 )
 		SendOverheadEventMessage( owner, OVERHEAD_ALERT_GOLD, owner, r, nil )
 		UTIL_Remove( item ) -- otherwise it pollutes the player inventory
+	elseif event.itemname == "item_travel_boots" then
+		if not owner:HasModifier("modifier_travel_boots_anti_root") then
+			owner:AddNewModifier(owner, item, "modifier_travel_boots_anti_root", {})
+		end
 	elseif event.itemname == "item_treasure_chest" then
 		print( "Special Item Picked Up" )
 

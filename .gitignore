@@ -19,7 +19,6 @@
 *.vpdi_c
 *.vxml_c
 *.vjs_c
-*.vpdi_c
 
 # Gen folders
 maps
@@ -44,3 +43,4 @@ tools_asset_info.bin
 tools_thumbnail_cache.sqlite3
 tools_thumbnail_cache.sqlite3-shm
 tools_thumbnail_cache.sqlite3-wal
+panorama/dynamic_images_custom_abilities.vpdi_c
